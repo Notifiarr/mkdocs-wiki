@@ -1,0 +1,89 @@
+---
+title: Notifiarr Integrations
+description: 
+published: true
+date: 2022-10-20T22:18:33.341Z
+tags: 
+editor: markdown
+dateCreated: 2022-01-09T20:38:47.551Z
+---
+
+# Notifiarr Integrations
+
+## \*Arr
+
+* [Lidarr](/Website/Integrations/Lidarr)
+* [Radarr](/Website/Integrations/Radarr)
+* [Readarr](/Website/Integrations/Readarr)
+* [Sonarr](/Website/Integrations/Sonarr)
+* [Prowlarr](/Website/Integrations/Prowlarr)
+{.links-list}
+
+## \*Arr Companions
+
+* [Autobrr](/Website/Integrations/Autobrr)
+* [Bazarr](/Website/Integrations/Bazarr)
+* [Overseerr](/Website/Integrations/Overseerr)
+* [Release Parser](/Website/Integrations/ReleaseParser)
+* [Unpackerr](/Website/Integrations/Unpackerr)
+{.links-list}
+
+## Media Requests
+
+* [Lidarr](/Website/Integrations/MediaRequests.md#lidarr)
+* [Radarr](/Website/Integrations/MediaRequests.md#radarr)
+* [Readarr](/Website/Integrations/MediaRequests.md#readarr)
+* [Sonarr](/Website/Integrations/MediaRequests.md#sonarr)
+{.links-list}
+
+## Media Management
+
+* [Emby](/Website/Integrations/Emby)
+* [Jellyfin](/Website/Integrations/Jellyfin)
+* [Jellyseerr](/Website/Integrations/Jellyseerr)
+* [Mdblist](/Website/Integrations/Mdblist)
+* [Plex](/Website/Integrations/Plex)
+* [Plex Meta Manager](/Website/Integrations/PMM)
+* [Reciperr](/Website/Integrations/Reciperr)
+{.links-list}
+
+## Systems
+
+* [Log Watcher](/Website/Integrations/LogWatcher)
+* [Package Manager](/Website/Integrations/PackageManager)
+* [Process & Application Monitoring](/Website/Integrations/Network)
+* [System Snapshots](/Website/Integrations/Snapshots)
+{.links-list}
+
+## Websites
+
+* [Better Uptime](/Website/Integrations/BetterUptime)
+* [Website Monitoring](/Website/Integrations/WebsiteStatus)
+* [RSS Watcher](/Website/Integrations/RSSWatcher)
+{.links-list}
+
+## Discord
+
+* [Discord](/Website/Integrations/Discord)
+* [Persistent](/Website/Integrations/Persist)
+* [Simon Says](/Website/Integrations/SimonSays)
+{.links-list}
+
+## Downloading
+
+* [Cross Seed](/Website/Integrations/CrossSeed)
+* [Qbit Manage](/Website/Integrations/QbitManage)
+{.links-list}
+
+## Misc
+
+* [Channel Stats](/Website/Integrations/ChannelStats)
+* [Dashboard](/Website/Integrations/Dashboard)
+* [Github](/Website/Integrations/Github)
+* [Reddit Subreddit](/Website/Integrations/Reddit)
+* [Hotio: Pullio](/Website/Integrations/Hotio)
+* [Passthrough](/Website/Integrations/Passthrough)
+* [TRaSH: Sync](/Website/Integrations/Trash)
+{.links-list}
+
+This may not always be a full list, but covers most integrations.

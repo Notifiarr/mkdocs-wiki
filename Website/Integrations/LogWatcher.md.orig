@@ -1,0 +1,119 @@
+---
+title: Log Watcher
+<<<<<<< HEAD
+description: 
+published: true
+date: 2022-09-22T16:13:48.371Z
+=======
+description: File (Log) Watcher
+published: true
+date: 2022-12-30T23:40:51.011Z
+>>>>>>> main
+tags: 
+editor: markdown
+dateCreated: 2022-09-22T16:13:48.371Z
+---
+
+# Log Watcher
+
+<<<<<<< HEAD
+***Coming Soon***
+
+=======
+aka File Watcher
+
+This allows the Notifiarr Client to watch (log) files for lines matching a regular expression. This is similar to tail -f file | grep string and allows you to send notifications when, for instance, a log file has a new line written that matches a regular expression.
+
+***Coming Soon***
+
+> If creating a skip expression that contains `'` replace the apostrophe with `.?`
+{.is-info}
+
+
+>>>>>>> main
+## Regular Expressions & Skip Expressions
+
+Below are community suggested expressions
+
+<<<<<<< HEAD
+### Starr Apps
+
+#### Radarr
+
+##### Radarr Regular Expression
+
+```regex
+(?i)(\|warn\||\|error\||^\[v4.+\])
+```
+
+##### Radarr Skip Expression
+
+```regex
+(?i)Movie with IMDBId|It will not be added|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.
+```
+
+#### Sonarr
+
+##### Sonarr Regular Expression
+
+```regex
+(?i)(\|warn\||\|error\||^\[v(?:v(?:3|4).+\])
+```
+
+##### Sonarr Skip Expression
+
+```regex
+(?i)Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|Unable to find exact quality
+```
+
+#### Prowlarr
+
+##### Prowlarr Regular Expression
+
+```regex
+(?i)(\|warn\||\|error\||^\[v0.+\])
+```
+
+##### Prowlarr Skip Expression
+
+```regex
+(?i)Validation failed|An unhandled exception has occurred while executing the request|(?:CinemaZ|PrivateHD)[.a-z0-9/=&?: ]+404\.NotFound
+```
+
+#### Readarr
+
+##### Readarr Regular Expression
+
+```regex
+(?i)(\|warn\||\|error\||^\[v0.+\])
+```
+
+##### Readarr Skip Expression
+
+```regex
+(?i)Validation failed|An unhandled exception has occurred while executing the request.
+```
+
+#### Lidarr
+
+##### Lidarr Regular Expression
+
+```regex
+(?i)(\|warn\||\|error\||^\[v1.+\])
+```
+
+##### Lidarr Skip Expression
+
+```regex
+(?i)Validation failed|An unhandled exception has occurred while executing the request.
+```
+=======
+| App      | Regular Expression                                                     | Skip Expression                                                                                                                                                               | Regular Explanation                                                                     | Skip Explanation                                                                                             |
+| -------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| Radarr   | `(?i)(\|warn\||\|error\||^\[v4.+\])`            | `(?i)Movie with IMDBId|It will not be added|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error` | Notify on all Warnings, Errors, and Stack Traces (Version Number)                      | Skip movie add errors. Skip Indexer Feed invalid date Errors. Skip Errors   saying there was an Error        |
+| Sonarr   | `(?i)(\|warn\||\|error\||^\[v4.+\])` | `(?i)Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|Unable to find exact quality|HttpClient error`            | Notify on all Warnings, Errors, and Stack Traces (Version Number)                      | Skip Indexer Feed invalid date Errors. Skip Errors saying there was an   Error. Skip unknown quality errors. |
+| Prowlarr | `(?i)(\|warn\||\|error\||^\[v0.+\])`            | `(?i)Validation failed|An unhandled exception has occurred while executing the request|(?:CinemaZ|PrivateHD)[.a-z0-9/=&?: ]+404\.NotFound|HttpClient error`          | Notify on all Warnings, Errors, and Stack Traces (Version Number)                      | Skip Errors saying there was an error. Skip Cinemaz/PrivateHD 404   (NotFound Errors)                        |
+| Readarr  | `(?i)(\|warn\||\|error\||^\[v0.+\])`            | `(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error`                                                              | Notify on all Warnings, Errors, and Stack Traces (Version Number)                      | Skip Errors saying there was an error.                                                                       |
+| Lidarr   | `(?i)(\|warn\||\|error\||^\[v0.+\])`            | `(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error`                                                              | Notify on all Warnings, Errors, and Stack Traces (Version Number)                      | Skip Errors saying there was an error.                                                                       |
+| PMM      | `(?i)(Convert Error:|ID not found)`              | `N/A`                                                                                                                                                       | Notify on IMDb/AniDB/TVDb/TMDb missing IDs or unable to convert to   TMDb/TVDb/IMDb IDs | None.                                                                                                        |
+>>>>>>> main

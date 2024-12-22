@@ -1,0 +1,380 @@
+---
+title: Installation
+description: Notifiarr Client Installation Page
+published: true
+<<<<<<< HEAD
+date: 2022-10-24T17:25:50.357Z
+=======
+date: 2023-01-23T01:47:04.070Z
+>>>>>>> main
+tags: 
+editor: markdown
+dateCreated: 2021-05-22T01:08:57.387Z
+---
+
+<img src="https://docs.notifiarr.com/img/repo-logo.png">
+
+This is the unified client for [Notifiarr.com](https://notifiarr.com).
+The client enables content requests from Media Bot in your Discord Server and also provides reports for Plex usage and system health among many other features.
+
+# Installation
+
+- [Installation](#installation)
+  - [Linux](#linux)
+    - [Arch Linux](#arch-linux)
+    - [FreeBSD](#freebsd)
+    - [macOS Install](#macos-install)
+      - [Homebrew](#homebrew)
+      - [macOS App](#macos-app)
+    - [Windows](#windows)
+      - [Windows Startup](#windows-startup)
+    - [Docker](#docker)
+      - [Docker Config File](#docker-config-file)
+      - [Docker Environment Variables](#docker-environment-variables)
+  - [Configuration Information](#configuration-information)
+    - [WebUI](#webui)
+    - [Config Settings](#config-settings)
+    - [System Snapshot](#system-snapshot)
+      - [Snapshot Sudoers](#snapshot-sudoers)
+      - [Snapshot Packages](#snapshot-packages)
+      - [Snapshot Configuration](#snapshot-configuration)
+  - [Reverse Proxy](#reverse-proxy)
+
+## Linux
+
+Linux repository hosting provided by
+[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
+
+- This works on any system with apt or yum. If your system does not use APT or YUM, then download a binary from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+  - On Linux, Notifiarr runs as `user:group` of `notifiarr:notifiarr`.
+- Install the Go Lift package repo and Notifiarr with this command:
+
+```bash
+curl -s https://golift.io/repo.sh | sudo bash -s - notifiarr
+```
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+After install, edit the config and start the service:
+
+```bash
+sudo nano /etc/notifiarr/notifiarr.conf
+sudo systemctl restart notifiarr
+```
+
+### Arch Linux
+
+- This one is special; hope you know what you're doing.
+- Build a package with `makepkg` using the [`aur` source](https://github.com/golift/aur)
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+### FreeBSD
+
+- Download a package from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+- Install it, edit config, start it.
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+Example of the above in shell form:
+
+```shell
+<<<<<<< HEAD
+wget -qO- https://raw.githubusercontent.com/Notifiarr/notifiarr/main/scripts/install.sh | sudo bash
+=======
+wget -qO- https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install.sh | sudo bash
+>>>>>>> main
+vi /usr/local/etc/notifiarr/notifiarr.conf
+service notifiarr start
+```
+
+On FreeBSD, Notifiarr runs as `user:group` of `notifiarr:notifiarr`.
+
+### macOS Install
+
+#### Homebrew
+
+- Edit config file at `/usr/local/etc/notifiarr/notifiarr.conf`
+- Start it.
+- Like this:
+
+```shell
+brew install golift/mugs/notifiarr
+vi /usr/local/etc/notifiarr/notifiarr.conf
+brew services start notifiarr
+```
+
+#### macOS App
+
+- You can use the unsigned app on the Releases page.
+- You must right click the app and select `Open` so macOS allows it.
+- When you open it for the first time it will create a config file and log file:
+  - `~/.notifiarr/notifiarr.conf`
+  - `~/.notifiarr/notifiarr.log`
+- Edit the config file and reload or restart the app.
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+### Windows
+
+- Extract a `.exe.zip` file from [the Releases page](https://github.com/Notifiarr/notifiarr/releases).
+- Run the `notifiarr.amd64.exe` binary. This starts the app in the system tray.
+- When you open it for the first time it will create a config file and log file:
+  - `C:\ProgramData\notifiarr\notifiarr.conf`
+  - `<your home folder>\.notifiarr\notifiarr.log`
+- Edit the new config file suit your environment then reload or restart the app.
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+#### Windows Startup
+
+To enable Notifiarr to auto start on system reboot:
+
+1. Create shortcut (right click on the notifiarr.exe => create shortcut)
+1. Windows logo key + R, type `shell:startup`, then select OK. This opens the Startup folder.
+1. Copy and paste the newly created shortcut from its current location to the opened Startup folder.
+
+### Docker
+
+This project builds automatically in [Docker Cloud](https://hub.docker.com/r/golift/notifiarr) and creates [ready-to-use multi-architecture images](https://hub.docker.com/r/golift/notifiarr/tags). The `latest` tag is always a tagged release in GitHub. The `main` tag corresponds to the `main` branch in GitHub and may be broken.
+
+{#docker-compose}
+
+A sample docker compose file is [found in Examples](https://github.com/Notifiarr/notifiarr/blob/main/examples/compose.yml) in the Notifiarr Client repo.
+
+> **Unraid Users**
+You must configure a Notifiarr API Key in the Unraid Template. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well.
+{.is-danger}
+
+> **Docker Users**
+Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
+{.is-info}
+
+#### Docker Config File
+
+- Copy the [example config file](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example) from Notifiarr Client repo.
+- Then grab the image from docker hub and run it using an overlay for the config file.
+- You must set `privileged` to use `smartctl` (`monitor_drives`) and/or `MegaCli` (`monitor_raid`).
+- Map the `/var/run/utmp` volume if you want to count users.
+- Mount any volumes you want to report storage space for. Where does not matter, "where" is the "name".
+- **You MUST [set a static hostname](/Client/Configuration#hostname). Each client is identified by hostname.**
+
+```shell
+docker pull golift/notifiarr
+docker run --hostname=$(hostname) -d \
+-v /your/config/notifiarr.conf:/config/notifiarr.conf \
+-v /var/run/utmp:/var/run/utmp \
+golift/notifiarr
+docker logs <container id from docker run>
+```
+
+> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+{.is-info}
+
+#### Docker Environment Variables
+
+See below for more information about which environment variables are available.
+You must set `--privileged` when `monitor drives` is enabled on the website.
+
+```shell
+docker pull golift/notifiarr
+docker run --hostname $(hostname) -d --privileged \
+  -v /var/run/utmp:/var/run/utmp \
+  -e "DN_API_KEY=abcdef-12345-bcfead-43312-bbbaaa-123" \
+  -e "DN_SONARR_0_URL=http://localhost:8989" \
+  -e "DN_SONARR_0_API_KEY=kjsdkasjdaksdj" \
+  golift/notifiarr
+docker logs <container id from docker run>
+```
+
+## Configuration Information
+
+### Hostname
+
+> See the [Configuration Page](/Client/Configuration#hostname)
+{.is-info}
+
+### WebUI
+
+> See the [Configuration Page](/Client/Configuration#web-ui)
+{.is-info}
+
+### Config Settings
+
+> See the [Configuration Page](/Client/Configuration#env-variables)
+{.is-info}
+
+### System Snapshot
+
+This application can take a snapshot of your system at an interval and send
+you a notification. Snapshot means system health like cpu, memory, disk, raid, users, etc.
+Other data available in the snapshot: mysql health, `iotop`, `iostat` and `top` data.
+Some of this may only be available on Linux, but other platforms have similar abilities.
+
+If you monitor drive health you must have smartmontools (`smartctl`) installed.
+If you use smartctl on Linux, you must enable sudo. Add the sudoers entry below to
+`/etc/sudoers` and fix the path to `smartctl` if yours differs. If you monitor
+raid and use MegaCli (LSI card), add the appropriate sudoers entry for that too.
+
+To monitor application disk I/O you may install `iotop` and add the sudoers entry
+for it, shown below. This feature is enabled on the website.
+
+#### Snapshot Sudoers
+
+The following sudoers entries are used by various snapshot features. Add them if you use the respective feature.
+You can usually just put the following content into `/etc/sudoers` or `/etc/sudoers.d/00-notifiarr`.
+
+```yml
+# Allows drive health monitoring on macOS, Linux/Docker and FreeBSD.
+notifiarr ALL=(root) NOPASSWD:/usr/sbin/smartctl *
+
+# Allows disk utilization monitoring on Linux (non-Docker).
+notifiarr ALL=(root) NOPASSWD:/usr/sbin/iotop *
+
+# Allows monitoring megaraid volumes on macOS, Linux/Docker and FreeBSD.
+# Rarely needed, and you'll know if you need this.
+notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
+```
+
+#### Snapshot Packages
+
+- **Windows**:  `smartmontools` - get it here <https://sourceforge.net/projects/smartmontools/>
+- **Linux**:
+  - Debian/Ubuntu: `apt install smartmontools`
+  - RedHat/CentOS: `yum install smartmontools`
+- **Docker**:    It's already in the container. Lucky you! Just run the container in `--privileged` mode.
+- **Synology**: `opkg install smartmontools`, but first get Entware:
+  - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+  - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+
+#### Snapshot Configuration
+
+There is no client configuration for snapshots (except MySQL, below).
+Snapshot configuration is found on the [website](https://notifiarr.com).
+
+## Reverse Proxy
+
+You'll need to expose this application to the Internet, so Notifiarr.com
+can make connections to it. While you can certainly poke a hole your firewall
+and send the traffic directly to this app, it is recommended that you put it
+behind a reverse proxy. It's pretty easy.
+<<<<<<< HEAD
+
+You'll want to tune the `upstreams` and `urlbase` settings for your environment.
+If your reverse proxy IP is `192.168.3.45` then set `upstreams = ["192.168.3.45/32"]`.
+The `urlbase` can be left at `/`, but change it if you serve this app from a
+subfolder. We'll assume you want to serve the app from `/notifiarr/` and
+it's running on `192.168.3.33` - here's a sample nginx config to do that:
+
+```nginx
+location /notifiarr {
+  proxy_set_header X-Forwarded-For $remote_addr;
+  set $notifiarr http://192.168.3.33:5454;
+  proxy_pass $notifiarr$request_uri;
+}
+=======
+- You'll want to tune the `upstreams` and `urlbase` settings for your environment.
+  - If your reverse proxy IP is `192.168.3.45` then set `upstreams = ["192.168.3.45/32"]`.
+- The `urlbase` can be left at `/`, but change it if you serve this app from a
+subfolder.
+
+### Reverse Proxy Authentication
+
+> If using Authelia or Organizr ensure they are passing the username header
+{.is-info}
+
+For example in NGINX: if `_username` is the variable your authentication app is passing then your would need:
+
+```nginx
+  proxy_set_header X-WebAuth-User $_username;
+```
+
+#### Traefik
+
+- If you are using Traefik, you **must** utilize a [plugin](https://github.com/tomMoulard/htransformation) to map the appropriate auth header.
+- The below Traefik yaml created a middleware called `webauthheader` which maps Authelia's `Remote-User` header to Notifiarr's expected `X-WebAuth-User` header. You must then attach the `webauthheader` middleware to the Notifiarr client in Traefik.
+- **Ensure you have configured the `/api` and `/plex` endpoints to bypass authentication.**
+
+```yaml
+http:
+  middlewares:
+    webauthheader:
+      plugin:
+        htransformation:
+          Rules:
+            - Name: 'Auth header rename'
+              Header: 'Remote-User'
+              Value: 'X-WebAuth-User'
+              Type: 'Rename'
+```
+
+----
+
+- [Nginx Subfolder Example](#nginx-subfolder-example)
+- [NGINX Subdomain Example](#nginx-subdomain-example)
+{.links-list}
+
+### NGINX Subfolder Example
+
+- We'll assume you want to serve the app from `/notifiarr` and it's running on `127.0.0.1` - here's a sample nginx config to do that:
+
+```nginx
+# Notifiarr Client
+location /notifiarr/api {
+  proxy_set_header X-Forwarded-For $remote_addr;
+  set $notifiarr http://127.0.0.1:5454;
+  proxy_pass $notifiarr$request_uri;
+  auth_request off;
+}
+
+location /notifiarr {
+  proxy_set_header X-Forwarded-For $remote_addr;
+  set $notifiarr http://127.0.0.1:5454;
+  proxy_pass $notifiarr$request_uri;
+  proxy_http_version 1.1;
+  proxy_set_header Upgrade $http_upgrade;
+  proxy_set_header Connection $http_connection;
+}
+
+>>>>>>> main
+```
+
+Make sure the Nginx `location` path matches the `urlbase` Notifiarr setting.
+That's all there is to it.
+
+<<<<<<< HEAD
+Using an auth proxy? Be sure to set `ui_password` to the string `"webauth"`.
+The Nginx config looks more like this:
+
+```nginx
+location /notifiarr/api {
+  proxy_set_header X-Forwarded-For $remote_addr;
+  set $notifiarr http://192.168.3.33:5454;
+  proxy_pass $notifiarr$request_uri;
+}
+
+location /notifiarr {
+  proxy_set_header X-Forwarded-For $remote_addr;
+  proxy_set_header X-WebAuth-User $_username;
+  set $notifiarr http://192.168.3.33:5454;
+  proxy_pass $notifiarr$request_uri;
+}
+```
+
+> If using Authelia or Organizr ensure they are passing the username header
+{.is-info}
+
+Here are two more example Nginx configs:
+
+- [TRaSH-'s Swag](https://gist.github.com/TRaSH-/037235b0440b38c8964a2cbb64179cf3) - A drop-in for Swag users.
+- [Captain's Custom](https://github.com/Go-Lift-TV/organizr-nginx/blob/master/golift/notifiarr.conf) - Fits into Captain's Go Lift setup. Not for everyone.
+=======
+### NGINX Subdomain Example
+
+Example Needed
+>>>>>>> main

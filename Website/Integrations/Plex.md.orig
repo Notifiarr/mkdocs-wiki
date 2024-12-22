@@ -1,0 +1,137 @@
+---
+title: Plex
+description: 
+published: true
+<<<<<<< HEAD
+date: 2022-10-30T15:45:36.427Z
+=======
+date: 2023-01-17T16:45:06.651Z
+>>>>>>> main
+tags: 
+editor: markdown
+dateCreated: 2021-05-23T04:11:41.340Z
+---
+
+<<<<<<< HEAD
+> This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](/Client/Installation).
+=======
+> This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](/Client/Installation).{.is-info}
+>>>>>>> main
+
+Reaction example:
+
+![reaction.png](/plex/reaction.png)
+
+## Trigger options
+
+![trigger-channels.png](/plex/trigger-channels.png)
+
+1. Triggers
+    - `Play` - Notify when a user starts playing media
+    - `Resume` - Notify when a user resumes playing media
+    - `Finished` - Notify when a user finishes playing media
+    - `Rating` - Notify when a user rates a movie/show
+    - `New Item` - Notify when a new item is added to plex (requires push notifications enabled)
+    - `Sessions` - Get notifications about streaming sessions and minimal server information
+    - `Devices` - Notify when a new device is added
+    - `Backup` - Notify when a backup was completed
+    - `Corruption` - Notify when database corruption is detected
+1. Channel
+    - Channel(s) to use for sending plex notifications
+
+## Configuration
+
+![open-configuration.png](/plex/open-configuration.png)
+
+Click the **cog icon** to open the configuration options for Plex.
+
+![configuration.png](/plex/configuration.png)
+
+1. Notification triggers
+2. Notification colors
+3. Custom Icon (Subscriber Feature)
+4. Content lines are small previews of the full notification for toast/push notifications
+### Notification Options
+![notification-options.png](/plex/notification-options.png)
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+### User/Device
+
+![configuration-2.png](/plex/configuration-2.png)
+
+1. Table of all users and devices. Uncheck the notify box to not receive notifications from the specific user/device.
+1. Keyword for having the bot display what is currently streaming on your server.
+
+### Session Killing
+
+![configuration-3.png](/plex/configuration-3.png)
+
+1. Kill all sessions from a given user/device (Maybe a user shared their login with someone else)
+1. Kill the session after rules have been met
+1. Notify when sessions are automatically killed
+
+### Library Trash
+
+![configuration-4.png](/plex/configuration-4.png)
+
+1. Keyword to trigger a cleanup outside the set frequency and time
+2. Check which libraries you want the automated trash cleanup
+3. The time and frequency of the automated cleanup
+4. The times for the library
+
+## Client Settings
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
+![client-settings.png](/plex/client-settings.png)
+1. Account Map - `This will map user emails in your notifications to a user friendly name`
+![account-map.png](/plex/account-map.png)
+- Track Play/Resume sessions - `Check this if you want to get Play/Resume notifications but do not have a Plex Pass`
+- Finished Movie - `This is a percentage setting for when to send a finished playing movie notification, 0 to disable, 70 min and 95-98 suggested`
+- Finished Episode - `This is a percentage setting for when to send a finished playing episode notification, 0 to disable, 70 min and 95-98 suggested`
+- Include Activity - `This is a used to send speed, transcode, container, etc information in plex notifications`
+- Activity Delay - `This is how long to wait after media is started before getting the session, at least 10-12 seconds is needed`
+2. Interval - `This is how often to send a notification for the Plex Sessions trigger, nothing sends if there is no media playing or paused`
+![interval.png](/plex/interval.png)
+
+
+## Instructions
+
+This integration requires the [Notifiarr client](/Client/Client-UI#media-apps) to be running locally. You can get it from [Github](https://github.com/Notifiarr/notifiarr/releases). After installing, you need to setup plex in the UI. An example is
+
+![instructions.png](/plex/instructions.png)
+
+1. The name for Plex comes from Plex and cannot be changed here. There is no automatic way to add a service check to Plex. If you want service checks, add one for it in Service Checks.
+<<<<<<< HEAD
+
+2. `http://` or `https://` URL for the application instance. If your application has a Base URL, include it. Providing an https:// URL reveals a checkbox. Checking this box enables SSL certificate validation; invalid certificates generate an error.
+
+3. Your Plex Token you may find directions for locating your Plex token at this [Plex Article](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/).
+
+4. This controls the maximum duration a request to this application may elapse. Selecting No Timeout can be dangerous. Selecting Disabled completely disables the instance.
+
+### Webhook
+
+In plex, add a [webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
+![webhook.png](/plex/webhook.png)
+Replace `http://localhost:port` with the path:port to the Notifiarr client
+Replace plex-token-here with the token for plex so the Notifiarr client allows the incoming connection
+=======
+1. `http://` or `https://` URL for the application instance. If your application has a Base URL, include it. Providing an https:// URL reveals a checkbox. Checking this box enables SSL certificate validation; invalid certificates generate an error.
+1. Your Plex Token you may find directions for locating your Plex token at this [Plex Article](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/).
+1. This controls the maximum duration a request to this application may elapse. Selecting No Timeout can be dangerous. Selecting Disabled completely disables the instance.
+
+### Webhook
+
+> [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require [Plexpass](https://www.plex.tv/plex-pass/)
+{.is-info}
+
+In Plex, [add a webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
+- Replace `localhost:port` with the `ip:port` to the Notifiarr client
+- Replace `plex-token-here` with the token for Plex so the Notifiarr client allows the incoming connection
+
+![webhook.png](/plex/webhook.png)
+>>>>>>> main

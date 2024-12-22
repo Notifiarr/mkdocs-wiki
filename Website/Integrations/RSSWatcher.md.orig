@@ -1,0 +1,30 @@
+---
+title: RSS Watcher
+description: 
+published: true
+<<<<<<< HEAD
+date: 2022-11-02T12:38:59.762Z
+=======
+date: 2022-11-02T12:39:01.064Z
+>>>>>>> main
+tags: 
+editor: markdown
+dateCreated: 2022-10-20T22:10:41.417Z
+---
+
+## Integration Card
+![configuration1.png](/rsswatcher/configuration1.png)
+1. Configuration
+2. Channel picker for the feeds
+### Channel Picker
+![configuration2.png](/rsswatcher/configuration2.png)
+1. List of channels <sup>Dropdown menu</sup>
+2. Test bot channel permissions
+3. Copy Channel to all
+## Configuration
+![configuration3.png](/rsswatcher/configuration3.png)
+1. Custom Icon <sup>Subscriber Feature</sup>
+2. List of preset RSS feeds you can toggle on to get notifications from
+3. Name of custom feed
+4. URL for the RSS feed you wanna add
+5. regex filter of things to post
