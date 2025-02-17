@@ -1,0 +1,70 @@
+site_name: Wiki
+site_author: nitsua
+site_description: Notifiarr provides native custom integrations with dozens of applications and websites. That means these applications or websites can send data to Notifiarr, and we’ll format a message according to your configuration then send it to your chat server.
+site_url: http://rm-web-1:8007/en/latest/
+repo_name: Client
+repo_url: https://github.com/Notifiarr/notifiarr
+repo_wiki_name: Wiki
+repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
+
+nav:
+  - Notifiarr:
+    - About: index.md
+  - Client:
+    - Install: pages/client/install.md
+    - Reverse proxy: pages/client/reverseProxy.md
+    - Cloudflare config: pages/client/cloudflare.md
+    - GUI: pages/client/gui.md
+    - Setup: pages/client/setup.md
+  - Website:
+    - Wizard: pages/website/wizard.md
+  - Discord Bot:
+    - Inviting: pages/bot/invite.md
+    - Permissions: pages/bot/invite.md
+  - Translations:
+    - Contribute: pages/translations/contribute.md
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  language: en
+  features:
+    - content.code.annotate
+    - content.tabs.link
+    - content.code.copy
+    - header.autohide
+    - announce.dismiss
+    - navigation.footer
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
