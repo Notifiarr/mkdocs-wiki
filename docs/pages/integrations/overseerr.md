@@ -1,0 +1,24 @@
+## Integration Card
+![instructions2.png](/overseerr/instructions2.png)
+1. Configuration
+2. Channel picker for the notifications
+### Channel Picker
+![instructions3.png](/overseerr/instructions3.png)
+1. List of channels <sup>Dropdown menu</sup>
+2. Test bot channel permissions
+3. Copy Channel to all
+## Configuration
+![instructions4.png](/overseerr/instructions4.png)
+1. Notification triggers
+2. Notification Options
+3. Notification Color
+4. Custom Icon <sup>Subscriber Feature</sup>
+5. Save your changes when done
+## Instructions
+![instructions1.png](/overseerr/instructions1.png)
+1. Notifications Settings
+2. Webhook
+3. Enable the webhook agent
+4. Add the notification URL `https://notifiarr.com/api/v1/notification/overseerr/api_key_here` - Make sure to make a api key specific to overseerr
+5. Notification types you want to receive
+6. Save changes and enable the webhook
