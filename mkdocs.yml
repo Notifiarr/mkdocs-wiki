@@ -10,6 +10,8 @@ repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
 nav:
   - Notifiarr:
     - About: index.md
+  - Quick Start:
+    - Quick Start: pages/quickstart/quickStart.md
   - Client:
     - Install: pages/client/install.md
     - Reverse proxy: pages/client/reverseProxy.md
@@ -17,12 +19,53 @@ nav:
     - GUI: pages/client/gui.md
     - Setup: pages/client/setup.md
   - Website:
-    - Wizard: pages/website/wizard.md
+    - Config: pages/website/configuration.md
+    - Client config: pages/website/clientConfig.md
+    - Integrations setup: pages/website/integrationsSetup.md
+    - Media requests: pages/website/mediaRequests.md
+    - Notification history: pages/website/notificationHistory.md
+    - Transcode history: pages/website/transcodeHistory.md
+    - Trending: pages/website/trending.md
+    - Translations: pages/website/translations.md
+    - Metrics: pages/website/metrics.md
+  - Integrations:
+    - Basic Usage: pages/integrations/basicUsage.md
+    - Bazarr: pages/integrations/bazarr.md
+    - Better Uptime: pages/integrations/betterUptime.md
+    - Dashboard: pages/integrations/dashboard.md
+    - Discord App: pages/integrations/discordApp.md
+    - Emby: pages/integrations/emby.md
+    - Github: pages/integrations/github.md
+    - Hotio: pages/integrations/hotio.md
+    - Jellyfin: pages/integrations/jellyfin.md
+    - Lidarr: pages/integrations/lidarr.md
+    - Log Watcher: pages/integrations/logWatcher.md
+    - Media Requests: pages/integrations/mediaRequests.md
+    - MDBList: pages/integrations/mdblist.md
+    - Network: pages/integrations/network.md
+    - Passthrough: pages/integrations/passthrough.md
+    - Persistent: pages/integrations/persistent.md
+    - Plex: pages/integrations/plex.md
+    - Plex Meta Manager: pages/integrations/plexmetamanager.md
+    - Overseerr: pages/integrations/overseerr.md
+    - Radarr: pages/integrations/radarr.md
+    - Readarr: pages/integrations/readarr.md
+    - Release Parser: pages/integrations/releaseParser.md
+    - Reddit: pages/integrations/reddit.md
+    - RSS Watcher: pages/integrations/rssWatcher.md
+    - Simon Says: pages/integrations/simonSays.md
+    - Snapshots: pages/integrations/snapshots.md
+    - Sonarr: pages/integrations/sonarr.md
+    - TRaSH: pages/integrations/trash.md
+    - Unpackerr: pages/integrations/unpackerr.md
+    - Website Status: pages/integrations/websitestatus.md
   - Discord Bot:
     - Inviting: pages/bot/invite.md
     - Permissions: pages/bot/invite.md
   - Translations:
     - Contribute: pages/translations/contribute.md
+  - Faq: 
+    - Faq: pages/faq/faq.md
 
 theme:
   name: material
@@ -46,6 +89,8 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
+    - instant
+
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -64,7 +109,10 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - tables
+  
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
   - md_in_html
+

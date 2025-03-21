@@ -39,8 +39,6 @@ I built Notifiarr in late 2019 for [myself](https://github.com/austinwbest), and
 
 ## Integrations
 
-See the [integrations](/Website/Integrations) page.
-
 ## Additional Features
 
 * Fully configurable on what triggers to get notifications for. Each integration and many triggers in them can go to their own channels.

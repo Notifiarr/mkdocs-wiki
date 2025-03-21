@@ -15,7 +15,7 @@ For initial runs:
 - If the API Key is configured and valid your password is the APIKey
 - If the API Key is invalid and if there is no existing config the password will be printed in the logs on first run.
 
-![login_screen.png](/client-ui/login_screen.png)
+![login](../../assets/screenshots/client/login.png)
 
 # Forgotten Passwords
 
@@ -77,7 +77,7 @@ grep ui_password  /mnt/user/appdata/Notifiarr/notifiarr.conf
 
 Once logged in you will be taken to the Homepage. From here you are free to navigate the Client and have the power to Modify, Update, Trigger Applications/Integrations and much, much more.
 
-![ui_homepage2.png](/client-ui/ui_homepage2.png)
+![ui_homepage2.png](../../assets/screenshots/client/ui_homepage2.png)
 
 1. `Notifiarr Client` - Clicking this at any stage will take you back to the Homescreen.
 1. `Admin` - Provides the user the option to view their profile and to log out of the Client UI.
@@ -91,11 +91,11 @@ Once logged in you will be taken to the Homepage. From here you are free to navi
 
 # Admin
 
-![admin.jpg](/client-ui/admin.jpg)
+![admin.jpg](../../assets/screenshots/client/admin.jpg)
 
 1. `Profile` - In here you can change your username and password.
 
-![user_profile.png](/client-ui/user_profile.png)
+![user_profile.png](../../assets/screenshots/client/user_profile.png)
 
 1. `Logout` - Log out of your Client Homepage.
 
@@ -105,7 +105,7 @@ Once logged in you will be taken to the Homepage. From here you are free to navi
 
 The following sections will be discussed in more detail.
 
-![settings.png](/client-ui/settings.png)
+![settings.png](../../assets/screenshots/client/settings.png)
 
 ## Configuration
 
@@ -115,7 +115,7 @@ Under the configuration menue you can further setup your Notifiarr Client within
 {.is-warning}
 
 Variables being overwritten with an enviormental variable will look like this.
-![ui_fieldlocked_envvar.png](/client-ui/ui_fieldlocked_envvar.png)
+![ui_fieldlocked_envvar.png](../../assets/screenshots/client/ui_fieldlocked_envvar.png)
 
 ---
 
@@ -125,12 +125,12 @@ The General section is more catered to the ingress and egress options/functional
 > In most cases the default value will be fine and should only be modified if required.
 {.is-info}
 
-![general3.png](/client-ui/general3.png)
+![general3.png](../../assets/screenshots/client/general3.png)
 
 1. `Setting Column` - Contains the settings you are modifying.
-1. `Current Value Column` - Shows the current value of the setting
-1. `New Value Column` - Shows the new value for the setting that is being changed.
-1. `API Key` - API key from your Notifiarr.com account, required for security validation.
+2. `Current Value Column` - Shows the current value of the setting
+3. `New Value Column` - Shows the new value for the setting that is being changed.
+4. `API Key` - API key from your Notifiarr.com account, required for security validation.
 
 > This API must be an All key!
 {.is-warning}
@@ -150,7 +150,7 @@ The General section is more catered to the ingress and egress options/functional
 
 The SSL section handles the SSL Certificates and where they are kept so that the Client may use it.
 
-![ssl.png](/client-ui/ssl.png)
+![ssl.png](../../assets/screenshots/client/ssl.png)
 
 1. `Cert Key File Path` - This is the path to the SSL certificate key file. This is a secret! See Certificate File help for more info.
 1. `Cert File Path` - This application can serve HTTPS. Enable that by specifying a certificate file path and key file path. The certificate file should have the full CA chain included.
@@ -163,7 +163,7 @@ The Services section is used specifically to adjust the Service checking of all 
 > In most cases the default value will be fine and should only be modified if required.
 {.is-info}
 
-![services.png](/client-ui/services.png)
+![services.png](../../assets/screenshots/client/services.png)
 
 1. `Run Checks` - Disable or enable monitoring all network and services checks right here.
 1. `Parallel Checks` - Normally running service checks 1 at a time is fine, but if you have more than 30 or 40, you may want to increase this. This controls how many checks may run at once.
@@ -178,7 +178,7 @@ The Logging section, as the name suggests, is centred around the Notifiarr Clien
 > In most cases the default value will be fine and should only be modified if required.
 {.is-info}
 
-![logging1.png](/client-ui/logging1.png)
+![logging1.png](../../assets/screenshots/client/logging1.png)
 
 1. `Debug Logging` - Enabling debug logging causes a lot more data to write to the log. Includes payloads to and from Notifiarr.com and starr apps. Use Max Body settings to control payloads sizes.
 1. `Quiet Logging` - Enabling Quiet makes the app not print anything to stdout. This is useful when a log file is enabled and you don't want logs spewing into a start-up daemon too.
