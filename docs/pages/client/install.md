@@ -23,8 +23,8 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
     sudo nano /etc/notifiarr/notifiarr.conf
     sudo systemctl restart notifiarr
     ```
-
-> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ## Arch Linux
 
@@ -46,12 +46,12 @@ wget -qO- https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
-
-> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ## TrueNAS Scale
 
-!!! warning
+!!! warning "TrueNAS"
     Please be aware none of us (Devs, Suppprt, etc.) use this but hopefully for those who do this is helpful.
 
 - Consider moving away from TrueNAS Scale, and more specifically **you must move away from TrueCharts for Notifiarr** as Notifiarr v0.7.1 is broken / unsupported and TrueCharts will not upgrade the chart.
@@ -75,12 +75,12 @@ service notifiarr start
     1. `~/.notifiarr/notifiarr.log`
 1. Edit the config file and reload or restart the app from the menu bar.
 
-> See [Configuration Instructions Here](/Client/Configuration#web-ui)
-{.is-info}
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ### Homebrew
-
-> Homebrew is not recommend, and may be discontinued in the future.
+!!! warning "Homebrew users"
+    Homebrew is not recommend, and may be discontinued in the future.
 
 1. Install Notifiarr
 1. Edit config file at `/usr/local/etc/notifiarr/notifiarr.conf`
@@ -147,7 +147,8 @@ brew services start notifiarr
     - Option B: Right click on the notifiarr icon and pick Logs -> View and get the login credentials from there
     - Option C: Open the notifiarr.conf and look at the top for `ui_password` to get the credentials
 
-> [Launch the web interface and set it up](/Client/Configuration#web-ui)
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ## Synology
 
@@ -157,7 +158,8 @@ brew services start notifiarr
 curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install-synology.sh | sudo bash
 ```
 
-> [Launch the web interface and set it up](/Client/Configuration#web-ui)
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ## Docker
 
@@ -181,16 +183,13 @@ A sample docker compose file may be found [in the Github repo here](https://gith
 1. Map the `/var/run/utmp` volume if you want to count users.
 1. Mount any volumes you want to report storage space for. Where does not matter, "where" is the "name". e.g. `/mnt/nas/data:/synonas`
 
-!!! important
-    You MUST [set a static hostname](/Client/Configuration#hostname). Each client is identified by hostname.
-
+!!! warning
+    You MUST [set a static hostname](../../pages/website/configuration.md#hostname) Each client is identified by hostname.
 ```bash
 docker pull golift/notifiarr
 docker run --name notifiarr -h notifiarr --restart unless-stopped --privileged -p 5454:5454 -v /path/to/notifiarrconfig/:/config -v /var/run/utmp:/var/run/utmp -v /etc/machine-id:/etc/machine-id golift/notifiarr
 docker logs notifiarr
 ```
-
-> See [Configuration Instructions Here to use the Web UI to configure the client](/Client/Configuration#web-ui)
 
 ### Docker Environment Variables
 
@@ -209,21 +208,21 @@ docker logs <container id from docker run>
 
 ## Home Assistant OS
 
-!!! warning
+!!! warning "Home Assistant OS Users"
     Please be aware none of us (Devs, Support, etc.) use this but hopefully for those who do this is helpful.
 
 [Home Assistant Addon](https://github.com/zanyraspi/home-assistant-addons), the person to ask for help is `@ZanY` on the Notifiarr discord (if they are no longer a member, try their Github)
 
 ## Proxmox
 
-!!! warning
+!!! warning "Proxmox Users"
     Please be aware none of us (Devs, Support, etc.) use this but hopefully for those who do this is helpful.
 
 - [Proxmox Helper script](https://helper-scripts.com/scripts?id=Notifiarr) provided by the community
 
 ## UltraCC Seedbox
 
-!!! warning
+!!! warning "UltraCC Seedbox Users"
     Please be aware none of us (Devs, Support, etc.) use this but hopefully for those who do this is helpful.
 
 1. SSH into your Ultra Seedbox

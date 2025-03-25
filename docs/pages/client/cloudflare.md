@@ -1,8 +1,7 @@
 # Notifiarr Client - Cloudflare Configuration
-
-> None of this is required or necessary. **We recommend NOT exposing your 
+!!! danger
+    None of this is required or necessary. **We recommend NOT exposing your 
 Notifiarr client to the Internet at all. In other words, don't do any of this.** But you can if you want to access your local Notifiarr Client from the internet
-{.is-danger}
 
 Many users use Cloudflare's "Cloudflare Tunnel" feature or additional Cloudflare security features to provide / protect external access to their Notifiarr Client box.  Specific configuration required for Cloudflare's various options are detailed below.
 
