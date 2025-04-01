@@ -1,14 +1,14 @@
 ## Integration Card
-![integration_card.png](/rsswatcher/integration_card.png)
+![integration_card.png](../../assets/screenshots/integrations/rsswatcher/integration_card.png)
 1. Configuration
 2. Channel picker for the feeds
 ### Channel Picker
-![discord_channel_setup.png](/rsswatcher/discord_channel_setup.png)
+![discord_channel_setup.png](../../assets/screenshots/integrations/rsswatcher/discord_channel_setup.png)
 1. List of channels <sup>Dropdown menu</sup>
 2. Test bot channel permissions
 3. Copy Channel to all
 ## Configuration
-![integration_settings.png](/rsswatcher/integration_settings.png)
+![integration_settings.png](../../assets/screenshots/integrations/rsswatcher/integration_settings.png)
 1. Page to configure the RSS Watcher.
 2. Custom Icon <sup>Subscriber Feature</sup>
 3. Example screenshots of what you can expect the notification to look like.

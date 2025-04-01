@@ -1,7 +1,7 @@
 # Passthrough
+!!! info
+    This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.
 
-> This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.
-{.is-info}
 
 By sending them through this integration you can keep track of how many it has sent, when the last one was, status code, etc
 

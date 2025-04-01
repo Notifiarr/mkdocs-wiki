@@ -22,13 +22,13 @@ When a new docker image is deployed with an empty /config folder mounted, the ap
 - Must provide the "All" API key from your [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
   - **The Notifiarr application uses the API key for bi-directional authorization between the Site and the Client.**
   
-> **Unraid Users**
-You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
-{.is-danger}
+!!! danger "Unraid Users"
+    You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
 
-> **Docker Users**
-Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
-{.is-info}
+
+!!! info "Docker Users"
+    Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
+
 
 ### Compressed Conf File
 
@@ -76,7 +76,8 @@ It is important that a static hostname is set so the site can keep track of mult
 - TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
 ![truecharts_install.jpg](/truecharts_install.jpg)
 
-Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](/Website/ClientConfiguration#duplicate-clients).
+!!! note 
+    Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients)
 
 ### WSL2 users
 
@@ -134,25 +135,6 @@ Recommend not messing with these unless instructed to do so.
 
 _Note: You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`._
 
-### System Snapshot
-
-> See the [Installation Page](/Client/Installation#system-snapshot)
-{.is-info}
-
-#### Snapshot Sudoers
-
-> See the [Installation Page](/Client/Installation#snapshot-sudoers)
-{.is-info}
-
-#### Snapshot Packages
-
-> See the [Installation Page](/Client/Installation#snapshot-packages)
-{.is-info}
-
-#### Snapshot Configuration
-
-> See the [Installation Page](/Client/Installation#snapshot-configuration)
-{.is-info}
 
 #### MySQL Snapshots
 

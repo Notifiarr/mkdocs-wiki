@@ -1,12 +1,13 @@
-> This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](/Client/Installation).{.is-info}
+!!! info
+    This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](../../pages/client/install.md)
 
 Reaction example:
 
-![reaction.png](/plex/reaction.png)
+![reaction.png](../../assets/screenshots/integrations/plex/reaction.png)
 
 ## Plex Trigger Overview
 
-![trigger_options.png](/plex/trigger_options.png)
+![trigger_options.png](../../assets/screenshots/integrations/plex/trigger_options.png)
 
 1. Opens the integrations settings.
 1. Reloads the integration.
@@ -25,11 +26,11 @@ Reaction example:
 
 ## Integration Settings Menu
 
-![open_config.png](/plex/open_config.png)
+![open_config.png](../../assets/screenshots/integrations/plex/open_config.png)
 
 Click the **cog icon** to open the integration settings for Plex.
 
-![settings1.png](/plex/settings1.png)
+![settings1.png](../../assets/screenshots/integrations/plex/settings1.png)
 
 1. `Basic Instructions` - Gives you basic guidelines on how to setup this integration in the UI.
 1. `Triggers` - Adjust which webhooks will send notifications to you.
@@ -42,7 +43,7 @@ Click the **cog icon** to open the integration settings for Plex.
 1. `Save` - Saves all your Configured settings and closes the Integration Settings Menu.
 
 ### Triggers
-![triggers1.png](/plex/triggers1.png)
+![triggers1.png](../../assets/screenshots/integrations/plex/triggers1.png)
 
 1. Notification triggers.
 1. Notification fields - Select various fields to be displayed in the notification.
@@ -53,20 +54,20 @@ Click the **cog icon** to open the integration settings for Plex.
 Here you can adjust the settings for this integration.
 
 #### User/Device
-![user-device.png](/plex/user-device.png)
+![user-device.png](../../assets/screenshots/integrations/plex/user-device.png)
 
 1. Table of all users and devices. Uncheck the notify box to not receive notifications from the specific user/device.
 1. Keyword for having the bot display what is currently streaming on your server.
 
 #### Session Management
-![session-management.png](/plex/session-management.png)
+![session-management.png](../../assets/screenshots/integrations/plex/session-management.png)
 
 1. `Scope` - Kill all sessions from a given user/device (Maybe a user shared their login with someone else).
 2. `Rules` - Kill the session after rules have been met.
 3. `Action` - Notify when sessions are automatically killed.
 
 #### Library Trash
-![library-trash.png](/plex/library-trash.png)
+![library-trash.png](../../assets/screenshots/integrations/plex/library-trash.png)
 
 *Note: You may see the following error when tab is loading: `Error fetching plex library list.` Ensure the [client settings](#Client-Settings) are saved and try again.*
 1. `Trigger` - Keyword to trigger a cleanup outside the set frequency and time
@@ -80,15 +81,15 @@ Here you can adjust the settings for this integration.
 
 ### Extra Settings
 Additional settings such as automatically unmonitor an episode or movie once a user has watched it. You are able to select multiple users by holding down ctrl and highlighting the names.
-![extra-settings.png](/plex/extra-settings.png)
+![extra-settings.png](../../assets/screenshots/integrations/plex/extra-settings.png)
 
 ### Client Settings
 
-![client-settings11.png](/plex/client-settings11.png)
-![client-settings2.png](/plex/client-settings2.png)
+![client-settings11.png](../../assets/screenshots/integrations/plex/client-settings11.png)
+![client-settings2.png](../../assets/screenshots/integrations/plex/client-settings2.png)
 
 1. `Account Map` - This will map user emails in your notifications to a user friendly name.
-![account-map.png](/plex/account-map.png)
+![account-map.png](../../assets/screenshots/integrations/plex/account-map.png)
 1. `Plex and Tautulli Account Map` - Examples of mapped accounts.
 1. `Track Play/Resume sessions` - Check this if you want to get Play/Resume notifications but do not have a Plex Pass.
 1. `Finished Movie` - This is a percentage setting for when to send a finished playing movie notification, 0 to disable, 70 min and 95-98 suggested.
@@ -101,17 +102,17 @@ Additional settings such as automatically unmonitor an episode or movie once a u
 
 ### Custom Icon
 Assign another icon to notifications from this integration (Subscriber Feature)
-![custom-icon.png](/plex/custom-icon.png)
+![custom-icon.png](../../assets/screenshots/integrations/plex/custom-icon.png)
 
 ### Content Lines
 Content lines are small previews of the full notification for toast/push notifications. Great for wearables.
-![content-lines.png](/plex/content-lines.png)
+![content-lines.png](../../assets/screenshots/integrations/plex/content-lines.png)
 
 ## Instructions
 
-This integration requires the [Notifiarr client](/Client/Client-UI#media-apps) to be running locally. You can get it from [Github](https://github.com/Notifiarr/notifiarr/releases). After installing, you need to setup plex in the UI. An example is
+This integration requires the Notifiarr client to be running locally. You can get it from [Github](https://github.com/Notifiarr/notifiarr/releases). After installing, you need to setup plex in the UI. An example is
 
-![instructions.png](/plex/instructions.png)
+![instructions.png](../../assets/screenshots/integrations/plex/instructions.png)
 
 1. The name for Plex comes from Plex and cannot be changed here. There is no automatic way to add a service check to Plex. If you want service checks, add one for it in Service Checks.
 1. `http://` or `https://` URL for the application instance. If your application has a Base URL, include it. Providing an https:// URL reveals a checkbox. Checking this box enables SSL certificate validation; invalid certificates generate an error.
@@ -119,12 +120,12 @@ This integration requires the [Notifiarr client](/Client/Client-UI#media-apps) t
 1. This controls the maximum duration a request to this application may elapse. Selecting No Timeout can be dangerous. Selecting Disabled completely disables the instance.
 
 ### Webhook
+!!! info
+    [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require [Plexpass](https://www.plex.tv/plex-pass/)
 
-> [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require [Plexpass](https://www.plex.tv/plex-pass/)
-{.is-info}
 
 In Plex, [add a webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
 - Replace `localhost:port` with the `ip:port` to the Notifiarr client
 - Replace `plex-token-here` with the token for Plex so the Notifiarr client allows the incoming connection
 
-![webhook.png](/plex/webhook.png)
+![webhook.png](../../assets/screenshots/integrations/plex/webhook.png)

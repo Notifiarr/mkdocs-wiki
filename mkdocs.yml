@@ -20,7 +20,6 @@ nav:
     - Reverse proxy: pages/client/reverseProxy.md
     - Setup: pages/client/setup.md
   - Website:
-    - Config: pages/website/configuration.md
     - Client config: pages/website/clientConfig.md
     - Integrations setup: pages/website/integrationsSetup.md
     - Media requests: pages/website/mediaRequests.md
@@ -40,7 +39,7 @@ nav:
     - Hotio: pages/integrations/hotio.md
     - Jellyfin: pages/integrations/jellyfin.md
     - Lidarr: pages/integrations/lidarr.md
-    - Log Watcher: pages/integrations/logWatcher.md
+    - Log Watcher: pages/integrations/logWatch.md
     - Media Requests: pages/integrations/mediaRequests.md
     - MDBList: pages/integrations/mdblist.md
     - Network: pages/integrations/network.md
@@ -61,8 +60,8 @@ nav:
     - Unpackerr: pages/integrations/unpackerr.md
     - Website Status: pages/integrations/websitestatus.md
   - Discord Bot:
-    - Inviting: pages/bot/invite.md
-    - Permissions: pages/bot/invite.md
+    - Permissions: pages/discordbot/permissions.md
+    - Custom Bot: pages/discordbot/custombot.md
   - Translations:
     - Contribute: pages/translations/contribute.md
   - Faq: 

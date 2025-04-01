@@ -1,9 +1,10 @@
-> This integration allows for notifications from Sonarr using the connect for Webhooks. In Sonarr click Settings → Connect → <kb>+</kb> → Webhook.
-{.is-info}
+!!! info
+    This integration allows for notifications from Sonarr using the connect for Webhooks. In Sonarr click Settings → Connect → <kb>+</kb> → Webhook.
+
 
 ## Trigger options
 
-![triggers-channels.png](/sonarr/triggers-channels.png)
+![triggers-channels.png](../../assets/screenshots/integrations/sonarr/triggers-channels.png)
 
 ### 1. Triggers
 
@@ -12,8 +13,8 @@
 - `Upgrade` - Receive a notification when **upgraded** media is successfully imported
 - `Deleted` - Be notified when media is deleted
 - `Update` - Receive a notification when the application updates
-- `Backup` - Receive a notification when a backup occurs [(Notifiarr Client Required)](/Client/Main)
-- `Corrupt` - Monitor backups for corruption and size loss [(Notifiarr Client Required)](/Client/Main)
+- `Backup` - Receive a notification when a backup occurs 
+- `Corrupt` - Monitor backups for corruption and size loss 
 - `Failed` - Custom notification type based on previous grabs. If the system detects a grab for the same media with the same quality or better before the previous one was imported then it will set the previous one as failed
 - `Health` - Receive a notification when the application reports an issue
 
@@ -23,18 +24,18 @@
 
 ## Configuration
 
-![open-configuration.png](/sonarr/open-configuration.png)
+![open-configuration.png](../../assets/screenshots/integrations/sonarr/open-configuration.png)
 
 Click the **cog icon** to open the configuration options for Sonarr.
 
-![configuration.png](/sonarr/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/sonarr/configuration.png)
 
 1. Basic instructions on how to add Notifiarr to Sonarr including the proper URL
 1. Trigger options and colors for the notification
 1. Custom icon (Subscriber feature)
 1. An optional content line added to notifications for mobile/wearable devices
 
-![configuration.png](/sonarr/configuration-2.png)
+![configuration.png](../../assets/screenshots/integrations/sonarr/configuration-2.png)
 
 1. Sends an overview once a day of your Sonarr history
 2. Custom regular expression option to exclude health checks that match
@@ -44,12 +45,12 @@ Click the **cog icon** to open the configuration options for Sonarr.
 6. Option to delete the grab notification after the import notification is received
 7. Send notifications with selected ratings (considered 'adult') to another channel
 
-![configuration-2.png](/sonarr/configuration-3.png)
+![configuration-2.png](../../assets/screenshots/integrations/sonarr/configuration-3.png)
 
 1. Notification content options that you can turn on/off to show in the notifications
 1. Launch the integration layout editor (image below)
 
-![layout-editor.png](/sonarr/layout-editor.png)
+![layout-editor.png](../../assets/screenshots/integrations/sonarr/layout-editor.png)
 
 1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
 1. Test Layout - Will send a test notification with the current layout format
@@ -60,7 +61,7 @@ Click the **cog icon** to open the configuration options for Sonarr.
 
 > For the latest instructions - refer to the Instructions within the Integration setting on the site {.is-info}
 
-![layout-editor.png](/sonarr/instructions.png)
+![layout-editor.png](../../assets/screenshots/integrations/sonarr/instructions.png)
 
 1. In Sonarr navigate to Connect => Add New (Plus Button) => Webhook
 2. Enter the webhook URL in the URL field

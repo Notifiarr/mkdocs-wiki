@@ -10,11 +10,11 @@ Corruption checks require a temp folder to write the db file. This may be a coup
 
 ### Resolving Duplicate Clients
 
-- If you have duplicate clients on the website and are [setting a hostname after the fact](#hostname), [see these instructions](/Website/ClientConfiguration#resolving-duplicate-clients) for resolving the duplicates after setting a hostname.
+- If you have duplicate clients on the website and are [setting a hostname after the fact](#hostname), [see these instructions](../../pages/website/clientConfig.md#resolving-duplicate-clients) for resolving the duplicates after setting a hostname.
 
 ## Notifiarr Website
 
-There are non-integration related settings and triggers are configured on the Notifiarr site in the `Notifiarr Client Configuration` popup (button is located at the top of the setup page. You can get some insight about that [on the wiki](/Website/ClientConfiguration) as well. Integration specific timers and settings are found in the Client Configuration of each Integration that uses the Client.
+There are non-integration related settings and triggers are configured on the Notifiarr site in the `Notifiarr Client Configuration` popup (button is located at the top of the setup page. You can get some insight about that [on the wiki](../../pages/website/clientConfig.md) as well. Integration specific timers and settings are found in the Client Configuration of each Integration that uses the Client.
 
 ## Web UI
 
@@ -100,7 +100,7 @@ It is important that a static hostname is set so the site can keep track of mult
 - TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
 ![truecharts_install.jpg](/truecharts_install.jpg)
 
-Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](/Website/ClientConfiguration#duplicate-clients).
+Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
 
 ### WSL2 users
 

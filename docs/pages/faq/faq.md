@@ -47,7 +47,7 @@ ping origin-proxy.notifiarr.com
 
 ## Q. How do I monitor the queue for stuck items?
 
-- Open the [Client Settings](/Website/ClientConfiguration) on the site and expand the **Starr** section to set the notify times.
+- Open the [Client Settings](../../pages/website/clientConfig.md) on the site and expand the **Starr** section to set the notify times.
 
 - It will notify once when it thinks it is stuck and then update the existing message every 5 minutes until it is imported so you can see the amount of time it is stuck and why. Messages go to the shared `Errors` channel.
 
@@ -83,9 +83,9 @@ curl -I -H "X-Plex-Token: <token>" <url>/status/sessions
 
 If session info is missing from notifications or the sessions notification is not working:
 
-- Make sure you dont have duplicated clients in the [Client Settings](/Website/ClientConfiguration)
-- Make sure you have a [client](/Website/ClientConfiguration) setup for Plex
-- Make sure you have selected the **Activity** checkbox in the Plex section of the [Client Settings](/Website/ClientConfiguration)
+- Make sure you dont have duplicated clients in the [Client Settings](../../pages/website/clientConfig.md)
+- Make sure you have a [client](../../pages/website/clientConfig.md) setup for Plex
+- Make sure you have selected the **Activity** checkbox in the Plex section of the [Client Settings](../../pages/website/clientConfig.md)
 - Try to increase the **Activity Delay** in the Plex section of the [Client Settings](https://notifiarr.wiki/en/Website/ClientConfiguration) as this will give Plex more time to get the session available in the endpoint
 - Note 1: The sessions notifications will only send when there is at least one item being played or paused
 - Note 2: It doesn't matter what Tautulli shows or the Plex Dashboard shows, they both use the same sessions endpoint. If you where to look at them at the same time as the notification is sent (when it doesn't work) they would also not show the session yet. How long it takes Plex & your (possibly low powered or over worked) server to make the session available in the endpoint is out of our control which is why we added the delay option
@@ -108,30 +108,3 @@ If session info is missing from notifications or the sessions notification is no
 | 7 days | 14 days | Unlimited | Network | Status retention (used for the network status page to show uptime and for detail links in notifications) |
 | 14 days | 30 days | Unlimited | Plex | Session retention (used for tracking transcodes by device, app, user, media type, etc and sessions notifications) |
 | 7 days | 14 days | Unlimited | Website Status | Incident retention (used for network status page to show uptime) |
-
-### Features by integration
-
-These are available to one time patrons or subs (not always up to date with everything but we try)
-| Patron | Subscriber | Integration | Status | Setting |
-| :- | :- | :- | :- | :- |
-| | <i class="v-icon mdi mdi-check green--text"></i> | Core | Available | BYOB (Use your own bot, discord.js instance hosted by Notifiarr) | 
-| | <i class="v-icon mdi mdi-check green--text"></i> | All | Available | Custom integration icons for notifications | 
-| | <i class="v-icon mdi mdi-check green--text"></i> | Client | Available | Custom commands which execute user scripts locally that can be triggered automatically based on notifications, timers or manually in discord with a keyword | 
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Emby | Available | Automatically unmonitor items (in starr apps) with finished notifications. User rules available |
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Jellyfin | Available | Automatically unmonitor items (in starr apps) with finished notifications. User rules available |
-| | <i class="v-icon mdi mdi-check green--text"></i> | Lidarr | Available | Actionable links in discord for stuck items such as ignore, change category, delete, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Lidarr | In-Progress | Actionable links in discord for delayed items such as grab now, remove, etc
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Plex | Available | Automatically unmonitor items (in starr apps) with finished notifications. User rules available |
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Plex | Available | Manual session killing with Discord bot interaction |
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Plex | Available | Automated session killing based on media, user and device rules |
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | Plex | Available | Automated trash management based on library and scheduled times |
-| | <i class="v-icon mdi mdi-check green--text"></i> | Radarr | Available | Actionable links in discord for stuck items such as ignore, change category, delete, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Radarr | In-Progress | Actionable links in discord for delayed items such as grab now, remove, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Radarr | Available | Gaps collection monitoring with UI for filtering (this is mostly built into Radarr v4 now)
-| | <i class="v-icon mdi mdi-check green--text"></i> | Readarr | Available | Actionable links in discord for stuck items such as ignore, change category, delete, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Readarr | In-Progress | Actionable links in discord for delayed items such as grab now, remove, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Sonarr | Available | Actionable links in discord for stuck items such as ignore, change category, delete, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | Sonarr | In-Progress | Actionable links in discord for delayed items such as grab now, remove, etc
-| <i class="v-icon mdi mdi-check green--text"></i> | <i class="v-icon mdi mdi-check green--text"></i> | TRaSH | Available | Sync custom formats, release profiles, naming convention, scores, etc with multiple instances. Use custom scores, score multipliers, mass manage CFs and RPs, etc
-| | <i class="v-icon mdi mdi-check green--text"></i> | TRaSH | Available | Queue priority (move to the top when multiple people are in queue)
-| | <i class="v-icon mdi mdi-check green--text"></i> | TRaSH | Available | Instant sync (start a sync as soon as TRaSH pushed an update)

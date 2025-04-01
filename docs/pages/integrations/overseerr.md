@@ -1,21 +1,31 @@
+!!! info
+    this is the same for jellyseerr
+
 ## Integration Card
-![instructions2.png](/overseerr/instructions2.png)
+![instructions2.png](../../assets/screenshots/integrations/overseerr/instructions2.png)
+
 1. Configuration
 2. Channel picker for the notifications
+
 ### Channel Picker
-![instructions3.png](/overseerr/instructions3.png)
+![instructions3.png](../../assets/screenshots/integrations/overseerr/instructions3.png)
+
 1. List of channels <sup>Dropdown menu</sup>
 2. Test bot channel permissions
 3. Copy Channel to all
+
 ## Configuration
-![instructions4.png](/overseerr/instructions4.png)
+![instructions4.png](../../assets/screenshots/integrations/overseerr/instructions4.png)
+
 1. Notification triggers
 2. Notification Options
 3. Notification Color
 4. Custom Icon <sup>Subscriber Feature</sup>
 5. Save your changes when done
+
 ## Instructions
-![instructions1.png](/overseerr/instructions1.png)
+![instructions1.png](../../assets/screenshots/integrations/overseerr/instructions1.png)
+
 1. Notifications Settings
 2. Webhook
 3. Enable the webhook agent

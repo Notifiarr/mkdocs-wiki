@@ -1,4 +1,5 @@
-![overview.png](/snapshots/overview.png)
+![overview.png](../../assets/screenshots/integrations/snapshots/overview.png)
+
 1. Reloads the integration.
 1. Opens the integrations settings.
 1. A list of locations which have the Notifiarr client installed.
@@ -8,11 +9,11 @@
 
 ## Integration Settings Menu
 
-![open_config.png](/snapshots/open_config.png)
+![open_config.png](../../assets/screenshots/integrations/snapshots/open_config.png)
 
 Click the **cog icon** to open the integration settings for the Snapshot integration.
 
-![settings.png](/snapshots/settings.png)
+![settings.png](../../assets/screenshots/integrations/snapshots/settings.png)
 
 1. `Basic Instructions` - Gives you basic guidelines on how to setup this integration.
 1. `Integration Settings` - Allows the user to further configure the integration.
@@ -28,16 +29,18 @@ Click the **cog icon** to open the integration settings for the Snapshot integra
 
 Before all the configuration options are available you must "Pick a client" from the drop-down list. This will typically be the hostname you have for your locally installed Notifiarr client.
 
-![integration_settings1.png](/snapshots/integration_settings1.png)
+![integration_settings1.png](../../assets/screenshots/integrations/snapshots/integration_settings1.png)
 
 These are all the configurable options available to the user.
 
-![integration_settings.png](/snapshots/integration_settings.png)
+![integration_settings.png](../../assets/screenshots/integrations/snapshots/integration_settings.png)
 
 1. `Pick a client` - Select the local Notifiarr client you wish to configure for alerting.
 1. `Trigger` - What the Snapshot integration will alert on.
 The following Trigger options are available.
-![trigger_options.png](/snapshots/trigger_options.png)
+
+![trigger_options.png](../../assets/screenshots/integrations/snapshots/trigger_options.png)
+
 1. `Comparator` - Allows the user to configure alerts using one of the following, =, <=, >=, contains OR does not contain.
 1. `Value` - What value shall be used to trigger the alert.
 1. `@mention` - Pick a user or role and Discord will ping you if there is an alert.
@@ -67,7 +70,7 @@ The triggers used by the snapshot integration have the following allowed values.
 
 Allows the user to update existing messages and change between Fahrenheit and Celsius.
 
-![extra_settings.jpg](/snapshots/extra_settings.jpg)
+![extra_settings.jpg](../../assets/screenshots/integrations/snapshots/extra_settings.jpg)
 
 ---
 
@@ -75,7 +78,7 @@ Allows the user to update existing messages and change between Fahrenheit and Ce
 
 Here are all the different settings for your client. These selections will determin what notifications will be monitored and reported on.
 
-![client_settings.jpg](/snapshots/client_settings.jpg)
+![client_settings.jpg](../../assets/screenshots/integrations/snapshots/client_settings.jpg)
 
 ---
 
@@ -83,6 +86,6 @@ Here are all the different settings for your client. These selections will deter
 
 If you are AWESOME and are one of our Sub's then you will see this option and can upload your own custom icon.
 
-![custom_icon.jpg](/snapshots/custom_icon.jpg)
+![custom_icon.jpg](../../assets/screenshots/integrations/snapshots/custom_icon.jpg)
 
 

@@ -24,7 +24,7 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
     sudo systemctl restart notifiarr
     ```
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
 
 ## Arch Linux
 
@@ -32,7 +32,8 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
 - Build a package with `makepkg` using the [`aur` source](https://github.com/golift/aur)
 
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
+
 
 ## FreeBSD
 
@@ -48,7 +49,8 @@ vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
+
 
 ## TrueNAS Scale
 
@@ -77,7 +79,8 @@ service notifiarr start
 1. Edit the config file and reload or restart the app from the menu bar.
 
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
+
 
 ### Homebrew
 !!! warning "Homebrew users"
@@ -149,7 +152,8 @@ brew services start notifiarr
     - Option C: Open the notifiarr.conf and look at the top for `ui_password` to get the credentials
 
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
+
 
 ## Synology
 
@@ -160,7 +164,8 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 ```
 
 !!! info
-    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
+    See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
+
 
 ## Docker
 
@@ -185,7 +190,7 @@ A sample docker compose file may be found [in the Github repo here](https://gith
 1. Mount any volumes you want to report storage space for. Where does not matter, "where" is the "name". e.g. `/mnt/nas/data:/synonas`
 
 !!! warning
-    You MUST [set a static hostname](../../pages/website/configuration.md#hostname) Each client is identified by hostname.
+    You MUST [set a static hostname](../../pages/client/configuration.md#hostname) Each client is identified by hostname.
 ```bash
 docker pull golift/notifiarr
 docker run --name notifiarr -h notifiarr --restart unless-stopped --privileged -p 5454:5454 -v /path/to/notifiarrconfig/:/config -v /var/run/utmp:/var/run/utmp -v /etc/machine-id:/etc/machine-id golift/notifiarr

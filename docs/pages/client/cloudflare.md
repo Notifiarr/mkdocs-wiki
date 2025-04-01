@@ -5,11 +5,6 @@ Notifiarr client to the Internet at all. In other words, don't do any of this.**
 
 Many users use Cloudflare's "Cloudflare Tunnel" feature or additional Cloudflare security features to provide / protect external access to their Notifiarr Client box.  Specific configuration required for Cloudflare's various options are detailed below.
 
-- [Cloudflare Tunnel](#cloudflare-tunnel)
-- [Cloudflare Web Access Firewall (WAF)](#waf-rule)
-- [Notifiarr Site Access Only](#increased-security)
-{.links-list}
-
 ## Cloudflare Tunnel
 
 > This assumes that you already have a Cloudflare Tunnel set up on your system. If you want to get started with Cloudflare Tunnels follow this YouTube guide first: [Cloudflare Tunnel: Creating Tunnels via GUI - Bypass CG-NAT

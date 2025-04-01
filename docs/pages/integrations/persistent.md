@@ -1,9 +1,10 @@
-> This integration allows for notifications to always stay in the channel. Anytime someone posts, it will remove its previous post and readd it to the bottom of the channel.
-{.is-info}
+!!! info
+     This integration allows for notifications to always stay in the channel. Anytime someone posts, it will remove its previous post and readd it to the bottom of the channel.
+
 
 ## Trigger options
 
-![trigger-channels.png](/persistent/trigger-channels.png)
+![trigger-channels.png](../../assets/screenshots/integrations/persistent/trigger-channels.png)
 
 1. Triggers
     - `Active` - Enable notifications
@@ -12,10 +13,10 @@
 
 ## Configuration
 
-![open-configuration.png](/persistent/open-configuration.png)
+![open-configuration.png](../../assets/screenshots/integrations/persistent/open-configuration.png)
 
 Click the **cog icon** to open the configuration options for Persistent messages.
 
-![configuration.png](/persistent/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/persistent/configuration.png)
 
 - Pick the channel you want to add a persistent message to and give it a title with a message.

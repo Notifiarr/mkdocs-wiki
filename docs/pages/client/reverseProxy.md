@@ -11,7 +11,7 @@ While you can certainly poke a hole your firewall and send the traffic directly 
 
 ## Cloudflare Users
 
-Cloudflare Firewall / ZeroTrust users - See [this wiki entry](/Client/Client-Cloudflare) to ensure Notifiarr is allowed through Cloudflare
+Cloudflare Firewall / ZeroTrust users - See [this wiki entry](../../pages/client/cloudflare.md) to ensure Notifiarr is allowed through Cloudflare
 
 ## NGINX Subfolder Example
 
