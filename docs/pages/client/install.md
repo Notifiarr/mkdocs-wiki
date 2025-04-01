@@ -31,7 +31,8 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
 - This one is special; hope you know what you're doing.
 - Build a package with `makepkg` using the [`aur` source](https://github.com/golift/aur)
 
-> See [Configuration Instructions Here](/Client/Configuration#web-ui)
+!!! info
+    See [Configuration Instructions Here](../../pages/website/configuration.md#web-gui)
 
 ## FreeBSD
 

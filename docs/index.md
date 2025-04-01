@@ -40,10 +40,7 @@ we have a big community, if you need assistance you can ask there by opening a s
 I built Notifiarr in late 2019 for [myself](https://github.com/austinwbest), and it was used by only myself until August of 2020 when I opened it up for others to use. My goal has always been to have a single location for common notification needs, so I am not jumping around 20 apps to do things. [Captain](https://github.com/davidnewhall) joined the crew in December 2020, and the two of us run the servers and write the code for the client and website.
 
 ## Integrations
-<<<<<<< HEAD
 see [integrations](pages/integrations/basicUsage#how-to-setup-integrations)
-=======
->>>>>>> a968b23e322ec8666effa9569ad465da512dad66
 
 ## Additional Features
 

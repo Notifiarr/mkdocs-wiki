@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-![radarr-icon](../../assets/screenshots/integrations/radarr/radarr-logo.png){ width="100" }
 !!! info
      This integration allows for notifications from Radarr using its built in Connection for **Notifiarr**. In Radarr click Settings → Connect → <kb>+</kb> → Notifiarr
-=======
-> This integration allows for notifications from Radarr using its built in Connection for **Notifiarr**. In Radarr click Settings → Connect → <kb>+</kb> → Notifiarr
-{.is-info}
->>>>>>> a968b23e322ec8666effa9569ad465da512dad66
 
 ---
 

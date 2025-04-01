@@ -14,9 +14,10 @@ nav:
     - Quick Start: pages/quickstart/quickStart.md
   - Client:
     - Install: pages/client/install.md
-    - Reverse proxy: pages/client/reverseProxy.md
-    - Cloudflare config: pages/client/cloudflare.md
+    - Config: pages/client/configuration.md
     - GUI: pages/client/gui.md
+    - Cloudflare config: pages/client/cloudflare.md
+    - Reverse proxy: pages/client/reverseProxy.md
     - Setup: pages/client/setup.md
   - Website:
     - Config: pages/website/configuration.md
@@ -106,6 +107,10 @@ theme:
         name: Dark mode
 
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - admonition
   - pymdownx.details
   - pymdownx.superfences
