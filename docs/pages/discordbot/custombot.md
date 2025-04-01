@@ -1,5 +1,5 @@
 !!! info
-     Let the *Admins* know that you want to run your own bot instead of the Notifiarr bot so we can enable it for your account. *Keep in mind this is a Sub feature.*
+     Let the *Staff* know that you want to run your own bot instead of the Notifiarr bot so we can enable it for your account. *Keep in mind this is a Sub feature.*
 
 # Discord
 

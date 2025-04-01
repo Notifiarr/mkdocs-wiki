@@ -70,7 +70,8 @@ service notifiarr start
 
 ### macOS App
 
-> This is the recommend installation method for macOS.
+!!! note
+    This is the recommend installation method for macOS.
 
 1. Download the signed `dmg` file from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
 1. When you open it for the first time it will create a config file and log file:
@@ -191,6 +192,7 @@ A sample docker compose file may be found [in the Github repo here](https://gith
 
 !!! warning
     You MUST [set a static hostname](../../pages/client/configuration.md#hostname) Each client is identified by hostname.
+    
 ```bash
 docker pull golift/notifiarr
 docker run --name notifiarr -h notifiarr --restart unless-stopped --privileged -p 5454:5454 -v /path/to/notifiarrconfig/:/config -v /var/run/utmp:/var/run/utmp -v /etc/machine-id:/etc/machine-id golift/notifiarr
