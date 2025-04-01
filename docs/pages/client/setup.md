@@ -1,42 +1,5 @@
 # Setup
 
-- [Setup](#setup)
-  - [Troubleshooting](#troubleshooting)
-    - [Resolving Duplicate Clients](#resolving-duplicate-clients)
-    - [Tmp Not Found](#tmp-not-found)
-  - [Notifiarr Website](#notifiarr-website)
-  - [Web UI](#web-ui)
-  - [.conf File](#conf-file)
-    - [Log Files](#log-files)
-      - [Detailed Debugging](#detailed-debugging)
-      - [Clearing Logs](#clearing-logs)
-  - [Hostname](#hostname)
-    - [WSL2 users](#wsl2-users)
-  - [ENV Variables](#env-variables)
-    - [Client](#client)
-    - [Secret Settings](#secret-settings)
-    - [System Snapshot](#system-snapshot)
-      - [Snapshot Sudoers](#snapshot-sudoers)
-      - [Snapshot Packages](#snapshot-packages)
-      - [Snapshot Configuration](#snapshot-configuration)
-      - [MySQL Snapshots](#mysql-snapshots)
-    - [Lidarr](#lidarr)
-    - [Prowlarr](#prowlarr)
-    - [Radarr](#radarr)
-    - [Readarr](#readarr)
-    - [Sonarr](#sonarr)
-    - [Downloaders](#downloaders)
-      - [QbitTorrent](#qbittorrent)
-      - [rTorrent](#rtorrent)
-      - [SABnzbd](#sabnzbd)
-      - [Deluge](#deluge)
-      - [NZBGet](#nzbget)
-    - [Plex](#plex)
-    - [Tautulli](#tautulli)
-    - [Service Checks](#service-checks)
-  - [Reverse Proxy](#reverse-proxy)
-  - [Docker Compose](#docker-compose)
-
 ## Troubleshooting
 
 - Find help on Discord: [Notifiarr](https://discord.gg/AURf8Yz) (preferred) or [Go Lift](https://golift.io/discord) (if you like Go).
@@ -47,11 +10,11 @@ Corruption checks require a temp folder to write the db file. This may be a coup
 
 ### Resolving Duplicate Clients
 
-- If you have duplicate clients on the website and are [setting a hostname after the fact](#hostname), [see these instructions](/Website/ClientConfiguration#resolving-duplicate-clients) for resolving the duplicates after setting a hostname.
+- If you have duplicate clients on the website and are [setting a hostname after the fact](#hostname), [see these instructions](../../pages/website/clientConfig.md#resolving-duplicate-clients) for resolving the duplicates after setting a hostname.
 
 ## Notifiarr Website
 
-There are non-integration related settings and triggers are configured on the Notifiarr site in the `Notifiarr Client Configuration` popup (button is located at the top of the setup page. You can get some insight about that [on the wiki](/Website/ClientConfiguration) as well. Integration specific timers and settings are found in the Client Configuration of each Integration that uses the Client.
+There are non-integration related settings and triggers are configured on the Notifiarr site in the `Notifiarr Client Configuration` popup (button is located at the top of the setup page. You can get some insight about that [on the wiki](../../pages/website/clientConfig.md) as well. Integration specific timers and settings are found in the Client Configuration of each Integration that uses the Client.
 
 ## Web UI
 
@@ -137,7 +100,7 @@ It is important that a static hostname is set so the site can keep track of mult
 - TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
 ![truecharts_install.jpg](/truecharts_install.jpg)
 
-Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](/Website/ClientConfiguration#duplicate-clients).
+Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
 
 ### WSL2 users
 
@@ -192,28 +155,9 @@ Recommend not messing with these unless instructed to do so.
 | debug_log   | `DN_DEBUG_LOG`    | `""` / Set a file system path to write debug logs to a dedicated file                             |
 | max_body    | `DN_MAX_BODY`     | Unlimited, `0` / Maximum debug-log body size (integer) for payloads to and from notifiarr.com     |
 |             | `TMPDIR`          | `%TMP%` on Windows. Varies depending on system; must be writable if using Backup Corruption Check |
+!!! note
+    You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`._
 
-_Note: You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`._
-
-### System Snapshot
-
-> See the [Installation Page](/Client/Installation#system-snapshot)
-{.is-info}
-
-#### Snapshot Sudoers
-
-> See the [Installation Page](/Client/Installation#snapshot-sudoers)
-{.is-info}
-
-#### Snapshot Packages
-
-> See the [Installation Page](/Client/Installation#snapshot-packages)
-{.is-info}
-
-#### Snapshot Configuration
-
-> See the [Installation Page](/Client/Installation#snapshot-configuration)
-{.is-info}
 
 #### MySQL Snapshots
 
@@ -425,9 +369,9 @@ ie. use this `expect = "/^/usr/bin/smtpd$/"` to match an exact string.
 Run `notifiarr --ps` to view the process list from Notifiarr's point of view.
 
 ## Docker Compose
+!!! info
+     See the [Installation Page](../../pages/client/install.md#docker)
 
-> See the [Installation Page](/Client/Installation#docker-compose)
-{.is-info}
 
 
 ## Snapshot Dependencies
@@ -476,3 +420,42 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 - **Synology**: `opkg install smartmontools`, but first get Entware:
   - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
   - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+
+### Setup Index
+
+- [Setup](#setup)
+- [Troubleshooting](#troubleshooting)
+- [Resolving Duplicate Clients](#resolving-duplicate-clients)
+- [Tmp Not Found](#tmp-not-found)
+- [Notifiarr Website](#notifiarr-website)
+- [Web UI](#web-ui)
+- [.conf File](#conf-file)
+- [Log Files](#log-files)
+- [Detailed Debugging](#detailed-debugging)
+- [Clearing Logs](#clearing-logs)
+- [Hostname](#hostname)
+- [WSL2 users](#wsl2-users)
+- [ENV Variables](#env-variables)
+- [Client](#client)
+- [Secret Settings](#secret-settings)
+- [System Snapshot](#system-snapshot)
+- [Snapshot Sudoers](#snapshot-sudoers)
+- [Snapshot Packages](#snapshot-packages)
+- [Snapshot Configuration](#snapshot-configuration)
+- [MySQL Snapshots](#mysql-snapshots)
+- [Lidarr](#lidarr)
+- [Prowlarr](#prowlarr)
+- [Radarr](#radarr)
+- [Readarr](#readarr)
+- [Sonarr](#sonarr)
+- [Downloaders](#downloaders)
+- [QbitTorrent](#qbittorrent)
+- [rTorrent](#rtorrent)
+- [SABnzbd](#sabnzbd)
+- [Deluge](#deluge)
+- [NZBGet](#nzbget)
+- [Plex](#plex)
+- [Tautulli](#tautulli)
+- [Service Checks](#service-checks)
+- [Reverse Proxy](#reverse-proxy)
+- [Docker Compose](#docker-compose)

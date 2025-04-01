@@ -6,7 +6,7 @@ The Client UI is the preferred and recommended method of modifying the Notifiarr
 
 # Enabling the Client UI
 
-Once the Notifiarr client is installed, follow the instructions to set the UI Username/Password as described under [Client -> Configuration -> Web UI](/Client/Configuration#web-ui)
+Once the Notifiarr client is installed, follow the instructions to set the UI Username/Password as described under [Client -> Setup -> Web UI](../../pages/client/setup.md#web-ui)
 
 Once the above is done, point your browser to the client and you will be taken to the login screen. Login with your specified Username (default: admin) and configured Password.
 
@@ -44,12 +44,11 @@ grep ui_password  /mnt/user/appdata/Notifiarr/notifiarr.conf
 
 ## Windows
 
-1. Run this command
+1. Run this command, and then restart the application
 
 	```bash
 	notifiarr.exe --reset
 	```
-1. Restart the application
 
 ## Docker
 
@@ -194,12 +193,11 @@ The Logging section, as the name suggests, is centred around the Notifiarr Clien
 ---
 
 ## Starr Apps
-
-> \* Completely disable an instance by setting the Timeout to Disabled.
-> \* Disable service checks by settings Interval to Disabled.
-> \* Use local URLs! Timeouts happen all the time when using a proxied URL
-> \* TRaSH Sync currently requires the Starr Apps to be synced to be named.
-{.is-info}
+!!! info "Starr Apps"
+     * Completely disable an instance by setting the Timeout to Disabled.
+     * Disable service checks by settings Interval to Disabled.
+     * Use local URLs! Timeouts happen all the time when using a proxied URL
+     * TRaSH Sync currently requires the Starr Apps to be synced to be named.
 
 TBA - Refer to the (?) Icons for more information
 

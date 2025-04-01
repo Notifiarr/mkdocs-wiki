@@ -20,7 +20,7 @@ MDBList is a 3rd party service that allows you to curate lists of shows and movi
 2.  Configure your discord channels
 3.  Enable "Movie Add" and "Show Add" by enabling the toggles as shown below.
 
-![mdblist-movieaddtoggle.jpg](/mdblist/mdblist-movieaddtoggle.jpg)
+![mdblist-movieaddtoggle.jpg](../../assets/screenshots/integrations/mdblist/mdblist-movieaddtoggle.jpg)
 
 We now need to configure some additional settings from within the integration, to tell Notifiarr what settings to use when adding a movie or show. 
 
@@ -35,4 +35,4 @@ Edit the MDBList integration, scroll down to the Extra settings modify the add m
 
 When setup how you like, select save. When you now find a show or movie on MDBList, you have the option to add to Radarr and Sonarr, the above enables that. You will find it is added to the instance and a search takes place imediately. 
 
-![mdblist-movieaddsettings2.jpg](/mdblist/mdblist-movieaddsettings2.jpg)
+![mdblist-movieaddsettings2.jpg](../../assets/screenshots/integrations/mdblist/mdblist-movieaddsettings2.jpg)

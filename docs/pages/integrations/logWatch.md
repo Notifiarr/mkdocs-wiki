@@ -5,9 +5,9 @@ aka File Watcher
 This allows the Notifiarr Client to watch (log) files for lines matching a regular expression. This is similar to tail -f file | grep string and allows you to send notifications when, for instance, a log file has a new line written that matches a regular expression.
 
 ***Coming Soon***
+!!! info
+    If creating a skip expression that contains `'` replace the apostrophe with `.?`
 
-> If creating a skip expression that contains `'` replace the apostrophe with `.?`
-{.is-info}
 
 
 ## Regular Expressions & Skip Expressions

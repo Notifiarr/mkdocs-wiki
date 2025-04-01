@@ -1,7 +1,7 @@
 # Client Reverse Proxy Configuration
 
-!!! note
-    None of this is required or necessary. **We recommend NOT exposing your Notifiarr client to the Internet at all. In other words, don't do any of this.** But you can if you want to access your local Notifiarr Client from the internet
+!!! danger "Reverse Proxy Users"
+      None of this is required or necessary. **We recommend NOT exposing your Notifiarr client to the Internet at all. In other words, don't do any of this.** But you can if you want to access your local Notifiarr Client from the internet
 
 While you can certainly poke a hole your firewall and send the traffic directly to this app, it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
 
@@ -11,7 +11,7 @@ While you can certainly poke a hole your firewall and send the traffic directly 
 
 ## Cloudflare Users
 
-Cloudflare Firewall / ZeroTrust users - See [this wiki entry](/Client/Client-Cloudflare) to ensure Notifiarr is allowed through Cloudflare
+Cloudflare Firewall / ZeroTrust users - See [this wiki entry](../../pages/client/cloudflare.md) to ensure Notifiarr is allowed through Cloudflare
 
 ## NGINX Subfolder Example
 
@@ -159,5 +159,5 @@ server {
 1. Check `Force SSL and HTTP/2 Support`
 1. Save
 
-You will need to use  Notifiarr Login/Password setup, not the webauth method with the above NPM configuration. See [Client UI](/Client/Client-UI) for details
+You will need to use  Notifiarr Login/Password setup, not the webauth method with the above NPM configuration. See [Client UI](../../pages/client/gui.md) for more details
 

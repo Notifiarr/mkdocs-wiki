@@ -1,11 +1,12 @@
-> This integration allows for notifications from Readarr using its built in Connection for **Notifiarr**. In Readarr click Settings → Connect → <kb>+</kb> → Notifiarr
-{.is-info}
+!!! info
+    This integration allows for notifications from Readarr using its built in Connection for **Notifiarr**. In Readarr click Settings → Connect → <kb>+</kb> → Notifiarr
+
 
 ---
 
 ## Trigger options
 
-![trigger-channels.png](/readarr/trigger-channels.png)
+![trigger-channels.png](../../assets/screenshots/integrations/readarr/trigger-channels.png)
 
 ### Triggers
 
@@ -14,8 +15,8 @@
 - `Update` - Receive a notification when the application updates
 - `Upgrade` - Receive a notification when **upgraded** media is successfully imported
 - `Health` - Receive a notification when the application reports an issue
-- `Backup` - Receive a notification when a backup occurs [(Notifiarr Client Required)](/Client/Main)
-- `Corrupt` - Monitor backups for corruption and size loss [(Notifiarr Client Required)](/Client/Main)
+- `Backup` - Receive a notification when a backup occurs
+- `Corrupt` - Monitor backups for corruption and size loss
 - `Deleted` - Be notified when media is deleted
 
 ### Channel
@@ -26,23 +27,23 @@
 
 ## Configuration
 
-![open-configuration.png](/readarr/open-configuration.png)
+![open-configuration.png](../../assets/screenshots/integrations/readarr/open-configuration.png)
 
 Click the **cog icon** to open the configuration options for Readarr.
 
-![configuration.png](/readarr/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/readarr/configuration.png)
 
 1. Enable and colors for each trigger type
 1. Trigger specific options
 1. Content lines are small previews of the full notification for toast/push notifications
 1. 1:1 notifications means each notification will be sent, nothing updates existing messages
 
-![configuration-2.png](/readarr/configuration-2.png)
+![configuration-2.png](../../assets/screenshots/integrations/readarr/configuration-2.png)
 
 1. Notification content options that you can turn on/off to show in the notifications
 1. Launch the integration layout editor (image below)
 
-![layout-editor.png](/readarr/layout-editor.png)
+![layout-editor.png](../../assets/screenshots/integrations/readarr/layout-editor.png)
 
 1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
 1. Test Layout - Will send a test notification with the current layout format
@@ -51,7 +52,7 @@ Click the **cog icon** to open the configuration options for Readarr.
 
 ### Instructions
 
-![instructions.png](/readarr/instructions.png)
+![instructions.png](../../assets/screenshots/integrations/readarr/instructions.png)
 
 1. How to enable notifications from within Readarr
 1. Test the notification from Notifiarr to Discord

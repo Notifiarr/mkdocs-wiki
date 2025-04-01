@@ -1,11 +1,11 @@
-> This integration allows for notifications from Radarr using its built in Connection for **Notifiarr**. In Radarr click Settings → Connect → <kb>+</kb> → Notifiarr
-{.is-info}
+!!! info
+     This integration allows for notifications from Radarr using its built in Connection for **Notifiarr**. In Radarr click Settings → Connect → <kb>+</kb> → Notifiarr
 
 ---
 
 ## Trigger options
 
-![triggers-channels.png](/radarr/triggers-channels.png)
+![triggers-channels.png](../../assets/screenshots/integrations/radarr/triggers-channels.png)
 
 ### Triggers
 
@@ -15,8 +15,8 @@
 - `Upgrade` - Receive a notification when **upgraded** media is successfully imported
 - `Deleted` - Be notified when media is deleted
 - `Update` - Receive a notification when the application updates
-- `Backup` - Receive a notification when a backup occurs [(Notifiarr Client Required)](/Client/Main)
-- `Corrupt` - Monitor backups for corruption and size loss [(Notifiarr Client Required)](/Client/Main)
+- `Backup` - Receive a notification when a backup occurs 
+- `Corrupt` - Monitor backups for corruption and size loss
 - `Failed` - Custom notification type based on previous grabs. If the system detects a grab for the same media with the same quality or better before the previous one was imported then it will set the previous one as failed
 - `Health` - Receive a notification when the application reports an issue
 
@@ -28,11 +28,11 @@
 
 ## Configuration
 
-![open-configuration.png](/radarr/open-configuration.png)
+![open-configuration.png](../../assets/screenshots/integrations/radarr/open-configuration.png)
 
 Click the **cog icon** to open the configuration options for Radarr.
 
-![configuration.png](/radarr/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/radarr/configuration.png)
 
 1. Basic instructions on how to add Notifiarr to Radarr
 2. Trigger options and colors for the notification
@@ -49,14 +49,14 @@ Click the **cog icon** to open the configuration options for Radarr.
 
 ### Notification Content
 
-![configuration-2.png](/radarr/configuration-2.png)
+![configuration-2.png](../../assets/screenshots/integrations/radarr/configuration-2.png)
 
 1. Notification content options that you can turn on/off to show in the notifications
 1. Launch the integration layout editor (image below)
 
 ### Layout Editor
 
-![layout-editor.png](/radarr/layout-editor.png)
+![layout-editor.png](../../assets/screenshots/integrations/radarr/layout-editor.png)
 
 1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
 1. Test Layout - Will send a test notification with the current layout format
@@ -65,7 +65,7 @@ Click the **cog icon** to open the configuration options for Radarr.
 
 ## Instructions
 
-![instructions.png](/radarr/instructions.png)
+![instructions.png](../../assets/screenshots/integrations/radarr/instructions.png)
 
 ## Errors
 

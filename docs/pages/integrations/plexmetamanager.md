@@ -8,9 +8,10 @@ Open the Plex channel picker and you will see a channel setting for `Collections
 
 ## Webhook Types
 
-> As of December 2022, this integration can send 5 webhooks. You can either activate them by ticking the on/off buttons or clicking on the gear icon where you can pic your notifications’ colours as well. {.is-info}
+!!! info
+     As of December 2022, this integration can send 5 webhooks. You can either activate them by ticking the on/off buttons or clicking on the gear icon where you can pic your notifications’ colours as well.
 
-![notifiarr_pmm_toggles.png](/plexmetamanger/notifiarr_pmm_toggles.png)
+![notifiarr_pmm_toggles.png](../../assets/screenshots/integrations/plexmetamanger/notifiarr_pmm_toggles.png)
 
 - `Start/Complete`: Sends a notification every time PMM runs and finishes its run.
 - `Updated`: Sends a notification whenever a collection changes, whether an item is added or removed. They can be sent at the same time as well. Notifiarr will show a maximum of 10 items and will sum up the rest according to their number.
