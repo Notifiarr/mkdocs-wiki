@@ -59,7 +59,8 @@ ping origin-proxy.notifiarr.com
 
 - [See this post in the Plex Forums](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
 
-> The Plex Token is required for the Notifiarr Client to send commands to Plex {.is-info}
+!!! info
+     The Plex Token is required for the Notifiarr Client to send commands to Plex
 
 ### Connection
 
@@ -96,8 +97,9 @@ If session info is missing from notifications or the sessions notification is no
 - **Patron**: Anyone who [supports the project once](https://github.com/sponsors/Notifiarr)
 - **Subscriber**: Anyone who [supports the project monthly](https://github.com/sponsors/Notifiarr)
 
-> Patron and Sub also have extra channels available on Discord with roles and colors
-{.is-info}
+!!! note
+    Patron and Sub also have extra channels available on Discord with roles and colors
+
 
 ### Limitations
 
