@@ -120,6 +120,7 @@ plugins:
        draggable: true
        auto_caption: false
        caption_position: bottom
+   - search
 
 
 markdown_extensions:
