@@ -29,9 +29,10 @@ nav:
     - Translations: pages/website/translations.md
     - Metrics: pages/website/metrics.md
   - Integrations:
-    - Basic Usage: pages/integrations/basicUsage.md
+    - How To Setup Integrations: pages/integrations/basicUsage.md
+    - Authentik: pages/integrations/authentik.md
     - Bazarr: pages/integrations/bazarr.md
-    - Better Uptime: pages/integrations/betterUptime.md
+    - Better Stack: pages/integrations/betterstack.md
     - Dashboard: pages/integrations/dashboard.md
     - Discord App: pages/integrations/discordApp.md
     - Emby: pages/integrations/emby.md
@@ -104,6 +105,24 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
+
+  plugins:
+   - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       slide_effect: slide
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       skip_classes:
+         - custom-skip-class-name
+       auto_caption: false
+       caption_position: bottom
+       background: white
+       shadow: true
+       manual: false
 
 markdown_extensions:
   - attr_list

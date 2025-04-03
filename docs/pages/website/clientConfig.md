@@ -24,9 +24,9 @@ When you open the client settings you will see:
  1. If you no longer have the client installed on a specific hostname, you can remove it
  
 ## Commands
+!!! info "Subscribers Only"
+     This is a **subscriber** feature, you can add them in the client and run them from the client without being a subscriber but no automation will be available from the site.
 
-> This is a **subscriber** feature, you can add them in the client and run them from the client without being a subscriber but no automation will be available from the site.
-{.is-info}
  
 ### Client
 
