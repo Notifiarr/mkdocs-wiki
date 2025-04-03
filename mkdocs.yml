@@ -4,8 +4,7 @@ site_description: Notifiarr provides native custom integrations with dozens of a
 site_url: http://rm-web-1:8007/en/latest/
 repo_name: Client
 repo_url: https://github.com/Notifiarr/notifiarr
-repo_wiki_name: Wiki
-repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
+
 
 nav:
   - Notifiarr:
@@ -68,6 +67,8 @@ nav:
   - Faq: 
     - Faq: pages/faq/faq.md
 
+
+
 theme:
   name: material
   custom_dir: docs/overrides
@@ -78,6 +79,9 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
     - header.autohide
     - announce.dismiss
     - navigation.footer
@@ -86,12 +90,12 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.tracking
+    - navigation.instant
     - toc.follow
     - search.suggest
     - search.highlight
     - search.share
-    - instant
-
+  
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -105,24 +109,18 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
-
-  plugins:
+plugins:
    - glightbox:
        touchNavigation: true
        loop: false
        effect: zoom
-       slide_effect: slide
        width: 100%
        height: auto
        zoomable: true
        draggable: true
-       skip_classes:
-         - custom-skip-class-name
        auto_caption: false
        caption_position: bottom
-       background: white
-       shadow: true
-       manual: false
+
 
 markdown_extensions:
   - attr_list
@@ -133,9 +131,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - tables
-  
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
   - md_in_html
 
