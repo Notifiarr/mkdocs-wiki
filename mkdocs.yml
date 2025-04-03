@@ -4,6 +4,8 @@ site_description: Notifiarr provides native custom integrations with dozens of a
 site_url: http://rm-web-1:8007/en/latest/
 repo_name: Client
 repo_url: https://github.com/Notifiarr/notifiarr
+repo_wiki_name: Wiki
+repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
 
 
 nav:

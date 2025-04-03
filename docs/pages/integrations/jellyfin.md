@@ -1,6 +1,7 @@
 !!! info
 
      This integration allows for notifications from the Jellyfin media app
+---     
 
 ## Trigger options
 

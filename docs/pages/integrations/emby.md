@@ -1,6 +1,7 @@
 !!! info
+    This integration allows for notifications from the Emby media app
 
-     This integration allows for notifications from the Emby media app
+---
 
 ## Trigger options
 

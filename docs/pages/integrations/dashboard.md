@@ -2,6 +2,7 @@
 
      This integration allows for notifications to keep you updated with an overview of some commonly used apps.
 
+---
 
 The frequency of dashboard updates is controlled by the Notifiarr Client Configuration for the Dashboard for the specified client. All other Dashboard settings are noted below and within the Dashboard Integration.
 

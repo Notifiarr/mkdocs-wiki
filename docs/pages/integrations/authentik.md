@@ -1,5 +1,7 @@
 !!! info 
      This integration is for setting up discord notifications for Authentik 
+     
+---
 
 ## Trigger options
 

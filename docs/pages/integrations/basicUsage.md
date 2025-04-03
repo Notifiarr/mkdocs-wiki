@@ -3,6 +3,10 @@
 
      All the integrations follow the same layout and logic so this means once you understand how one of them works you will be able to figure out how to setup any of them.
 
+---
+
+## Explaing Integrations
+
 Each integration is split up into sections and there is a sub menu on the right (unless using mobile) that will help you jump to specific sections.
 
 ![submenu.png](../../assets/screenshots/integrations/basicUsage/submenu.png)

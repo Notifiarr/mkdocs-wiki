@@ -1,6 +1,7 @@
 !!! info
 
      This integration allows for notifications from public Github repositories.
+---
 
 ## Trigger options
 

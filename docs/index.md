@@ -1,22 +1,22 @@
 <center>
 Client:<br>
-![GitHub commit activity](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr?label=Commits&style=plastic)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr/main?label=Stable (:latest)&style=plastic)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr/unstable?label=Unstable (:unstable)&style=plastic)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/notifiarr/notifiarr/unstable?label=Last (:unstable)&style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/notifiarr/notifiarr?label=Contributors&style=plastic)
-![GitHub issues](https://img.shields.io/github/issues/Notifiarr/notifiarr?color=blue&logo=github&style=plastic)
-![GitHub issues](https://img.shields.io/github/issues-closed/Notifiarr/notifiarr?color=blue&logo=github&style=plastic)
-![GitHub issues](https://img.shields.io/github/issues-pr/Notifiarr/notifiarr?color=blue&logo=github&style=plastic)
-![GitHub issues](https://img.shields.io/github/issues-pr-closed/Notifiarr/notifiarr?color=blue&logo=github&style=plastic)
-[![GitHub license](https://img.shields.io/github/license/Notifiarr/notifiarr?color=blue)](https://github.com/Notifiarr/notifiarr/blob/main/LICENSE)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr?label=Commits&style=for-the-badge&color=526cfe)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr/main?label=Stable (:latest)&style=for-the-badge&color=526cfe)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr/unstable?label=Unstable (:unstable)&style=for-the-badge&color=526cfe)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/notifiarr/notifiarr/unstable?label=Last (:unstable)&style=for-the-badge&color=526cfe)
+![GitHub contributors](https://img.shields.io/github/contributors/notifiarr/notifiarr?label=Contributors&style=for-the-badge&color=526cfe)
+![GitHub issues](https://img.shields.io/github/issues/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)
+![GitHub issues](https://img.shields.io/github/issues-closed/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)
+![GitHub issues](https://img.shields.io/github/issues-pr/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)
+![GitHub issues](https://img.shields.io/github/issues-pr-closed/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)
+[![GitHub license](https://img.shields.io/github/license/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)](https://github.com/Notifiarr/notifiarr/blob/main/LICENSE)
 
 Site:<br>
-![GitHub issues](https://img.shields.io/github/issues/Notifiarr/website?color=blue&logo=github&style=plastic)
-![GitHub issues](https://img.shields.io/github/issues-closed/Notifiarr/website?color=blue&logo=github&style=plastic)
+![GitHub issues](https://img.shields.io/github/issues/Notifiarr/website?&logo=github&style=for-the-badge&color=526cfe)
+![GitHub issues](https://img.shields.io/github/issues-closed/Notifiarr/website?&logo=github&style=for-the-badge&color=526cfe)
 
 Support:<br>
-[![Discord](https://img.shields.io/discord/764440599066574859?label=Discord&color=purple&style=plastic)](https://notifiarr.com/discord)
+[![Discord](https://img.shields.io/discord/764440599066574859?label=Discord&style=for-the-badge&color=7F00FF)](https://notifiarr.com/discord)
 
 ![Logo](assets/logo.png)
 </center>
