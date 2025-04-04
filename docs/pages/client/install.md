@@ -1,7 +1,3 @@
-# Notifiarr Client Installation
-
-Find directions below to install the client and dependencies.
-
 ## Linux
 
 *Linux repository hosting provided by* &nbsp;[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
@@ -23,6 +19,7 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
     sudo nano /etc/notifiarr/notifiarr.conf
     sudo systemctl restart notifiarr
     ```
+
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
 
@@ -33,7 +30,6 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
 
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
-
 
 ## FreeBSD
 
@@ -48,9 +44,9 @@ wget -qO- https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
+
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
-
 
 ## TrueNAS Scale
 
@@ -82,8 +78,8 @@ service notifiarr start
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
 
-
 ### Homebrew
+
 !!! warning "Homebrew users"
     Homebrew is not recommend, and may be discontinued in the future.
 
@@ -123,7 +119,7 @@ brew services start notifiarr
 
 1. Download `notifiarr.amd64.exe.zip` from [the Releases page](https://github.com/Notifiarr/notifiarr/releases)
 1. Save it in `C:\ProgramData\notifiarr`
-1. Open the folder that was created from extracting and copy the `.exe` + example `.conf` files up one directory so it is located at 
+1. Open the folder that was created from extracting and copy the `.exe` + example `.conf` files up one directory so it is located at:
     - `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
     - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
@@ -138,12 +134,12 @@ brew services start notifiarr
 
 ### New and existing installs
 
-- At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome). 
+- At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome).
 
 1. Right click on the `.exe` and create a shortcut
-	- Windows 11 users:
-  		- Right click on the shortcut and pick properties
-      - Change the target path to `C:\Windows\System32\conhost.exe C:\ProgramData\notifiarr\notifiarr.amd64.exe` which will minimize the console to the tray when it is ran
+    - Windows 11 users:
+        - Right click on the shortcut and pick properties
+    - Change the target path to `C:\Windows\System32\conhost.exe C:\ProgramData\notifiarr\notifiarr.amd64.exe` which will minimize the console to the tray when it is ran
 1. Windows logo key + R, type `shell:startup`, then select OK. This opens the Startup folder.
 1. Copy and paste the newly created shortcut from its current location to the opened Startup folder.
 1. Double click on the shortcut and the client is now running
@@ -155,7 +151,6 @@ brew services start notifiarr
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
 
-
 ## Synology
 
 1. Run the below command while ssh'd in to the NAS. It will run the [Syno Install Script located on the Notifiarr Repository](https://github.com/Notifiarr/notifiarr/blob/main/userscripts/install.sh)
@@ -166,7 +161,6 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
 !!! info
     See [Configuration Instructions Here](../../pages/client/configuration.md#web-gui)
-
 
 ## Docker
 
@@ -192,7 +186,7 @@ A sample docker compose file may be found [in the Github repo here](https://gith
 
 !!! warning
     You MUST [set a static hostname](../../pages/client/configuration.md#hostname) Each client is identified by hostname.
-    
+
 ```bash
 docker pull golift/notifiarr
 docker run --name notifiarr -h notifiarr --restart unless-stopped --privileged -p 5454:5454 -v /path/to/notifiarrconfig/:/config -v /var/run/utmp:/var/run/utmp -v /etc/machine-id:/etc/machine-id golift/notifiarr

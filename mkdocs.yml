@@ -7,7 +7,6 @@ repo_url: https://github.com/Notifiarr/notifiarr
 repo_wiki_name: Wiki
 repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
 
-
 nav:
   - Notifiarr:
     - About: index.md
@@ -69,8 +68,6 @@ nav:
   - Faq: 
     - Faq: pages/faq/faq.md
 
-
-
 theme:
   name: material
   custom_dir: docs/overrides
@@ -112,18 +109,17 @@ theme:
         icon: material/weather-night
         name: Dark mode
 plugins:
-   - glightbox:
-       touchNavigation: true
-       loop: false
-       effect: zoom
-       width: 100%
-       height: auto
-       zoomable: true
-       draggable: true
-       auto_caption: false
-       caption_position: bottom
-   - search
-
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
+  - search
 
 markdown_extensions:
   - attr_list
@@ -137,4 +133,3 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - md_in_html
-

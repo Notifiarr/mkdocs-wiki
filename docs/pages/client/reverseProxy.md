@@ -132,7 +132,7 @@ server {
     
     # API path must not be protected by auth, authelia, ldap, etc.
     location ~ (/notifiarr)?/api {
-	    	deny all; # remove this line if you really want to expose the API.
+        deny all; # remove this line if you really want to expose the API.
         proxy_set_header X-Forwarded-For $remote_addr;
         proxy_pass $upstream_proto://$upstream_app:$upstream_port;
     }
@@ -160,4 +160,3 @@ server {
 1. Save
 
 You will need to use  Notifiarr Login/Password setup, not the webauth method with the above NPM configuration. See [Client UI](../../pages/client/gui.md) for more details
-

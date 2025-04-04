@@ -46,13 +46,14 @@ When a new docker image is deployed and an empty /config folder is mounted the a
 - The UI is recommended which requires a [one time setting](#web-ui)
 - Must provide the "All" API key from your [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
   - **The Notifiarr application uses the API key for bi-directional authorization between the Site and the Client.**
-  
-> **Unraid Users**
-You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
-{.is-danger}
-> **Docker Users**
-Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
-{.is-info}
+
+!!! warning  
+    **Unraid Users**
+    You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
+
+!!! info
+    **Docker Users**
+    Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
 
 ### Compressed Conf File
 
@@ -155,9 +156,9 @@ Recommend not messing with these unless instructed to do so.
 | debug_log   | `DN_DEBUG_LOG`    | `""` / Set a file system path to write debug logs to a dedicated file                             |
 | max_body    | `DN_MAX_BODY`     | Unlimited, `0` / Maximum debug-log body size (integer) for payloads to and from notifiarr.com     |
 |             | `TMPDIR`          | `%TMP%` on Windows. Varies depending on system; must be writable if using Backup Corruption Check |
+
 !!! note
     You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`._
-
 
 #### MySQL Snapshots
 
@@ -369,10 +370,9 @@ ie. use this `expect = "/^/usr/bin/smtpd$/"` to match an exact string.
 Run `notifiarr --ps` to view the process list from Notifiarr's point of view.
 
 ## Docker Compose
+
 !!! info
      See the [Installation Page](../../pages/client/install.md#docker)
-
-
 
 ## Snapshot Dependencies
 
@@ -410,12 +410,13 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 ### Snapshot Packages
 
 #### Windows
+
  `smartmontools` - get it here <https://sourceforge.net/projects/smartmontools/>
 
 #### Linux
 
-  - Debian/Ubuntu: `apt install smartmontools`
-  - RedHat/CentOS: `yum install smartmontools`
+- Debian/Ubuntu: `apt install smartmontools`
+- RedHat/CentOS: `yum install smartmontools`
 - **Docker**:    It's already in the container. Lucky you! Just run the container in `--privileged` mode.
 - **Synology**: `opkg install smartmontools`, but first get Entware:
   - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
@@ -438,10 +439,9 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 - [ENV Variables](#env-variables)
 - [Client](#client)
 - [Secret Settings](#secret-settings)
-- [System Snapshot](#system-snapshot)
+- [System Snapshot](#snapshot-dependencies)
 - [Snapshot Sudoers](#snapshot-sudoers)
 - [Snapshot Packages](#snapshot-packages)
-- [Snapshot Configuration](#snapshot-configuration)
 - [MySQL Snapshots](#mysql-snapshots)
 - [Lidarr](#lidarr)
 - [Prowlarr](#prowlarr)
@@ -457,5 +457,4 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 - [Plex](#plex)
 - [Tautulli](#tautulli)
 - [Service Checks](#service-checks)
-- [Reverse Proxy](#reverse-proxy)
 - [Docker Compose](#docker-compose)

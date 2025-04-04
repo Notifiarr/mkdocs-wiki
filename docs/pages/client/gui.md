@@ -4,7 +4,7 @@ The Client UI is the preferred and recommended method of modifying the Notifiarr
 
 ---
 
-# Enabling the Client UI
+## Enabling the Client UI
 
 Once the Notifiarr client is installed, follow the instructions to set the UI Username/Password as described under [Client -> Setup -> Web UI](../../pages/client/setup.md#web-ui)
 
@@ -17,7 +17,7 @@ For initial runs:
 
 ![login](../../assets/screenshots/client/login.png)
 
-# Forgotten Passwords
+## Forgotten Passwords
 
 ## Locate the Password in config file prior to UI Access
 
@@ -35,44 +35,44 @@ grep ui_password  /mnt/user/appdata/Notifiarr/notifiarr.conf
 
 1. Run this command which resets the password then restarts the applicatoin
 
-	```bash
-	# Reset password.
-	notifiarr --reset
-	# Restart client (linux).
-	systemctl restart notifiarr
-	```
+```bash
+# Reset password.
+notifiarr --reset
+# Restart client (linux).
+systemctl restart notifiarr
+```
 
 ## Windows
 
 1. Run this command, and then restart the application
 
-	```bash
-	notifiarr.exe --reset
-	```
+```bash
+notifiarr.exe --reset
+```
 
 ## Docker
 
-*Also applies to Unraid*
+\*Also applies to Unraid\*
 
-1. Run these two commands in your host system's terminal (console) while the Notifiarr container is running. 
+1. Run these two commands in your host system's terminal (console) while the Notifiarr container is running.
    *If your container is named `notifiarr` then replace `Notifiarr` with the lowercase version.*
 
-	```bash
-	docker exec Notifiarr /notifiarr --reset
-	docker kill --signal=HUP Notifiarr
-	```
+```bash
+docker exec Notifiarr /notifiarr --reset
+docker kill --signal=HUP Notifiarr
+```
   
-	```bash
-	# Example output with new password:
-	[INFO] 2023/09/08 09:32:11 New 'admin' user password: four38=Draw
-	[INFO] 2023/09/08 09:32:11 Writing Config File: /config/notifiarr.conf
- 	```
+```bash
+# Example output with new password:
+[INFO] 2023/09/08 09:32:11 New 'admin' user password: four38=Draw
+[INFO] 2023/09/08 09:32:11 Writing Config File: /config/notifiarr.conf
+```
 
-1. If you still can't login, restart the container. 
+1. If you still can't login, restart the container.
 
 ---
 
-# Client UI Homepage
+## Client UI Homepage
 
 Once logged in you will be taken to the Homepage. From here you are free to navigate the Client and have the power to Modify, Update, Trigger Applications/Integrations and much, much more.
 
@@ -88,7 +88,7 @@ Once logged in you will be taken to the Homepage. From here you are free to navi
 
 ---
 
-# Admin
+## Admin
 
 ![admin.jpg](../../assets/screenshots/client/admin.jpg)
 
@@ -100,7 +100,7 @@ Once logged in you will be taken to the Homepage. From here you are free to navi
 
 ---
 
-# Settings
+## Settings
 
 The following sections will be discussed in more detail.
 
@@ -110,8 +110,8 @@ The following sections will be discussed in more detail.
 
 Under the configuration menue you can further setup your Notifiarr Client within the following sections.
 
-> Note that some values may be locked as they are trumped by Enviormental Variables.  Unraid requires the use of the API Key and Plex Settings as enviormental variables.
-{.is-warning}
+!!! warning
+    Note that some values may be locked as they are trumped by Enviormental Variables.  Unraid requires the use of the API Key and Plex Settings as enviormental variables.
 
 Variables being overwritten with an enviormental variable will look like this.
 ![ui_fieldlocked_envvar.png](../../assets/screenshots/client/ui_fieldlocked_envvar.png)
@@ -121,18 +121,19 @@ Variables being overwritten with an enviormental variable will look like this.
 ### General
 
 The General section is more catered to the ingress and egress options/functionality of the Notifiarr client.
-> In most cases the default value will be fine and should only be modified if required.
-{.is-info}
+
+!!! info
+    In most cases the default value will be fine and should only be modified if required.
 
 ![general3.png](../../assets/screenshots/client/general3.png)
 
 1. `Setting Column` - Contains the settings you are modifying.
-2. `Current Value Column` - Shows the current value of the setting
-3. `New Value Column` - Shows the new value for the setting that is being changed.
-4. `API Key` - API key from your Notifiarr.com account, required for security validation.
+1. `Current Value Column` - Shows the current value of the setting
+1. `New Value Column` - Shows the new value for the setting that is being changed.
+1. `API Key` - API key from your Notifiarr.com account, required for security validation.
 
-> This API must be an All key!
-{.is-warning}
+!!! warning
+    This API must be an All key!
 
 1. `Extra Keys` - This application uses the Notifiarr.com API key (set above) for incoming authentication. It's not safe to give that key to any other website, person, or third party service. This is because that key is also used for authentication to the Notifiarr.com API. If you want third parties to authenticate to this application's API, you should create custom keys for each integration. As of March 8, 2022, there are no existing integrations, so this is for future use. You can use this section to add extra API keys. Whatever you want. Separate them with newlines or spaces.
 1. `Bind Address` - This is the IP and port the app will listen on. 0.0.0.0 means all IPs, and you should use that in almost all cases! Change the port if the default 5454 does not work for you.
@@ -159,8 +160,9 @@ The SSL section handles the SSL Certificates and where they are kept so that the
 ### Services
 
 The Services section is used specifically to adjust the Service checking of all your Apps.
-> In most cases the default value will be fine and should only be modified if required.
-{.is-info}
+
+!!! info
+    In most cases the default value will be fine and should only be modified if required.
 
 ![services.png](../../assets/screenshots/client/services.png)
 
@@ -174,8 +176,9 @@ The Services section is used specifically to adjust the Service checking of all 
 ### Logging
 
 The Logging section, as the name suggests, is centred around the Notifiarr Client logs and has various settings the user can change.
-> In most cases the default value will be fine and should only be modified if required.
-{.is-info}
+
+!!! info
+    In most cases the default value will be fine and should only be modified if required.
 
 ![logging1.png](../../assets/screenshots/client/logging1.png)
 
@@ -193,11 +196,12 @@ The Logging section, as the name suggests, is centred around the Notifiarr Clien
 ---
 
 ## Starr Apps
+
 !!! info "Starr Apps"
-     * Completely disable an instance by setting the Timeout to Disabled.
-     * Disable service checks by settings Interval to Disabled.
-     * Use local URLs! Timeouts happen all the time when using a proxied URL
-     * TRaSH Sync currently requires the Starr Apps to be synced to be named.
+    \* Completely disable an instance by setting the Timeout to Disabled.
+    \* Disable service checks by settings Interval to Disabled.
+    \* Use local URLs! Timeouts happen all the time when using a proxied URL
+    \* TRaSH Sync currently requires the Starr Apps to be synced to be named.
 
 TBA - Refer to the (?) Icons for more information
 
@@ -227,32 +231,32 @@ TBA - Refer to the (?) Icons for more information
 
 ---
 
-# Insights
+## Insights
 
-## Triggers
-
-TBA - Refer to the (?) Icons for more information
-
-## Integrations
+### Triggers
 
 TBA - Refer to the (?) Icons for more information
 
-## Monitoring
+### Integrations
 
 TBA - Refer to the (?) Icons for more information
 
-## Metrics
+### Monitoring
 
 TBA - Refer to the (?) Icons for more information
 
-## Log Files
+### Metrics
 
 TBA - Refer to the (?) Icons for more information
 
-## Config Files
+### Log Files
 
 TBA - Refer to the (?) Icons for more information
 
-## System
+### Config Files
+
+TBA - Refer to the (?) Icons for more information
+
+### System
 
 TBA - Refer to the (?) Icons for more information
