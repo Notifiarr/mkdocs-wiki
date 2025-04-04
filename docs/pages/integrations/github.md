@@ -18,7 +18,9 @@
 
 Click the **cog icon** to open the configuration options for Github.
 
-![configuration.png](../../assets/screenshots/integrations/github/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/github/configuration-1.png)
+![configuration.png](../../assets/screenshots/integrations/github/configuration-2.png)
+![configuration.png](../../assets/screenshots/integrations/github/configuration-3.png)
 
 1. Add the organization URL. You have to be able to manage the selected Organization so you can add webhooks.
 1. Remove an existing organization, keep in mind this removes all repositories linked to it
