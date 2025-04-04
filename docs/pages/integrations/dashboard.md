@@ -6,7 +6,6 @@
 
 The frequency of dashboard updates is controlled by the Notifiarr Client Configuration for the Dashboard for the specified client. All other Dashboard settings are noted below and within the Dashboard Integration.
 
-Some examples of what you may see are shown below.
 
 
 ## Trigger options
