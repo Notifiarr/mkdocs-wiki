@@ -7,6 +7,7 @@ repo_url: https://github.com/Notifiarr/notifiarr
 repo_wiki_name: Wiki
 repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
 
+
 nav:
   - Notifiarr:
     - About: index.md
@@ -29,15 +30,17 @@ nav:
     - Translations: pages/website/translations.md
     - Metrics: pages/website/metrics.md
   - Integrations:
-    - Basic Usage: pages/integrations/basicUsage.md
+    - How To Setup Integrations: pages/integrations/basicUsage.md
+    - Authentik: pages/integrations/authentik.md
     - Bazarr: pages/integrations/bazarr.md
-    - Better Uptime: pages/integrations/betterUptime.md
+    - Better Stack: pages/integrations/betterstack.md
     - Dashboard: pages/integrations/dashboard.md
     - Discord App: pages/integrations/discordApp.md
     - Emby: pages/integrations/emby.md
     - Github: pages/integrations/github.md
     - Hotio: pages/integrations/hotio.md
     - Jellyfin: pages/integrations/jellyfin.md
+    - Kometa: pages/integrations/plexmetamanager.md
     - Lidarr: pages/integrations/lidarr.md
     - Log Watcher: pages/integrations/logWatch.md
     - Media Requests: pages/integrations/mediaRequests.md
@@ -46,7 +49,6 @@ nav:
     - Passthrough: pages/integrations/passthrough.md
     - Persistent: pages/integrations/persistent.md
     - Plex: pages/integrations/plex.md
-    - Plex Meta Manager: pages/integrations/plexmetamanager.md
     - Overseerr: pages/integrations/overseerr.md
     - Radarr: pages/integrations/radarr.md
     - Readarr: pages/integrations/readarr.md
@@ -67,6 +69,8 @@ nav:
   - Faq: 
     - Faq: pages/faq/faq.md
 
+
+
 theme:
   name: material
   custom_dir: docs/overrides
@@ -77,6 +81,9 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.tooltips
     - header.autohide
     - announce.dismiss
     - navigation.footer
@@ -85,12 +92,12 @@ theme:
     - navigation.sections
     - navigation.top
     - navigation.tracking
+    - navigation.instant
     - toc.follow
     - search.suggest
     - search.highlight
     - search.share
-    - instant
-
+  
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -104,6 +111,19 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
+plugins:
+   - glightbox:
+       touchNavigation: true
+       loop: false
+       effect: zoom
+       width: 100%
+       height: auto
+       zoomable: true
+       draggable: true
+       auto_caption: false
+       caption_position: bottom
+   - search
+
 
 markdown_extensions:
   - attr_list
@@ -114,9 +134,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - tables
-  
   - pymdownx.tabbed:
       alternate_style: true
-  - attr_list
   - md_in_html
 

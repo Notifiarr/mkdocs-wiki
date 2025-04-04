@@ -1,11 +1,12 @@
 !!! info
 
-     This integration allows for notifications from Better Uptime utilizing their webhook system
+     This integration allows for notifications from Better stack utilizing their webhook system
 
+---
 
 ## Trigger options
 
-![triggers-channels.png](../../assets/screenshots/integrations/betteruptime/triggers-channels.png)
+![triggers-channels.png](../../assets/screenshots/integrations/betterstack/triggers-channels.png)
 
 1. Triggers
     - `Started` - Sent when Better Uptime detects an issue with a site you are monitoring
@@ -18,11 +19,11 @@
 
 ## Configuration
 
-![open-configuration.png](../../assets/screenshots/integrations/betteruptime/open-configuration.png)
+![open-configuration.png](../../assets/screenshots/integrations/betterstack/open-configuration.png)
 
 Click the **cog icon** to open the configuration options for Better Uptime.
 
-![configuration.png](../../assets/screenshots/integrations/betteruptime/configuration.png)
+![configuration.png](../../assets/screenshots/integrations/betterstack/configuration.png)
 
 1. Notification colors for each trigger type
 1. Notification content options that you can turn on/off to show in the notifications

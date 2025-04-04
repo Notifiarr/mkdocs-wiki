@@ -1,6 +1,7 @@
 !!! info
 
      This integration allows for notifications from the Jellyfin media app
+---     
 
 ## Trigger options
 
@@ -26,7 +27,7 @@ Click the **cog icon** to open the configuration options for Jellyfin.
 ![configuration.png](../../assets/screenshots/integrations/jellyfin/configuration.png)
 
 1. Enable triggers and pick colors for each trigger
-1. Expand the notification content settings
+1. Expand the notification content settings via the customize button
 
 ![configuration-2.png](../../assets/screenshots/integrations/jellyfin/configuration-2.png)
 
@@ -73,8 +74,9 @@ Write the URL of your Jellyfin server where it says <kbd>SERVER URL</kbd> and cl
 + <kbd>NAME</kbd>
 
 Give the Webhook a name 
-> Example: Notifiarr
-{.is-info}
+!!! info
+     Example: Notifiarr
+
 
 <br>
 

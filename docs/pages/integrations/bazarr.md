@@ -2,9 +2,11 @@
 
     This integration allows for notifications from Bazarr and will also add reactions to notifications if a subtitle was found for it and you are using reactions.
 
-Reaction example:
+---
 
-![reaction.png](../../assets/screenshots/integrations/bazarr/reaction.png)
+## Current Versions
+
+![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Frelease%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb } ![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Fnightly%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb }
 
 ---
 
@@ -36,6 +38,11 @@ Click the **cog icon** to open the configuration options for Bazarr.
 1. Open integration specific instructions
 1. Choose the notification format
 1. Enable reactions for `*arr` notifications when a subtitle is found if the associated `*arr` notification can be found
+
+Reaction example:
+
+![reaction.png](../../assets/screenshots/integrations/bazarr/reaction.png)
+
 
 ### Instructions
 

@@ -20,8 +20,9 @@
 1. Notification triggers
 2. Notification Options
 3. Notification Color
-4. Custom Icon <sup>Subscriber Feature</sup>
-5. Save your changes when done
+
+!!! note
+    Be sure to save settings
 
 ## Instructions
 ![instructions1.png](../../assets/screenshots/integrations/overseerr/instructions1.png)

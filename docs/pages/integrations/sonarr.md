@@ -1,6 +1,9 @@
 !!! info
     This integration allows for notifications from Sonarr using the connect for Webhooks. In Sonarr click Settings → Connect → <kb>+</kb> → Webhook.
 
+### Current Versions
+
+![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=526cfe&style=for-the-badge&label=Main&query=%24%5B%27v4-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases){ .off-glb } ![Current Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=526cfe&style=for-the-badge&label=Develop&query=%24%5B%27v4-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases){ .off-glb }
 
 ## Trigger options
 
@@ -28,38 +31,8 @@
 
 Click the **cog icon** to open the configuration options for Sonarr.
 
-![configuration.png](../../assets/screenshots/integrations/sonarr/configuration.png)
-
-1. Basic instructions on how to add Notifiarr to Sonarr including the proper URL
-1. Trigger options and colors for the notification
-1. Custom icon (Subscriber feature)
-1. An optional content line added to notifications for mobile/wearable devices
-
-![configuration.png](../../assets/screenshots/integrations/sonarr/configuration-2.png)
-
-1. Sends an overview once a day of your Sonarr history
-2. Custom regular expression option to exclude health checks that match
-3. Minimum size difference between backups to warn of file size changing
-4. Option to only send notifications if corruption detects a warning or error
-5. Option to stop notification updating and send a notification for everything
-6. Option to delete the grab notification after the import notification is received
-7. Send notifications with selected ratings (considered 'adult') to another channel
-
-![configuration-2.png](../../assets/screenshots/integrations/sonarr/configuration-3.png)
-
-1. Notification content options that you can turn on/off to show in the notifications
-1. Launch the integration layout editor (image below)
-
-![layout-editor.png](../../assets/screenshots/integrations/sonarr/layout-editor.png)
-
-1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
-1. Test Layout - Will send a test notification with the current layout format
-1. Save Layout - Will save the current layout format as the one you want to use
-1. Reset Layout - Will set the layout back to default
-
 ### Instructions
 
-> For the latest instructions - refer to the Instructions within the Integration setting on the site {.is-info}
 
 ![layout-editor.png](../../assets/screenshots/integrations/sonarr/instructions.png)
 
@@ -69,8 +42,24 @@ Enter a name for the Notification in Sonarr `Notifiarr` is suggested, but use wh
 Enable the notification triggers you wish to have sent from Sonarr to the Notifiarr Site
 Hit test - you should receive a notification on discord with the test message from Sonarr
 Save
-3. Add `?instance=<name-here>` if you want to use multiple instances
-4. Send a test notification from the site to your discord server
+
+## Integration instructions
+
+![configuration.png](../../assets/screenshots/integrations/sonarr/configuration.png)
+
+2. Notification color selector
+2. all `notification fields` available under `grabbbed` trigger
+3. Notification for corrupted database
+4. Sends an overview once a day of your Sonarr history at your specified time
+5. Send notifications with selected ratings (considered 'adult') to another channel
+6. Options to remove `forced` from instances/indexer name
+
+## Examples
+
+grabbed example             |  update example
+:-------------------------:|:-------------------------:
+![example-1.ping](../../assets/screenshots/integrations/sonarr/example-1.png)  |  ![example-2.png](../../assets/screenshots/integrations/sonarr/example-2.png)
+
 
 ### Errors
 

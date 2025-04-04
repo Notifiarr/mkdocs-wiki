@@ -184,4 +184,5 @@ Sonarr
 1. In the popup click the Delete Map button and clear the maps.
 1. (Optional) As Sonarr v4 does a less than optimal job of migrating Preferred Words to Custom Formats, you can use Notifiarr to bulk delete. Click the Delete link in the `CF >= 4.*` You can then mass delete all the migrated CFs to start fresh. Then you can configure Notifiarr to sync the Custom Formats you want to use.
 
-For Sonarr v4 specific (non-Notifiarr Sonarr related) support questions, visit Sonarr's discord, forums, or subreddit.
+!!! info "Sonarr v4"
+    For Sonarr v4 specific (non-Notifiarr Sonarr related) support questions, visit Sonarr's discord, forums, or subreddit.

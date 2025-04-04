@@ -1,6 +1,7 @@
 !!! info
 
      This integration allows for notifications from Hotio.
+---
 
 ## Currently supported
 
