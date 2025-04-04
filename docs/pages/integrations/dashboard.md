@@ -8,10 +8,6 @@ The frequency of dashboard updates is controlled by the Notifiarr Client Configu
 
 Some examples of what you may see are shown below.
 
-## Examples
-
-![dashboard-example-radarr.png](../../assets/screenshots/integrations/dashboard/dashboard-example-radarr.png)
-![dashboard-example-qbt.png](../../assets/screenshots/integrations/dashboard/dashboard-example-qbt.png)
 
 ## Trigger options
 
@@ -71,4 +67,10 @@ Click the **cog icon** to open the configuration options for the Dashboard integ
 !!! warning
 
      When you change the active status or the order, the next update will trigger a delete all and repost everything automatically, so they are in the correct order based on what you have turned on.
+
+## Examples
+
+radarr example             |  sonarr example
+:-------------------------:|:-------------------------:
+![example-radarr.ping](../../assets/screenshots/integrations/dashboard/dashboard-example-radarr.png)  |  ![example-sonarr.png](../../assets/screenshots/integrations/dashboard/dashboard-example-sonarr.png)
 
