@@ -31,32 +31,22 @@
 
 Click the **cog icon** to open the configuration options for Readarr.
 
-![configuration.png](../../assets/screenshots/integrations/readarr/configuration.png)
-
-1. Enable and colors for each trigger type
-1. Trigger specific options
-1. Content lines are small previews of the full notification for toast/push notifications
-1. 1:1 notifications means each notification will be sent, nothing updates existing messages
-
-![configuration-2.png](../../assets/screenshots/integrations/readarr/configuration-2.png)
-
-1. Notification content options that you can turn on/off to show in the notifications
-1. Launch the integration layout editor (image below)
-
-![layout-editor.png](../../assets/screenshots/integrations/readarr/layout-editor.png)
-
-1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
-1. Test Layout - Will send a test notification with the current layout format
-1. Save Layout - Will save the current layout format as the one you want to use
-1. Reset Layout - Will set the layout back to default
-
 ### Instructions
 
 ![instructions.png](../../assets/screenshots/integrations/readarr/instructions.png)
 
 1. How to enable notifications from within Readarr
-1. Test the notification from Notifiarr to Discord
-    - This will ensure your server, channel and permissions are set properly in Discord.
+2. Automatically add the connect if the client is setup
+
+## Integration Instructions
+
+
+![configuration.png](../../assets/screenshots/integrations/readarr/configuration.png)
+
+1. Use the `Customize` toggle too drop down
+2. Set the color of the notification
+3. All available `notification fields` in this case we used the `grab` trigger
+
 
 ### Errors
 

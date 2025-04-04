@@ -16,6 +16,9 @@
 
 Click the **cog icon** to open the configuration options for the Release parser.
 
+## Instructions
+
 ![configuration.png](../../assets/screenshots/integrations/releaseparser/configuration.png)
 
-- Pick the keywords that the bot will watch for
+1. basic instructions
+2. Pick the keywords that the bot will watch for

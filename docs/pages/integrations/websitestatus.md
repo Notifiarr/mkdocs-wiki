@@ -21,6 +21,9 @@ Click the **cog icon** to open the configuration options for website monitoring.
 ![configuration.png](../../assets/screenshots/integrations/websitestatus/configuration.png)
 
 1. Colors for notifications based on status
-1. Pick a pre-define indexer to monitor
-1. List of existing sites being monitored
-1. Website settings to be monitored
+2. Select pre-defined indexters to monitor
+3. Update the selected indexer
+4. toggle active state on/off
+5. URL of the desired website
+6. Delete toggle "browser popup to confirm action"
+7. reset all integration settings

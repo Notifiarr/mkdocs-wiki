@@ -48,7 +48,7 @@ Click the **cog icon** to open the configuration options for *arr apps.
 ![configuration-2.png](../../assets/screenshots/integrations/mediarequests/configuration-2.png)
 
 1. Add another instance of an \*arr app to be used for anything related to the Notifiarr client.
-1. Example conf setup for multiple instances.
+
 
 ### App settings
 

@@ -40,6 +40,7 @@ nav:
     - Github: pages/integrations/github.md
     - Hotio: pages/integrations/hotio.md
     - Jellyfin: pages/integrations/jellyfin.md
+    - Kometa: pages/integrations/plexmetamanager.md
     - Lidarr: pages/integrations/lidarr.md
     - Log Watcher: pages/integrations/logWatch.md
     - Media Requests: pages/integrations/mediaRequests.md
@@ -48,7 +49,6 @@ nav:
     - Passthrough: pages/integrations/passthrough.md
     - Persistent: pages/integrations/persistent.md
     - Plex: pages/integrations/plex.md
-    - Plex Meta Manager: pages/integrations/plexmetamanager.md
     - Overseerr: pages/integrations/overseerr.md
     - Radarr: pages/integrations/radarr.md
     - Readarr: pages/integrations/readarr.md

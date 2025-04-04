@@ -31,6 +31,10 @@
 
 ---
 
+## Instructions
+
+![instructions.png](../../assets/screenshots/integrations/lidarr/instructions.png)
+
 ## Configuration
 
 ![open-configuration.png](../../assets/screenshots/integrations/lidarr/open-configuration.png)
@@ -39,30 +43,13 @@ Click the **cog icon** to open the configuration options for Lidarr.
 
 ![configuration.png](../../assets/screenshots/integrations/lidarr/configuration.png)
 
-1. Open integration specific instructions
-1. Notification colors for each trigger type
-1. Unique notifications: Generate a new notification each time (By default notifications edit the previous one so there is a Grab and then the Download ot Upgrade will edit the Grab notification to alleviate the notification spam)
+1. set the notification color
+2. enable trigger in this example we used `album delete` and selected all available fields
 
-![configuration-2.png](../../assets/screenshots/integrations/lidarr/configuration-2.png)
+### Example
+here is a example if we enable all notification fields under the `grab` trigger
 
-1. Open integration specific instructions
-1. Notification content options that you can turn on/off to show in the notifications
-1. Launch the integration layout editor (image below)
-
-![layout-editor.png](../../assets/screenshots/integrations/lidarr/layout-editor.png)
-
-1. Drag and drop positioning of where you want to see each piece of information in the notification. Some fields are locked (red outline). Full width items can not be used in a multi-line layout. You can not have more than 3 items per line.
-1. Test Layout - Will send a test notification with the current layout format
-1. Save Layout - Will save the current layout format as the one you want to use
-1. Reset Layout - Will set the layout back to default
-
-### Instructions
-
-![instructions.png](../../assets/screenshots/integrations/lidarr/instructions.png)
-
-1. How to enable notifications from within Lidarr
-1. Test the notification from Notifiarr to Discord
-    - This will ensure your server, channel and permissions are set properly in Discord.
+![example.png](../../assets/screenshots/integrations/lidarr/example.png)
 
 ### Errors
 
