@@ -1,3 +1,5 @@
+# Bazarr
+
 !!! info
 
     This integration allows for notifications from Bazarr and will also add reactions to notifications if a subtitle was found for it and you are using reactions.
@@ -14,12 +16,16 @@
 
 ![triggers-channels.png](../../assets/screenshots/integrations/bazarr/triggers-channels.png)
 
+---
+
 ### Triggers
 
 - `Info` - Currently all notifications use this type
 - `Warning` - To date, Bazarr doesn't use this type
 - `Success` - To date, Bazarr doesn't use this type
 - `Failure` - To date, Bazarr doesn't use this type
+
+---
 
 ### Channel
 
@@ -43,15 +49,16 @@ Reaction example:
 
 ![reaction.png](../../assets/screenshots/integrations/bazarr/reaction.png)
 
+---
 
-### Instructions
+## Instructions
 
 ![instructions.png](../../assets/screenshots/integrations/bazarr/instructions.png)
 
 1. How to enable notifications from within Bazarr
 1. The URL to use in Bazarr
 1. Test the notification from Notifiarr to Discord
- 
+
 !!! note
-   
-     This will ensure your server, channel and permissions are set properly in Discord.
+
+     This will ensure your server, channel and permissions are set properly in Discord

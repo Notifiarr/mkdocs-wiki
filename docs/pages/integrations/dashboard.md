@@ -1,3 +1,5 @@
+# Dashboard
+
 !!! info
 
      This integration allows for notifications to keep you updated with an overview of some commonly used apps.
@@ -5,8 +7,6 @@
 ---
 
 The frequency of dashboard updates is controlled by the Notifiarr Client Configuration for the Dashboard for the specified client. All other Dashboard settings are noted below and within the Dashboard Integration.
-
-
 
 ## Trigger options
 
@@ -47,21 +47,10 @@ Click the **cog icon** to open the configuration options for the Dashboard integ
 1. How many of the newest items to see in the message (1-5).
 1. How many of the upcoming items to see in the message (1-10).
 1. How the Dashboard should display your completion ratio. Two options are available,
-  - `In Database` - Compares your downloaded items against what the App considers a complete list.
-  - `On Disk` - Compares your downloaded items to what you have on your disk.
-11. The order in which to post the dashboard notifications.
-1. Enables or disables the App from posting.
+1. `In Database` - Compares your downloaded items against what the App considers a complete list
+1. `On Disk` - Compares your downloaded items to what you have on your disk.
 
-### Extra Settings
-
-![extra_settings.png](../../assets/screenshots/integrations/dashboard/extra_settings.png)
-
-1. This will add the hostname to the notification title to know which machine it came from.
-1. How would you like your notifications to be displayed in Discord. Two options are available,
-  - `Update Existing` - A single notification will be received and continually refreshed.
-  - `New Messages` - A new message will be sent with each update.
-3. This will trigger a delete all and repost on the next update. **Note: this is a fleeting check box and the check will disappear after the save button is clicked.**
-1. If the Dashboard order has changed, use this to clear all current posts and repost in the new order. **Note: this is a fleeting check box and the check will disappear after the save button is clicked.**
+---
 
 !!! warning
 
@@ -72,4 +61,3 @@ Click the **cog icon** to open the configuration options for the Dashboard integ
 radarr example             |  sonarr example
 :-------------------------:|:-------------------------:
 ![example-radarr.ping](../../assets/screenshots/integrations/dashboard/dashboard-example-radarr.png)  |  ![example-sonarr.png](../../assets/screenshots/integrations/dashboard/dashboard-example-sonarr.png)
-

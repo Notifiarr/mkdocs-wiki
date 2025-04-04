@@ -6,7 +6,7 @@
 While you can certainly poke a hole your firewall and send the traffic directly to this app, it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
 
 - You'll want to tune the `upstreams` and `urlbase` client settings for your environment
-    - If your reverse proxy IP is `192.168.3.45` then set `upstreams` in the Profile page of the local Notifiarr Client to `192.168.3.45/32`
+  - If your reverse proxy IP is `192.168.3.45` then set `upstreams` in the Profile page of the local Notifiarr Client to `192.168.3.45/32`
 - The `urlbase` on the local Notifiarr Client configuration page can be left at `/`, but change it if you serve this app from a subfolder like `/notifiarr`
 
 ## Cloudflare Users

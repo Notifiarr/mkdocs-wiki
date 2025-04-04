@@ -1,6 +1,8 @@
-!!! info
-    This integration allows for users to parse a release name in the same method Radarr and Sonarr do to see how the name will be treated.
+# Release Parser
 
+!!! info
+
+    This integration allows for users to parse a release name in the same method Radarr and Sonarr do to see how the name will be treated.
 
 ## Trigger options
 

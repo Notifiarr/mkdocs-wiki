@@ -1,3 +1,5 @@
+# Better Stack
+
 !!! info
 
      This integration allows for notifications from Better stack utilizing their webhook system

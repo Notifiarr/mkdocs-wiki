@@ -1,4 +1,7 @@
+# TRaSH
+
 !!! info "TRaSH"
+
     This integration allows you to setup and sync TRaSH guides with Radarr and Sonarr. Keep in mind this requires the Notifiarr client.
 
 !!! warning "patrons/subscribers"
@@ -7,15 +10,14 @@
 !!! warning
     Users switching from an existing Sonarr v3 instance to Sonarr v4 [have additional steps that are required](#sonarr-v3-to-v4-migration)
 
-
-# Client Setup
+## Client Setup
 
 - TRaSH Integration requires the notifiarr client to be running locally, [configured and working (i.e. communicating with) on the Notifiarr site](../../pages/website/clientConfig.md), and the Starr Apps configured.
 - Add Starr Apps to the Client in the `Starr Apps` Tab of the Local Client
   - Note that `Time Out` for the Starr Apps **cannot** be set to `Disabled` for the app to be enabled
   - Note that a `Name` value **is required** for the Starr Apps you wish to sync
 
-# Integration Card
+### Integration Card
 
 ![trigger-channels-nt.png](../../assets/screenshots/integrations/trash/trigger-channels-nt.png)
 
@@ -24,7 +26,7 @@
 1. Channel
     - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
 
-# Integration Settings
+## Integration Settings
 
 Click the **cog icon** in the card header to open the configuration options for TRaSH.
 
@@ -36,8 +38,8 @@ Click the **cog icon** in the card header to open the configuration options for 
 
 ![client-settings2.png](../../assets/screenshots/integrations/trash/client-settings2.png)
 
-2. This will sync your CF changes as soon as TRaSH pushes them (Subscriber feature)
-3. This will save the client settings
+1. This will sync your CF changes as soon as TRaSH pushes them (Subscriber feature)
+2. This will save the client settings
 
 ## Notification Triggers
 
@@ -50,11 +52,11 @@ Click the **cog icon** in the card header to open the configuration options for 
     - `Removed` When a CF is removed from the guide
  2. Sonarr Notifications
     - `Quality Update` When Quality Definitions are updated
- 3. Sonarr CF Notifications <sup>**Requires V4**</sup>
+ 3. Sonarr CF Notifications **Requires V4**
     - `Update`  When differences are detected and notifiarr syncs
     - `Score Update` When Score changes are detected and updated
     - `Removed` When a CF is removed from the guide
- 4. Sonarr RP Notifications <sup>**Requires V3**</sup>
+ 4. Sonarr RP Notifications **Requires V3**
     - `Update`  When differences are detected and notifiarr syncs
     - `Score Update` When Score changes are detected and updated
     - `Removed` When a CF is removed from the guide
@@ -71,7 +73,7 @@ Sonarr
 2. Sync toggles
    - You can set all at once or each individually to keep synced
 
-## Radarr Sync <sup>& V4 Sonarr</sup>
+## Radarr Sync & V4 Sonarr
 
 ![sync1.png](../../assets/screenshots/integrations/trash/sync1-nt.png)
 
@@ -81,11 +83,11 @@ Sonarr
 2. Auto close results dialog will close the pop up showing the progress and results of the syncing
 3. Clicking one of the CFs in this table will send you down to the Custom Format settings of the one you clicked which is explained in the next section
 
-### Custom Formats <sup>& V4 Sonarr</sup>
+### Custom Formats & V4 Sonarr
 
 ![sync2.png](../../assets/screenshots/integrations/trash/sync2-nt.png)
 
-1. This will toggle on all custom formats in all your Radarr instances <sup>**Be very careful with this option**</sup>
+1. This will toggle on all custom formats in all your Radarr instances **Be very careful with this option**
 2. This will toggle on all scores to be synced in all your Radarr instances
 3. This will save all your settings and initiate a client sync
 
@@ -97,11 +99,14 @@ Sonarr
 4. These toggles will turn on syncing the scores from TRaSH in your Quality Profile
 
 ### Flowcharts for help
+
 ![flowchart.png](../../assets/screenshots/integrations/trash/flowchart-nt.png)
+
 1. Opens the flowchart selector
-2. Flowcharts <sup>**SQP Flowchart should not be selected without joining the [SQP Trash Discord Channel](https://discord.com/invite/Vau8dZ3)**</sup>
+2. Flowcharts **SQP Flowchart should not be selected without joining the [SQP Trash Discord Channel](https://discord.com/invite/Vau8dZ3)**
 
 ![flowchart2.png](../../assets/screenshots/integrations/trash/flowchart2.png)
+
 #### Default Flowchart
 
 ![flowchart3.png](../../assets/screenshots/integrations/trash/flowchart3-nt.png)
@@ -111,26 +116,27 @@ Sonarr
 3. Choose which profiles for which instance you want to apply this to
 4. Clicking the button will enable them for the specified Instance, to save and initiate sync you can refer to [Custom Formats](../../pages/integrations/trash.md#custom-formats--v4-sonarr)
 
-## Radarr Scores <sup>& V4 Sonarr</sup>
+## Radarr Scores & V4 Sonarr
 
 ![scores1.png](../../assets/screenshots/integrations/trash/scores1-nt.png)
 
-1. Quality Profile Selection <sup>Dropdown menu</sup>
+1. Quality Profile Selection D`ropdown menu`
 
 - If you toggle off one of the profiles it won't show in the scores list
 ![scores2.png](../../assets/screenshots/integrations/trash/scores2.png)
 
-2. CF Name and the instance it is in
-3. The Quality Profile you are syncing the score to
-4. You can input a multiplier here to subtract or add a percentage to the synced TRaSH score
+1. CF Name and the instance it is in
+1. The Quality Profile you are syncing the score to
+1. You can input a multiplier here to subtract or add a percentage to the synced TRaSH score
    - Such as multiplier of 0.8 would reduce it by 20%
-5. The current score of the CF in the Quality Profile
+1. The current score of the CF in the Quality Profile
    - Tick the checkbox if you wish to manually edit the score directly and disable sync
-6. This is  the current TRaSH Guide score for this CF
-7. This checkbox will enable score sync for all Custom Formats in the list
+1. This is  the current TRaSH Guide score for this CF
+1. This checkbox will enable score sync for all Custom Formats in the list
    - You can also tick each checkbox individually and choose which you want to be synced to which profile
 
 ## Naming Conventions
+
 ![naming.png](../../assets/screenshots/integrations/trash/naming-nt.png)
 
 1. Movie folder naming
@@ -138,7 +144,7 @@ Sonarr
 3. Movie file naming
 4. Pick to use a variation of naming that TRaSH recommends
 
-## Radarr Delete <sup>& V4 Sonarr</sup>
+## Radarr Delete & V4 Sonarr
 
 ![delete1.png](../../assets/screenshots/integrations/trash/delete1-nt.png)
 
@@ -151,9 +157,9 @@ Sonarr
    - `Fix Map` This will re-enable disabled CFs and Scores that exist in radarr so the sync can add them back or re-map them
    - `Delete CFs` This will delete the marked CFs and let the sync put them back as needed
    - `Delete CFs & Map` Delete the marked CFs and the map so they will no longer sync
-   - `Delete Map` Delete the site map for the radarr instance and start over <sup>Disables Sync</sup>
+   - `Delete Map` Delete the site map for the radarr instance and start over `Disables Sync`
 
-## Sonarr Delete <sup>V3</sup>
+## Sonarr Delete `V3`
 
 ![delete2.png](../../assets/screenshots/integrations/trash/delete2-nt.png)
 
@@ -164,9 +170,9 @@ Sonarr
    - You can also mark them individually for deletion
 5. Actions
    - `Delete RPs` This will delete the marked RPs so they can sync again
-   - `Delete Map` Delete the sync map for sonarr instances and start over <sup>Disables Sync</sup>
+   - `Delete Map` Delete the sync map for sonarr instances and start over `Disables Sync`
 
-## Sonarr Sync <sup>V3</sup>
+## Sonarr Sync `V3`
 
 ![sync3.png](../../assets/screenshots/integrations/trash/sync-sonarr-nt.png)
 
@@ -179,6 +185,7 @@ Sonarr
 ## Sonarr v3 to v4 Migration
 
 - Users with an existing v3 instance they upgraded to v4 have some manual migration steps required.
+
 1. Open the TRaSH Guides integration on Notifiarr
 1. on the left in the Sonarr group click the Delete link in the `RP <= v3.*` section.
 1. In the popup click the Delete Map button and clear the maps.

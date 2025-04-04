@@ -1,11 +1,13 @@
 # Passthrough
-!!! info
-    This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.
 
+!!! info
+
+    This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.
 
 By sending them through this integration you can keep track of how many it has sent, when the last one was, status code, etc
 
 ## Payload field breakdown
+
 ```
 notification: {
     update: false, // Optional (Bool) - This is used to update an existing message with the same id, true will update existing & false will always post new
@@ -45,7 +47,9 @@ discord: {
 ```
 
 ## Payload Example 1
+
 - This would send a new notification
+
 ```
 {
     "notification": {

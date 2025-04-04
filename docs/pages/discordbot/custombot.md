@@ -1,7 +1,7 @@
+# Discord
+
 !!! info
      Let the *Staff* know that you want to run your own bot instead of the Notifiarr bot so we can enable it for your account. *Keep in mind this is a Sub feature.*
-
-# Discord
 
 ## Dev portal
 
@@ -23,4 +23,4 @@ Now that you have added the bot to your server you need to get the bots id. Righ
 
 After the Admins have enabled it you simply need to go to your profile and in the Notification section is a place for the Bot Token and Bot Id. Add those pieces of information and click save so the site will create a container for your bot.
 
-Since you already added the bot to your server above, once you hit save it should only take a few seconds for the bot to show online in your server.
+Since you already added the bot to your server above, once you hit save it should only take a few seconds for the bot to show online in your server

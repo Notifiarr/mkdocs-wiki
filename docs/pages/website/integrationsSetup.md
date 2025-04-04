@@ -9,7 +9,7 @@
 
 1. Once you open the `Integration Configuration` you only need to toggle on/off what you want to use.
 
-# Reactions Setup
+## Reactions Setup
 
 ![reaction-setup.png](../../assets/screenshots/website/reaction-setup.png)
 
@@ -20,8 +20,6 @@
 	1. Go to any channel on your server and type `\:emoji_name:` (replace `emoji_name` with the actual name/alias you are using for the emoji when you uploaded it to your server) then press Enter.
   1. You will see a message in your chat that looks like `<:emoji_name:1069872535814496896>`. In this example, `emoji_name` represents the name/alias of the emoji, and the string of numbers after the colon is the emoji ID.
 - Copy this value, without the brackets or leading colon (in this example, you would copy `emoji_name:1069872535814496896`) and paste the results in the Discord settings field that corresponds to the reaction you are using the emoji for.
-
-# Troubleshooting
 
 ## Discord Server Missing from Dropdown
 

@@ -8,8 +8,6 @@ This allows the Notifiarr Client to watch (log) files for lines matching a regul
 !!! info
     If creating a skip expression that contains `'` replace the apostrophe with `.?`
 
-
-
 ## Regular Expressions & Skip Expressions
 
 Below are community suggested expressions

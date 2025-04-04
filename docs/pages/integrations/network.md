@@ -1,6 +1,8 @@
-!!! info
-    This integration allows for notifications from the local Notifiarr client app to monitor network machines or services.
+# network
 
+!!! info
+
+    This integration allows for notifications from the local Notifiarr client app to monitor network machines or services.
 
 ## Network Overview
 
@@ -46,17 +48,20 @@ Detailed instructions are shown in the Client UI section of the wiki.
 These are all the configurable options available to the user.
 
 ## Triggers
+
 ![triggers.png](../../assets/screenshots/integrations/network/triggers.png)
 
 Select the individual trigger colour that will be displayed on Discord notifications.
 
-## Integration Settings
+## Integration Settings continued
+
 ![integration_settings.png](../../assets/screenshots/integrations/network/integration_settings.png)
 
 1. `Status` - This will post a message with the current status of selected items and update its self accordingly.
 1. `Exclude` - This will allow specific items to be ignored when they go down or come up, typically during expected maintenance.
 
 ## Extra Settings
+
 ![extra_settings.png](../../assets/screenshots/integrations/network/extra_settings.png)
 
 1. `Status Page` - Enables a web page status overview of all your monitored items. Past events are also shown.
@@ -64,13 +69,8 @@ Select the individual trigger colour that will be displayed on Discord notificat
 1. `Network Integration API` - Enable this by assigning a unique API key to the Network Integration on the Homepage of the Notifiarr website.
 
 ## Client Settings
+
 ![client_settings.png](../../assets/screenshots/integrations/network/client_settings.png)
 
 1. `Mute Client Down Alerts` - Select this to stop down alerts.
 1. `Interval` - Select from the drop down list the check time in minutes. Or to disable all checks.
-
-## Custom Icon
-![custom_icon.png](../../assets/screenshots/integrations/network/custom_icon.png)
-
-Assign another icon to notifications from this integration (Subscriber Feature) 
-

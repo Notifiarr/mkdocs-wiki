@@ -1,7 +1,8 @@
+# Reddit
+
 !!! info
+
     This integration allows for notifications from subreddits you choose to watch
-
-
 
 ---
 

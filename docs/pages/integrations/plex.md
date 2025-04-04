@@ -1,4 +1,7 @@
+# Plex
+
 !!! info
+
     This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](../../pages/client/install.md)
 
 ## Current Version
@@ -47,6 +50,7 @@ Click the **cog icon** to open the integration settings for Plex.
 1. `Save` - Saves all your Configured settings and closes the Integration Settings Menu.
 
 ### Triggers
+
 ![triggers1.png](../../assets/screenshots/integrations/plex/triggers1.png)
 
 1. Notification triggers.
@@ -58,12 +62,14 @@ Click the **cog icon** to open the integration settings for Plex.
 Here you can adjust the settings for this integration.
 
 #### User/Device
+
 ![user-device.png](../../assets/screenshots/integrations/plex/user-device.png)
 
 1. Table of all users and devices. Uncheck the notify box to not receive notifications from the specific user/device.
 1. Keyword for having the bot display what is currently streaming on your server.
 
 #### Session Management
+
 ![session-management.png](../../assets/screenshots/integrations/plex/session-management.png)
 
 1. `Scope` - Kill all sessions from a given user/device (Maybe a user shared their login with someone else).
@@ -71,9 +77,11 @@ Here you can adjust the settings for this integration.
 3. `Action` - Notify when sessions are automatically killed.
 
 #### Library Trash
+
 ![library-trash.png](../../assets/screenshots/integrations/plex/library-trash.png)
 
-*Note: You may see the following error when tab is loading: `Error fetching plex library list.` Ensure the [client settings](#Client-Settings) are saved and try again.*
+*Note: You may see the following error when tab is loading: `Error fetching plex library list.` Ensure the [client settings](#client-settings) are saved and try again.*
+
 1. `Trigger` - Keyword to trigger a cleanup outside the set frequency and time
 2. `Library` - Check which libraries you want the automated trash cleanup
 3. `Trash Settings` - The time and frequency of the automated cleanup
@@ -84,6 +92,7 @@ Here you can adjust the settings for this integration.
 4. `Times` - The times for the library
 
 ### Extra Settings
+
 Additional settings such as automatically unmonitor an episode or movie once a user has watched it. You are able to select multiple users by holding down ctrl and highlighting the names.
 ![extra-settings.png](../../assets/screenshots/integrations/plex/extra-settings.png)
 
@@ -105,10 +114,12 @@ Additional settings such as automatically unmonitor an episode or movie once a u
 ![interval.png](/plex/interval.png)
 
 ### Custom Icon
+
 Assign another icon to notifications from this integration (Subscriber Feature)
 ![custom-icon.png](../../assets/screenshots/integrations/plex/custom-icon.png)
 
 ### Content Lines
+
 Content lines are small previews of the full notification for toast/push notifications. Great for wearables.
 ![content-lines.png](../../assets/screenshots/integrations/plex/content-lines.png)
 
@@ -124,11 +135,13 @@ This integration requires the Notifiarr client to be running locally. You can ge
 1. This controls the maximum duration a request to this application may elapse. Selecting No Timeout can be dangerous. Selecting Disabled completely disables the instance.
 
 ### Webhook
+
 !!! info
+
     [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require [Plexpass](https://www.plex.tv/plex-pass/)
 
-
 In Plex, [add a webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
+
 - Replace `localhost:port` with the `ip:port` to the Notifiarr client
 - Replace `plex-token-here` with the token for Plex so the Notifiarr client allows the incoming connection
 

@@ -1,20 +1,32 @@
+# Overseerr
+
 !!! info
+
     this is the same for jellyseerr
 
+---
+
 ## Integration Card
+
 ![instructions2.png](../../assets/screenshots/integrations/overseerr/instructions2.png)
 
 1. Configuration
 2. Channel picker for the notifications
 
+---
+
 ### Channel Picker
+
 ![instructions3.png](../../assets/screenshots/integrations/overseerr/instructions3.png)
 
-1. List of channels <sup>Dropdown menu</sup>
+1. List of channels `Dropdown menu`
 2. Test bot channel permissions
 3. Copy Channel to all
 
+---
+
 ## Configuration
+
 ![instructions4.png](../../assets/screenshots/integrations/overseerr/instructions4.png)
 
 1. Notification triggers
@@ -22,9 +34,13 @@
 3. Notification Color
 
 !!! note
+
     Be sure to save settings
 
+---
+
 ## Instructions
+
 ![instructions1.png](../../assets/screenshots/integrations/overseerr/instructions1.png)
 
 1. Notifications Settings

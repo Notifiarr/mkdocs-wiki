@@ -1,6 +1,8 @@
-!!! info
-    This integration allows for requesting media via Discord.
+# Media Requests
 
+!!! info
+
+    This integration allows for requesting media via Discord.
 
 ## Currently Supported Applications
 
@@ -15,10 +17,10 @@
 
 ### Triggers
 
-- `Lidarr`<sup>1</sup> - Enable Lidarr requests for an instance
-- `Radarr`<sup>1</sup> - Enable Radarr requests for an instance
-- `Readarr`<sup>1</sup> - Enable Readarr requests for an instance
-- `Sonarr`<sup>1</sup> - Enable Sonarr requests for an instance
+- `Lidarr` - Enable Lidarr requests for an instance
+- `Radarr` - Enable Radarr requests for an instance
+- `Readarr`- Enable Readarr requests for an instance
+- `Sonarr`- Enable Sonarr requests for an instance
 
 ### Channel
 
@@ -49,8 +51,7 @@ Click the **cog icon** to open the configuration options for *arr apps.
 
 1. Add another instance of an \*arr app to be used for anything related to the Notifiarr client.
 
-
-### App settings
+## App settings
 
 ![app-settings.png](../../assets/screenshots/integrations/mediarequests/app-settings.png)
 
@@ -74,4 +75,4 @@ A basic overview on how to use the integration. This may change from time to tim
 ### Discord Troubleshooting
 
 - Type `cancel` to end any existing or stuck requests
-- Type `help` to ensure the bot has access to the channel and can response 
+- Type `help` to ensure the bot has access to the channel and can response
