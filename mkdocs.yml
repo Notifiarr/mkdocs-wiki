@@ -30,36 +30,55 @@ nav:
     - Metrics: pages/website/metrics.md
   - Integrations:
     - How To Setup Integrations: pages/integrations/basicUsage.md
+    - Apprise: pages/integrations/apprise.md
     - Authentik: pages/integrations/authentik.md
+    - Autobrr: pages/integrations/autobrr.md
     - Bazarr: pages/integrations/bazarr.md
     - Better Stack: pages/integrations/betterstack.md
+    - Channel Stats: pages/integrations/channelstats.md
+    - Cronitor: pages/integrations/cronitor.md
+    - Cross Seed: pages/integrations/crossseed.md
+    - Crowdsec: pages/integrations/crowdsec.md
     - Dashboard: pages/integrations/dashboard.md
     - Discord App: pages/integrations/discordApp.md
+    - DockWatch: pages/integrations/dockwatch.md
+    - Duplicacy: pages/integrations/duplicacy.md
     - Emby: pages/integrations/emby.md
+    - Fail2ban: pages/integrations/fail2ban.md
     - Github: pages/integrations/github.md
     - Hotio: pages/integrations/hotio.md
     - Jellyfin: pages/integrations/jellyfin.md
+    - Jellyseerr: pages/integrations/jellyseerr.md
     - Kometa: pages/integrations/plexmetamanager.md
     - Lidarr: pages/integrations/lidarr.md
     - Log Watcher: pages/integrations/logWatch.md
-    - Media Requests: pages/integrations/mediaRequests.md
     - MDBList: pages/integrations/mdblist.md
+    - Media Requests: pages/integrations/mediaRequests.md
     - Network: pages/integrations/network.md
+    - Overseerr: pages/integrations/overseerr.md
+    - Package Manager: pages/integrations/packagemanager.md
     - Passthrough: pages/integrations/passthrough.md
     - Persistent: pages/integrations/persistent.md
     - Plex: pages/integrations/plex.md
-    - Overseerr: pages/integrations/overseerr.md
+    - Prowlarr: pages/integrations/prowlarr.md
+    - Qbit Manage: pages/integrations/qbitmanage.md
     - Radarr: pages/integrations/radarr.md
     - Readarr: pages/integrations/readarr.md
-    - Release Parser: pages/integrations/releaseParser.md
+    - Reciperr: pages/integrations/reciperr.md
     - Reddit: pages/integrations/reddit.md
+    - Release Parser: pages/integrations/releaseParser.md
     - RSS Watcher: pages/integrations/rssWatcher.md
     - Simon Says: pages/integrations/simonSays.md
     - Snapshots: pages/integrations/snapshots.md
     - Sonarr: pages/integrations/sonarr.md
+    - Starr Proxy: pages/integrations/starrproxy.md
+    - Synology: pages/integrations/synology.md
     - TRaSH: pages/integrations/trash.md
     - Unpackerr: pages/integrations/unpackerr.md
+    - Uptime Kuma: pages/integrations/uptimekuma.md
+    - Watchtower: pages/integrations/watchtower.md
     - Website Status: pages/integrations/websitestatus.md
+    - Whisparr: pages/integrations/whisparr.md
   - Discord Bot:
     - Permissions: pages/discordbot/permissions.md
     - Custom Bot: pages/discordbot/custombot.md

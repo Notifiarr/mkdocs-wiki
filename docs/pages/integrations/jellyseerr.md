@@ -1,0 +1,3 @@
+# Jellyseerr
+
+COMING SOON :smile:
