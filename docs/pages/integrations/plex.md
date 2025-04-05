@@ -111,7 +111,7 @@ Additional settings such as automatically unmonitor an episode or movie once a u
 1. `Activity Delay` - This is how long to wait after media is started before getting the session, at least 10-12 seconds is needed.
 1. `Cooldown` - Minimum time between notifications to ensure duplicates are not sent (such as media.play and playback.started)
 1. `Interval` - This is how often to send a notification for the Plex Sessions trigger, nothing sends if there is no media playing or paused.
-![interval.png](/plex/interval.png)
+![interval.png](../../assets/screenshots/integrations/plex/interval.png)
 
 ### Custom Icon
 

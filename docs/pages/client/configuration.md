@@ -72,7 +72,7 @@ It is important that a static hostname is set so the site can keep track of mult
 - Docker Compose users add `hostname: notifiarr` to your yaml
 - Unraid users add `-h notifiarr` to Extra Parameters
 - TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
-![truecharts_install.jpg](/truecharts_install.jpg)
+![truecharts_install.jpg](../../assets/screenshots/client/truecharts_install.jpg)
 
 !!! note
     Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients)

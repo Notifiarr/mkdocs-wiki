@@ -83,7 +83,7 @@ Sonarr
 2. Auto close results dialog will close the pop up showing the progress and results of the syncing
 3. Clicking one of the CFs in this table will send you down to the Custom Format settings of the one you clicked which is explained in the next section
 
-### Custom Formats & V4 Sonarr
+## Custom Formats Sonarr v4
 
 ![sync2.png](../../assets/screenshots/integrations/trash/sync2-nt.png)
 
@@ -114,7 +114,7 @@ Sonarr
 1. Clicking the Yellow scare will open the Custom Formats list for these matching conditions
 2. List of the Custom Formats for the condition you selected
 3. Choose which profiles for which instance you want to apply this to
-4. Clicking the button will enable them for the specified Instance, to save and initiate sync you can refer to [Custom Formats](../../pages/integrations/trash.md#custom-formats--v4-sonarr)
+4. Clicking the button will enable them for the specified Instance, to save and initiate sync you can refer to [Custom Formats](../../pages/integrations/trash.md#custom-formats-sonarr-v4)
 
 ## Radarr Scores & V4 Sonarr
 
