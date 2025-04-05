@@ -30,8 +30,9 @@ What sets us apart from direct integrations are the options we provide to format
 Everything is configurable, even how much data we keep on our servers. You get to decide how long your transaction log files live for, or if your transactions even get logged at all.
 
 ## Support
+
 Over on [discord](https://notifiarr.com/discord)
-we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel. 
+we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel.
 !!! info
     For Patron access - Link your GitHub from thr Profile Page on the Notifiarr Website
 

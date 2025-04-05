@@ -3,6 +3,7 @@
 ## Integration Card
 
 ![integration_card.png](../../assets/screenshots/integrations/rsswatcher/integration_card.png)
+
 1. Configuration
 2. Channel picker for the feeds
 

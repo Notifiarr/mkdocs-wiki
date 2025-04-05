@@ -112,16 +112,16 @@ Once the webhook has been configured, remember to click on  **Save**.
 
      Remember to add a comma after `"System": "Warning"` to avoid formatting errors.
 
-```diff
-{
-    "Serilog": {
-        "MinimumLevel": {
-            "Default": "Information",
-            "Override": {
-                "Microsoft": "Warning",
-                "System": "Warning",
-+               "Jellyfin.Plugin.Webhook": "Debug"
-            }
-        }
+     ```diff
+     {
+     "Serilog": {
+          "MinimumLevel": {
+               "Default": "Information",
+               "Override": {
+                    "Microsoft": "Warning",
+                    "System": "Warning",
+     +               "Jellyfin.Plugin.Webhook": "Debug"
+               }
+          }
 
-```
+     ```
