@@ -1,1 +1,3 @@
-**documentation coming soon**
+# Simon Says
+
+DOCUMENTATION COMING SOON :smile:

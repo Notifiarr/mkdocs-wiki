@@ -100,12 +100,11 @@ If session info is missing from notifications or the sessions notification is no
 !!! note
     Patron and Sub also have extra channels available on Discord with roles and colors
 
-
-### Limitations
+## Limitations
 
 | User | Patron | Subscriber | Integration | Setting |
 | :- | :- | :- | :- | :- |
-| 12,000 / day<br>500 / hour | 24,000 / day<br>1,000 / hour| Unlimited | Core | Notifications |
+| 12,000 / day 500 / hour | 24,000 / day 1,000 / hour| Unlimited | Core | Notifications |
 | All but TRaSH Sync | All | All | Core | Integrations |
 | 7 days | 14 days | Unlimited | Network | Status retention (used for the network status page to show uptime and for detail links in notifications) |
 | 14 days | 30 days | Unlimited | Plex | Session retention (used for tracking transcodes by device, app, user, media type, etc and sessions notifications) |

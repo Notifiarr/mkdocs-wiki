@@ -30,8 +30,9 @@ What sets us apart from direct integrations are the options we provide to format
 Everything is configurable, even how much data we keep on our servers. You get to decide how long your transaction log files live for, or if your transactions even get logged at all.
 
 ## Support
+
 Over on [discord](https://notifiarr.com/discord)
-we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel. 
+we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel.
 !!! info
     For Patron access - Link your GitHub from thr Profile Page on the Notifiarr Website
 
@@ -40,7 +41,8 @@ we have a big community, if you need assistance you can ask there by opening a s
 I built Notifiarr in late 2019 for [myself](https://github.com/austinwbest), and it was used by only myself until August of 2020 when I opened it up for others to use. My goal has always been to have a single location for common notification needs, so I am not jumping around 20 apps to do things. [Captain](https://github.com/davidnewhall) joined the crew in December 2020, and the two of us run the servers and write the code for the client and website.
 
 ## Integrations
-see [integrations](pages/integrations/basicUsage#how-to-setup-integrations)
+
+see [integrations](pages/integrations/basicUsage.md#how-to-setup-integrations)
 
 ## Additional Features
 
@@ -57,5 +59,5 @@ see [integrations](pages/integrations/basicUsage#how-to-setup-integrations)
   * Discover features
   * Multi-Instance Support
 * Minimal Access - No \*Arr apikeys or anything of the sort is used or saved on the site. All requests to the client are verified with your Notifiarr apikey and thrown out if they don't match up
-* TRaSH Custom Format Sync [*\*Patron Feature\**](pages/faq/faq/#q-what-are-the-user-level-differences) - Automated continuous add/sync for the custom formats TRaSH has made to use with Radarr
+* TRaSH Custom Format Sync [*\*Patron Feature\**](pages/faq/faq.md#q-what-are-the-user-level-differences) - Automated continuous add/sync for the custom formats TRaSH has made to use with Radarr
 * Radarr Collections - A fully automated way to monitor all your Radarr collections with auto add new items to your library as they are put into the collection on TMDb for any monitored collections, etc.

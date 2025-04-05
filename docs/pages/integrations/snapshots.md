@@ -1,3 +1,5 @@
+# Snapshot
+
 ![overview.png](../../assets/screenshots/integrations/snapshots/overview.png)
 
 1. Reloads the integration.
@@ -87,5 +89,3 @@ Here are all the different settings for your client. These selections will deter
 If you are AWESOME and are one of our Sub's then you will see this option and can upload your own custom icon.
 
 ![custom_icon.jpg](../../assets/screenshots/integrations/snapshots/custom_icon.jpg)
-
-

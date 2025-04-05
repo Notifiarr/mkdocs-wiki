@@ -1,4 +1,4 @@
-## Web GUI
+# Web GUI
 
 Open the conf file, set your Notifiarr API Key and restart the client.
 Point your browser to the client. This can be something like:
@@ -9,7 +9,7 @@ Point your browser to the client. This can be something like:
 
 Use the username (default:admin) and apikey you setup in the conf file to login to the app. Now you can configure and setup the client via the UI including changing your password.
 
-### Docker Users
+## Docker Users
 
 When a new docker image is deployed with an empty /config folder mounted, the app will do two things:
 
@@ -72,7 +72,7 @@ It is important that a static hostname is set so the site can keep track of mult
 - Docker Compose users add `hostname: notifiarr` to your yaml
 - Unraid users add `-h notifiarr` to Extra Parameters
 - TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
-![truecharts_install.jpg](/truecharts_install.jpg)
+![truecharts_install.jpg](../../assets/screenshots/client/truecharts_install.jpg)
 
 !!! note
     Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients)

@@ -1,6 +1,8 @@
-!!! info
-    This integration allows for notifications from Readarr using its built in Connection for **Notifiarr**. In Readarr click Settings → Connect → <kb>+</kb> → Notifiarr
+# Readarr
 
+!!! info
+
+    This integration allows for notifications from Readarr using its built in Connection for **Notifiarr**. In Readarr click Settings → Connect → <kb>+</kb> → Notifiarr
 
 ---
 
@@ -19,6 +21,8 @@
 - `Corrupt` - Monitor backups for corruption and size loss
 - `Deleted` - Be notified when media is deleted
 
+---
+
 ### Channel
 
 - Readarr shares the *arr channel unless Granular Setup is used, clicking the link on the site will move to the channel setup location.
@@ -31,6 +35,8 @@
 
 Click the **cog icon** to open the configuration options for Readarr.
 
+---
+
 ### Instructions
 
 ![instructions.png](../../assets/screenshots/integrations/readarr/instructions.png)
@@ -38,8 +44,9 @@ Click the **cog icon** to open the configuration options for Readarr.
 1. How to enable notifications from within Readarr
 2. Automatically add the connect if the client is setup
 
-## Integration Instructions
+---
 
+## Integration Instructions
 
 ![configuration.png](../../assets/screenshots/integrations/readarr/configuration.png)
 
@@ -47,6 +54,7 @@ Click the **cog icon** to open the configuration options for Readarr.
 2. Set the color of the notification
 3. All available `notification fields` in this case we used the `grab` trigger
 
+---
 
 ### Errors
 

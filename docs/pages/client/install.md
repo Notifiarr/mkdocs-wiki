@@ -1,4 +1,4 @@
-## Linux
+# Linux
 
 *Linux repository hosting provided by* &nbsp;[![packagecloud](https://docs.golift.io/integrations/packagecloud-full.png "PackageCloud.io")](http://packagecloud.io)
 
@@ -55,12 +55,14 @@ service notifiarr start
 
 - Consider moving away from TrueNAS Scale, and more specifically **you must move away from TrueCharts for Notifiarr** as Notifiarr v0.7.1 is broken / unsupported and TrueCharts will not upgrade the chart.
 - The next TrueNAS Scale OS release will no longer support TrueCharts after their next OS release in 3 months (~10/2024)
-- For additional information:
-    - [Please see some commentary and screenshots on the Notifiarr Discord](https://discord.com/channels/764440599066574859/1261063207859261441/1261085647142391829)
-    - [Refer to TrueNAS Forums as to why TrueCharts Team are no longer updating their apps](https://forums.truenas.com/t/the-future-of-electric-eel-and-apps/5409)
-    - [Be weary of asking for TrueCharts support in the TrueNAS Discord. Per Reddit: Users have been banned](https://old.reddit.com/r/truenas/comments/1e0vf5h/trucharts_banning_talking_about_scale/)
+
+For additional information:
+
+- [Please see some commentary and screenshots on the Notifiarr Discord](https://discord.com/channels/764440599066574859/1261063207859261441/1261085647142391829)
+- [Refer to TrueNAS Forums as to why TrueCharts Team are no longer updating their apps](https://forums.truenas.com/t/the-future-of-electric-eel-and-apps/5409)
+- [Be weary of asking for TrueCharts support in the TrueNAS Discord. Per Reddit: Users have been banned](https://old.reddit.com/r/truenas/comments/1e0vf5h/trucharts_banning_talking_about_scale/)
 - No current TrueNAS Scale users have been able to to write documentation for Notifiarr.
-    - [Heavy's Guide](https://heavysetup.info/applications/notifiarr/notifiarr/) **is depreciated and will eventually be removed. It may stop working or be out of date at any time.**
+- [Heavy's Guide](https://heavysetup.info/applications/notifiarr/notifiarr/) **is depreciated and will eventually be removed. It may stop working or be out of date at any time.**
 
 ## macOS
 

@@ -1,11 +1,14 @@
+# Hotio
+
 !!! info
 
      This integration allows for notifications from Hotio.
----
 
 ## Currently supported
 
 - Pullio
+
+---
 
 ## Trigger options
 
@@ -27,6 +30,8 @@ Click the **cog icon** to open the configuration options for Hotio apps.
 ![configuration.png](../../assets/screenshots/integrations/hotio/configuration.png)
 
 1. Pick the colors for the different Pullio update states
+
+---
 
 ### Instructions
 

@@ -1,3 +1,5 @@
+# Emby
+
 !!! info
     This integration allows for notifications from the Emby media app
 
@@ -29,6 +31,8 @@ Click the **cog icon** to open the configuration options for Emby.
 ![configuration.png](../../assets/screenshots/integrations/emby/configuration.png)
 
 1. Enable triggers and pick colors for each trigger
+
+---
 
 ### Instructions
 

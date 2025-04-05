@@ -1,3 +1,5 @@
+# Trending
+
 ![trending-1.png](../../assets/screenshots/website/trending-1.png)
 
 1. Most grabbed among all users with Sonarr enabled in the last 30 days

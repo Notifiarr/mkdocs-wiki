@@ -1,4 +1,7 @@
+# Website Status
+
 !!! info
+
      This integration allows for notifications based on website status.
 
 ## Trigger options

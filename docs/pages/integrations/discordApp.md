@@ -1,1 +1,3 @@
-**COMING SOON**
+# Discord App
+
+COMING SOON :smile:

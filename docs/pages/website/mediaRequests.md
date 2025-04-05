@@ -8,7 +8,7 @@
 4. Details about each request made
 5. Action buttons for things that are pending if approval is used (This can also be done with the bot)
 
-# Collections Monitoring (Gaps)
+## Collections Monitoring (Gaps)
 
 ![media-requests-1.png](../../assets/screenshots/website/media-requests-3.png)
 

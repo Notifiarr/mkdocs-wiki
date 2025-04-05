@@ -1,3 +1,5 @@
+# Github
+
 !!! info
 
      This integration allows for notifications from public Github repositories.
@@ -29,6 +31,8 @@ Click the **cog icon** to open the configuration options for Github.
 1. Pick a repository, they are pulled automatically based on the organizations added.
 1. Copy the `Server` or `Channel` selection to all triggers
 1. Available Github triggers
+
+---
 
 ### Instructions
 

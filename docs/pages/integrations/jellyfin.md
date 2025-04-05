@@ -1,7 +1,8 @@
+# Jellyfin
+
 !!! info
 
      This integration allows for notifications from the Jellyfin media app
----     
 
 ## Trigger options
 
@@ -17,6 +18,8 @@
     - Open the configuration to enable/disable more triggers
 1. Channel
     - Setup all the channels needed for each trigger
+
+---
 
 ## Configuration
 
@@ -40,47 +43,33 @@ Click the **cog icon** to open the configuration options for Jellyfin.
 1. This needs to be done in Jellyfin before webhooks can be used
 1. After the webhook plugin is installed, this is how you add the webhook for Notifiarr
 
-<br><br>
-
 ### JELLYFIN
 
 To configure your Jellyfin server to work with Notifiarr, we will first have to configure a few things, such as our webhook and notification settings - the latter required to for new content notifications.
 
-<br>
+## Install the Webhook Plugin
 
+To install the Webhook plugin, navigate to the `Dashboard` and into the `Plugins` section.
+From here, scroll down until you find the `Webhook Plugin`
 
-**Install the Webhook Plugin**
-
----
-
-
-To install the Webhook plugin, navigate to the <kbd>Dashboard</kbd> and into the <kbd>Plugins</kbd> section. 
-From here, scroll down until you find the <kbd>Webhook Plugin</kbd>.
-
-Click on the plugin and install the latest version. 
+Click on the plugin and install the latest version.
 Once installed, go ahead and restart your Jellyfin server for the plugin to be loaded.
 
-<br>
+## Configure the Webhook Plugin
 
-**Configure the Webhook Plugin**
+Once you have restarted your Jellyfin server, navigate back to your `Plugins` menu and look for **Webhook** under the `My Plugins tab`. Click on it to reveal its options.
 
----
+Write the URL of your Jellyfin server where it says `SERVER URL` and click on **"Add Generic Destination"** and scroll down to configure it.
 
+- `NAME`
 
-Once you have restarted your Jellyfin server, navigate back to your <kbd>Plugins</kbd> menu and look for **Webhook** under the *'My Plugins'* tab. Click on it to reveal its options. 
+Give the Webhook a name
 
-Write the URL of your Jellyfin server where it says <kbd>SERVER URL</kbd> and click on **"Add Generic Destination"** and scroll down to configure it.
-
-+ <kbd>NAME</kbd>
-
-Give the Webhook a name 
 !!! info
+
      Example: Notifiarr
 
-
-<br>
-
-+ <kbd>Webhook Url</kbd>
+- `Webhook Url`
 
 !!! note
 
@@ -90,25 +79,16 @@ Give the Webhook a name
      https://notifiarr.com/api/v1/notification/jellyfin/YOUR_API_KEY
      ```
 
-
-<br>
-
-+ <kbd>Notification Type</kbd>
+- `Notification Type`
 
 Enable all **except**:
 
-```
-Generic
-Playback Progress
-Task Completed
-User Data Saved
-```
-<br>
-
-+ <kbd>Item Type</kbd>
+1. Generic
+1. Playback Progress
+1. Task Completed
+1. User Data Saved
 
 Check **"Send All Properties (ignores template)"**
-
 
 Once the webhook has been configured, remember to click on  **Save**.
 
@@ -119,11 +99,7 @@ Once the webhook has been configured, remember to click on  **Save**.
      You can also change how often Jellyfin notifies you of new items by changing the intervals of the scheduled task.
      <kbd>Dashboard > Scheduled Tasks > Webhook Item Added Notifier</kbd>
 
-
-
-<br>
-
-**Debugging Webhooks**
+## Debugging Webhooks
 
 ---
 
@@ -136,17 +112,16 @@ Once the webhook has been configured, remember to click on  **Save**.
 
      Remember to add a comma after `"System": "Warning"` to avoid formatting errors.
 
+     ```diff
+     {
+     "Serilog": {
+          "MinimumLevel": {
+               "Default": "Information",
+               "Override": {
+                    "Microsoft": "Warning",
+                    "System": "Warning",
+     +               "Jellyfin.Plugin.Webhook": "Debug"
+               }
+          }
 
-```diff
-{
-    "Serilog": {
-        "MinimumLevel": {
-            "Default": "Information",
-            "Override": {
-                "Microsoft": "Warning",
-                "System": "Warning",
-+               "Jellyfin.Plugin.Webhook": "Debug"
-            }
-        }
-
-```
+     ```
