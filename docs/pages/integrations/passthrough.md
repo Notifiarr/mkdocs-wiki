@@ -1,14 +1,13 @@
 # Passthrough
 
 !!! info
-
     This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.
 
 By sending them through this integration you can keep track of how many it has sent, when the last one was, status code, etc
 
 ## Payload field breakdown
 
-```
+```json
 notification: {
     update: false, // Optional (Bool) - This is used to update an existing message with the same id, true will update existing & false will always post new
     name: "Local App", // Required (Str) - This is the name of the custom app/script, should be unique
@@ -50,7 +49,7 @@ discord: {
 
 - This would send a new notification
 
-```
+```json
 {
     "notification": {
         "update": false,
@@ -83,9 +82,10 @@ discord: {
 ```
 
 ## Payload Example 2
+
 - This would update an existing notification
 
-```
+```json
 {
     "notification": {
         "update": true,
@@ -144,8 +144,11 @@ subprocess.call(webhook)
 ```
 
 ## Notifiarr script
+
 - Can be called from any script (example above)
+
 ### Python
+
 ```python
 import argparse
 import json
