@@ -14,13 +14,13 @@ nav:
     - Quick Start: pages/quickstart/quickStart.md
   - Client:
     - Install: pages/client/install.md
-    - Config: pages/client/configuration.md
-    - GUI: pages/client/gui.md
+    - Client configuration: pages/client/configuration.md
+    - Client UI: pages/client/gui.md
     - Cloudflare config: pages/client/cloudflare.md
     - Reverse proxy: pages/client/reverseProxy.md
     - Setup: pages/client/setup.md
   - Website:
-    - Client config: pages/website/clientConfig.md
+    - Client setup: pages/website/clientConfig.md
     - Integrations setup: pages/website/integrationsSetup.md
     - Media requests: pages/website/mediaRequests.md
     - Notification history: pages/website/notificationHistory.md
