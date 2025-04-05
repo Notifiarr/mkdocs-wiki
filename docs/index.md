@@ -34,7 +34,7 @@ Everything is configurable, even how much data we keep on our servers. You get t
 Over on [discord](https://notifiarr.com/discord)
 we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel.
 !!! info
-    For Patron access - Link your GitHub from thr Profile Page on the Notifiarr Website
+    For Patron access - Link your GitHub from the Profile Page on the Notifiarr Website
 
 ## From the author
 
@@ -42,7 +42,9 @@ I built Notifiarr in late 2019 for [myself](https://github.com/austinwbest), and
 
 ## Integrations
 
-see [integrations](pages/integrations/basicUsage.md#how-to-setup-integrations)
+!!! note
+
+    [How to setup integrations](pages/integrations/basicUsage.md#how-to-setup-integrations)
 
 ## Additional Features
 
