@@ -58,6 +58,6 @@ Prowlarr Connect            |  Test Notification
 
 ### Examples
 
-Prowlarr example 1           |  Prowlarr example 2
+Prowlarr Grab          |  Prowlarr Corruption
 :-------------------------:|:-------------------------:
 ![prowlarr.connect](../../assets/screenshots/integrations/prowlarr/example-1.png)  |  ![test-notification](../../assets/screenshots/integrations/prowlarr/example-2.png)
