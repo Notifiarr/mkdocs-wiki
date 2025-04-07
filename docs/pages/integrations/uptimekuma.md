@@ -13,10 +13,6 @@
 
 ## Instructions
 
-!!! note
-
-    refer to [Uptime-Kuma](https://github.com/louislam/uptime-kuma/wiki) for more details
-
 ![instructions.png](../../assets/screenshots/integrations/uptimekuma/instructions.png)
 
 !!! info
