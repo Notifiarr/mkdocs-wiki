@@ -75,7 +75,7 @@ nav:
     - Synology: pages/integrations/synology.md
     - TRaSH: pages/integrations/trash.md
     - Unpackerr: pages/integrations/unpackerr.md
-    - Uptime Kuma: pages/integrations/uptimekuma.md
+    - Uptime-Kuma: pages/integrations/uptimekuma.md
     - Watchtower: pages/integrations/watchtower.md
     - Website Status: pages/integrations/websitestatus.md
     - Whisparr: pages/integrations/whisparr.md

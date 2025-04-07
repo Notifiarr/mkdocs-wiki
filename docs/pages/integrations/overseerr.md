@@ -1,9 +1,5 @@
 # Overseerr
 
-!!! info
-
-    this is the same for jellyseerr
-
 ---
 
 ## Integration Card
@@ -35,7 +31,7 @@
 
 !!! note
 
-    Be sure to save settings
+    **Be sure to save settings**
 
 ---
 

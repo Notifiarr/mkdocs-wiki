@@ -40,7 +40,6 @@ Prowlarr Connect            |  Test Notification
 :-------------------------:|:-------------------------:
 ![prowlarr.connect](../../assets/screenshots/integrations/prowlarr/prowlarr-connect.png)  |  ![test-notification](../../assets/screenshots/integrations/prowlarr/test-notification.png)
 
-
 ---
 
 ## Configuration

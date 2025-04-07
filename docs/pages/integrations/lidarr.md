@@ -2,7 +2,7 @@
 
 !!! info "Lidarr"
 
-    This integration allows for notifications from Lidarr using its built in Connection for **Notifiarr**. In Lidarr click Settings → Connect → <kb>+</kb> → Notifiarr
+    This integration allows for notifications from Lidarr using its built in Connection for **Notifiarr**. In Lidarr click Settings &rarr; Connect &rarr; Notifiarr
 
 ## Current Versions
 
