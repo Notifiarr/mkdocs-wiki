@@ -2,7 +2,7 @@
 
 !!! info
 
-     This integration allows for notifications from Prowlarr using its built in Connection for **Notifiarr**. In Prowlarr click Settings → Connect → <kb>+</kb> → Notifiarr
+     This integration is for setting up discord notifications for Prowlarr
 
 ## Trigger options
 
