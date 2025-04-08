@@ -1,11 +1,9 @@
 site_name: Wiki
 site_author: nitsua
 site_description: Notifiarr provides native custom integrations with dozens of applications and websites. That means these applications or websites can send data to Notifiarr, and we’ll format a message according to your configuration then send it to your chat server.
-site_url: http://rm-web-1:8007/en/latest/
-repo_name: Client
-repo_url: https://github.com/Notifiarr/notifiarr
-repo_wiki_name: Wiki
-repo_wiki_url: https://github.com/Notifiarr/mkdocs-wiki
+site_url: https://notifiarr.wiki
+repo_name: Wiki
+repo_url: https://github.com/Notifiarr/mkdocs-wiki
 
 nav:
   - Notifiarr:
@@ -97,8 +95,6 @@ theme:
     - content.code.annotate
     - content.tabs.link
     - content.code.copy
-    - content.action.edit
-    - content.action.view
     - content.tooltips
     - header.autohide
     - announce.dismiss
