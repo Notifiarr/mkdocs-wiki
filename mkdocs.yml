@@ -122,6 +122,10 @@ theme:
       toggle:
         icon: material/weather-night
         name: Dark mode
+
+extra_css:
+  - stylesheets/github-permalink-style.css
+
 plugins:
   - glightbox:
       touchNavigation: true
@@ -147,3 +151,5 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - md_in_html
+  - toc:
+      permalink: ''
