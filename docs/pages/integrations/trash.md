@@ -7,8 +7,8 @@
 !!! warning "patrons/subscribers"
     **Patron Feature** - Acessible to [Patrons and Subscribers](../../pages/faq/faq.md#q-what-are-the-user-level-differences) only
 
-!!! warning
-    This is notifiarr NOT TRaSH Guides. If you have any issues settings up TRaSH please use their [discord](https://trash-guides.info/discord) for help :smile:
+!!! note
+    If you have questions about what the formats, profiles, scores, etc do then please use the TRaSH [discord](https://trash-guides.info/discord) server for help or check their guide. This wiki is for setting up and getting things in sync.
 
 ## Client Setup
 
@@ -21,10 +21,9 @@
 
 ![trigger-channels.png](../../assets/screenshots/integrations/trash/trigger-channels.png)
 
-1. Sync
-    - The amount of CF's and scores you have in sync
-1. Channel
-    - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
+`CFs/Scores` - The amount of CF's and scores you have synced.
+
+`Channel` - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
 
 ## Getting Started
 
@@ -55,9 +54,11 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 
 ![profiles-1.png](../../assets/screenshots/integrations/trash/profiles-1.png)
 
-1. syncing the profile.
-2. if you want to create a new profile, or overide a existing profile.
-3. profile name **Needs to be unique**.
+`Sync` - syncing the profile.
+
+`Starr instance profile` - if you want to create a new profile, or overide a existing profile.
+
+`Profile name` - profile name **Needs to be unique**.
 
 !!! Note
     If you plan too use TRaSH as default you can stop here and save your settings. Below we will got into customizing the profile, quality, and CF's.
@@ -74,11 +75,15 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 
 ![profile-customization-1.png](../../assets/screenshots/integrations/trash/profile-customization-1.png)
 
-1. if you want too sync the language.
-2. if you want too allow upgrades.
-3. minimum allowed score to download.
-4. minimum upgrade score, meaning if your current file has a score of 200 it will upgrade to a file with a score of 201 if it becomes available unless you have met your cutoff quality.
-5. quality cutoff met.
+`Language` - If you want too always sync your language, **Disable this if you plan too use something other then TRaSH default.
+
+`Upgrades allowed` - Enable to allow upgrades.
+
+`Minimum score` - Minimum score to download.
+
+`Minimum upgrade score` - Minimum score differnce too allow upgrade. **defaulted to 1**
+
+`Cutoff score` - When quality cutoff is met. **default set 10000**
 
 ### Quality Settings
 
@@ -87,17 +92,19 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 
 ![quality.png](../../assets/screenshots/integrations/trash/quality.png)
 
-1. Quality cutoff.
-2. If you want to match TRaSH qualities, or allow for custom qualities.
+`Cutoff quality` - Enable to use the default cutoff here it would be `Bluray-1080p`
+
+`Qualities` - Match TRaSH qualities, or allow Custom qualities.
 
 ### Custom Formats "CF"
 
 ![custom-formats-1.png](../../assets/screenshots/integrations/trash/custom-formats-1.png)
 
-1. Choose if you want all new formats automatically added, only add missing formats, or add no formats.
-2. Remove cf scores from this profile, or allow cf scores for this profile.
-3. All available cf groups.
-4. You can enable a grouping and choose the dropdown for all available cf's in the group.
+`Add` - Choose if you want all new formats automatically added, only add missing formats, or add no formats.
+
+`Remove` - Remove cf scores from this profile, or allow cf scores for this profile.
+
+`Groups` - All available cf groups, You can choose the drop down too show all that are available.
 
 ### Formats
 
@@ -106,8 +113,9 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 
 ![formats-1.png](../../assets/screenshots/integrations/trash/formats-1.png)
 
-1. Syncing the CF names/condition names
-2. Useful interactive flowcharts.
+`Sync TRaSH CF names` - If you want to sync the names for the TRaSH CFs.
+
+`Interactive flowchart` - Useful interactive flow charts for TRaSH.
 
 ### Scores
 
@@ -115,10 +123,13 @@ Here you can setup custom scores too your liking, and choose to sync them.
 
 ![scores-1.png](../../assets/screenshots/integrations/trash/scores-1.png)
 
-1. Filter between profiles.
-2. Multiplier (multiplier * TRaSH = your score)
-3. Custom set starr score
-4. Sync check box
+`Filter` - filter between avialable profiles.
+
+`Multiplier` - (multiplier * TRaSH = your score)
+
+`Starr score/Custom` - Set a custom score of your choice.
+
+`Sync` - Check-box to enable sync.
 
 ## Quality
 
@@ -126,9 +137,11 @@ Here you can edit quality names within a specific group and choose too sync them
 
 ![quality-1.png](../../assets/screenshots/integrations/trash/quality-1.png)
 
-1. Quality group.
-2. Rename field
-3. Sync check-box
+`Definition group`- Here you can choose the starr profile.
+
+`Rename Field` - This is where you can customize the name of a quality.
+
+`Sync` - Check-box to enable sync.
 
 ### Naming
 
@@ -140,11 +153,18 @@ Here you can choose a default TRaSH naming scheme for your media files/folders.
 
 ![formats-1.png](../../assets/screenshots/integrations/trash/delete-formats.png)
 
-1. Open the Custom Format map tool.
-2. Enable sync for all CF's.
-3. Enable sync and scores.
-4. Unlink your starr id from the map.
-5. Relink your starr ip/map.
-6. Delete map **BE CAREFUL**
-7. delete your CF's and map
-8. Fresh start CF's or ALL.
+`Fix Map` - Open the Custom Format map tool.
+
+`Enable sync` - Enable sync for all CF's.
+
+`Enable sync + scores` - Enable sync and scores. Will trigger a sync for starr instance
+
+`Unlink starr` - Unlink your starr id from the map.
+
+`Relink starr` - Relink your starr ip/map.
+
+`Delete map` - Delete map **BE CAREFUL THIS WILL DELETE ALL YOUR SYNC SETTINGS**
+
+`Delete Selected CFs/Delete Selected CFs & Map` delete your CF's and map
+
+`  Fresh Start CFs/All` Fresh start CF's or ALL.
