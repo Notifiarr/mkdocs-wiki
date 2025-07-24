@@ -1,7 +1,7 @@
 # Autobrr
 
 !!! info
-    This integration is too enable discord notifications for autobrr.
+    This integration is to enable discord notifications for autobrr.
 
 ## Trigger Options
 
@@ -29,12 +29,12 @@ Here you can customize the layout and color of your notifcation for each avaiabl
 
 ![instructions.png](../../assets/screenshots/integrations/autobrr/instructions.png)
 
-1. Basic instructions too setup autobrr notifications.
+1. Basic instructions to setup autobrr notifications.
 2. The API key used within the autobrr settings → Notifications.
 3. Always save.
 
 !!! info
-    Here is how too setup your notifcations in autobrr.
+    Here is how to setup your notifcations in autobrr.
 
 ![autobrr-instructions.png](../../assets/screenshots/integrations/autobrr/autobrr-instructions.png)
 
