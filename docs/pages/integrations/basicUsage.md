@@ -6,7 +6,7 @@
 
 ---
 
-## Explaing Integrations
+## Explainig Integrations
 
 Each integration is split up into sections and there is a sub menu on the right (unless using mobile) that will help you jump to specific sections.
 
