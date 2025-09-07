@@ -10,6 +10,38 @@
 !!! note
     If you have questions about what the formats, profiles, scores, etc do then please use the TRaSH [discord](https://trash-guides.info/discord) server for help or check their guide. This wiki is for setting up and getting things in sync.
 
+## Features
+
+| Feature | Patron | Subscriber |
+|---|---|---|
+| GUI | ✅ | ✅ |
+| Multiple instances | ✅ | ✅ |
+| <center><b>Formats</b></center> | | |
+| Sync | ✅ | ✅ |
+| Customize format scores | ✅ | ✅ |
+| Apply score multiplier | ✅ | ✅ |
+| Mass update scores | ✅ | ✅ |
+| Mass delete formats | ✅ | ✅ |
+| Notifications | ✅ | ✅ |
+| <center><b>Profiles</b></center> | | |
+| Sync | ✅ | ✅ |
+| Customize profile settings | ✅ | ✅ |
+| Clone profiles | ✅ | ✅ |
+| Notifications | ✅ | ✅ |
+| <center><b>Quality definitions</b></center> | | |
+| Sync | ✅ | ✅ |
+| Multiple preset quality groups | ✅ | ✅ |
+| Notifications | ✅ | ✅ |
+| <center><b>File naming</b></center> | | |
+| Sync | ✅ | ✅ |
+| Multiple preset naming conventions | ✅ | ✅ |
+| Notifications | ✅ | ✅ |
+| <center><b>Extras</b></center> | | |
+| Access to community sync<br>-- Upload your own formats for public/private use | ✅ | ✅ |
+| Instant sync when TRaSH updates | | ✅ |
+| Jump to top of the querue | | ✅ |
+| Trigger a sync from Discord | | ✅ |
+
 ## Client Setup
 
 - TRaSH Integration requires the notifiarr client to be running locally, [configured and working (i.e. communicating with) on the Notifiarr site](../../pages/website/clientConfig.md), and the Starr Apps configured.
