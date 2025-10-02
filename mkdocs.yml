@@ -47,7 +47,7 @@ nav:
     - Hotio: pages/integrations/hotio.md
     - Jellyfin: pages/integrations/jellyfin.md
     - Jellyseerr: pages/integrations/jellyseerr.md
-    - Kometa: pages/integrations/plexmetamanager.md
+    - Kometa: pages/integrations/kometa.md
     - Lidarr: pages/integrations/lidarr.md
     - Log Watcher: pages/integrations/logWatch.md
     - MDBList: pages/integrations/mdblist.md

@@ -1,11 +1,5 @@
 # Kometa
 
-## Website
-
-To enable Kometa support on the site, open the Plex integration and you will find the Kometa triggers and color settings.
-
-Open the Plex channel picker and you will see a channel setting for `Collections`. Any errors will automatically be sent to the shared error channel.
-
 ## Webhook Types
 
 !!! info
