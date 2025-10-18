@@ -13,9 +13,10 @@ jobs:
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - uses: actions/checkout@v4
+      - name: Clone repository
+        uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Setup Python environment
         uses: actions/setup-python@v5
         with:
           python-version: "3.13"
@@ -23,7 +24,7 @@ jobs:
       - name: Upgrade pip
         run: python3 -m pip install --upgrade pip
 
-      - name: Get pip cache dir
+      - name: Get pip cache directory
         id: pip-cache
         run: echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
 
