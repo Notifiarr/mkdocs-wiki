@@ -9,7 +9,7 @@
         <meta name="author" content="nitsua">
       
       
-        <link rel="canonical" href="http://rm-web-1:8007/en/latest/pages/client/setup/">
+        <link rel="canonical" href="https://notifiarr.wiki/pages/client/setup/">
       
       
         <link rel="prev" href="../reverseProxy/">
@@ -48,6 +48,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/github-permalink-style.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -95,52 +97,21 @@
     </div>
     
     
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine classes -->
-
+      
 
   
 
-
-<!-- Header -->
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-
-    <!-- Link to home -->
     <a href="../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-
-    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
-
-    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -157,8 +128,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Color palette toggle -->
     
       
         <form class="md-header__option" data-md-component="palette">
@@ -186,24 +155,18 @@
 </form>
       
     
-
-    <!-- User preference: color palette -->
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-
-    <!-- Site language selector -->
     
-
-    <!-- Button to open search modal -->
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-      </label>
-
-      <!-- Search interface -->
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -242,62 +205,22 @@
     </div>
   </div>
 </div>
-    
-
-    <!-- Repository information -->
-    
-      <div style="width: 15rem; display: inline-block;">
-        <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
       </div>
     
   </nav>
-
-  <!-- Navigation tabs (sticky) -->
   
     
       
@@ -504,52 +427,15 @@
   </label>
   
     <div class="md-nav__source">
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+      <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -783,7 +669,7 @@
   
   
   <span class="md-ellipsis">
-    Config
+    Client configuration
     
   </span>
   
@@ -806,7 +692,7 @@
   
   
   <span class="md-ellipsis">
-    GUI
+    Client UI
     
   </span>
   
@@ -1392,7 +1278,7 @@
   
   
   <span class="md-ellipsis">
-    Client config
+    Client setup
     
   </span>
   
@@ -1644,12 +1530,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/apprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/authentik/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Authentik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/autobrr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autobrr
     
   </span>
   
@@ -1713,6 +1645,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/channelstats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Channel Stats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/cronitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronitor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/crossseed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cross Seed
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/crowdsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crowdsec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/dashboard/" class="md-nav__link">
         
   
@@ -1759,12 +1783,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/dockwatch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DockWatch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/duplicacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Duplicacy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/emby/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Emby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/fail2ban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fail2ban
     
   </span>
   
@@ -1851,7 +1944,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/plexmetamanager/" class="md-nav__link">
+      <a href="../../integrations/jellyseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jellyseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/kometa/" class="md-nav__link">
         
   
   
@@ -1920,29 +2036,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/mediaRequests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Media Requests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../integrations/mdblist/" class="md-nav__link">
         
   
@@ -1966,12 +2059,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/mediaRequests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/network/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/overseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/packagemanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Manager
     
   </span>
   
@@ -2058,12 +2220,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/overseerr/" class="md-nav__link">
+      <a href="../../integrations/prowlarr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overseerr
+    Prowlarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/qbitmanage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qbit Manage
     
   </span>
   
@@ -2127,12 +2312,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/releaseParser/" class="md-nav__link">
+      <a href="../../integrations/reciperr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Release Parser
+    Reciperr
     
   </span>
   
@@ -2156,6 +2341,29 @@
   
   <span class="md-ellipsis">
     Reddit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/releaseParser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Parser
     
   </span>
   
@@ -2265,6 +2473,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/starrproxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Starr Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/synology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/trash/" class="md-nav__link">
         
   
@@ -2311,12 +2565,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/uptimekuma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uptime-Kuma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/watchtower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watchtower
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/websitestatus/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Website Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/whisparr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Whisparr
     
   </span>
   
@@ -3020,36 +3343,23 @@
 
 
   
-    <a href="https://github.com/Notifiarr/notifiarr/edit/master/docs/pages/client/setup.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
-    </a>
-  
-  
-    
-      
-    
-    <a href="https://github.com/Notifiarr/notifiarr/raw/master/docs/pages/client/setup.md" title="View source of this page" class="md-content__button md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
-    </a>
   
 
 
-<h1 id="setup">Setup</h1>
-<h2 id="troubleshooting">Troubleshooting</h2>
+<h1 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link"></a></h1>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link"></a></h2>
 <ul>
 <li>Find help on Discord: <a href="https://discord.gg/AURf8Yz">Notifiarr</a> (preferred) or <a href="https://golift.io/discord">Go Lift</a> (if you like Go).</li>
 </ul>
-<h3 id="tmp-not-found">Tmp not found</h3>
+<h3 id="tmp-not-found">Tmp not found<a class="headerlink" href="#tmp-not-found" title="Permanent link"></a></h3>
 <p>Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more. Set the <code>TMPDIR</code> environment variable to a writable path, or mount <code>/tmp</code> to resolve the error.</p>
-<h3 id="resolving-duplicate-clients">Resolving Duplicate Clients</h3>
+<h3 id="resolving-duplicate-clients">Resolving Duplicate Clients<a class="headerlink" href="#resolving-duplicate-clients" title="Permanent link"></a></h3>
 <ul>
 <li>If you have duplicate clients on the website and are <a href="#hostname">setting a hostname after the fact</a>, <a href="../../website/clientConfig/#resolving-duplicate-clients">see these instructions</a> for resolving the duplicates after setting a hostname.</li>
 </ul>
-<h2 id="notifiarr-website">Notifiarr Website</h2>
+<h2 id="notifiarr-website">Notifiarr Website<a class="headerlink" href="#notifiarr-website" title="Permanent link"></a></h2>
 <p>There are non-integration related settings and triggers are configured on the Notifiarr site in the <code>Notifiarr Client Configuration</code> popup (button is located at the top of the setup page. You can get some insight about that <a href="../../website/clientConfig/">on the wiki</a> as well. Integration specific timers and settings are found in the Client Configuration of each Integration that uses the Client.</p>
-<h2 id="web-ui">Web UI</h2>
+<h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link"></a></h2>
 <ol>
 <li>
 <p>Open the conf file, set your Notifiarr API Key and restart the client.</p>
@@ -3069,13 +3379,13 @@ api_key = "api-key-from-notifiarr.com"
 <p>Use the username (default: <code>admin</code>) and the api mey you setup in the conf file to login to the app. Now you can configure and setup the client via the UI including changing your password.</p>
 </li>
 </ol>
-<h3 id="docker-users">Docker Users</h3>
+<h3 id="docker-users">Docker Users<a class="headerlink" href="#docker-users" title="Permanent link"></a></h3>
 <p>When a new docker image is deployed and an empty /config folder is mounted the app will do two things:</p>
 <ul>
 <li>If the API Key is not configured via an enviormental variable or invalid: Create a new ui_password and print it into the log file.</li>
 <li>Write a brand new config file with this password already saved</li>
 </ul>
-<h2 id="conf-file">.conf File</h2>
+<h2 id="conf-file">.conf File<a class="headerlink" href="#conf-file" title="Permanent link"></a></h2>
 <ul>
 <li>You can use env variables, the conf file, or the UI.</li>
 <li>The UI is recommended which requires a <a href="#web-ui">one time setting</a></li>
@@ -3092,14 +3402,14 @@ You must configure the Notifiarr API Key in the Unraid Template/ Container Setti
 <p><strong>Docker Users</strong>
 Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.</p>
 </div>
-<h3 id="compressed-conf-file">Compressed Conf File</h3>
+<h3 id="compressed-conf-file">Compressed Conf File<a class="headerlink" href="#compressed-conf-file" title="Permanent link"></a></h3>
 <ul>
 <li>After accessing Notifiarr Client's Webui, upon saving to prevent user caused issues from editing the conf file, the conf file is compressed and will look like gibberish</li>
 <li>In the rare case the UI is not accessible and the conf file must be edited, you will need to decompress the file with <code>bzcat</code> prior to making your edits</li>
 </ul>
 <div class="highlight"><pre><span></span><code>bzcat<span class="w"> </span>/path/to/notifiarr.conf<span class="w"> </span>&gt;<span class="w"> </span>/output/path/to/notifiarr_decomp.conf
 </code></pre></div>
-<h3 id="log-files">Log Files</h3>
+<h3 id="log-files">Log Files<a class="headerlink" href="#log-files" title="Permanent link"></a></h3>
 <p>You can set a log file in the config for apt/deb linux installs. You should do that. Otherwise, find your logs here:</p>
 <ul>
 <li>Linux: <code>/var/log/notifiarr</code></li>
@@ -3110,13 +3420,13 @@ Note that Docker Environmental Variables - and thus the Unraid Template - overri
 <li>Windows: <code>&lt;home folder&gt;/.notifiarr/notifiarr.log</code></li>
 </ul>
 <p>In the Client UI log settings can be found under <code>Logging</code> in Settings =&gt; Configuration. Logs can be viewed in the UI under Insights =&gt; Logs.</p>
-<h4 id="detailed-debugging">Detailed Debugging</h4>
+<h4 id="detailed-debugging">Detailed Debugging<a class="headerlink" href="#detailed-debugging" title="Permanent link"></a></h4>
 <p>In the Client UI log settings can be found under <code>Logging</code> in Settings =&gt; Configuration.</p>
 <ul>
 <li>Enable <code>Debug Logging</code></li>
 </ul>
 <p>Logs can be viewed in the UI under Insights =&gt; Logs.</p>
-<h4 id="clearing-logs">Clearing Logs</h4>
+<h4 id="clearing-logs">Clearing Logs<a class="headerlink" href="#clearing-logs" title="Permanent link"></a></h4>
 <ul>
 <li>
 <p>To <code>clear</code> logs to make troubleshooting easier - stop the client and rename/remove the log file, the restart the client.</p>
@@ -3125,23 +3435,23 @@ Note that Docker Environmental Variables - and thus the Unraid Template - overri
 <p>If you have not previously enabled debug logs you do not need to clear anything.</p>
 </li>
 </ul>
-<h2 id="hostname">Hostname</h2>
+<h2 id="hostname">Hostname<a class="headerlink" href="#hostname" title="Permanent link"></a></h2>
 <p>It is important that a static hostname is set so the site can keep track of multiple clients for the settings. Some examples of how to do that:</p>
 <ul>
 <li>Docker Run users add <code>-h notifiarr</code> to your docker run command</li>
 <li>Docker Compose users add <code>hostname: notifiarr</code> to your yaml</li>
 <li>Unraid users add <code>-h notifiarr</code> to Extra Parameters</li>
 <li>TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
-<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="/truecharts_install.jpg" data-desc-position="bottom"><img alt="truecharts_install.jpg" src="/truecharts_install.jpg"></a></li>
+<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/truecharts_install.jpg" data-desc-position="bottom"><img alt="truecharts_install.jpg" src="../../../assets/screenshots/client/truecharts_install.jpg"></a></li>
 </ul>
 <p>Failure to set a hostname will result in <a href="../../website/clientConfig/#resolving-duplicate-clients">duplicate clients that will need to be resolved once a hostname is set</a>.</p>
-<h3 id="wsl2-users">WSL2 users</h3>
+<h3 id="wsl2-users">WSL2 users<a class="headerlink" href="#wsl2-users" title="Permanent link"></a></h3>
 <ul>
 <li>Add a volume to your Notifiarr container (This is used for a unique uuid for each client instance)</li>
 </ul>
 <div class="highlight"><pre><span></span><code>/etc/machine-id:/etc/machine-id
 </code></pre></div>
-<h2 id="env-variables">ENV Variables</h2>
+<h2 id="env-variables">ENV Variables<a class="headerlink" href="#env-variables" title="Permanent link"></a></h2>
 <p>Config File and Docker Environmental Variables are listed below</p>
 <ul>
 <li>Any variable not provided takes the default.</li>
@@ -3150,7 +3460,7 @@ Note that Docker Environmental Variables - and thus the Unraid Template - overri
 <li><strong>The Notifiarr application uses the API key for bi-directional authorization.</strong></li>
 <li>You may provide multiple Sonarr, Radarr or Readarr instances using <code>DN_SONARR_1_URL</code>, <code>DN_SONARR_2_URL</code>, etc or by duplicating the starr block in the conf file. Note the header of <code>[[radarr]]</code>, <code>[[sonarr]]</code>, <code>[[readarr]]</code>, etc. is required.</li>
 </ul>
-<h3 id="client">Client</h3>
+<h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3239,7 +3549,7 @@ Note that Docker Environmental Variables - and thus the Unraid Template - overri
 </table>
 <p>All applications below (starr, downloaders, Tautulli, Plex) have a <code>timeout</code> setting.
 If the configuration for an application is missing the timeout, the global timeout (above) is used.</p>
-<h3 id="secret-settings">Secret Settings</h3>
+<h3 id="secret-settings">Secret Settings<a class="headerlink" href="#secret-settings" title="Permanent link"></a></h3>
 <p>Recommend not messing with these unless instructed to do so.</p>
 <table>
 <thead>
@@ -3286,7 +3596,7 @@ If the configuration for an application is missing the timeout, the global timeo
 <p class="admonition-title">Note</p>
 <p>You may disable the GUI (menu item) on Windows by setting the env variable <code>USEGUI</code> to <code>false</code>._</p>
 </div>
-<h4 id="mysql-snapshots">MySQL Snapshots</h4>
+<h4 id="mysql-snapshots">MySQL Snapshots<a class="headerlink" href="#mysql-snapshots" title="Permanent link"></a></h4>
 <p>You may add mysql credentials to your notifiarr configuration to snapshot mysql
 service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>SHOW STATUS</code> data.</p>
 <p>Access to a database is not required. Example Grant:</p>
@@ -3323,7 +3633,7 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 </tr>
 </tbody>
 </table>
-<h3 id="lidarr">Lidarr</h3>
+<h3 id="lidarr">Lidarr<a class="headerlink" href="#lidarr" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3378,7 +3688,7 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 <ul>
 <li><strong>BCC = Backup Corruption Check</strong></li>
 </ul>
-<h3 id="prowlarr">Prowlarr</h3>
+<h3 id="prowlarr">Prowlarr<a class="headerlink" href="#prowlarr" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3430,7 +3740,7 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 </tr>
 </tbody>
 </table>
-<h3 id="radarr">Radarr</h3>
+<h3 id="radarr">Radarr<a class="headerlink" href="#radarr" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3482,7 +3792,7 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 </tr>
 </tbody>
 </table>
-<h3 id="readarr">Readarr</h3>
+<h3 id="readarr">Readarr<a class="headerlink" href="#readarr" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3534,7 +3844,7 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 </tr>
 </tbody>
 </table>
-<h3 id="sonarr">Sonarr</h3>
+<h3 id="sonarr">Sonarr<a class="headerlink" href="#sonarr" title="Permanent link"></a></h3>
 <table>
 <thead>
 <tr>
@@ -3586,13 +3896,13 @@ service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>S
 </tr>
 </tbody>
 </table>
-<h3 id="downloaders">Downloaders</h3>
+<h3 id="downloaders">Downloaders<a class="headerlink" href="#downloaders" title="Permanent link"></a></h3>
 <p>You can add supported downloaders so they show up on the dashboard integration.
 You may easily add service checks to these downloaders by adding a name.
 Any number of downloaders of any type may be configured.</p>
 <p>These all also have <code>interval</code> and <code>timeout</code> represented as a Go Duration.
 Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</code>. Valid units are<code>s</code>,<code>m</code>, and<code>h</code>. Combining units is additive.</p>
-<h4 id="qbittorrent">QbitTorrent</h4>
+<h4 id="qbittorrent">QbitTorrent<a class="headerlink" href="#qbittorrent" title="Permanent link"></a></h4>
 <table>
 <thead>
 <tr>
@@ -3634,7 +3944,7 @@ Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</c
 </tr>
 </tbody>
 </table>
-<h4 id="rtorrent">rTorrent</h4>
+<h4 id="rtorrent">rTorrent<a class="headerlink" href="#rtorrent" title="Permanent link"></a></h4>
 <table>
 <thead>
 <tr>
@@ -3666,7 +3976,7 @@ Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</c
 </tr>
 </tbody>
 </table>
-<h4 id="sabnzbd">SABnzbd</h4>
+<h4 id="sabnzbd">SABnzbd<a class="headerlink" href="#sabnzbd" title="Permanent link"></a></h4>
 <table>
 <thead>
 <tr>
@@ -3693,7 +4003,7 @@ Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</c
 </tr>
 </tbody>
 </table>
-<h4 id="deluge">Deluge</h4>
+<h4 id="deluge">Deluge<a class="headerlink" href="#deluge" title="Permanent link"></a></h4>
 <table>
 <thead>
 <tr>
@@ -3730,7 +4040,7 @@ Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</c
 </tr>
 </tbody>
 </table>
-<h4 id="nzbget">NZBGet</h4>
+<h4 id="nzbget">NZBGet<a class="headerlink" href="#nzbget" title="Permanent link"></a></h4>
 <table>
 <thead>
 <tr>
@@ -3762,7 +4072,7 @@ Examples: <code>1m</code>, <code>1m30s</code>, <code>3m15s</code>, <code>1h5m</c
 </tr>
 </tbody>
 </table>
-<h3 id="plex">Plex</h3>
+<h3 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link"></a></h3>
 <p>This application can also send Plex sessions to Notifiarr so you can receive notifications when users interact with your server.
 This has three different features:</p>
 <ul>
@@ -3800,7 +4110,7 @@ You may also need to add a webhook to Plex so it sends notices to this applicati
 </tr>
 </tbody>
 </table>
-<h3 id="tautulli">Tautulli</h3>
+<h3 id="tautulli">Tautulli<a class="headerlink" href="#tautulli" title="Permanent link"></a></h3>
 <p>Only 1 Tautulli instance may be configured per client.
 Providing Tautulli allows Notifiarr to use the "Friendly Name" for your Plex users and it allows you to easily enable a service check.</p>
 <table>
@@ -3829,7 +4139,7 @@ Providing Tautulli allows Notifiarr to use the "Friendly Name" for your Plex use
 </tr>
 </tbody>
 </table>
-<h3 id="service-checks">Service Checks</h3>
+<h3 id="service-checks">Service Checks<a class="headerlink" href="#service-checks" title="Permanent link"></a></h3>
 <p>The Notifiarr client can also check URLs for health. If you set names on your Starr apps they will be automatically checked and reports sent to Notifiarr.
 If you provide a log file for service checks, those logs will no longer write to the app log nor to console stdout.</p>
 <table>
@@ -3909,12 +4219,12 @@ You may combine these with commas. ie <code>restart,count:1:3</code>.</p>
 Unless you wrap the value in slashes, then it becomes a regex.
 ie. use this <code>expect = "/^/usr/bin/smtpd$/"</code> to match an exact string.</p>
 <p>Run <code>notifiarr --ps</code> to view the process list from Notifiarr's point of view.</p>
-<h2 id="docker-compose">Docker Compose</h2>
+<h2 id="docker-compose">Docker Compose<a class="headerlink" href="#docker-compose" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>See the <a href="../install/#docker">Installation Page</a></p>
 </div>
-<h2 id="snapshot-dependencies">Snapshot Dependencies</h2>
+<h2 id="snapshot-dependencies">Snapshot Dependencies<a class="headerlink" href="#snapshot-dependencies" title="Permanent link"></a></h2>
 <p>This application can take a snapshot of your system at an interval and send
 you a notification. Snapshot means system health like cpu, memory, disk, raid, users, etc.
 Other data available in the snapshot: mysql health, <code>iotop</code>, <code>iostat</code> and <code>top</code> data.
@@ -3925,7 +4235,7 @@ If you use smartctl on Linux, you must enable sudo. Add the sudoers entry below 
 raid and use MegaCli (LSI card), add the appropriate sudoers entry for that too.</p>
 <p>To monitor application disk I/O you may install <code>iotop</code> and add the sudoers entry
 for it, shown below. This feature is enabled on the website.</p>
-<h3 id="snapshot-sudoers">Snapshot Sudoers</h3>
+<h3 id="snapshot-sudoers">Snapshot Sudoers<a class="headerlink" href="#snapshot-sudoers" title="Permanent link"></a></h3>
 <p>The following sudoers entries are used by various snapshot features. Add them if you use the respective feature.
 You can usually just put the following content into <code>/etc/sudoers</code> or <code>/etc/sudoers.d/00-notifiarr</code>.
 Make sure the 00-notifiarr file has the proper permissions needed <code>chmod 400 /etc/sudoers.d/00-notifiarr</code>.</p>
@@ -3939,10 +4249,10 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/iotop *
 # Rarely needed, and you'll know if you need this.
 notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 </code></pre></div>
-<h3 id="snapshot-packages">Snapshot Packages</h3>
-<h4 id="windows">Windows</h4>
+<h3 id="snapshot-packages">Snapshot Packages<a class="headerlink" href="#snapshot-packages" title="Permanent link"></a></h3>
+<h4 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link"></a></h4>
 <p><code>smartmontools</code> - get it here <a href="https://sourceforge.net/projects/smartmontools/">https://sourceforge.net/projects/smartmontools/</a></p>
-<h4 id="linux">Linux</h4>
+<h4 id="linux">Linux<a class="headerlink" href="#linux" title="Permanent link"></a></h4>
 <ul>
 <li>Debian/Ubuntu: <code>apt install smartmontools</code></li>
 <li>RedHat/CentOS: <code>yum install smartmontools</code></li>
@@ -3951,26 +4261,33 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 <li>Entware (synology):  <a href="https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS">https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS</a></li>
 <li>Entware Package List:  <a href="https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS">https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS</a></li>
 </ul>
-<h3 id="setup-index">Setup Index</h3>
+<h3 id="setup-index">Setup Index<a class="headerlink" href="#setup-index" title="Permanent link"></a></h3>
 <ul>
 <li><a href="#setup">Setup</a></li>
-<li><a href="#troubleshooting">Troubleshooting</a></li>
+<li><a href="#troubleshooting">Troubleshooting</a><ul>
+<li><a href="#tmp-not-found">Tmp not found</a></li>
 <li><a href="#resolving-duplicate-clients">Resolving Duplicate Clients</a></li>
-<li><a href="#tmp-not-found">Tmp Not Found</a></li>
+</ul>
+</li>
 <li><a href="#notifiarr-website">Notifiarr Website</a></li>
-<li><a href="#web-ui">Web UI</a></li>
-<li><a href="#conf-file">.conf File</a></li>
+<li><a href="#web-ui">Web UI</a><ul>
+<li><a href="#docker-users">Docker Users</a></li>
+</ul>
+</li>
+<li><a href="#conf-file">.conf File</a><ul>
+<li><a href="#compressed-conf-file">Compressed Conf File</a></li>
 <li><a href="#log-files">Log Files</a></li>
 <li><a href="#detailed-debugging">Detailed Debugging</a></li>
 <li><a href="#clearing-logs">Clearing Logs</a></li>
-<li><a href="#hostname">Hostname</a></li>
+</ul>
+</li>
+<li><a href="#hostname">Hostname</a><ul>
 <li><a href="#wsl2-users">WSL2 users</a></li>
-<li><a href="#env-variables">ENV Variables</a></li>
+</ul>
+</li>
+<li><a href="#env-variables">ENV Variables</a><ul>
 <li><a href="#client">Client</a></li>
 <li><a href="#secret-settings">Secret Settings</a></li>
-<li><a href="#snapshot-dependencies">System Snapshot</a></li>
-<li><a href="#snapshot-sudoers">Snapshot Sudoers</a></li>
-<li><a href="#snapshot-packages">Snapshot Packages</a></li>
 <li><a href="#mysql-snapshots">MySQL Snapshots</a></li>
 <li><a href="#lidarr">Lidarr</a></li>
 <li><a href="#prowlarr">Prowlarr</a></li>
@@ -3986,7 +4303,17 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
 <li><a href="#plex">Plex</a></li>
 <li><a href="#tautulli">Tautulli</a></li>
 <li><a href="#service-checks">Service Checks</a></li>
+</ul>
+</li>
 <li><a href="#docker-compose">Docker Compose</a></li>
+<li><a href="#snapshot-dependencies">Snapshot Dependencies</a><ul>
+<li><a href="#snapshot-sudoers">Snapshot Sudoers</a></li>
+<li><a href="#snapshot-packages">Snapshot Packages</a></li>
+<li><a href="#windows">Windows</a></li>
+<li><a href="#linux">Linux</a></li>
+<li><a href="#setup-index">Setup Index</a></li>
+</ul>
+</li>
 </ul>
 
 
@@ -4042,13 +4369,13 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
         
         
           
-          <a href="../../website/clientConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Client config">
+          <a href="../../website/clientConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Client setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Client config
+                Client setup
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -4084,7 +4411,7 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>

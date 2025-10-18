@@ -9,7 +9,7 @@
         <meta name="author" content="nitsua">
       
       
-        <link rel="canonical" href="http://rm-web-1:8007/en/latest/pages/quickstart/quickStart/">
+        <link rel="canonical" href="https://notifiarr.wiki/pages/quickstart/quickStart/">
       
       
         <link rel="prev" href="../../..">
@@ -48,6 +48,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/github-permalink-style.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -95,52 +97,21 @@
     </div>
     
     
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine classes -->
-
+      
 
   
 
-
-<!-- Header -->
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-
-    <!-- Link to home -->
     <a href="../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-
-    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
-
-    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -157,8 +128,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Color palette toggle -->
     
       
         <form class="md-header__option" data-md-component="palette">
@@ -186,24 +155,18 @@
 </form>
       
     
-
-    <!-- User preference: color palette -->
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-
-    <!-- Site language selector -->
     
-
-    <!-- Button to open search modal -->
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-      </label>
-
-      <!-- Search interface -->
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -242,62 +205,22 @@
     </div>
   </div>
 </div>
-    
-
-    <!-- Repository information -->
-    
-      <div style="width: 15rem; display: inline-block;">
-        <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
       </div>
     
   </nav>
-
-  <!-- Navigation tabs (sticky) -->
   
     
       
@@ -504,52 +427,15 @@
   </label>
   
     <div class="md-nav__source">
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+      <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -852,7 +738,7 @@
   
   
   <span class="md-ellipsis">
-    Config
+    Client configuration
     
   </span>
   
@@ -875,7 +761,7 @@
   
   
   <span class="md-ellipsis">
-    GUI
+    Client UI
     
   </span>
   
@@ -1017,7 +903,7 @@
   
   
   <span class="md-ellipsis">
-    Client config
+    Client setup
     
   </span>
   
@@ -1269,12 +1155,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/apprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/authentik/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Authentik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/autobrr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autobrr
     
   </span>
   
@@ -1338,6 +1270,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/channelstats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Channel Stats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/cronitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronitor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/crossseed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cross Seed
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/crowdsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crowdsec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/dashboard/" class="md-nav__link">
         
   
@@ -1384,12 +1408,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/dockwatch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DockWatch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/duplicacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Duplicacy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/emby/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Emby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/fail2ban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fail2ban
     
   </span>
   
@@ -1476,7 +1569,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/plexmetamanager/" class="md-nav__link">
+      <a href="../../integrations/jellyseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jellyseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/kometa/" class="md-nav__link">
         
   
   
@@ -1545,29 +1661,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/mediaRequests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Media Requests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../integrations/mdblist/" class="md-nav__link">
         
   
@@ -1591,12 +1684,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/mediaRequests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/network/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/overseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/packagemanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Manager
     
   </span>
   
@@ -1683,12 +1845,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/overseerr/" class="md-nav__link">
+      <a href="../../integrations/prowlarr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overseerr
+    Prowlarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/qbitmanage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qbit Manage
     
   </span>
   
@@ -1752,12 +1937,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../integrations/releaseParser/" class="md-nav__link">
+      <a href="../../integrations/reciperr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Release Parser
+    Reciperr
     
   </span>
   
@@ -1781,6 +1966,29 @@
   
   <span class="md-ellipsis">
     Reddit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/releaseParser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Parser
     
   </span>
   
@@ -1890,6 +2098,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/starrproxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Starr Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/synology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/trash/" class="md-nav__link">
         
   
@@ -1936,12 +2190,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../../integrations/uptimekuma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uptime-Kuma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/watchtower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watchtower
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../integrations/websitestatus/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Website Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/whisparr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Whisparr
     
   </span>
   
@@ -2270,32 +2593,19 @@
 
 
   
-    <a href="https://github.com/Notifiarr/notifiarr/edit/master/docs/pages/quickstart/quickStart.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
-    </a>
-  
-  
-    
-      
-    
-    <a href="https://github.com/Notifiarr/notifiarr/raw/master/docs/pages/quickstart/quickStart.md" title="View source of this page" class="md-content__button md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
-    </a>
   
 
 
-<h1 id="quick-start">Quick Start</h1>
+<h1 id="quick-start">Quick Start<a class="headerlink" href="#quick-start" title="Permanent link"></a></h1>
 <p>Almost everything needed is available in different parts of the wiki. This will point to each one to get you up and running.</p>
-<h2 id="assumptions">Assumptions</h2>
+<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link"></a></h2>
 <ul>
 <li>You already have an account setup on notifiarr.com with a valid apikey to use in the client but if you dont, stop here and go make one.</li>
 <li>You have <a href="../../client/install/">setup the notifiarr client</a> if you plan to use it. To know if you will need it or not you can view the faq <a href="../../faq/faq/#q-is-the-notifiarr-client-required">for information on if it is required</a></li>
 </ul>
-<h2 id="client-connection">Client Connection</h2>
+<h2 id="client-connection">Client Connection<a class="headerlink" href="#client-connection" title="Permanent link"></a></h2>
 <p>Once the client is setup locally and you can see it internally (example: <code>localhost:5454</code>) and externally (example: <code>http://&lt;your-external-ip&gt;:5454</code> or <code>https://notifiarr.&lt;your-domain&gt;.com</code>).</p>
-<h2 id="integrations">Integrations</h2>
+<h2 id="integrations">Integrations<a class="headerlink" href="#integrations" title="Permanent link"></a></h2>
 <p>First thing, <a href="../../website/integrationsSetup/#main-setup">turn on a couple</a> that you want to use (or all of them at once that you want to use if you want but less is more while learning). Once you have them turned on the page will reload and you'll see a card for each one. If you cant figure out how to turn things on etc, each integration has a wiki page for it (well most do). Click the <code>Wiki</code> link in the integration card to get more information about that specific one.</p>
 
 
@@ -2393,7 +2703,7 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>

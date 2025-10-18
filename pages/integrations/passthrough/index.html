@@ -9,10 +9,10 @@
         <meta name="author" content="nitsua">
       
       
-        <link rel="canonical" href="http://rm-web-1:8007/en/latest/pages/integrations/passthrough/">
+        <link rel="canonical" href="https://notifiarr.wiki/pages/integrations/passthrough/">
       
       
-        <link rel="prev" href="../network/">
+        <link rel="prev" href="../packagemanager/">
       
       
         <link rel="next" href="../persistent/">
@@ -48,6 +48,8 @@
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../../stylesheets/github-permalink-style.css">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -95,52 +97,21 @@
     </div>
     
     
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine classes -->
-
+      
 
   
 
-
-<!-- Header -->
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-
-    <!-- Link to home -->
     <a href="../../.." title="Wiki" class="md-header__button md-logo" aria-label="Wiki" data-md-component="logo">
       
   <img src="../../../assets/logo.png" alt="logo">
 
     </a>
-
-    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
     </label>
-
-    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -157,8 +128,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Color palette toggle -->
     
       
         <form class="md-header__option" data-md-component="palette">
@@ -186,24 +155,18 @@
 </form>
       
     
-
-    <!-- User preference: color palette -->
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-
-    <!-- Site language selector -->
     
-
-    <!-- Button to open search modal -->
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
-      </label>
-
-      <!-- Search interface -->
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -242,62 +205,22 @@
     </div>
   </div>
 </div>
-    
-
-    <!-- Repository information -->
-    
-      <div style="width: 15rem; display: inline-block;">
-        <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
       </div>
     
   </nav>
-
-  <!-- Navigation tabs (sticky) -->
   
     
       
@@ -504,52 +427,15 @@
   </label>
   
     <div class="md-nav__source">
-      <!--
-  Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Repository information -->
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/notifiarr" title="Go to repository" class="md-source" data-md-component="source">
-    <div class="md-source__icon md-icon">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div class="md-source__repository">
-        Client
-    </div>
-    </a>
-</div>
-<div style="width: 7rem; display: inline-block;">
-    <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source">
-    <div class="md-source__icon md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
-    </div>
-    <div style="display: inline-block; vertical-align: middle;">
-      Wiki
-      <br><div class="md-source__facts">Contribute!</div>
-    </div>
-  </a>
-</div>
+      <a href="https://github.com/Notifiarr/mkdocs-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    Wiki
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -778,7 +664,7 @@
   
   
   <span class="md-ellipsis">
-    Config
+    Client configuration
     
   </span>
   
@@ -801,7 +687,7 @@
   
   
   <span class="md-ellipsis">
-    GUI
+    Client UI
     
   </span>
   
@@ -943,7 +829,7 @@
   
   
   <span class="md-ellipsis">
-    Client config
+    Client setup
     
   </span>
   
@@ -1200,12 +1086,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../apprise/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Apprise
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../authentik/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Authentik
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autobrr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Autobrr
     
   </span>
   
@@ -1269,6 +1201,98 @@
   
   
     <li class="md-nav__item">
+      <a href="../channelstats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Channel Stats
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronitor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cronitor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crossseed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cross Seed
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crowdsec/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crowdsec
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../dashboard/" class="md-nav__link">
         
   
@@ -1315,12 +1339,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../dockwatch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DockWatch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../duplicacy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Duplicacy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../emby/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Emby
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fail2ban/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fail2ban
     
   </span>
   
@@ -1407,7 +1500,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../plexmetamanager/" class="md-nav__link">
+      <a href="../jellyseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Jellyseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kometa/" class="md-nav__link">
         
   
   
@@ -1476,29 +1592,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../mediaRequests/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Media Requests
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../mdblist/" class="md-nav__link">
         
   
@@ -1522,12 +1615,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../mediaRequests/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Media Requests
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../network/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overseerr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overseerr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packagemanager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Package Manager
     
   </span>
   
@@ -1624,7 +1786,16 @@
         <li class="md-nav__item">
   <a href="#python-example-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Python example usage
+      Python Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powershell-example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powershell Example Usage
     </span>
   </a>
   
@@ -1644,6 +1815,15 @@
   <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powershell
     </span>
   </a>
   
@@ -1716,12 +1896,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../overseerr/" class="md-nav__link">
+      <a href="../prowlarr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Overseerr
+    Prowlarr
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qbitmanage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Qbit Manage
     
   </span>
   
@@ -1785,12 +1988,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../releaseParser/" class="md-nav__link">
+      <a href="../reciperr/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Release Parser
+    Reciperr
     
   </span>
   
@@ -1814,6 +2017,29 @@
   
   <span class="md-ellipsis">
     Reddit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../releaseParser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Release Parser
     
   </span>
   
@@ -1923,6 +2149,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../starrproxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Starr Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../synology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Synology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../trash/" class="md-nav__link">
         
   
@@ -1969,12 +2241,81 @@
   
   
     <li class="md-nav__item">
+      <a href="../uptimekuma/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Uptime-Kuma
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../watchtower/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Watchtower
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../websitestatus/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Website Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../whisparr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Whisparr
     
   </span>
   
@@ -2290,7 +2631,16 @@
         <li class="md-nav__item">
   <a href="#python-example-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Python example usage
+      Python Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#powershell-example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powershell Example Usage
     </span>
   </a>
   
@@ -2310,6 +2660,15 @@
   <a href="#python" class="md-nav__link">
     <span class="md-ellipsis">
       Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Powershell
     </span>
   </a>
   
@@ -2336,146 +2695,134 @@
 
 
   
-    <a href="https://github.com/Notifiarr/notifiarr/edit/master/docs/pages/integrations/passthrough.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
-    </a>
-  
-  
-    
-      
-    
-    <a href="https://github.com/Notifiarr/notifiarr/raw/master/docs/pages/integrations/passthrough.md" title="View source of this page" class="md-content__button md-icon">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"></path></svg>
-    </a>
   
 
 
-<h1 id="passthrough">Passthrough</h1>
+<h1 id="passthrough">Passthrough<a class="headerlink" href="#passthrough" title="Permanent link"></a></h1>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>This integration allows for notifications from custom scripts. This means you can create any script you want to run and add a webhook with the JSON payload below so you get notified about it.</p>
 </div>
 <p>By sending them through this integration you can keep track of how many it has sent, when the last one was, status code, etc</p>
-<h2 id="payload-field-breakdown">Payload field breakdown</h2>
-<div class="highlight"><pre><span></span><code>notification: {
-    update: false, // Optional (Bool) - This is used to update an existing message with the same id, true will update existing &amp; false will always post new
-    name: "Local App", // Required (Str) - This is the name of the custom app/script, should be unique
-    event: "0" // Optional (Str) - This is used to pass a unique id for this notification if necessary
-},
-discord: {
-    color: "", // Optional (Str) - The color you want to use for the notification, 6 digit HTML color code
-    ping: {
-        pingUser: 123456789, // Optional (Int) - If you want to ping a user with this notification, add their discord id
-        pingRole: 0 // Optional (Int) - If you want to ping a role with this notification, add the role discord id
-    },
-    images: {
-        thumbnail: "http://website.com/image.png", //-- Optional (Str) - Add a valid URL to a thumbnail
-        image: "http://website.com/image.png" //-- Optional (Str) - Add a valid URL to an image that will be on the bottom of the notification
-    },
-    text: {
-        title: "Notification Title", // Optional (Str)
-        icon: "http://website.com/image.png", // Optional (Str) - Add a valid URL
-        content: "", //-- Optional - (Str) This text goes above the embed and is what is seen in toast notifications and wearables
-        description: "", // Optional if fields is used (Str) - This text goes between the title and the embeds
-        fields: [{ // Optional if description is used (List) - This is a list of items to put in the notification, 25 max fields allowed
-            title: "Field",
-            text: "Field Text",
-            inline: false
-        }, {
-            title: "Field", // (Str)
-            text: "Field Text", // (Str)
-            inline: false // (Bool)
-        }],
-        footer: "Footer text" // Optional (Str)
-    },
-    ids: {
-        channel: 1234567890 // Required (Int) - This is the channel to send the notification to on your server
-    }
-}
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/passthrough/passthrough.png" data-desc-position="bottom"><img alt="passthrough.png" src="../../../assets/screenshots/integrations/passthrough/passthrough.png"></a></p>
+<h2 id="payload-field-breakdown">Payload field breakdown<a class="headerlink" href="#payload-field-breakdown" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span></span><code><span class="kc">n</span><span class="err">o</span><span class="kc">t</span><span class="err">i</span><span class="kc">f</span><span class="err">ica</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">upda</span><span class="kc">te</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional (Bool) - This is used to update an existing message with the same id, true will update existing &amp; false will always post new</span>
+<span class="w">    </span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="s2">"Local App"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Required (Str) - This is the name of the custom app/script, should be unique</span>
+<span class="w">    </span><span class="err">eve</span><span class="kc">nt</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w"> </span><span class="c1">// Optional (Str) - This is used to pass a unique id for this notification if necessary</span>
+<span class="p">},</span>
+<span class="err">discord</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="err">color</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional (Str) - The color you want to use for the notification, 6 digit HTML color code</span>
+<span class="w">    </span><span class="err">pi</span><span class="kc">n</span><span class="err">g</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">pi</span><span class="kc">n</span><span class="err">gUser</span><span class="p">:</span><span class="w"> </span><span class="mi">123456789</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional (Int) - If you want to ping a user with this notification, add their discord id</span>
+<span class="w">        </span><span class="err">pi</span><span class="kc">n</span><span class="err">gRole</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="c1">// Optional (Int) - If you want to ping a role with this notification, add the role discord id</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">images</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kc">t</span><span class="err">humb</span><span class="kc">na</span><span class="err">il</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://website.com/image.png"</span><span class="p">,</span><span class="w"> </span><span class="c1">//-- Optional (Str) - Add a valid URL to a thumbnail</span>
+<span class="w">        </span><span class="err">image</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://website.com/image.png"</span><span class="w"> </span><span class="c1">//-- Optional (Str) - Add a valid URL to an image that will be on the bottom of the notification</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification Title"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional (Str)</span>
+<span class="w">        </span><span class="err">ico</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://website.com/image.png"</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional (Str) - Add a valid URL</span>
+<span class="w">        </span><span class="err">co</span><span class="kc">ntent</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">//-- Optional - (Str) This text goes above the embed and is what is seen in toast notifications and wearables</span>
+<span class="w">        </span><span class="err">descrip</span><span class="kc">t</span><span class="err">io</span><span class="kc">n</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w"> </span><span class="c1">// Optional if fields is used (Str) - This text goes between the title and the embeds</span>
+<span class="w">        </span><span class="kc">f</span><span class="err">ields</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="c1">// Optional if description is used (List) - This is a list of items to put in the notification, 25 max fields allowed</span>
+<span class="w">            </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field"</span><span class="p">,</span>
+<span class="w">            </span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field Text"</span><span class="p">,</span>
+<span class="w">            </span><span class="err">i</span><span class="kc">nl</span><span class="err">i</span><span class="kc">ne</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kc">t</span><span class="err">i</span><span class="kc">tle</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field"</span><span class="p">,</span><span class="w"> </span><span class="c1">// (Str)</span>
+<span class="w">            </span><span class="kc">te</span><span class="err">x</span><span class="kc">t</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field Text"</span><span class="p">,</span><span class="w"> </span><span class="c1">// (Str)</span>
+<span class="w">            </span><span class="err">i</span><span class="kc">nl</span><span class="err">i</span><span class="kc">ne</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// (Bool)</span>
+<span class="w">        </span><span class="p">}],</span>
+<span class="w">        </span><span class="kc">f</span><span class="err">oo</span><span class="kc">ter</span><span class="p">:</span><span class="w"> </span><span class="s2">"Footer text"</span><span class="w"> </span><span class="c1">// Optional (Str)</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">ids</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="err">cha</span><span class="kc">nnel</span><span class="p">:</span><span class="w"> </span><span class="mi">1234567890</span><span class="w"> </span><span class="c1">// Required (Int) - This is the channel to send the notification to on your server</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="payload-example-1">Payload Example 1</h2>
+<h2 id="payload-example-1">Payload Example 1<a class="headerlink" href="#payload-example-1" title="Permanent link"></a></h2>
 <ul>
-<li>This would send a new notification
-<div class="highlight"><pre><span></span><code>{
-    "notification": {
-        "update": false,
-        "name": "1:1 App",
-        "event": "12345"
-    },
-    "discord": {
-        "color": "FFFFFF",
-        "ping": {
-            "pingUser": 0,
-            "pingRole": 0
-        },
-        "images": {
-            "thumbnail": "",
-            "image": ""
-        },
-        "text": {
-            "title": "Notification Title",
-            "icon": "",
-            "content": "Content of the notification here",
-            "description": "Body of the notification here",
-            "fields": [],
-            "footer": "Footer Text"
-        },
-        "ids": {
-            "channel": 735481457153277994
-        }
-    }
-}
-</code></pre></div></li>
+<li>This would send a new notification</li>
 </ul>
-<h2 id="payload-example-2">Payload Example 2</h2>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"notification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"update"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1:1 App"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"discord"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"FFFFFF"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"ping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"pingUser"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"pingRole"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification Title"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Content of the notification here"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Body of the notification here"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">            </span><span class="nt">"footer"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Footer Text"</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ids"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">735481457153277994</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="payload-example-2">Payload Example 2<a class="headerlink" href="#payload-example-2" title="Permanent link"></a></h2>
 <ul>
 <li>This would update an existing notification</li>
 </ul>
-<div class="highlight"><pre><span></span><code>{
-    "notification": {
-        "update": true,
-        "name": "Update App",
-        "event": ""
-    },
-    "discord": {
-        "color": "000000",
-        "ping": {
-            "pingUser": 543077981707436033,
-            "pingRole": 0
-        },
-        "images": {
-            "thumbnail": "https://notifiarr.com/images/logo/notifiarr.png",
-            "image": ""
-        },
-        "text": {
-            "title": "Notification Title",
-            "icon": "",
-            "content": "Content of the notification here",
-            "description": "Body of the notification here",
-            "fields": [{
-                "title": "Field Title",
-                "text": "Inline true",
-                "inline": true
-            }, {
-                "title": "Field Title",
-                "text": "Inline true",
-                "inline": true
-            }, {
-                "title": "Field Title",
-                "text": "Inline false",
-                "inline": false
-            }],
-            "footer": ""
-        },
-        "ids": {
-            "channel": 735481457153277994
-        }
-    }
-}
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"notification"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"update"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Update App"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">"discord"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"000000"</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"ping"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"pingUser"</span><span class="p">:</span><span class="w"> </span><span class="mi">543077981707436033</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"pingRole"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"images"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://notifiarr.com/images/logo/notifiarr.png"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"image"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Notification Title"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"icon"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"content"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Content of the notification here"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Body of the notification here"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"fields"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field Title"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inline true"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"inline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field Title"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inline true"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"inline"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Field Title"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"text"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Inline false"</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">"inline"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">            </span><span class="p">}],</span>
+<span class="w">            </span><span class="nt">"footer"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"ids"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="mi">735481457153277994</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
-<h2 id="python-example-usage">Python example usage</h2>
+<h2 id="python-example-usage">Python Example Usage<a class="headerlink" href="#python-example-usage" title="Permanent link"></a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 
@@ -2486,11 +2833,80 @@ discord: {
 <span class="n">webhook</span> <span class="o">=</span> <span class="s2">"python "</span> <span class="o">+</span> <span class="n">NOTIFIARR_PY</span> <span class="o">+</span> <span class="s2">" -e </span><span class="se">\"</span><span class="s2"> Errors</span><span class="se">\"</span><span class="s2"> -c 631827062348512345 -m </span><span class="se">\"</span><span class="s2">FFA500</span><span class="se">\"</span><span class="s2"> -t </span><span class="se">\"</span><span class="s2">Error ("</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span> <span class="o">+</span><span class="s2">"/"</span><span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">totalErrors</span><span class="p">)</span> <span class="o">+</span><span class="s2">")</span><span class="se">\"</span><span class="s2"> -b </span><span class="se">\"</span><span class="s2">URLs found with errors</span><span class="se">\"</span><span class="s2"> -g </span><span class="se">\"</span><span class="s2">"</span> <span class="o">+</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">inlineFields</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'"'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'\"'</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\"</span><span class="s2"> -f </span><span class="se">\"</span><span class="s2">"</span> <span class="o">+</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">singleFields</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'"'</span><span class="p">,</span> <span class="sa">r</span><span class="s1">'\"'</span><span class="p">)</span> <span class="o">+</span> <span class="s2">"</span><span class="se">\"</span><span class="s2"> -a </span><span class="se">\"</span><span class="s2">https://notifiarr.com/images/logo/notifiarr.png</span><span class="se">\"</span><span class="s2"> -z </span><span class="se">\"</span><span class="s2">Passthrough Integration</span><span class="se">\"</span><span class="s2">"</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">webhook</span><span class="p">)</span>
 </code></pre></div>
-<h2 id="notifiarr-script">Notifiarr script</h2>
+<h2 id="powershell-example-usage">Powershell Example Usage<a class="headerlink" href="#powershell-example-usage" title="Permanent link"></a></h2>
+<div class="highlight"><pre><span></span><code><span class="nv">$payload</span> <span class="p">=</span> <span class="p">@{</span>
+    <span class="n">notification</span> <span class="p">=</span> <span class="p">@{</span>
+        <span class="n">update</span> <span class="p">=</span> <span class="nv">$false</span>
+        <span class="n">name</span> <span class="p">=</span> <span class="s2">"My Notifiarr App"</span>
+        <span class="n">event</span> <span class="p">=</span> <span class="s2">"0"</span>
+    <span class="p">}</span>
+    <span class="n">discord</span> <span class="p">=</span> <span class="p">@{</span>
+        <span class="n">color</span> <span class="p">=</span> <span class="s2">"00FF00"</span>
+        <span class="n">ping</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">pingUser</span> <span class="p">=</span> <span class="nv">$PING_USER_ID</span> <span class="c"># Replace with your Discord user ID</span>
+            <span class="n">pingRole</span> <span class="p">=</span> <span class="nv">$PING_ROLE_ID</span> <span class="c"># Replace with your Discord role ID</span>
+        <span class="p">}</span>
+        <span class="n">images</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">thumbnail</span> <span class="p">=</span> <span class="s2">"https://gh.notifiarr.com/images/icons/notifiarr.png"</span>
+            <span class="n">image</span> <span class="p">=</span> <span class="s2">"https://gh.notifiarr.com/images/icons/notifiarr.png"</span>
+        <span class="p">}</span>
+        <span class="n">text</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">title</span> <span class="p">=</span> <span class="s2">"My Notifiarr Title"</span>
+            <span class="n">icon</span> <span class="p">=</span> <span class="s2">"https://gh.notifiarr.com/images/icons/notifiarr.png"</span>
+            <span class="n">content</span> <span class="p">=</span> <span class="s2">"My Notifiarr Content"</span>
+            <span class="n">description</span> <span class="p">=</span> <span class="s2">"My Notifiarr Description"</span>
+            <span class="n">fields</span> <span class="p">=</span> <span class="p">@(</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 1'</span>
+                <span class="n">text</span> <span class="p">=</span> <span class="s1">'This is a normal field'</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$false</span>
+                <span class="p">}</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 2'</span>
+                <span class="n">text</span> <span class="p">=</span> <span class="s1">'This is an inline field'</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$true</span>
+                <span class="p">}</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 3'</span>
+                    <span class="n">text</span> <span class="p">=</span> <span class="s2">"* **This**</span>
+<span class="s2">                        * *is*</span>
+<span class="s2">                            * ~~a~~</span>
+<span class="s2">                                * __*Markdown*__</span>
+<span class="s2">                                    * ~~*field*~~"</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$false</span>
+                <span class="p">}</span>
+            <span class="p">)</span>
+            <span class="n">footer</span> <span class="p">=</span> <span class="s2">"My Notifiarr Footer Text"</span>
+        <span class="p">}</span>
+        <span class="n">ids</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">channel</span> <span class="p">=</span> <span class="nv">$DISCORD_CHANNEL_ID</span> <span class="c"># Replace with your Discord channel ID</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+    <span class="nv">$jsonPayload</span> <span class="p">=</span> <span class="nv">$payload</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span> <span class="n">-Depth</span> <span class="n">10</span> <span class="n">-Compress</span>
+
+    <span class="nv">$params</span> <span class="p">=</span> <span class="p">@{</span>
+        <span class="n">Uri</span> <span class="p">=</span> <span class="s2">"https://notifiarr.com/api/v1/notification/passthrough/$NOTIFIARR_APIKEY"</span> <span class="c"># Replace with your Notifiarr API key</span>
+        <span class="n">Method</span> <span class="p">=</span> <span class="s2">"POST"</span>
+        <span class="n">Body</span> <span class="p">=</span> <span class="nv">$jsonPayload</span>
+        <span class="n">ContentType</span> <span class="p">=</span> <span class="s2">"application/json"</span>
+        <span class="n">Headers</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="s2">"Accept"</span> <span class="p">=</span> <span class="s2">"text/plain"</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nv">$response</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="nv">@params</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$request</span><span class="p">.</span><span class="n">details</span><span class="p">.</span><span class="n">response</span> <span class="o">-eq</span> <span class="s1">'Pass through payload processed.'</span><span class="p">){</span>
+        <span class="nb">Write-Host</span> <span class="s2">"Notification sent successfully!"</span> <span class="n">-ForegroundColor</span> <span class="n">Green</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nb">Write-Warning</span> <span class="s2">"Failed to send notification."</span>
+        <span class="nb">Write-Host</span> <span class="s2">"Response: </span><span class="p">$(</span><span class="nv">$response</span><span class="p">.</span><span class="n">result</span><span class="p">.</span><span class="n">details</span><span class="p">)</span><span class="s2">"</span>
+    <span class="p">}</span>
+</code></pre></div>
+<h2 id="notifiarr-script">Notifiarr script<a class="headerlink" href="#notifiarr-script" title="Permanent link"></a></h2>
 <ul>
 <li>Can be called from any script (example above)</li>
 </ul>
-<h3 id="python">Python</h3>
+<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link"></a></h3>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">argparse</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
@@ -2572,6 +2988,467 @@ discord: {
     <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="sa">f</span><span class="s1">'https://notifiarr.com/api/v1/notification/passthrough/</span><span class="si">{</span><span class="n">NOTIFIARR_APIKEY</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">notifiarr_payload</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s1">'Content-type'</span><span class="p">:</span> <span class="s1">'application/json'</span><span class="p">,</span> <span class="s1">'Accept'</span><span class="p">:</span> <span class="s1">'text/plain'</span><span class="p">})</span>
     <span class="c1">#print(r.text)</span>
 </code></pre></div>
+<h3 id="powershell">Powershell<a class="headerlink" href="#powershell" title="Permanent link"></a></h3>
+<ul>
+<li>This is a sample function meant to be reused in one or more scripts. It allows you to send payload fields as parameters, and it will build the payload for you.</li>
+<li>It contains a helper function to validate the fields you pass in, and it will throw an error if they are not valid.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">function</span> <span class="nb">Send-NotifiarrPassthroughNotification</span> <span class="p">{</span>
+    <span class="cm">&lt;#</span>
+<span class="cm">    </span><span class="sd">.SYNOPSIS</span>
+<span class="cm">    Sends a Discord notification using a third-party passthrough integration.</span>
+
+<span class="cm">    </span><span class="sd">.DESCRIPTION</span>
+<span class="cm">    This function sends a Discord notification by constructing the payload and sending it to the specified API endpoint.</span>
+<span class="cm">    It validates high-level parameters and constructs the notification payload with appropriate formatting.</span>
+<span class="cm">    The function supports a wide range of customization options including colors, fields, images, and user mentions.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> AppName</span>
+<span class="cm">    The name of the custom app/script that is sending the notification. Should be unique and non-empty.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> ChannelId</span>
+<span class="cm">    The Discord channel ID to send the notification to. Must be a numeric string.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Color</span>
+<span class="cm">    The color of the notification embed. Can be a predefined name ("Success", "Warning", "Error") or a custom HEX color code without the # prefix.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Content</span>
+<span class="cm">    Content text that appears above the embed and is seen in toast notifications.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Description</span>
+<span class="cm">    The description text of the notification embed. Supports Discord markdown formatting.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Event</span>
+<span class="cm">    A unique event ID for the notification. Used for message deduplication or tracking.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Footer</span>
+<span class="cm">    The footer text to display at the bottom of the notification embed.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Fields</span>
+<span class="cm">    A hashtable or array of hashtables representing fields to include in the notification embed.</span>
+<span class="cm">    Each field must have 'title', 'text', and 'inline' keys. Maximum of 25 fields allowed.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Icon</span>
+<span class="cm">    The URL of the icon to display in the notification. Must be a valid HTTP/HTTPS URL.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> ImageUrl</span>
+<span class="cm">    The URL of the main image to display in the notification embed. Must be a valid HTTP/HTTPS URL.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> PingRole</span>
+<span class="cm">    The Discord role ID to ping with the notification. Must be a numeric string.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> PingUser</span>
+<span class="cm">    The Discord user ID to ping with the notification. Must be a numeric string.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> ThumbnailUrl</span>
+<span class="cm">    The URL of the thumbnail image to display in the notification embed. Must be a valid HTTP/HTTPS URL.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Title</span>
+<span class="cm">    The title of the notification embed.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Update</span>
+<span class="cm">    Whether to update an existing message with the same ID instead of sending a new one. Defaults to $false.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> WebhookUrl</span>
+<span class="cm">    The API endpoint URL to send the notification to. Must be a valid HTTP/HTTPS URL.</span>
+
+<span class="cm">    </span><span class="sd">.OUTPUTS</span>
+<span class="cm">    [PSCustomObject] An object with Status, Message, and ErrorDetail properties indicating the result of the operation.</span>
+
+<span class="cm">    </span><span class="sd">.EXAMPLE</span>
+<span class="cm">    Send-NotifiarrPassthroughNotification -AppName "Monitoring" -ChannelId "123456789012345678" -WebhookUrl "https://api</span><span class="sd">.example</span><span class="cm">.com/webhook" -Title "Alert" -Description "System is running low on disk space" -Color "Warning"</span>
+
+<span class="cm">    </span><span class="sd">.EXAMPLE</span>
+<span class="cm">    $fields = @(</span>
+<span class="cm">        @{ title = "Server"; text = "PROD-WEB01"; inline = $true },</span>
+<span class="cm">        @{ title = "Status"; text = "Online"; inline = $true }</span>
+<span class="cm">    )</span>
+<span class="cm">    Send-NotifiarrPassthroughNotification -AppName "StatusChecker" -ChannelId "123456789012345678" -WebhookUrl "https://api</span><span class="sd">.example</span><span class="cm">.com/webhook" -Fields $fields -Color "Success"</span>
+
+<span class="cm">    </span><span class="sd">.LINK</span>
+<span class="cm">    https://notifiarr.wiki/en/Website/Integrations/Passthrough</span>
+
+<span class="cm">    </span><span class="sd">.NOTES</span>
+<span class="cm">    This function cleans up sensitive information from memory after execution for security.</span>
+<span class="cm">    #&gt;</span>
+    <span class="p">[</span><span class="k">CmdletBinding</span><span class="p">(</span><span class="n">SupportsShouldProcess</span><span class="p">)]</span>
+    <span class="p">[</span><span class="n">OutputType</span><span class="p">(</span><span class="no">[PSCustomObject]</span><span class="p">)]</span>
+    <span class="k">param</span> <span class="p">(</span>
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">,</span> <span class="k">Position</span> <span class="p">=</span> <span class="n">0</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">ValidateNotNullOrEmpty</span><span class="p">()]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$AppName</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+        <span class="p">[</span><span class="n">ValidateNotNullOrEmpty</span><span class="p">()]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^\d+$'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$ChannelId</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Color</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Content</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Description</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Event</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Footer</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[object]</span>
+        <span class="nv">$Fields</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^https?://.+'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Icon</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^https?://.+'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$ImageUrl</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^\d+$'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$PingRole</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^\d+$'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$PingUser</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^https?://.+'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$ThumbnailUrl</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$Title</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">)]</span>
+        <span class="no">[bool]</span>
+        <span class="nv">$Update</span> <span class="p">=</span> <span class="nv">$false</span><span class="p">,</span>
+
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+        <span class="p">[</span><span class="k">ValidatePattern</span><span class="p">(</span><span class="s1">'^https?://.+'</span><span class="p">)]</span>
+        <span class="no">[string]</span>
+        <span class="nv">$WebhookUrl</span>
+    <span class="p">)</span>
+
+    <span class="k">begin</span> <span class="p">{</span>
+        <span class="c"># Initialize tracking variables for payload construction</span>
+        <span class="nv">$processedColor</span> <span class="p">=</span> <span class="nv">$null</span>
+        <span class="nv">$validatedFields</span> <span class="p">=</span> <span class="nv">$null</span>
+
+        <span class="c"># Initialize the result object with properties for standardized returns</span>
+        <span class="nv">$result</span> <span class="p">=</span> <span class="no">[PSCustomObject]</span><span class="p">@{</span>
+            <span class="n">Status</span>      <span class="p">=</span> <span class="nv">$null</span>
+            <span class="n">Message</span>     <span class="p">=</span> <span class="nv">$null</span>
+            <span class="n">ErrorDetail</span> <span class="p">=</span> <span class="nv">$null</span>
+        <span class="p">}</span>
+
+        <span class="c"># Map predefined color names to HEX codes for easier user experience</span>
+        <span class="nv">$colorMap</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">Success</span> <span class="p">=</span> <span class="s2">"00FF00"</span> <span class="c"># Green</span>
+            <span class="n">Warning</span> <span class="p">=</span> <span class="s2">"FFFF00"</span> <span class="c"># Yellow</span>
+            <span class="n">Error</span>   <span class="p">=</span> <span class="s2">"FF0000"</span> <span class="c"># Red</span>
+        <span class="p">}</span>
+
+        <span class="c"># Build the base notification payload structure with required elements</span>
+        <span class="nv">$payload</span> <span class="p">=</span> <span class="p">@{</span>
+            <span class="n">notification</span> <span class="p">=</span> <span class="no">[ordered]</span><span class="p">@{</span>
+                <span class="n">update</span> <span class="p">=</span> <span class="nv">$Update</span>
+                <span class="n">name</span>   <span class="p">=</span> <span class="nv">$AppName</span>
+            <span class="p">}</span>
+            <span class="n">discord</span>      <span class="p">=</span> <span class="no">[ordered]</span><span class="p">@{</span>
+                <span class="n">ids</span> <span class="p">=</span> <span class="p">@{</span>
+                    <span class="n">channel</span> <span class="p">=</span> <span class="nv">$ChannelId</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">process</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$PSCmdlet</span><span class="p">.</span><span class="n">ShouldProcess</span><span class="p">(</span><span class="s2">"Discord Channel ID: $ChannelId"</span><span class="p">,</span> <span class="s2">"Send Notification"</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="c"># Process and validate fields if provided</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Fields'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Fields parameter was provided, performing validation."</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$Fields</span> <span class="o">-is</span> <span class="no">[hashtable]</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nb">Write-Verbose</span> <span class="s2">"Fields parameter is a single hashtable, converting to array."</span>
+                        <span class="nv">$Fields</span> <span class="p">=</span> <span class="p">@(</span><span class="nv">$Fields</span><span class="p">)</span>
+                    <span class="p">}</span>
+                    <span class="nv">$validatedFields</span> <span class="p">=</span> <span class="nb">Confirm-NotifiarrPassthroughFields</span> <span class="n">-Fields</span> <span class="nv">$Fields</span>
+                <span class="p">}</span>
+
+                <span class="c"># Process color parameter if provided</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Color'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Color parameter was provided."</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$colorMap</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="nv">$Color</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nb">Write-Verbose</span> <span class="s2">"Using predefined color: $Color."</span>
+                        <span class="nv">$processedColor</span> <span class="p">=</span> <span class="nv">$colorMap</span><span class="p">[</span><span class="nv">$Color</span><span class="p">]</span>
+                    <span class="p">}</span>
+                    <span class="k">elseif</span> <span class="p">(</span><span class="nv">$Color</span> <span class="o">-match</span> <span class="s1">'^[0-9A-Fa-f]{6}$'</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nb">Write-Verbose</span> <span class="s2">"Using custom HEX color: $Color."</span>
+                        <span class="nv">$processedColor</span> <span class="p">=</span> <span class="nv">$Color</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span> <span class="p">{</span>
+                        <span class="nb">Write-Verbose</span> <span class="s2">"Invalid color format: '$Color'. Using default (null)."</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c"># Add optional notification parameters</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Event'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nv">$payload</span><span class="p">.</span><span class="n">notification</span><span class="p">[</span><span class="s1">'event'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Event</span>
+                <span class="p">}</span>
+
+                <span class="c"># Build discord object sections</span>
+                <span class="c"># Add color if specified</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$processedColor</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">[</span><span class="s1">'color'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$processedColor</span>
+                <span class="p">}</span>
+
+                <span class="c"># Add ping object if any ping parameters are specified</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'PingUser'</span><span class="p">)</span> <span class="o">-or</span> <span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'PingRole'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">[</span><span class="s1">'ping'</span><span class="p">]</span> <span class="p">=</span> <span class="p">@{}</span>
+
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'PingUser'</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">.</span><span class="n">ping</span><span class="p">[</span><span class="s1">'pingUser'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$PingUser</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'PingRole'</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">.</span><span class="n">ping</span><span class="p">[</span><span class="s1">'pingRole'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$PingRole</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c"># Add images object if any image parameters are specified</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'ThumbnailUrl'</span><span class="p">)</span> <span class="o">-or</span> <span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'ImageUrl'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">[</span><span class="s1">'images'</span><span class="p">]</span> <span class="p">=</span> <span class="p">@{}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'ThumbnailUrl'</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">.</span><span class="n">images</span><span class="p">[</span><span class="s1">'thumbnail'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$ThumbnailUrl</span>
+                    <span class="p">}</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'ImageUrl'</span><span class="p">))</span> <span class="p">{</span>
+                        <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">.</span><span class="n">images</span><span class="p">[</span><span class="s1">'image'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$ImageUrl</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="c"># Build text object with all text-related parameters</span>
+                <span class="nv">$text</span> <span class="p">=</span> <span class="p">@{}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Title'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding title parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'title'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Title</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Icon'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding icon parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'icon'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Icon</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Content'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding content parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'content'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Content</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Description'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding description parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'description'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Description</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$validatedFields</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding fields parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'fields'</span><span class="p">]</span> <span class="p">=</span> <span class="p">@(</span><span class="nv">$validatedFields</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$PSBoundParameters</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'Footer'</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"Adding footer parameter to text object."</span>
+                    <span class="nv">$text</span><span class="p">[</span><span class="s1">'footer'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$Footer</span>
+                <span class="p">}</span>
+
+                <span class="c"># Add text object if any text parameters were specified</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$text</span><span class="p">.</span><span class="n">Count</span> <span class="o">-gt</span> <span class="n">0</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nv">$payload</span><span class="p">.</span><span class="n">discord</span><span class="p">[</span><span class="s1">'text'</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$text</span>
+                <span class="p">}</span>
+
+                <span class="c"># Convert the payload to JSON for transmission</span>
+                <span class="nv">$jsonPayload</span> <span class="p">=</span> <span class="nv">$payload</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span> <span class="n">-Depth</span> <span class="n">10</span> <span class="n">-Compress</span>
+
+                <span class="nv">$jsonPayload</span>
+
+                <span class="nb">Write-Verbose</span> <span class="s2">"Sending payload to webhook: $WebhookUrl"</span>
+
+                <span class="c"># Send the notification via REST API</span>
+                <span class="nv">$response</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="n">-Uri</span> <span class="nv">$WebhookUrl</span> <span class="n">-Method</span> <span class="n">Post</span> <span class="n">-Body</span> <span class="nv">$jsonPayload</span> <span class="n">-ContentType</span> <span class="s1">'application/json'</span> <span class="n">-StatusCodeVariable</span> <span class="s1">'statusCode'</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span> <span class="n">-SkipHttpErrorCheck</span>
+
+                <span class="c"># Process the API response and update result object</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nv">$response</span><span class="p">.</span><span class="n">result</span> <span class="o">-ne</span> <span class="s1">'success'</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nv">$result</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="nv">$false</span>
+                    <span class="nv">$result</span><span class="p">.</span><span class="n">Message</span> <span class="p">=</span> <span class="s2">"Failed to send notification: </span><span class="p">$(</span><span class="nv">$response</span><span class="p">.</span><span class="n">reason</span><span class="p">)</span><span class="s2">"</span>
+                    <span class="nv">$result</span><span class="p">.</span><span class="n">ErrorDetail</span> <span class="p">=</span> <span class="nv">$response</span> <span class="p">|</span> <span class="nb">ConvertTo-Json</span> <span class="n">-Compress</span>
+                    <span class="nb">Write-Warning</span> <span class="s2">"</span><span class="p">$(</span><span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2"> - Failed to send notification."</span>
+                <span class="p">}</span>
+                <span class="k">else</span> <span class="p">{</span>
+                    <span class="nv">$result</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="nv">$true</span>
+                    <span class="nv">$result</span><span class="p">.</span><span class="n">Message</span> <span class="p">=</span> <span class="nv">$response</span><span class="p">.</span><span class="n">details</span>
+                    <span class="nb">Write-Verbose</span> <span class="s2">"</span><span class="p">$(</span><span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2"> - Notification sent successfully."</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">catch</span> <span class="p">{</span>
+                <span class="c"># Handle errors and populate the result object with error details</span>
+                <span class="nv">$result</span><span class="p">.</span><span class="n">Status</span> <span class="p">=</span> <span class="nv">$false</span>
+                <span class="nv">$result</span><span class="p">.</span><span class="n">Message</span> <span class="p">=</span> <span class="s2">"Failed to send notification due to an exception"</span>
+                <span class="nv">$result</span><span class="p">.</span><span class="n">ErrorDetail</span> <span class="p">=</span> <span class="nv">$_</span><span class="p">.</span><span class="n">Exception</span><span class="p">.</span><span class="n">Message</span>
+
+                <span class="nb">Write-Warning</span> <span class="s2">"</span><span class="p">$(</span><span class="nv">$MyInvocation</span><span class="p">.</span><span class="n">MyCommand</span><span class="p">.</span><span class="n">Name</span><span class="p">)</span><span class="s2"> - Failed to send notification"</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="k">end</span> <span class="p">{</span>
+        <span class="nv">$result</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">function</span> <span class="nb">Confirm-NotifiarrPassthroughFields</span> <span class="p">{</span>
+    <span class="cm">&lt;#</span>
+<span class="cm">    </span><span class="sd">.SYNOPSIS</span>
+<span class="cm">    Validates field objects for Discord notifications.</span>
+
+<span class="cm">    </span><span class="sd">.DESCRIPTION</span>
+<span class="cm">    This function validates that each field in the provided array meets the requirements for Discord notification fields.</span>
+<span class="cm">    Each field must be a hashtable with 'title', 'text', and 'inline' keys. The function ensures that there are no more than 25 fields</span>
+<span class="cm">    and that each field contains properly typed values.</span>
+
+<span class="cm">    </span><span class="sd">.PARAMETER</span><span class="cm"> Fields</span>
+<span class="cm">    An array of hashtables, each representing a field with 'title' (string), 'text' (string), and 'inline' (boolean) keys.</span>
+<span class="cm">    Maximum of 25 fields are allowed per Discord API limitations.</span>
+
+<span class="cm">    </span><span class="sd">.OUTPUTS</span>
+<span class="cm">    [array] The validated fields array, unchanged if all validation passes.</span>
+
+<span class="cm">    </span><span class="sd">.EXAMPLE</span>
+<span class="cm">    $fields = @(</span>
+<span class="cm">        @{ title = "Field 1"; text = "Field 1 Text"; inline = $false },</span>
+<span class="cm">        @{ title = "Field 2"; text = "Field 2 Text"; inline = $true }</span>
+<span class="cm">    )</span>
+<span class="cm">    $validatedFields = Confirm-NotifiarrPassthroughFields -Fields $fields</span>
+
+<span class="cm">    </span><span class="sd">.NOTES</span>
+<span class="cm">    This function performs strict validation and will throw exceptions for any validation failures.</span>
+<span class="cm">    #&gt;</span>
+    <span class="p">[</span><span class="k">CmdletBinding</span><span class="p">()]</span>
+    <span class="p">[</span><span class="n">OutputType</span><span class="p">(</span><span class="no">[array]</span><span class="p">)]</span>
+    <span class="k">param</span> <span class="p">(</span>
+        <span class="p">[</span><span class="k">Parameter</span><span class="p">(</span><span class="k">Mandatory</span> <span class="p">=</span> <span class="nv">$true</span><span class="p">)]</span>
+        <span class="no">[array]</span>
+        <span class="nv">$Fields</span>
+    <span class="p">)</span>
+
+    <span class="c"># Ensure the fields array does not exceed Discord's maximum limit of 25 items</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$Fields</span><span class="p">.</span><span class="n">Count</span> <span class="o">-gt</span> <span class="n">25</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">throw</span> <span class="s2">"The fields array cannot contain more than 25 items."</span>
+    <span class="p">}</span>
+
+    <span class="c"># Validate each field in the array meets all requirements</span>
+    <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="n">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-lt</span> <span class="nv">$Fields</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="nv">$i</span><span class="p">++)</span> <span class="p">{</span>
+        <span class="nv">$field</span> <span class="p">=</span> <span class="nv">$Fields</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span>
+
+        <span class="c"># Ensure the field is a hashtable as required for proper processing</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nv">$field</span> <span class="o">-is</span> <span class="no">[hashtable]</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> must be a hashtable."</span>
+        <span class="p">}</span>
+
+        <span class="c"># Check for the presence of the 'title' key and validate its type</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$field</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'title'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> is missing the 'title' key."</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nv">$field</span><span class="p">.</span><span class="n">title</span> <span class="o">-is</span> <span class="no">[string]</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> has an invalid 'title'. Expected a string but found </span><span class="p">$(</span><span class="nv">$field</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">Name</span><span class="p">)</span><span class="s2">."</span>
+        <span class="p">}</span>
+
+        <span class="c"># Check for the presence of the 'text' key and validate its type</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$field</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'text'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> is missing the 'text' key."</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nv">$field</span><span class="p">.</span><span class="n">text</span> <span class="o">-is</span> <span class="no">[string]</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> has an invalid 'text'. Expected a string but found </span><span class="p">$(</span><span class="nv">$field</span><span class="p">.</span><span class="n">text</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">Name</span><span class="p">)</span><span class="s2">."</span>
+        <span class="p">}</span>
+
+        <span class="c"># Check for the presence of the 'inline' key and validate its type</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="nv">$field</span><span class="p">.</span><span class="n">ContainsKey</span><span class="p">(</span><span class="s1">'inline'</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> is missing the 'inline' key."</span>
+        <span class="p">}</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">-not</span> <span class="p">(</span><span class="nv">$field</span><span class="p">.</span><span class="n">inline</span> <span class="o">-is</span> <span class="no">[bool]</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">throw</span> <span class="s2">"Field #</span><span class="p">$(</span><span class="nv">$i</span> <span class="p">+</span> <span class="n">1</span><span class="p">)</span><span class="s2"> has an invalid 'inline'. Expected a boolean but found </span><span class="p">$(</span><span class="nv">$field</span><span class="p">.</span><span class="n">inline</span><span class="p">.</span><span class="n">GetType</span><span class="p">().</span><span class="n">Name</span><span class="p">)</span><span class="s2">."</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c"># Always return a proper array, even if only one element</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$Fields</span><span class="p">.</span><span class="n">Count</span> <span class="o">-eq</span> <span class="n">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c"># Force return as array with only one element</span>
+        <span class="p">@(</span><span class="nv">$Fields</span><span class="p">[</span><span class="n">0</span><span class="p">])</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="c"># Return the validated fields array - no modification needed if validation passed</span>
+        <span class="nv">$Fields</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+    <span class="c"># Initialize notification parameters with standard values</span>
+    <span class="nv">$notificationParams</span> <span class="p">=</span> <span class="p">@{</span>
+        <span class="n">AppName</span>      <span class="p">=</span> <span class="s1">'My Notifiarr App'</span>
+        <span class="n">ChannelId</span>    <span class="p">=</span> <span class="n">1234567891011121314</span> <span class="c"># Replace with your Discord channel ID</span>
+        <span class="n">Color</span> <span class="p">=</span> <span class="s1">'Success'</span>
+        <span class="n">Content</span> <span class="p">=</span> <span class="s1">'My Notifiarr Content'</span>
+        <span class="n">Description</span> <span class="p">=</span> <span class="s1">'My Notifiarr Description'</span>
+        <span class="n">Footer</span>       <span class="p">=</span> <span class="s2">"My Notifiarr Footer Text"</span>
+        <span class="n">Fields</span> <span class="p">=</span> <span class="p">@(</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 1'</span>
+                <span class="n">text</span> <span class="p">=</span> <span class="s1">'This is a normal field'</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$false</span>
+                <span class="p">}</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 2'</span>
+                <span class="n">text</span> <span class="p">=</span> <span class="s1">'This is an inline field'</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$true</span>
+                <span class="p">}</span>
+            <span class="p">@{</span> <span class="n">title</span> <span class="p">=</span> <span class="s1">'Field 3'</span>
+                    <span class="n">text</span> <span class="p">=</span> <span class="s2">"* **This**</span>
+<span class="s2">                        * *is*</span>
+<span class="s2">                            * ~~a~~</span>
+<span class="s2">                                * __*Markdown*__</span>
+<span class="s2">                                    * ~~*field*~~"</span>
+                <span class="n">inline</span> <span class="p">=</span> <span class="nv">$false</span>
+                <span class="p">}</span>
+        <span class="p">)</span>
+        <span class="n">Icon</span>         <span class="p">=</span> <span class="s1">'https://gh.notifiarr.com/images/icons/notifiarr.png'</span>
+        <span class="n">ImageUrl</span>     <span class="p">=</span> <span class="s1">'https://gh.notifiarr.com/images/icons/notifiarr.png'</span>
+        <span class="n">PingRole</span>     <span class="p">=</span> <span class="n">1234567891011121314</span> <span class="c"># Replace with your Discord role ID</span>
+        <span class="n">PingUser</span>     <span class="p">=</span> <span class="n">1234567891011121314</span> <span class="c"># Replace with your Discord user ID</span>
+        <span class="n">ThumbnailUrl</span> <span class="p">=</span> <span class="s2">"https://gh.notifiarr.com/images/icons/notifiarr.png"</span>
+        <span class="n">Title</span>        <span class="p">=</span> <span class="s1">'My Notifiarr Title'</span>
+        <span class="n">WebhookUrl</span>   <span class="p">=</span> <span class="s2">"https://notifiarr.com/api/v1/notification/passthrough/$NOTIFIARR_APIKEY"</span> <span class="c"># Replace with your Notifiarr API key</span>
+    <span class="p">}</span>
+
+        <span class="c"># Send the notification using the function</span>
+        <span class="nv">$result</span> <span class="p">=</span> <span class="nb">Send-NotifiarrPassthroughNotification</span> <span class="nv">@notificationParams</span>
+
+        <span class="c"># Check the result and take action based on success or failure</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="p">.</span><span class="n">Status</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nb">Write-Host</span> <span class="s2">"Notification sent successfully!"</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="nb">Write-Warning</span> <span class="s2">"Failed to send notification: </span><span class="p">$(</span><span class="nv">$result</span><span class="p">.</span><span class="n">Message</span><span class="p">)</span><span class="s2">"</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nv">$result</span><span class="p">.</span><span class="n">ErrorDetail</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nb">Write-Warning</span> <span class="s2">"Error details: </span><span class="p">$(</span><span class="nv">$result</span><span class="p">.</span><span class="n">ErrorDetail</span><span class="p">)</span><span class="s2">"</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+</code></pre></div>
 
 
 
@@ -2609,7 +3486,7 @@ discord: {
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../network/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Network">
+          <a href="../packagemanager/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Package Manager">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2619,7 +3496,7 @@ discord: {
                 Previous
               </span>
               <div class="md-ellipsis">
-                Network
+                Package Manager
               </div>
             </div>
           </a>
@@ -2668,7 +3545,7 @@ discord: {
     
     
       
-      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.action.edit", "content.action.view", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.tabs.link", "content.code.copy", "content.tooltips", "header.autohide", "announce.dismiss", "navigation.footer", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.instant", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
