@@ -2632,22 +2632,18 @@
 <h2 id="client">Client<a class="headerlink" href="#client" title="Permanent link"></a></h2>
 <p>The Notifiarr client on your local machine is not required for this integration to work. Kometa is webhook based.  It is highly recommended you add an API key specific to this integration since it is a 3rd party.</p>
 <h2 id="kometa-config-file">Kometa Config File<a class="headerlink" href="#kometa-config-file" title="Permanent link"></a></h2>
-<p>In order to activate Notifiarr on Kometa, you need to edit the yml config file and add the following:</p>
-<pre><code>```yaml
-notifiarr:
-apikey: YOURKEY
-```
-</code></pre>
-<p>Kometa is web-hook agnostic hence you need to instruct it where to send the webhooks. Inside the config file edit the following:</p>
-<pre><code>```yaml
-webhooks:
-  error: notifiarr
-  version: notifiarr
-  run_start: notifiarr
-  run_end: notifiarr
-  changes: notifiarr
-```
-</code></pre>
+<p>In order to activate Notifiarr on Kometa, you need to edit the yml config file and add the following:
+    </p><div class="highlight"><pre><span></span><code><span class="nt">notifiarr</span><span class="p">:</span>
+<span class="nt">apikey</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">YOURKEY</span>
+</code></pre></div><p></p>
+<p>Kometa is web-hook agnostic hence you need to instruct it where to send the webhooks. Inside the config file edit the following:
+    </p><div class="highlight"><pre><span></span><code><span class="nt">webhooks</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">error</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notifiarr</span>
+<span class="w">  </span><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notifiarr</span>
+<span class="w">  </span><span class="nt">run_start</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notifiarr</span>
+<span class="w">  </span><span class="nt">run_end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notifiarr</span>
+<span class="w">  </span><span class="nt">changes</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">notifiarr</span>
+</code></pre></div><p></p>
 <p>It's always good to run a yml validator if you are not sure if your file will be a valid one. Then make sure to restart Kometa in order for new changes to take effect.</p>
 <h2 id="misc">Misc<a class="headerlink" href="#misc" title="Permanent link"></a></h2>
 <p>If you would like Notifiarr to include your Collections’ pictures and background, you can include <code>url_background</code> and/or <code>url_poster</code> inside your PMM library’s yml file and notifiarr will grab them and include them within the notification, making them look nicer.</p>

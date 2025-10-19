@@ -3194,7 +3194,12 @@ docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </spa
 <p>This API must be an All key!</p>
 </div>
 <ol>
-<li><code>Extra Keys</code> - This application uses the Notifiarr.com API key (set above) for incoming authentication. It's not safe to give that key to any other website, person, or third party service. This is because that key is also used for authentication to the Notifiarr.com API. If you want third parties to authenticate to this application's API, you should create custom keys for each integration. As of March 8, 2022, there are no existing integrations, so this is for future use. You can use this section to add extra API keys. Whatever you want. Separate them with newlines or spaces.</li>
+<li><code>Extra Keys</code> - This application uses the Notifiarr.com API key (set above) for incoming authentication.
+It's not safe to give that key to any other website, person, or third party service.
+This is because that key is also used for authentication to the Notifiarr.com API.
+If you want third parties to authenticate to this application's API, you should create custom keys for each integration.
+As of March 8, 2022, there are no existing integrations, so this is for future use. You can use this section to add
+extra API keys. Whatever you want. Separate them with newlines or spaces.</li>
 <li><code>Bind Address</code> - This is the IP and port the app will listen on. 0.0.0.0 means all IPs, and you should use that in almost all cases! Change the port if the default 5454 does not work for you.</li>
 <li><code>URL Base</code> - This application serves HTTP on / by default. You can change that by typing in something else here.</li>
 <li><code>Upstreams</code> - If Notifiarr client is behind a reverse proxy (swag, nginx, etc), then you should add that proxy IP here. You can also specify full networks. This controls which IP is written to the web server log file (requestor or x-forwarded-for header). It also allows the x-webauth-user header for proxy authentication. Separate with spaces or new lines.</li>

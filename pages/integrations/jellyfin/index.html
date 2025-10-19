@@ -2747,7 +2747,7 @@ Once installed, go ahead and restart your Jellyfin server for the plugin to be l
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is the URL of your webhook, which includes your API Key </p>
+<p>This is the URL of your webhook, which includes your API Key</p>
 <div class="highlight"><pre><span></span><code>https://notifiarr.com/api/v1/notification/jellyfin/YOUR_API_KEY
 </code></pre></div>
 </div>
@@ -2765,7 +2765,7 @@ Once installed, go ahead and restart your Jellyfin server for the plugin to be l
 <p>Once the webhook has been configured, remember to click on  <strong>Save</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are using the 'Item Added' notification, be sure to enable it in the notifications settings, otherwise it won't work. 
+<p>If you are using the 'Item Added' notification, be sure to enable it in the notifications settings, otherwise it won't work.
  <kbd>Dashboard &gt; Notifications &gt; New content added</kbd>
  You can also change how often Jellyfin notifies you of new items by changing the intervals of the scheduled task.
  <kbd>Dashboard &gt; Scheduled Tasks &gt; Webhook Item Added Notifier</kbd></p>
@@ -2774,13 +2774,13 @@ Once installed, go ahead and restart your Jellyfin server for the plugin to be l
 <hr>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If your webhook isn't working, start debugging by adding webhooks to your logging configuration. 
+<p>If your webhook isn't working, start debugging by adding webhooks to your logging configuration.
  Amend your Jellyfin's <kbd>logging.json</kbd> file to enable webhook debugging by adding <code>"Jellyfin.Plugin.Webhook": "Debug"</code></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Remember to add a comma after <code>"System": "Warning"</code> to avoid formatting errors.</p>
-<div class="highlight"><pre><span></span><code>{
+<p>Remember to add a comma after <code>"System": "Warning"</code> to avoid formatting errors.
+ </p><div class="highlight"><pre><span></span><code>{
 "Serilog": {
 <span class="w"> </span>    "MinimumLevel": {
 <span class="w"> </span>         "Default": "Information",
@@ -2790,7 +2790,7 @@ Once installed, go ahead and restart your Jellyfin server for the plugin to be l
 <span class="gi">+               "Jellyfin.Plugin.Webhook": "Debug"</span>
 <span class="w"> </span>         }
 <span class="w"> </span>    }
-</code></pre></div>
+</code></pre></div><p></p>
 </div>
 
 
