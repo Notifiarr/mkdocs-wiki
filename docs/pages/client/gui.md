@@ -61,7 +61,7 @@ notifiarr.exe --reset
 docker exec Notifiarr /notifiarr --reset
 docker kill --signal=HUP Notifiarr
 ```
-  
+
 ```bash
 # Example output with new password:
 [INFO] 2023/09/08 09:32:11 New 'admin' user password: four38=Draw
@@ -135,7 +135,12 @@ The General section is more catered to the ingress and egress options/functional
 !!! warning
     This API must be an All key!
 
-1. `Extra Keys` - This application uses the Notifiarr.com API key (set above) for incoming authentication. It's not safe to give that key to any other website, person, or third party service. This is because that key is also used for authentication to the Notifiarr.com API. If you want third parties to authenticate to this application's API, you should create custom keys for each integration. As of March 8, 2022, there are no existing integrations, so this is for future use. You can use this section to add extra API keys. Whatever you want. Separate them with newlines or spaces.
+1. `Extra Keys` - This application uses the Notifiarr.com API key (set above) for incoming authentication.
+It's not safe to give that key to any other website, person, or third party service.
+This is because that key is also used for authentication to the Notifiarr.com API.
+If you want third parties to authenticate to this application's API, you should create custom keys for each integration.
+As of March 8, 2022, there are no existing integrations, so this is for future use. You can use this section to add
+extra API keys. Whatever you want. Separate them with newlines or spaces.
 1. `Bind Address` - This is the IP and port the app will listen on. 0.0.0.0 means all IPs, and you should use that in almost all cases! Change the port if the default 5454 does not work for you.
 1. `URL Base` - This application serves HTTP on / by default. You can change that by typing in something else here.
 1. `Upstreams` - If Notifiarr client is behind a reverse proxy (swag, nginx, etc), then you should add that proxy IP here. You can also specify full networks. This controls which IP is written to the web server log file (requestor or x-forwarded-for header). It also allows the x-webauth-user header for proxy authentication. Separate with spaces or new lines.

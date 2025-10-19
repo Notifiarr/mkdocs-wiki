@@ -1,7 +1,6 @@
 # Dashboard
 
 !!! info
-
      This integration allows for notifications to keep you updated with an overview of some commonly used apps.
 
 ---
@@ -53,7 +52,6 @@ Click the **cog icon** to open the configuration options for the Dashboard integ
 ---
 
 !!! warning
-
      When you change the active status or the order, the next update will trigger a delete all and repost everything automatically, so they are in the correct order based on what you have turned on.
 
 ## Examples

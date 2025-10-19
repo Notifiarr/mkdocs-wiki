@@ -1,7 +1,6 @@
 # Prowlarr
 
 !!! info
-
      This integration is for setting up discord notifications for Prowlarr
 
 ## Trigger options
@@ -29,8 +28,8 @@
 2. If you already have the client setup and configured use the `Add Notifiarr Connect` to automatically add the connect to prowlarr.
 
 !!! info
-
-    We can see the connect has been added via Prowlarr &rarr; Settings &rarr; Notifications &rarr; Connections, You should also have recieved a test notification.
+    We can see the connect has been added via Prowlarr &rarr; Settings &rarr; Notifications &rarr; Connections,
+    You should also have received a test notification.
 
 Prowlarr Connect            |  Test Notification
 :-------------------------:|:-------------------------:

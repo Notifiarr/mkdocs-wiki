@@ -1,8 +1,7 @@
 # Authentik
 
 !!! info
-
-     This integration is for setting up discord notifications for Authentik 
+     This integration is for setting up discord notifications for Authentik
 
 ---
 
@@ -21,9 +20,8 @@
 ## Instructions
 
 !!! info "Authentik Notifications"
-
      Detailed wiki for [Authentik Notifications](https://docs.goauthentik.io/docs/sys-mgmt/events/notifications)
-    
+
 ![instructions.png](../../assets/screenshots/integrations/authentik/instructions.png)
 
 1. Instructions on how too set webhook notifications in Authentik
@@ -40,7 +38,6 @@ Click the cog icon too open the configuration settings
 ![configuration.png](../../assets/screenshots/integrations/authentik/configuration.png)
 
 1. enabling each `trigger field`, and using the `customize toggle` too drop down the `notification fields` for each trigger
-
 2. choosing the color of the notification
 
 ---

@@ -1,7 +1,6 @@
 # TRaSH
 
 !!! info "TRaSH"
-
     This integration allows you to setup and sync TRaSH guides with Radarr and Sonarr. Keep in mind this requires the Notifiarr client.
 
 !!! warning "patrons/subscribers"
@@ -54,7 +53,6 @@
 ![trigger-channels.png](../../assets/screenshots/integrations/trash/trigger-channels.png)
 
 1. `CFs/Scores` - The amount of CF's and scores you have synced.
-
 2. `Channel` - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
 
 ## Getting Started
@@ -87,9 +85,7 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 ![profiles-1.png](../../assets/screenshots/integrations/trash/profiles-1.png)
 
 1. `Sync` - Enable this to sync your profile.
-
 2. `Starr instance profile` - Either create a new profile or select one of the TRaSH profiles available.
-
 3. `Profile name` - Here you can set your profile name **This needs to be unique**.
 
 !!! Note
@@ -106,13 +102,9 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 ![profile-customization-1.png](../../assets/screenshots/integrations/trash/profile-customization-1.png)
 
 1. `Language` - If you want to sync your prefered language, **Disable this if you plan to use something other then the TRaSH default.
-
 2. `Upgrades allowed` - Enable this if you plan to allow upgrades in your profile.
-
 3. `Minimum score` - Enable this to set the minimum download score to 0.
-
 4. `Minimum upgrade score` - enable this to set the minimim score increase to allow a upgrade.
-
 5. `Cutoff score` - Enable this to set the cutoff score. **default set 10000**
 
 ### Quality Settings
@@ -123,7 +115,6 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 ![quality.png](../../assets/screenshots/integrations/trash/quality.png)
 
 1. `Cutoff quality` - Cutoff quality is the quality that you want your starr instance to stop upgrading at. `Bluray-1080p`
-
 2. `Qualities` - You can choose to either match the TRaSH quality groups, or you can set this to allow custom set groups. For example we want to use the TRaSH `HD Bluray + WEB` profile but we don't want to include `720p`.
 
 ### Custom Formats "CF"
@@ -131,7 +122,6 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 ![custom-formats-1.png](../../assets/screenshots/integrations/trash/custom-formats-1.png)
 
 1. `Add` - You can choose to either automatically add new formats, add missing formats, or add none.
-
 2. `Remove` - You can choose to remove custom scores on each sync, or if you want to set your own scores you would want to `allow custom scores from formats assigned to this profile`. If your planning to set scores different then what TRaSH has then you would want to set this to `allow`.
 
 3. `Groups` - This is where you can select each group that you want in your profile sync, along with the available CF's within that group.
@@ -144,7 +134,6 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 ![formats-1.png](../../assets/screenshots/integrations/trash/formats-1.png)
 
 1. `Sync TRaSH CF names` - If you want to sync the names set for the TRaSH CFs.
-
 2. `Interactive flowchart` - Useful interactive flow charts for TRaSH profiles.
 
 ### Scores
@@ -154,11 +143,8 @@ Here you can setup custom scores to your liking, and choose to sync them.
 ![scores-1.png](../../assets/screenshots/integrations/trash/scores-1.png)
 
 1. `Filter` - Filter between witch profile you're editing/looking at.
-
 2. `Multiplier` - (multiplier * TRaSH = your score)
-
 3. `Starr score/Custom` - Here you can set personal scores while still keeping your CF's in sync.
-
 4. `Sync` - Check-box to enable sync.
 
 ## Quality
@@ -168,9 +154,7 @@ Here you can edit quality names within a specific group and choose to sync them 
 ![quality-1.png](../../assets/screenshots/integrations/trash/quality-1.png)
 
 1. `Definition group`- Here you can choose the starr profile, that you plan to edit or change.
-
 2. `Rename Field` - This is where you can customize the name of a quality.
-
 3. `Sync` - Check-box to enable sync.
 
 ### Naming
@@ -184,21 +168,12 @@ Here you can choose a default TRaSH naming scheme for your media. There are reco
 ![formats-1.png](../../assets/screenshots/integrations/trash/delete-formats.png)
 
 1. `Fix Map` - This will open the mapping tool options.
-
 2. `Enable sync` - This will re-enable all the CF toggles, this is useful if you want to change the selected CF's.
-
 3. `Enable sync + scores` - This will re-enable all the CF toggles, and scores. This is useful if you want to change CF's and scores.
-
 4. `Unlink starr` - This will unlink your starr id's from the map. This is useful if your moving your starr install to a different server or if your changing databases.
-
 5. `Relink starr` - This will attempt to re-link your starr instance id's and CF's to the map.
-
 6. `Delete map` - This will delete all of your sync settings. Useful for starting fresh.
-
-7. `Delete Selected CFs` - This will delete all of the selected CF's in your profile. 
-
+7. `Delete Selected CFs` - This will delete all of the selected CF's in your profile.
 8. `Delete Selected CFs & Map` - This will delete all of your CF's and the profile mapping.
-
 9. `Fresh Start CFs` - This will delete all the formats but leave the map so a sync would put everything back that is in sync. This is useful to clean things up without loosing your sync settings.
-
 10. `Fresh Start All` - This would delete all CF's/scores/ect. Only do this if you want to nuke everything and start over.

@@ -1,7 +1,6 @@
 # Jellyfin
 
 !!! info
-
      This integration allows for notifications from the Jellyfin media app
 
 ## Trigger options
@@ -66,14 +65,12 @@ Write the URL of your Jellyfin server where it says `SERVER URL` and click on **
 Give the Webhook a name
 
 !!! info
-
      Example: Notifiarr
 
 - `Webhook Url`
 
 !!! note
-
-     This is the URL of your webhook, which includes your API Key 
+     This is the URL of your webhook, which includes your API Key
 
      ```bash
      https://notifiarr.com/api/v1/notification/jellyfin/YOUR_API_KEY
@@ -93,8 +90,7 @@ Check **"Send All Properties (ignores template)"**
 Once the webhook has been configured, remember to click on  **Save**.
 
 !!! note
-
-     If you are using the 'Item Added' notification, be sure to enable it in the notifications settings, otherwise it won't work. 
+     If you are using the 'Item Added' notification, be sure to enable it in the notifications settings, otherwise it won't work.
      <kbd>Dashboard > Notifications > New content added</kbd>
      You can also change how often Jellyfin notifies you of new items by changing the intervals of the scheduled task.
      <kbd>Dashboard > Scheduled Tasks > Webhook Item Added Notifier</kbd>
@@ -104,14 +100,11 @@ Once the webhook has been configured, remember to click on  **Save**.
 ---
 
 !!! info
-
-     If your webhook isn't working, start debugging by adding webhooks to your logging configuration. 
+     If your webhook isn't working, start debugging by adding webhooks to your logging configuration.
      Amend your Jellyfin's <kbd>logging.json</kbd> file to enable webhook debugging by adding `"Jellyfin.Plugin.Webhook": "Debug"`
 
 !!! warning
-
      Remember to add a comma after `"System": "Warning"` to avoid formatting errors.
-
      ```diff
      {
      "Serilog": {
@@ -123,5 +116,4 @@ Once the webhook has been configured, remember to click on  **Save**.
      +               "Jellyfin.Plugin.Webhook": "Debug"
                }
           }
-
      ```

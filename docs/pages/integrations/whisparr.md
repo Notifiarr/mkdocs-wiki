@@ -1,11 +1,9 @@
 # Whisparr
 
 !!! info
-
      This integration is for setting up discord notifications for Whisparr
 
 !!! Warning "Whisparr"
-
     **NSFW content will not be shown**
 
 ## Trigger options
@@ -34,7 +32,6 @@
 1. Instructions on how to setup the notifiarr connect in prowlarr
 
 !!! info
-
     Add the Connect using its built in Connection for **Notifiarr**. In Whisparr click Settings → Connect → <kb>+</kb> → Notifiarr, once done correctly you will recieve a test notification :smile:
 
 Whisparr Connect            |  Test Notification

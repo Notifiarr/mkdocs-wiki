@@ -1,7 +1,6 @@
 # Uptime-Kuma
 
 !!! note
-
     setup notifications for Uptime Kuma
 
 ## Trigger Options
@@ -16,7 +15,6 @@
 ![instructions.png](../../assets/screenshots/integrations/uptimekuma/instructions.png)
 
 !!! info
-
     Add the webhook too your Uptime Kuma via Uptime-Kuma &rarr; Settings &rarr; Notifications &rarr; Setup Notifications
 
 ![uptime-webhook](../../assets/screenshots/integrations/uptimekuma/uptime-webhook.png)

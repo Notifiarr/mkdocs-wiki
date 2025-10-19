@@ -14,7 +14,7 @@ When you open the client settings you will see:
 
 1. Client list: Each client you have configured will show up as a tab so its settings can be modified
 2. This section is information about the local client and its host environment
-3. This is the automatically configured `Tunnel URL` to the client so the site can communicate with the locally installed client 
+3. This is the automatically configured `Tunnel URL` to the client so the site can communicate with the locally installed client
 4. This is the connection status, if it isn't green then the site can not reach the client. See [Errors](#errors) below.
 5. Use this client for timers that are not part of a specific integration (non client integrated timers, daily overview posts for example)
 6. Client triggers: If the URL is provided, you can trigger the client to run any of these actions by clicking the cloud icon
