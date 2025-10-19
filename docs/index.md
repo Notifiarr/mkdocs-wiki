@@ -1,5 +1,5 @@
 
-#### Client
+##### Client
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr?label=Commits&style=for-the-badge&color=526cfe)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/t/notifiarr/notifiarr/main?label=Stable%20(:latest)&style=for-the-badge&color=526cfe)
@@ -12,12 +12,12 @@
 ![GitHub issues](https://img.shields.io/github/issues-pr-closed/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)
 [![GitHub license](https://img.shields.io/github/license/Notifiarr/notifiarr?&logo=github&style=for-the-badge&color=526cfe)](https://github.com/Notifiarr/notifiarr/blob/main/LICENSE)
 
-#### Site
+##### Site
 
 ![GitHub issues](https://img.shields.io/github/issues/Notifiarr/website?&logo=github&style=for-the-badge&color=526cfe)
 ![GitHub issues](https://img.shields.io/github/issues-closed/Notifiarr/website?&logo=github&style=for-the-badge&color=526cfe)
 
-#### Support
+##### Support
 
 [![Discord](https://img.shields.io/discord/764440599066574859?label=Discord&style=for-the-badge&color=7F00FF)](https://notifiarr.com/discord)
 
