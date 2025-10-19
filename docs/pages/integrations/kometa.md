@@ -3,7 +3,6 @@
 ## Webhook Types
 
 !!! info
-
      As of December 2022, this integration can send 5 webhooks. You can either activate them by ticking the on/off buttons or clicking on the gear icon where you can pic your notifications’ colours as well.
 
 ![notifiarr_pmm_toggles.png](../../assets/screenshots/integrations/plexmetamanger/notifiarr_pmm_toggles.png)
@@ -22,14 +21,12 @@ The Notifiarr client on your local machine is not required for this integration 
 ## Kometa Config File
 
 In order to activate Notifiarr on Kometa, you need to edit the yml config file and add the following:
-
     ```yaml
     notifiarr:
     apikey: YOURKEY
     ```
 
 Kometa is web-hook agnostic hence you need to instruct it where to send the webhooks. Inside the config file edit the following:
-
     ```yaml
     webhooks:
       error: notifiarr

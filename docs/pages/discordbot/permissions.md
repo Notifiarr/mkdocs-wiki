@@ -1,10 +1,14 @@
 # Discord Permissions
 
-Getting permissions correct for your setup can be a struggle depending on how you have your Discord server setup. If you want to run a simple test to see if you have permission issues, set the Notifiarr role to have `Admin` permission and see whether it solves your issue. If everything works, this means you simply need to adjust permissions for the the Notifiarr role and you don't need to give it full admin permissions
+Getting permissions correct for your setup can be a struggle depending on how you have your Discord server setup.
+If you want to run a simple test to see if you have permission issues, set the Notifiarr role to have `Admin`
+permission and see whether it solves your issue. If everything works, this means you simply need to adjust permissions
+for the the Notifiarr role and you don't need to give it full admin permissions.
 
 ---
 
-To update the integration's permissions, click on your server name at the top and pick `Server Settings > Roles`. Click on the `Notifiarr` role and then pick `Permissions`.
+To update the integration's permissions, click on your server name at the top and pick `Server Settings > Roles`.
+Click on the `Notifiarr` role and then pick `Permissions`.
 
 ## **Required Permissions**
 

@@ -21,7 +21,7 @@ When a new docker image is deployed with an empty /config folder mounted, the ap
 - You can use env variables, the conf file, or the UI
 - Must provide the "All" API key from your [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
   - **The Notifiarr application uses the API key for bi-directional authorization between the Site and the Client.**
-  
+
 !!! danger "Unraid Users"
     You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
 
@@ -131,7 +131,7 @@ Recommend not messing with these unless instructed to do so.
 | max_body    | `DN_MAX_BODY`     | Unlimited, `0` / Maximum debug-log body size (integer) for payloads to and from notifiarr.com     |
 |             | `TMPDIR`          | `%TMP%` on Windows. Varies depending on system; must be writable if using Backup Corruption Check |
 
-_Note: You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`._
+*Note: You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`.*
 
 #### MySQL Snapshots
 

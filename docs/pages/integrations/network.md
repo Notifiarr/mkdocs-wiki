@@ -1,7 +1,6 @@
 # network
 
 !!! info
-
     This integration allows for notifications from the local Notifiarr client app to monitor network machines or services.
 
 ## Network Overview

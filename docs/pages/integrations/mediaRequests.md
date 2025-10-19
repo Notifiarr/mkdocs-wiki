@@ -1,7 +1,6 @@
 # Media Requests
 
 !!! info
-
     This integration allows for requesting media via Discord.
 
 ## Currently Supported Applications

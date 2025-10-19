@@ -13,7 +13,7 @@ F2B_HOST="$(hostname)"
 
 1. **Open a shell** on the server where Fail2ban is installed.
 
-2. **Change to the Fail2ban actions directory.**  
+2. **Change to the Fail2ban actions directory.**
    Adjust the path if your installation is different.
 
    ```bash
@@ -42,7 +42,7 @@ F2B_HOST="$(hostname)"
      ```
 
 6. **Configure your `jail.local` file:**
-   
+
    Open your jail configuration:
 
    ```bash

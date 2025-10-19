@@ -108,7 +108,7 @@ server {
     set $upstream_app notifiarr;
     set $upstream_port 5454;
     set $upstream_proto http;
-        
+
     location / {
         # enable the next two lines for http auth
         #auth_basic "Restricted";
@@ -117,7 +117,7 @@ server {
         # enable the next two lines for organizr auth
         #include /config/nginx/orgauth.conf;
         #auth_request /organizr-auth/0;
-        
+
         # enable the next two lines for ldap auth
         #auth_request /auth;
         #error_page 401 =200 /ldaplogin;
@@ -129,7 +129,7 @@ server {
         proxy_set_header X-WebAuth-User $auth_user;
         proxy_pass $upstream_proto://$upstream_app:$upstream_port;
     }
-    
+
     # API path must not be protected by auth, authelia, ldap, etc.
     location ~ (/notifiarr)?/api {
         deny all; # remove this line if you really want to expose the API.

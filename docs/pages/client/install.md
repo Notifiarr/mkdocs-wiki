@@ -267,7 +267,7 @@ WantedBy=default.target
 1. Type `systemctl --user enable notifiarr`
 1. Type `systemctl --user start notifiarr`
 1. Type `systemctl --user status notifiarr` to check if there are any errors.
-1. On your browser go to http://[ultraseedbox url]:5454
+1. On your browser go to `http://your-ultraseedbox-url:5454`
 1. Log into your Notifarr client and change the base url to /notifiarr and save changes
 1. Go back to your ssh console
 1. Type `cd /home/$USER/.apps/nginx/proxy.d`
@@ -296,4 +296,4 @@ deny all; # remove this line if you really want to expose the API.
 ```
 
 1. Type `systemctl --user restart nginx`
-1. Now you should be able to browse to https://[ultraseedbox url]/notifiarr
+1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`

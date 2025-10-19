@@ -1,7 +1,6 @@
 # Github
 
 !!! info
-
      This integration allows for notifications from public Github repositories.
 ---
 
@@ -39,5 +38,4 @@ Click the **cog icon** to open the configuration options for Github.
 ![instructions.png](../../assets/screenshots/integrations/github/instructions.png)
 
 !!! note
-
      This is how you add the webhook to Github and then how you add the organization in the Github integration
