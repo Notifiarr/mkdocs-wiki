@@ -1,27 +1,27 @@
-# Notifiarr Client UI
+# Notifiarr Client Web UI
 
-The Client UI is the preferred and recommended method of modifying the Notifiarr configuration file. Its GUI provides an easy and intuitive interface for all users to configure Applications for use with Notifiarr.
+The client's Web UI is the preferred and recommended method of modifying
+the Notifiarr configuration. The Web UI provides an easy and intuitive
+interface to configure Integrations for use with Notifiarr.
 
 ---
 
-## Enabling the Client UI
-
-Once the Notifiarr client is installed, follow the instructions to set the UI Username/Password as described under [Client -> Setup -> Web UI](../../pages/client/setup.md#web-ui)
-
-Once the above is done, point your browser to the client and you will be taken to the login screen. Login with your specified Username (default: admin) and configured Password.
+Login with your specified user name (default: `admin`) and configured password,
+or API key if you haven't set a password yet.
 
 For initial runs:
 
-- If the API Key is configured and valid your password is the APIKey
-- If the API Key is invalid and if there is no existing config the password will be printed in the logs on first run.
+- If the API Key is configured and valid your password is the API Key.
+- If the API Key is invalid and if there is no existing config file the password will be printed in the logs on first run.
 
 ![login](../../assets/screenshots/client/login.png)
 
 ## Forgotten Passwords
 
-## Locate the Password in config file prior to UI Access
+##### Fresh Installs
 
-Execute the below command to print the unecrypted first-start password. **This only works for brand new installations.**
+Execute the below command to print the unecrypted first-start password.
+**This only works for brand new installations.**
 
 ```bash
 # Fix the path yourself:
@@ -31,9 +31,9 @@ grep ui_password  /path/to/notifiarr/notifiarr.conf
 grep ui_password  /mnt/user/appdata/Notifiarr/notifiarr.conf
 ```
 
-## Liunx / FreeBSD
+##### Liunx & FreeBSD
 
-1. Run this command which resets the password then restarts the applicatoin
+- Run these commands to reset the password and restart the application.
 
 ```bash
 # Reset password.
@@ -42,19 +42,17 @@ notifiarr --reset
 systemctl restart notifiarr
 ```
 
-## Windows
+##### Windows
 
-1. Run this command, and then restart the application
+- Run this command, and then restart the application.
 
 ```bash
 notifiarr.exe --reset
 ```
 
-## Docker
+##### Docker & Unraid
 
-\*Also applies to Unraid\*
-
-1. Run these two commands in your host system's terminal (console) while the Notifiarr container is running.
+- Run these two commands in your host system's terminal (console or ssh) while the Notifiarr container is running.
    *If your container is named `notifiarr` then replace `Notifiarr` with the lowercase version.*
 
 ```bash
@@ -68,13 +66,18 @@ docker kill --signal=HUP Notifiarr
 [INFO] 2023/09/08 09:32:11 Writing Config File: /config/notifiarr.conf
 ```
 
-1. If you still can't login, restart the container.
+- If you still can't login, restart the container.
 
 ---
 
 ## Client UI Homepage
 
-Once logged in you will be taken to the Homepage. From here you are free to navigate the Client and have the power to Modify, Update, Trigger Applications/Integrations and much, much more.
+!!! danger "Outdated"
+    These screenshots are outdated, and we'll get them fixed up ASAP! Captain @ October 20, 2025.
+
+Once logged in you will be taken to the Homepage.
+From here you are free to navigate the Client and have the power to Modify,
+Update, Trigger Application Integrations and much, much more.
 
 ![ui_homepage2.png](../../assets/screenshots/client/ui_homepage2.png)
 
