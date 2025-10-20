@@ -21,7 +21,7 @@ There are non-integration related settings and triggers are configured on the No
 1. Open the conf file, set your Notifiarr API Key and restart the client.
 
     ```conf
-    ## This API key must be copied 
+    ## This API key must be copied
     from your notifiarr.com account.
     api_key = "api-key-from-notifiarr.com"
     ```
@@ -47,7 +47,7 @@ When a new docker image is deployed and an empty /config folder is mounted the a
 - Must provide the "All" API key from your [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
   - **The Notifiarr application uses the API key for bi-directional authorization between the Site and the Client.**
 
-!!! warning  
+!!! warning
     **Unraid Users**
     You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
 

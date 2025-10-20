@@ -1,7 +1,6 @@
 # Hotio
 
 !!! info
-
      This integration allows for notifications from Hotio.
 
 ## Currently supported
@@ -40,5 +39,4 @@ Click the **cog icon** to open the configuration options for Hotio apps.
 The compose entry to enable Notifiarr with Pullio
 
 !!! note
-
      for images: If you do not specify an avatar image in the app compose one will be used from the site so you do not have to worry about image hosting sites.

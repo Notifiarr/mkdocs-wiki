@@ -1,7 +1,6 @@
 # Readarr
 
 !!! info
-
     This integration allows for notifications from Readarr using its built in Connection for **Notifiarr**. In Readarr click Settings → Connect → <kb>+</kb> → Notifiarr
 
 ---

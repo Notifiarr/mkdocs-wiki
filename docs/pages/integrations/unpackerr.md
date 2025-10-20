@@ -1,7 +1,6 @@
 # Unpackerr
 
 !!! info
-
     This integration provides [Unpackerr](https://golift.io/unpackerr) notifications and reactions.
 
 You may choose to have either a reaction placed on existing Starr notifications, or receive a stand alone message for Unpackerr notifications, or both. Selecting the *Reactions* box enables or disables the Reaction emoji.

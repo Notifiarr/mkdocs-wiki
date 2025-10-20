@@ -1,7 +1,6 @@
 # Jellyseerr
 
 !!! question "jellyseerr notifications"
-
     If you have any issues setting up notifications for jellyseerr refer to this [wiki](https://docs.jellyseerr.dev/using-jellyseerr/notifications)
 
 ---
@@ -34,7 +33,6 @@
 3. Notification Color
 
 !!! note
-
     **Be sure to save settings**
 
 ---

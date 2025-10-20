@@ -30,7 +30,6 @@
 3. Notification Color
 
 !!! note
-
     **Be sure to save settings**
 
 ---

@@ -89,7 +89,10 @@ If session info is missing from notifications or the sessions notification is no
 - Make sure you have selected the **Activity** checkbox in the Plex section of the [Client Settings](../../pages/website/clientConfig.md)
 - Try to increase the **Activity Delay** in the Plex section of the [Client Settings](https://notifiarr.wiki/en/Website/ClientConfiguration) as this will give Plex more time to get the session available in the endpoint
 - Note 1: The sessions notifications will only send when there is at least one item being played or paused
-- Note 2: It doesn't matter what Tautulli shows or the Plex Dashboard shows, they both use the same sessions endpoint. If you where to look at them at the same time as the notification is sent (when it doesn't work) they would also not show the session yet. How long it takes Plex & your (possibly low powered or over worked) server to make the session available in the endpoint is out of our control which is why we added the delay option
+- Note 2: It doesn't matter what Tautulli shows or the Plex Dashboard shows, they both use the same sessions endpoint.
+  If you where to look at them at the same time as the notification is sent (when it doesn't work) they would also not
+  show the session yet. How long it takes Plex & your (possibly low powered or over worked) server to make the session
+  available in the endpoint is out of our control which is why we added the delay option
 
 ## Q. What are the user level differences
 

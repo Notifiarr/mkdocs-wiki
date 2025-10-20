@@ -7,83 +7,83 @@ repo_url: https://github.com/Notifiarr/mkdocs-wiki
 
 nav:
   - Notifiarr:
-    - About: index.md
+      - About: index.md
   - Quick Start:
-    - Quick Start: pages/quickstart/quickStart.md
+      - Quick Start: pages/quickstart/quickStart.md
   - Client:
-    - Install: pages/client/install.md
-    - Client configuration: pages/client/configuration.md
-    - Client UI: pages/client/gui.md
-    - Cloudflare config: pages/client/cloudflare.md
-    - Reverse proxy: pages/client/reverseProxy.md
-    - Setup: pages/client/setup.md
+      - Install: pages/client/install.md
+      - Client configuration: pages/client/configuration.md
+      - Client UI: pages/client/gui.md
+      - Cloudflare config: pages/client/cloudflare.md
+      - Reverse proxy: pages/client/reverseProxy.md
+      - Setup: pages/client/setup.md
   - Website:
-    - Client setup: pages/website/clientConfig.md
-    - Integrations setup: pages/website/integrationsSetup.md
-    - Media requests: pages/website/mediaRequests.md
-    - Notification history: pages/website/notificationHistory.md
-    - Transcode history: pages/website/transcodeHistory.md
-    - Trending: pages/website/trending.md
-    - Translations: pages/website/translations.md
-    - Metrics: pages/website/metrics.md
+      - Client setup: pages/website/clientConfig.md
+      - Integrations setup: pages/website/integrationsSetup.md
+      - Media requests: pages/website/mediaRequests.md
+      - Notification history: pages/website/notificationHistory.md
+      - Transcode history: pages/website/transcodeHistory.md
+      - Trending: pages/website/trending.md
+      - Translations: pages/website/translations.md
+      - Metrics: pages/website/metrics.md
   - Integrations:
-    - How To Setup Integrations: pages/integrations/basicUsage.md
-    - Apprise: pages/integrations/apprise.md
-    - Authentik: pages/integrations/authentik.md
-    - Autobrr: pages/integrations/autobrr.md
-    - Bazarr: pages/integrations/bazarr.md
-    - Better Stack: pages/integrations/betterstack.md
-    - Channel Stats: pages/integrations/channelstats.md
-    - Cronitor: pages/integrations/cronitor.md
-    - Cross Seed: pages/integrations/crossseed.md
-    - Crowdsec: pages/integrations/crowdsec.md
-    - Dashboard: pages/integrations/dashboard.md
-    - Discord App: pages/integrations/discordApp.md
-    - DockWatch: pages/integrations/dockwatch.md
-    - Duplicacy: pages/integrations/duplicacy.md
-    - Emby: pages/integrations/emby.md
-    - Fail2ban: pages/integrations/fail2ban.md
-    - Github: pages/integrations/github.md
-    - Hotio: pages/integrations/hotio.md
-    - Jellyfin: pages/integrations/jellyfin.md
-    - Jellyseerr: pages/integrations/jellyseerr.md
-    - Kometa: pages/integrations/kometa.md
-    - Lidarr: pages/integrations/lidarr.md
-    - Log Watcher: pages/integrations/logWatch.md
-    - MDBList: pages/integrations/mdblist.md
-    - Media Requests: pages/integrations/mediaRequests.md
-    - Network: pages/integrations/network.md
-    - Overseerr: pages/integrations/overseerr.md
-    - Package Manager: pages/integrations/packagemanager.md
-    - Passthrough: pages/integrations/passthrough.md
-    - Persistent: pages/integrations/persistent.md
-    - Plex: pages/integrations/plex.md
-    - Prowlarr: pages/integrations/prowlarr.md
-    - Qbit Manage: pages/integrations/qbitmanage.md
-    - Radarr: pages/integrations/radarr.md
-    - Readarr: pages/integrations/readarr.md
-    - Reciperr: pages/integrations/reciperr.md
-    - Reddit: pages/integrations/reddit.md
-    - Release Parser: pages/integrations/releaseParser.md
-    - RSS Watcher: pages/integrations/rssWatcher.md
-    - Simon Says: pages/integrations/simonSays.md
-    - Snapshots: pages/integrations/snapshots.md
-    - Sonarr: pages/integrations/sonarr.md
-    - Starr Proxy: pages/integrations/starrproxy.md
-    - Synology: pages/integrations/synology.md
-    - TRaSH: pages/integrations/trash.md
-    - Unpackerr: pages/integrations/unpackerr.md
-    - Uptime-Kuma: pages/integrations/uptimekuma.md
-    - Watchtower: pages/integrations/watchtower.md
-    - Website Status: pages/integrations/websitestatus.md
-    - Whisparr: pages/integrations/whisparr.md
+      - How To Setup Integrations: pages/integrations/basicUsage.md
+      - Apprise: pages/integrations/apprise.md
+      - Authentik: pages/integrations/authentik.md
+      - Autobrr: pages/integrations/autobrr.md
+      - Bazarr: pages/integrations/bazarr.md
+      - Better Stack: pages/integrations/betterstack.md
+      - Channel Stats: pages/integrations/channelstats.md
+      - Cronitor: pages/integrations/cronitor.md
+      - Cross Seed: pages/integrations/crossseed.md
+      - Crowdsec: pages/integrations/crowdsec.md
+      - Dashboard: pages/integrations/dashboard.md
+      - Discord App: pages/integrations/discordApp.md
+      - DockWatch: pages/integrations/dockwatch.md
+      - Duplicacy: pages/integrations/duplicacy.md
+      - Emby: pages/integrations/emby.md
+      - Fail2ban: pages/integrations/fail2ban.md
+      - Github: pages/integrations/github.md
+      - Hotio: pages/integrations/hotio.md
+      - Jellyfin: pages/integrations/jellyfin.md
+      - Jellyseerr: pages/integrations/jellyseerr.md
+      - Kometa: pages/integrations/kometa.md
+      - Lidarr: pages/integrations/lidarr.md
+      - Log Watcher: pages/integrations/logWatch.md
+      - MDBList: pages/integrations/mdblist.md
+      - Media Requests: pages/integrations/mediaRequests.md
+      - Network: pages/integrations/network.md
+      - Overseerr: pages/integrations/overseerr.md
+      - Package Manager: pages/integrations/packagemanager.md
+      - Passthrough: pages/integrations/passthrough.md
+      - Persistent: pages/integrations/persistent.md
+      - Plex: pages/integrations/plex.md
+      - Prowlarr: pages/integrations/prowlarr.md
+      - Qbit Manage: pages/integrations/qbitmanage.md
+      - Radarr: pages/integrations/radarr.md
+      - Readarr: pages/integrations/readarr.md
+      - Reciperr: pages/integrations/reciperr.md
+      - Reddit: pages/integrations/reddit.md
+      - Release Parser: pages/integrations/releaseParser.md
+      - RSS Watcher: pages/integrations/rssWatcher.md
+      - Simon Says: pages/integrations/simonSays.md
+      - Snapshots: pages/integrations/snapshots.md
+      - Sonarr: pages/integrations/sonarr.md
+      - Starr Proxy: pages/integrations/starrproxy.md
+      - Synology: pages/integrations/synology.md
+      - TRaSH: pages/integrations/trash.md
+      - Unpackerr: pages/integrations/unpackerr.md
+      - Uptime-Kuma: pages/integrations/uptimekuma.md
+      - Watchtower: pages/integrations/watchtower.md
+      - Website Status: pages/integrations/websitestatus.md
+      - Whisparr: pages/integrations/whisparr.md
   - Discord Bot:
-    - Permissions: pages/discordbot/permissions.md
-    - Custom Bot: pages/discordbot/custombot.md
+      - Permissions: pages/discordbot/permissions.md
+      - Custom Bot: pages/discordbot/custombot.md
   - Translations:
-    - Contribute: pages/translations/contribute.md
-  - Faq: 
-    - Faq: pages/faq/faq.md
+      - Contribute: pages/translations/contribute.md
+  - Faq:
+      - Faq: pages/faq/faq.md
 
 theme:
   name: material
@@ -108,15 +108,15 @@ theme:
     - search.suggest
     - search.highlight
     - search.share
-  
+
   palette:
-    - media: "(prefers-color-scheme: dark)"
+    - media: '(prefers-color-scheme: dark)'
       scheme: slate
       primary: custom
       toggle:
         icon: material/weather-sunny
         name: Light mode
-    - media: "(prefers-color-scheme: light)"
+    - media: '(prefers-color-scheme: light)'
       scheme: default
       primary: custom
       toggle:
@@ -152,4 +152,5 @@ markdown_extensions:
       alternate_style: true
   - md_in_html
   - toc:
+      toc_depth: 4
       permalink: ''

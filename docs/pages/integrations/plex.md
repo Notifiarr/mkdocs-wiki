@@ -1,7 +1,6 @@
 # Plex
 
 !!! info
-
     This integration allows for notifications from Plex. Keep in mind this utilizes the [Notifiarr client](../../pages/client/install.md)
 
 ## Current Version
@@ -137,8 +136,8 @@ This integration requires the Notifiarr client to be running locally. You can ge
 ### Webhook
 
 !!! info
-
-    [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require [Plexpass](https://www.plex.tv/plex-pass/)
+    [Plex Webhooks](https://support.plex.tv/articles/115002267687-webhooks/) from Plex to the Client require
+    [Plexpass](https://www.plex.tv/plex-pass/)
 
 In Plex, [add a webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
 

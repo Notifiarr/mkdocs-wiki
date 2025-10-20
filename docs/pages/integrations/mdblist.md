@@ -2,7 +2,7 @@
 
 ## What is MDBList
 
-MDBList is a 3rd party service that allows you to curate lists of shows and movies from various sources and can be found [here](https://mdblist.com), this integration is meant to do three things:
+MDBList is a 3rd party service that allows you to curate lists of shows and movies from various sources and [can be found here](https://mdblist.com), this integration is meant to do three things:
 
 1. Allow for the ability to add individual shows or movies to Radarr or Sonarr using the add button on the show item on the MDBList website
 

@@ -1,7 +1,6 @@
 # Better Stack
 
 !!! info
-
      This integration allows for notifications from Better stack utilizing their webhook system
 
 ---
@@ -32,5 +31,4 @@ Click the **cog icon** to open the configuration options for Better Uptime.
 1. Better Uptime team id that is used to link the Incident in the notification
 
 !!! note
-
      This integration sends a single notification for all triggers. After the first one is sent, the rest will update the existing notification in the chain.

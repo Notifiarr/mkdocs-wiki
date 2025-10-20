@@ -1,7 +1,6 @@
 # How To Setup Integrations
 
 !!! info
-
      All the integrations follow the same layout and logic so this means once you understand how one of them works you will be able to figure out how to setup any of them.
 
 ---

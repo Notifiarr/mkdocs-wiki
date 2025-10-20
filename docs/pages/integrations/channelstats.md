@@ -21,19 +21,12 @@ While most of the information is pulled from the dashboard integration, things s
     You will also need the Plex client setup if you plan to use the available Plex triggers.
 
 1. The trigger to enable each field that you may want.
-
 2. `Sonarr Total` - This will display the total number in sonarr.
-
 3. `Episodes on disk` - This is where you can choose how you want to name your `sonarr total` instance
-
 4. choose to list either the total `On Disk` or `In Database`
-
 5. `Plex Streaming` - Enabling this will list any plex streams that are happening.
-
 6. `Plex Transcoding` - Enabling this will list any present transcodes on the server.
-
 7. `Plex Lan Traffic` - Enabling this will display the current plex traffic on your LAN.
-
 8. `Plex Wan Traffic` - Enable this will display the current plex traffic on your WAN.
 
 **There are also some basic triggers such as:**
@@ -41,9 +34,7 @@ While most of the information is pulled from the dashboard integration, things s
 ![basic-triggers.png](../../assets/screenshots/integrations/channel-stats/basic-triggers.png)
 
 1. `discord: users` - Enabling this will list how many members are in the server.
-
 2. `Notifications: daily` - Enabling this will list how many notifications you get day by day.
-
 3. `Notifications: Total` - Enabling this will give you the total notifications that notifiarr has ever sent.
 
 ## Example

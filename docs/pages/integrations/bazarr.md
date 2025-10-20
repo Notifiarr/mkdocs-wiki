@@ -1,14 +1,14 @@
 # Bazarr
 
 !!! info
-
     This integration allows for notifications from Bazarr and will also add reactions to notifications if a subtitle was found for it and you are using reactions.
 
 ---
 
 ## Current Versions
 
-![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Frelease%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb } ![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Fnightly%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb }
+![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Frelease%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb }
+![version](https://img.shields.io/badge/dynamic/json?query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fhotio%2Fbazarr%2Fnightly%2FVERSION.json&label=Latest%20Version&style=for-the-badge&color=526cfe){ .off-glb }
 
 ---
 
@@ -60,5 +60,4 @@ Reaction example:
 1. Test the notification from Notifiarr to Discord
 
 !!! note
-
      This will ensure your server, channel and permissions are set properly in Discord
