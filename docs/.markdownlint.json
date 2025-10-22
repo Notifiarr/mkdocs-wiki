@@ -2,6 +2,7 @@
   "first-line-h1": false,
   "no-bare-urls": false,
   "no-inline-html": false,
+  "heading-increment": false,
   "code-block-style": {
     "style": "fenced"
   },
