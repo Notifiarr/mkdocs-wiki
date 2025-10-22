@@ -54,10 +54,11 @@ vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
 
-## TrueNAS Scale
+## TrueNAS Scale <!-- Make the line number below match this line's number. -->
 
 !!! warning "TrueNAS"
-    If you figure out how to install Notifiarr on TrueNAS, please update these instructions.
+    If you figure out how to install Notifiarr on TrueNAS, please
+    [update these instructions](https://github.com/Notifiarr/mkdocs-wiki/blob/main/docs/pages/client/install.md?plain=1#L57).
     Notifiarr support and developers have very little experience with TrueNAS.
 
 ## macOS
@@ -135,12 +136,12 @@ and creates [ready-to-use multi-architecture images](https://hub.docker.com/r/go
 The `latest` tag is always a tagged release in GitHub.
 It also builds in a GitHub Action and publishes to GHCR (ghcr.io).
 
-##### Compose
+### Compose
 
 A sample docker compose file may be found
 [in the Github repo here](https://github.com/Notifiarr/notifiarr/blob/main/examples/compose.yml).
 
-##### `docker run`
+### `docker run`
 
 1. Mount an empty `/config` folder and the application will automatically write the config file there.
 1. Pull the image from docker hub or ghcr and run it.
@@ -162,7 +163,7 @@ docker run --name Notifiarr -h notifiarr --restart unless-stopped \
 docker logs Notifiarr
 ```
 
-##### Docker Environment Variables
+### Docker Environment Variables
 
 You can find all the environment variables in the client's Web UI.
 You can run the app without a config file like this,

@@ -7,6 +7,8 @@ toc_depth: 2
 - Find help on [Notifiarr's Discord](http://notifiarr.com/discord) (preferred).
 - Or [Go Lift](https://golift.io/discord) if you want to chat about the client *code*.
 
+Find tips for common problems on this page.
+
 ## Tmp not found
 
 Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more.
