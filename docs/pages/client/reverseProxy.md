@@ -1,27 +1,33 @@
 # Client Reverse Proxy Configuration
 
-!!! danger "Reverse Proxy Users"
-      None of this is required or necessary. **We recommend NOT exposing your Notifiarr client to the Internet at all. In other words, don't do any of this.** But you can if you want to access your local Notifiarr Client from the internet
+!!! danger
+    None of this is required or necessary. **We recommend NOT exposing your
+    Notifiarr client to the Internet at all. In other words, don't do any of this.**
+    But you can if you want to access your local Notifiarr Client from the Internet.
 
-While you can certainly poke a hole your firewall and send the traffic directly to this app, it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
+While you can certainly poke a hole your firewall and send the traffic directly to this app,
+it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
 
-- You'll want to tune the `upstreams` and `urlbase` client settings for your environment
-  - If your reverse proxy IP is `192.168.3.45` then set `upstreams` in the Profile page of the local Notifiarr Client to `192.168.3.45/32`
-- The `urlbase` on the local Notifiarr Client configuration page can be left at `/`, but change it if you serve this app from a subfolder like `/notifiarr`
+- You'll want to tune the `upstreams` and `urlbase` client settings for your environment.
+  - If your reverse proxy IP is `192.168.3.45` then set `upstreams`
+    in the Trust Profile page of the local Notifiarr Client to `192.168.3.45/32`
+- The `urlbase` on the local Notifiarr client configuration page can be left at `/`,
+  but change it if you serve this app from a subfolder like `/notifiarr`.
 
 ## Cloudflare Users
 
-Cloudflare Firewall / ZeroTrust users - See [this wiki entry](../../pages/client/cloudflare.md) to ensure Notifiarr is allowed through Cloudflare
+If you use Cloudflare Firewall or ZeroTrust see
+[the Client:CloudFlare page](../../pages/client/cloudflare.md)
+to ensure Notifiarr is allowed through Cloudflare.
 
 ## NGINX Subfolder Example
 
-- We'll assume you want to serve the client from `/notifiarr` and it's running on `127.0.0.1`
+- We'll assume you want to serve the client from `/notifiarr` and it's running on `127.0.0.1`.
 - Here's a sample nginx config to do that:
 
 ```nginx
 # Notifiarr Client
 location /notifiarr/api {
-    deny all; # remove this line if you really want to expose the API.
     proxy_set_header X-Forwarded-For $remote_addr;
     set $notifiarr http://127.0.0.1:5454;
     proxy_pass $notifiarr$request_uri;
@@ -41,13 +47,13 @@ location /notifiarr {
 }
 ```
 
-Make sure the Nginx `location` path matches the `URL base` Notifiarr setting.
+Make sure the Nginx `location` path matches the `URL Base` Notifiarr setting.
 That's all there is to it.
 
 ## Reverse Proxy Authentication
 
 !!! info
-    If using Authelia or Organizr ensure they are passing the username header
+    If using Authelia or Organizr ensure they are passing the username header.
 
 There is working a SWAG example (with authelia, organizr, ldap) at the bottom of this page.
 
@@ -59,22 +65,7 @@ proxy_set_header X-WebAuth-User $auth_user;
 
 ## Traefik
 
-- If you are using Traefik, you **must** utilize a [plugin](https://github.com/tomMoulard/htransformation) to map the appropriate auth header.
-- The below Traefik yaml created a middleware called `webauthheader` which maps Authelia's `Remote-User` header to Notifiarr's expected `X-WebAuth-User` header. You must then attach the `webauthheader` middleware to the Notifiarr client in Traefik.
-- **Ensure you have configured the `/api` and `/plex` endpoints to bypass authentication.**
-
-```yaml
-http:
-  middlewares:
-    webauthheader:
-      plugin:
-        htransformation:
-          Rules:
-            - Name: 'Auth header rename'
-              Header: 'Remote-User'
-              Value: 'X-WebAuth-User'
-              Type: 'Rename'
-```
+Make sure to select the correct `Remote-User` header on the Trust Profile page in the client's Web UI.
 
 ## NGINX Subdomain Example
 
@@ -141,9 +132,9 @@ server {
 
 ## Nginx Proxy Manager
 
-- You will need a registered domain name with ddns services
-- Add a subdomain thru aliases on your domain/ddns provider and point it to your external ip
-- Add a proxy host in NPM
+- You will need a registered domain name with ddns services.
+- Add a subdomain thru aliases on your domain/ddns provider and point it to your external ip.
+- Add a proxy host in NPM.
 
 ### Details Tab
 
@@ -159,4 +150,5 @@ server {
 1. Check `Force SSL and HTTP/2 Support`
 1. Save
 
-You will need to use  Notifiarr Login/Password setup, not the webauth method with the above NPM configuration. See [Client UI](../../pages/client/gui.md) for more details
+You will need to use Notifiarr Login/Password setup, not the webauth method with the above NPM configuration.
+See [client Web UI](../../pages/client/gui.md) for more details

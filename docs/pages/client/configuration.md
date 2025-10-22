@@ -1,101 +1,97 @@
-# Web GUI
+# Notifiarr Client Configuration
 
-Open the conf file, set your Notifiarr API Key and restart the client.
-Point your browser to the client. This can be something like:
+Log into the Web UI to configure the client. Skim through the rest of this page for important information.
+
+## Web UI
+
+When you open the application on MacOS or Windows for the first time, you're
+prompted for your API key. Enter it. This is an "All" key from notifiarr.com.
+
+If you're on Linux or FreeBSD and installed with root, you should set the API
+key in the config file @ `/etc/notifiarr/notifiarr.conf` or
+`/usr/local/etc/notifiarr/notifiarr.conf`. If you installed on a seed box, set
+the API key in the config file in your home folder.
+
+You will use the API key as the password to login into the client's WebUI for
+the first time. You can set a dedicated password after logging in. The default
+username is `admin`.
+
+The login URL will usually look like one of these. The default listen port is `5454`.
 
 - `http://localhost:5454`
 - `http://notifiarr`
 - `http://192.168.1.10:5454`
 
-Use the username (default:admin) and apikey you setup in the conf file to login to the app. Now you can configure and setup the client via the UI including changing your password.
-
 ## Docker Users
 
-When a new docker image is deployed with an empty /config folder mounted, the app will do two things:
+When a new docker image is deployed with an empty `/config` folder mounted, the app will do two things:
 
-- If the API Key is not configured or invalid: Create a new ui_password and print it into the log file.
-- Write a brand new config file with this password already saved
-
-## .conf File
-
-- You can use env variables, the conf file, or the UI
-- Must provide the "All" API key from your [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
-  - **The Notifiarr application uses the API key for bi-directional authorization between the Site and the Client.**
+- *If the API Key is not configured or invalid:* Create a new Web UI `admin` and print it into the log file and docker logs.
+- Write a brand new config file with this password already saved.
+- Find the password by running `docker logs Notifiarr`.
 
 !!! danger "Unraid Users"
-    You must configure the Notifiarr API Key in the Unraid Template/ Container Settings. If you wish to use Plex then you'll also need to set the Plex Token and Plex URL in the template as well. The other integrations can be defined in notifiarr.conf
+    The Official Unraid Template for Notifiarr Client contains the API Key and Plex Token as pre-defined inputs.
+    Normally, you can just go ahead and set those there. Alternatively, you can delete them from the template, and
+    configure these values using the client's Web UI. For consistency, we recommend setting the API key and Plex token
+    in the Unraid template.
 
 !!! info "Docker Users"
-    Note that Docker Environmental Variables - and thus the Unraid Template - override the Config file.
+    Note that Environment Variables - and the Unraid Template - override settings in the Config file.
 
-### Compressed Conf File
+## `.conf` File
 
-- After accessing Notifiarr Client's Webui, upon saving to prevent user caused issues from editing the conf file, the conf file is compressed and will look like gibberish
-- In the rare case the UI is not accessible and the conf file must be edited, you will need to decompress the file with `bzcat` prior to making your edits
+The config file used to be the preferred way to change the application's behavior,
+but now days the config file is compressed and direct edits are discouraged.
+The format has become too much to properly document. If you're configuring your
+client with automation such as puppet or ansible, then you should use environment
+variables for configuration. It's possible the config file format may change in the
+future, and the env variables are more likely to remain unaffected.
 
-```bash
-bzcat /path/to/notifiarr.conf > /output/path/to/notifiarr_decomp.conf
-```
+**Use the WebUI to change the application configuration.**
 
-### Log Files
-
-You can set a log file in the config for apt/deb linux installs. You should do that. Otherwise, find your logs here:
-
-- Linux: `/var/log/notifiarr`
-  - Log paths for linux apt/deb installations are hardcoded
-- FreeBSD: `/var/log/syslog` (w/ default syslog)
-- Homebrew: `/usr/local/var/log/app.log`
-- macOS: `~/.notifiarr/notifiarr.log`
-- Windows: `<home folder>/.notifiarr/notifiarr.log`
-
-In the Client UI log settings can be found under `Logging` in Settings => Configuration. Logs can be viewed in the UI under Insights => Logs.
-
-#### Detailed Debugging
-
-In the Client UI log settings can be found under `Logging` in Settings => Configuration.
-
-- Enable `Debug Logging`
-
-Logs can be viewed in the UI under Insights => Logs.
-
-#### Clearing Logs
-
-- To `clear` logs to make troubleshooting easier - stop the client and rename/remove the log file, the restart the client.
-
-- If you have not previously enabled debug logs you do not need to clear anything.
+- Must provide the "All" API key from your
+  [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
+- **The Notifiarr client uses the API key for bi-directional authorization between the Site and the Client.**
 
 ## Hostname
 
-It is important that a static hostname is set so the site can keep track of multiple clients for the settings. Some examples of how to do that:
+It is important that a static hostname is set so the site can keep track of multiple clients' settings.
+Some examples of how to do that:
 
-- Docker Run users add `-h notifiarr` to your docker run command
-- Docker Compose users add `hostname: notifiarr` to your yaml
-- Unraid users add `-h notifiarr` to Extra Parameters
-- TrueNAS and Kubernetes hostnames will be automatically pulled based on the pod name since they dont offer static hostnames
-![truecharts_install.jpg](../../assets/screenshots/client/truecharts_install.jpg)
+- Docker Run users add `-h notifiarr` to your `docker run` command.
+- Docker Compose users add `hostname: notifiarr` to your docker-compose.yaml file.
+- Unraid users add `-h notifiarr` to `Extra Parameters`.
+- Kubernetes hostnames are automatically determined based on the pod name.
 
 !!! note
-    Failure to set a hostname will result in [duplicate clients that will need to be resolved once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients)
+    Failure to set a hostname will result in duplicate clients that need to be
+    [fixed once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
 
 ### WSL2 users
 
-- Add a volume to your Notifiarr container (This is used for a unique uuid for each client instance)
+Add this volume to your Notifiarr container. This is used for a unique UUID for each client instance.
 
-```none
-/etc/machine-id:/etc/machine-id
+```yaml
+volumes:
+  /etc/machine-id:/etc/machine-id
 ```
 
-## ENV Variables
+## Configuration Options
 
-Config File and Docker Environmental Variables are listed below
+Config File and Environment Variables are listed below.
+**This data is often out of date.**
+The up-to-date data now lives in the client's Web UI.
 
 - Any variable not provided takes the default.
-- Environmental Variables take precedent over config file settings
-- Must provide an API key from [notifiarr.com](https://notifiarr.com).
+- Environmental Variables take precedent over config file settings.
+- Must provide an "All" API key from [notifiarr.com](https://notifiarr.com).
   - **The Notifiarr application uses the API key for bi-directional authorization.**
-- You may provide multiple Sonarr, Radarr or Readarr instances using `DN_SONARR_1_URL`, `DN_SONARR_2_URL`, etc or by duplicating the starr block in the conf file. Note the header of `[[radarr]]`, `[[sonarr]]`, `[[readarr]]`, etc. is required.
+- You may provide multiple Sonarr, Radarr or Readarr instances using `DN_SONARR_1_URL`,
+  `DN_SONARR_2_URL`, etc or by duplicating the starr block in the conf file.
+- Note the header of `[[radarr]]`, `[[sonarr]]`, `[[readarr]]`, etc. is required.
 
-### Client
+### Global Configuration
 
 | Config Name   | Variable Name      | Default / Note                                                               |
 | ------------- | ------------------ | ---------------------------------------------------------------------------- |
@@ -115,9 +111,6 @@ Config File and Docker Environmental Variables are listed below
 | file_mode     | `DN_FILE_MODE`     | `"0600"` / Unix octal filemode for new log files                             |
 | timeout       | `DN_TIMEOUT`       | `60s` / Global API Timeouts (all apps default)                               |
 
-All applications below (starr, downloaders, Tautulli, Plex) have a `timeout` setting.
-If the configuration for an application is missing the timeout, the global timeout (above) is used.
-
 ### Secret Settings
 
 Recommend not messing with these unless instructed to do so.
@@ -125,13 +118,12 @@ Recommend not messing with these unless instructed to do so.
 | Config Name | Variable Name     | Default / Note                                                                                    |
 | ----------- | ----------------- | ------------------------------------------------------------------------------------------------- |
 | extra_keys  | `DN_EXTRA_KEYS_0` | `[]` (empty list) / Add keys to allow API requests from places besides notifiarr.com              |
-| mode        | `DN_MODE`         | `production` / Change application mode: `development` or `production`                             |
 | debug       | `DN_DEBUG`        | `false` / Adds payloads and other stuff to the log output; very verbose/noisy                     |
 | debug_log   | `DN_DEBUG_LOG`    | `""` / Set a file system path to write debug logs to a dedicated file                             |
 | max_body    | `DN_MAX_BODY`     | Unlimited, `0` / Maximum debug-log body size (integer) for payloads to and from notifiarr.com     |
 |             | `TMPDIR`          | `%TMP%` on Windows. Varies depending on system; must be writable if using Backup Corruption Check |
 
-*Note: You may disable the GUI (menu item) on Windows by setting the env variable `USEGUI` to `false`.*
+*Note: You may disable the GUI (menu item) on Windows and MacOS by setting the env variable `USEGUI` to `false`.*
 
 #### MySQL Snapshots
 
@@ -160,9 +152,6 @@ GRANT PROCESS ON *.* to 'notifiarr'@'localhost'
 | lidarr.api_key   | `DN_LIDARR_0_API_KEY`   | No Default. Provide URL and API key if you use Readarr                |
 | lidarr.username  | `DN_LIDARR_0_USERNAME`  | Provide username if using backup corruption check and auth is enabled |
 | lidarr.password  | `DN_LIDARR_0_PASSWORD`  | Provide password if using backup corruption check and auth is enabled |
-| lidarr.http_user | `DN_LIDARR_0_HTTP_USER` | Provide username if Lidarr uses basic auth (uncommon) and BCC enabled |
-| lidarr.http_pass | `DN_LIDARR_0_HTTP_PASS` | Provide password if Lidarr uses basic auth (uncommon) and BCC enabled |
-| lidarr.max_body  | `DN_LIDARR_0_MAX_BODY`  | `0` (off) / How much of the response body is logged when debug is on  |
 
 - **BCC = Backup Corruption Check**
 
@@ -175,9 +164,6 @@ GRANT PROCESS ON *.* to 'notifiarr'@'localhost'
 | prowlarr.api_key   | `DN_PROWLARR_0_API_KEY`   | No Default. Provide URL and API key if you use Readarr                  |
 | prowlarr.username  | `DN_PROWLARR_0_USERNAME`  | Provide username if using backup corruption check and auth is enabled   |
 | prowlarr.password  | `DN_PROWLARR_0_PASSWORD`  | Provide password if using backup corruption check and auth is enabled   |
-| prowlarr.http_user | `DN_PROWLARR_0_HTTP_USER` | Provide username if Prowlarr uses basic auth (uncommon) and BCC enabled |
-| prowlarr.http_pass | `DN_PROWLARR_0_HTTP_PASS` | Provide password if Prowlarr uses basic auth (uncommon) and BCC enabled |
-| prowlarr.max_body  | `DN_PROWLARR_0_MAX_BODY`  | `0` (off) / How much of the response body is logged when debug is on    |
 
 ### Radarr
 
@@ -188,9 +174,6 @@ GRANT PROCESS ON *.* to 'notifiarr'@'localhost'
 | radarr.api_key   | `DN_RADARR_0_API_KEY`   | No Default. Provide URL and API key if you use Radarr                 |
 | radarr.username  | `DN_RADARR_0_USERNAME`  | Provide username if using backup corruption check and auth is enabled |
 | radarr.password  | `DN_RADARR_0_PASSWORD`  | Provide password if using backup corruption check and auth is enabled |
-| radarr.http_user | `DN_RADARR_0_HTTP_USER` | Provide username if Radarr uses basic auth (uncommon) and BCC enabled |
-| radarr.http_pass | `DN_RADARR_0_HTTP_PASS` | Provide password if Radarr uses basic auth (uncommon) and BCC enabled |
-| radarr.max_body  | `DN_RADARR_0_MAX_BODY`  | `0` (off) / How much of the response body is logged when debug is on. |
 
 ### Readarr
 
@@ -201,9 +184,6 @@ GRANT PROCESS ON *.* to 'notifiarr'@'localhost'
 | readarr.api_key   | `DN_READARR_0_API_KEY`   | No Default. Provide URL and API key if you use Readarr                 |
 | readarr.username  | `DN_READARR_0_USERNAME`  | Provide username if using backup corruption check and auth is enabled  |
 | readarr.password  | `DN_READARR_0_PASSWORD`  | Provide password if using backup corruption check and auth is enabled  |
-| readarr.http_user | `DN_READARR_0_HTTP_USER` | Provide username if Readarr uses basic auth (uncommon) and BCC enabled |
-| readarr.http_pass | `DN_READARR_0_HTTP_PASS` | Provide password if Readarr uses basic auth (uncommon) and BCC enabled |
-| readarr.max_body  | `DN_READARR_0_MAX_BODY`  | `0` (off) / How much of the response body is logged when debug is on.  |
 
 ### Sonarr
 
@@ -214,24 +194,24 @@ GRANT PROCESS ON *.* to 'notifiarr'@'localhost'
 | sonarr.api_key   | `DN_SONARR_0_API_KEY`   | No Default. Provide URL and API key if you use Sonarr                 |
 | sonarr.username  | `DN_SONARR_0_USERNAME`  | Provide username if using backup corruption check and auth is enabled |
 | sonarr.password  | `DN_SONARR_0_PASSWORD`  | Provide password if using backup corruption check and auth is enabled |
-| sonarr.http_user | `DN_SONARR_0_HTTP_USER` | Provide username if Sonarr uses basic auth (uncommon) and BCC enabled |
-| sonarr.http_pass | `DN_SONARR_0_HTTP_PASS` | Provide password if Sonarr uses basic auth (uncommon) and BCC enabled |
-| sonarr.max_body  | `DN_SONARR_0_MAX_BODY`  | `0` (off) / How much of the response body is logged when debug is on. |
 
 ### Downloaders
 
-You can add supported downloaders so they show up on the dashboard integration.
-You may easily add service checks to these downloaders by adding a name.
-Any number of downloaders of any type may be configured.
+You can add supported downloaders so they show up on the
+dashboard integration. You may easily add service checks
+to these downloaders by setting a check `interval` to a
+positive value like `1m`.Any number of downloaders of any
+type may be configured.
 
 These all also have `interval` and `timeout` represented as a Go Duration.
-Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`. Combining units is additive.
+Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`.
+Combining units is additive.
 
 #### QbitTorrent
 
 | Config Name    | Variable Name         | Note                                                          |
 | -------------- | --------------------- | ------------------------------------------------------------- |
-| qbit.name      | `DN_QBIT_0_NAME`      | No Default. Setting a name enables service checks             |
+| qbit.name      | `DN_QBIT_0_NAME`      | Defaults to the URL if left unset.                            |
 | qbit.url       | `DN_QBIT_0_URL`       | No Default. Something like: `http://localhost:8080`           |
 | qbit.user      | `DN_QBIT_0_USER`      | No Default. Provide URL, user and pass if you use Qbit        |
 | qbit.pass      | `DN_QBIT_0_PASS`      | No Default. Provide URL, user and pass if you use Qbit        |
@@ -242,7 +222,7 @@ Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`. Combin
 
 | Config Name   | Variable Name        | Note                                                       |
 | ------------- | -------------------- | ---------------------------------------------------------- |
-| rtorrent.name | `DN_RTORRENT_0_NAME` | No Default. Setting a name enables service checks          |
+| rtorrent.name | `DN_RTORRENT_0_NAME` | Defaults to the URL if left unset.                         |
 | rtorrent.url  | `DN_RTORRENT_0_URL`  | No Default. Something like: `http://localhost:5000`        |
 | rtorrent.user | `DN_RTORRENT_0_USER` | No Default. Provide URL, user and pass if you use rTorrent |
 | rtorrent.pass | `DN_RTORRENT_0_PASS` | No Default. Provide URL, user and pass if you use rTorrent |
@@ -251,7 +231,7 @@ Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`. Combin
 
 | Config Name     | Variable Name          | Note                                                        |
 | --------------- | ---------------------- | ----------------------------------------------------------- |
-| sabnzbd.name    | `DN_SABNZBD_0_NAME`    | No Default. Setting a name enables service checks           |
+| sabnzbd.name    | `DN_SABNZBD_0_NAME`    | Defaults to the URL if left unset.                          |
 | sabnzbd.url     | `DN_SABNZBD_0_URL`     | No Default. Something like: `http://localhost:8080/sabnzbd` |
 | sabnzbd.api_key | `DN_SABNZBD_0_API_KEY` | No Default. Provide URL and API key if you use SABnzbd      |
 
@@ -259,7 +239,7 @@ Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`. Combin
 
 | Config Name      | Variable Name           | Note                                                            |
 | ---------------- | ----------------------- | --------------------------------------------------------------- |
-| deluge.name      | `DN_DELUGE_0_NAME`      | No Default. Setting a name enables service checks               |
+| deluge.name      | `DN_DELUGE_0_NAME`      | Defaults to the URL if left unset.                              |
 | deluge.url       | `DN_DELUGE_0_URL`       | No Default. Something like: `http://localhost:8080`             |
 | deluge.password  | `DN_DELUGE_0_PASSWORD`  | No Default. Provide URL and password key if you use Deluge      |
 | deluge.http_user | `DN_DELUGE_0_HTTP_USER` | Provide this username if Deluge is behind basic auth (uncommon) |
@@ -269,7 +249,7 @@ Examples: `1m`, `1m30s`, `3m15s`, `1h5m`. Valid units are`s`,`m`, and`h`. Combin
 
 | Config Name | Variable Name      | Note                                                            |
 | ----------- | ------------------ | --------------------------------------------------------------- |
-| nzbget.name | `DN_NZBGET_0_NAME` | No Default. Setting a name enables service checks               |
+| nzbget.name | `DN_NZBGET_0_NAME` | Defaults to the URL if left unset.                              |
 | nzbget.url  | `DN_NZBGET_0_URL`  | No Default. Something like: `http://localhost:6789`             |
 | nzbget.user | `DN_NZBGET_0_USER` | No Default. Provide URL username and password if you use NZBGet |
 | nzbget.pass | `DN_NZBGET_0_PASS` | No Default. Provide URL username and password if you use NZBGet |
@@ -283,8 +263,8 @@ This has three different features:
 - Notify on session nearing completion (percent complete).
 - Notify on session change (Plex Webhook) ie. pause/resume.
 
-You [must provide Plex Token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) for this to work.
-You may also need to add a webhook to Plex so it sends notices to this application.
+You [must provide the Plex Token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) for this to work.
+You also need to add a webhook to Plex so it sends notices to this application.
 
 - In Plex Media Server, add this URL to webhooks:
   - `http://localhost:5454/plex?token=plex-token-here`
@@ -300,11 +280,12 @@ You may also need to add a webhook to Plex so it sends notices to this applicati
 ### Tautulli
 
 Only 1 Tautulli instance may be configured per client.
-Providing Tautulli allows Notifiarr to use the "Friendly Name" for your Plex users and it allows you to easily enable a service check.
+Providing Tautulli allows Notifiarr to use the "Friendly Name" for
+your Plex users and it allows you to easily enable a service check.
 
 | Config Name      | Variable Name         | Note                                                                    |
 | ---------------- | --------------------- | ----------------------------------------------------------------------- |
-| tautulli.name    | `DN_TAUTULLI_NAME`    | No Default. Setting a name enables service checks of Tautulli           |
+| tautulli.name    | `DN_TAUTULLI_NAME`    | Defaults to the URL if left unset.                                      |
 | tautulli.url     | `DN_TAUTULLI_URL`     | No Default. Something like: `http://localhost:8181`                     |
 | tautulli.api_key | `DN_TAUTULLI_API_KEY` | No Default. Provide URL and API key if you want name maps from Tautulli |
 
@@ -330,6 +311,9 @@ You can also create ad-hoc service checks for things like Bazarr.
 | service.timeout  | `DN_SERVICE_0_TIMEOUT`  | `15s`, How long to wait for service response |
 | service.interval | `DN_SERVICE_0_INTERVAL` | `5m`, How often to check the service         |
 
+!!! info "Web UI"
+    It's a lot easier to configure service checks in the Web UI.
+
 When `type` is set to `process`, the `expect` parameter becomes a special variable.
 You may set it to `restart` to send a notification when the process restarts.
 You may set it to `running` to alert if the process is found running (negative check).
@@ -340,4 +324,5 @@ By default `check` is the value to find in the process list. It uses a simple st
 Unless you wrap the value in slashes, then it becomes a regex.
 ie. use this `expect = "/^/usr/bin/smtpd$/"` to match an exact string.
 
-Run `notifiarr --ps` to view the process list from Notifiarr's point of view.
+!!! tip "Notifiarr is a CLI app too"
+    Run `notifiarr --ps` to view the process list from Notifiarr's point of view.
