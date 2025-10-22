@@ -47,7 +47,7 @@ bunzip2 /path/to/notifiarr.conf.bz
 
 ### Fresh Installs
 
-Execute the below command to print the unecrypted first-start password.
+Execute the below command to print the unencrypted first-start password.
 **This only works for brand new installations.**
 
 ```bash
