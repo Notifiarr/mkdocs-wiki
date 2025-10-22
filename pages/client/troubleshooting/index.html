@@ -9,13 +9,13 @@
         <meta name="author" content="nitsua">
       
       
-        <link rel="canonical" href="https://notifiarr.wiki/pages/integrations/trash/">
+        <link rel="canonical" href="https://notifiarr.wiki/pages/client/troubleshooting/">
       
       
-        <link rel="prev" href="../synology/">
+        <link rel="prev" href="../setup/">
       
       
-        <link rel="next" href="../unpackerr/">
+        <link rel="next" href="../../website/clientConfig/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -23,7 +23,7 @@
     
     
       
-        <title>TRaSH - Wiki</title>
+        <title>Troubleshooting - Wiki</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trash" class="md-skip">
+        <a href="#client-troubleshooting" class="md-skip">
           Skip to content
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TRaSH
+              Troubleshooting
             
           </span>
         </div>
@@ -272,11 +272,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../client/install/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../install/" class="md-tabs__link">
           
   
   
@@ -312,13 +314,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../basicUsage/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../integrations/basicUsage/" class="md-tabs__link">
           
   
   
@@ -590,26 +590,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -622,7 +627,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Client
@@ -636,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/install/" class="md-nav__link">
+      <a href="../install/" class="md-nav__link">
         
   
   
@@ -659,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/configuration/" class="md-nav__link">
+      <a href="../configuration/" class="md-nav__link">
         
   
   
@@ -682,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/gui/" class="md-nav__link">
+      <a href="../gui/" class="md-nav__link">
         
   
   
@@ -705,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/cloudflare/" class="md-nav__link">
+      <a href="../cloudflare/" class="md-nav__link">
         
   
   
@@ -728,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/reverseProxy/" class="md-nav__link">
+      <a href="../reverseProxy/" class="md-nav__link">
         
   
   
@@ -751,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../client/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         
   
   
@@ -771,10 +776,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../client/troubleshooting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -785,6 +812,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tmp-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tmp not found
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolving-duplicate-clients" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolving Duplicate Clients
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compressed-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compressed Config File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clearing-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clearing Logs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1035,31 +1118,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   
@@ -1072,7 +1150,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Integrations
@@ -1086,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../basicUsage/" class="md-nav__link">
+      <a href="../../integrations/basicUsage/" class="md-nav__link">
         
   
   
@@ -1109,7 +1187,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../apprise/" class="md-nav__link">
+      <a href="../../integrations/apprise/" class="md-nav__link">
         
   
   
@@ -1132,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../authentik/" class="md-nav__link">
+      <a href="../../integrations/authentik/" class="md-nav__link">
         
   
   
@@ -1155,7 +1233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../autobrr/" class="md-nav__link">
+      <a href="../../integrations/autobrr/" class="md-nav__link">
         
   
   
@@ -1178,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bazarr/" class="md-nav__link">
+      <a href="../../integrations/bazarr/" class="md-nav__link">
         
   
   
@@ -1201,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../betterstack/" class="md-nav__link">
+      <a href="../../integrations/betterstack/" class="md-nav__link">
         
   
   
@@ -1224,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../channelstats/" class="md-nav__link">
+      <a href="../../integrations/channelstats/" class="md-nav__link">
         
   
   
@@ -1247,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cronitor/" class="md-nav__link">
+      <a href="../../integrations/cronitor/" class="md-nav__link">
         
   
   
@@ -1270,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crossseed/" class="md-nav__link">
+      <a href="../../integrations/crossseed/" class="md-nav__link">
         
   
   
@@ -1293,7 +1371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crowdsec/" class="md-nav__link">
+      <a href="../../integrations/crowdsec/" class="md-nav__link">
         
   
   
@@ -1316,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dashboard/" class="md-nav__link">
+      <a href="../../integrations/dashboard/" class="md-nav__link">
         
   
   
@@ -1339,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../discordApp/" class="md-nav__link">
+      <a href="../../integrations/discordApp/" class="md-nav__link">
         
   
   
@@ -1362,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dockwatch/" class="md-nav__link">
+      <a href="../../integrations/dockwatch/" class="md-nav__link">
         
   
   
@@ -1385,7 +1463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../duplicacy/" class="md-nav__link">
+      <a href="../../integrations/duplicacy/" class="md-nav__link">
         
   
   
@@ -1408,7 +1486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../emby/" class="md-nav__link">
+      <a href="../../integrations/emby/" class="md-nav__link">
         
   
   
@@ -1431,7 +1509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fail2ban/" class="md-nav__link">
+      <a href="../../integrations/fail2ban/" class="md-nav__link">
         
   
   
@@ -1454,7 +1532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../github/" class="md-nav__link">
+      <a href="../../integrations/github/" class="md-nav__link">
         
   
   
@@ -1477,7 +1555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hotio/" class="md-nav__link">
+      <a href="../../integrations/hotio/" class="md-nav__link">
         
   
   
@@ -1500,7 +1578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jellyfin/" class="md-nav__link">
+      <a href="../../integrations/jellyfin/" class="md-nav__link">
         
   
   
@@ -1523,7 +1601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jellyseerr/" class="md-nav__link">
+      <a href="../../integrations/jellyseerr/" class="md-nav__link">
         
   
   
@@ -1546,7 +1624,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../kometa/" class="md-nav__link">
+      <a href="../../integrations/kometa/" class="md-nav__link">
         
   
   
@@ -1569,7 +1647,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lidarr/" class="md-nav__link">
+      <a href="../../integrations/lidarr/" class="md-nav__link">
         
   
   
@@ -1592,7 +1670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logWatch/" class="md-nav__link">
+      <a href="../../integrations/logWatch/" class="md-nav__link">
         
   
   
@@ -1615,7 +1693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mdblist/" class="md-nav__link">
+      <a href="../../integrations/mdblist/" class="md-nav__link">
         
   
   
@@ -1638,7 +1716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../mediaRequests/" class="md-nav__link">
+      <a href="../../integrations/mediaRequests/" class="md-nav__link">
         
   
   
@@ -1661,7 +1739,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network/" class="md-nav__link">
+      <a href="../../integrations/network/" class="md-nav__link">
         
   
   
@@ -1684,7 +1762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../overseerr/" class="md-nav__link">
+      <a href="../../integrations/overseerr/" class="md-nav__link">
         
   
   
@@ -1707,7 +1785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../packagemanager/" class="md-nav__link">
+      <a href="../../integrations/packagemanager/" class="md-nav__link">
         
   
   
@@ -1730,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../passthrough/" class="md-nav__link">
+      <a href="../../integrations/passthrough/" class="md-nav__link">
         
   
   
@@ -1753,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../persistent/" class="md-nav__link">
+      <a href="../../integrations/persistent/" class="md-nav__link">
         
   
   
@@ -1776,7 +1854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../plex/" class="md-nav__link">
+      <a href="../../integrations/plex/" class="md-nav__link">
         
   
   
@@ -1799,7 +1877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../prowlarr/" class="md-nav__link">
+      <a href="../../integrations/prowlarr/" class="md-nav__link">
         
   
   
@@ -1822,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../qbitmanage/" class="md-nav__link">
+      <a href="../../integrations/qbitmanage/" class="md-nav__link">
         
   
   
@@ -1845,7 +1923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../radarr/" class="md-nav__link">
+      <a href="../../integrations/radarr/" class="md-nav__link">
         
   
   
@@ -1868,7 +1946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../readarr/" class="md-nav__link">
+      <a href="../../integrations/readarr/" class="md-nav__link">
         
   
   
@@ -1891,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reciperr/" class="md-nav__link">
+      <a href="../../integrations/reciperr/" class="md-nav__link">
         
   
   
@@ -1914,7 +1992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reddit/" class="md-nav__link">
+      <a href="../../integrations/reddit/" class="md-nav__link">
         
   
   
@@ -1937,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../releaseParser/" class="md-nav__link">
+      <a href="../../integrations/releaseParser/" class="md-nav__link">
         
   
   
@@ -1960,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rssWatcher/" class="md-nav__link">
+      <a href="../../integrations/rssWatcher/" class="md-nav__link">
         
   
   
@@ -1983,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../simonSays/" class="md-nav__link">
+      <a href="../../integrations/simonSays/" class="md-nav__link">
         
   
   
@@ -2006,7 +2084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snapshots/" class="md-nav__link">
+      <a href="../../integrations/snapshots/" class="md-nav__link">
         
   
   
@@ -2029,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sonarr/" class="md-nav__link">
+      <a href="../../integrations/sonarr/" class="md-nav__link">
         
   
   
@@ -2052,7 +2130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../starrproxy/" class="md-nav__link">
+      <a href="../../integrations/starrproxy/" class="md-nav__link">
         
   
   
@@ -2075,7 +2153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../synology/" class="md-nav__link">
+      <a href="../../integrations/synology/" class="md-nav__link">
         
   
   
@@ -2095,32 +2173,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    TRaSH
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../integrations/trash/" class="md-nav__link">
         
   
   
@@ -2131,179 +2187,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-setup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Client Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration-card" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Card
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#client-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Client Settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notifications
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Profiles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#profile-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Profile Customization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quality-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quality Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-formats-cf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom Formats "CF"
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formats
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scores" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scores
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#quality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quality
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Quality">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Naming
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Formats
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2316,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../unpackerr/" class="md-nav__link">
+      <a href="../../integrations/unpackerr/" class="md-nav__link">
         
   
   
@@ -2339,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../uptimekuma/" class="md-nav__link">
+      <a href="../../integrations/uptimekuma/" class="md-nav__link">
         
   
   
@@ -2362,7 +2245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../watchtower/" class="md-nav__link">
+      <a href="../../integrations/watchtower/" class="md-nav__link">
         
   
   
@@ -2385,7 +2268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../websitestatus/" class="md-nav__link">
+      <a href="../../integrations/websitestatus/" class="md-nav__link">
         
   
   
@@ -2408,7 +2291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../whisparr/" class="md-nav__link">
+      <a href="../../integrations/whisparr/" class="md-nav__link">
         
   
   
@@ -2700,155 +2583,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#tmp-not-found" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      Tmp not found
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#client-setup" class="md-nav__link">
+  <a href="#resolving-duplicate-clients" class="md-nav__link">
     <span class="md-ellipsis">
-      Client Setup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Client Setup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration-card" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Card
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
+      Resolving Duplicate Clients
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#client-settings" class="md-nav__link">
+  <a href="#compressed-config-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Client Settings
+      Compressed Config File
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Client Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#notifications" class="md-nav__link">
-    <span class="md-ellipsis">
-      Notifications
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#profiles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Profiles
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#profile-customization" class="md-nav__link">
-    <span class="md-ellipsis">
-      Profile Customization
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#quality-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Quality Settings
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-formats-cf" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom Formats "CF"
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Formats
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#scores" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scores
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#quality" class="md-nav__link">
+  <a href="#clearing-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Quality
+      Clearing Logs
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Quality">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#naming" class="md-nav__link">
-    <span class="md-ellipsis">
-      Naming
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delete-formats" class="md-nav__link">
-    <span class="md-ellipsis">
-      Delete Formats
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2871,287 +2637,31 @@
   
 
 
-<h1 id="trash">TRaSH<a class="headerlink" href="#trash" title="Permanent link"></a></h1>
-<div class="admonition info">
-<p class="admonition-title">TRaSH</p>
-<p>This integration allows you to setup and sync TRaSH guides with Radarr and Sonarr. Keep in mind this requires the Notifiarr client.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">patrons/subscribers</p>
-<p><strong>Patron Feature</strong> - Acessible to <a href="../../faq/faq/#q-what-are-the-user-level-differences">Patrons and Subscribers</a> only</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you have questions about what the formats, profiles, scores, etc do then please use the TRaSH <a href="https://trash-guides.info/discord">discord</a> server for help or check their guide. This wiki is for setting up and getting things in sync.</p>
-</div>
-<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link"></a></h2>
-<table>
-<thead>
-<tr>
-<th>Feature</th>
-<th>Patron</th>
-<th>Subscriber</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>GUI</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Multiple instances</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><center><b>Formats</b></center></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Sync</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Customize format scores</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Apply score multiplier</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Mass update scores</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Mass delete formats</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Notifications</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><center><b>Profiles</b></center></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Sync</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Customize profile settings</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Clone profiles</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Notifications</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><center><b>Quality definitions</b></center></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Sync</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Multiple preset quality groups</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Notifications</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><center><b>File naming</b></center></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Sync</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Multiple preset naming conventions</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Notifications</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td><center><b>Extras</b></center></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>Access to community sync<br>-- Upload your own formats for public/private use</td>
-<td>✅</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Instant sync when TRaSH updates</td>
-<td></td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Jump to top of the querue</td>
-<td></td>
-<td>✅</td>
-</tr>
-<tr>
-<td>Trigger a sync from Discord</td>
-<td></td>
-<td>✅</td>
-</tr>
-</tbody>
-</table>
-<h2 id="client-setup">Client Setup<a class="headerlink" href="#client-setup" title="Permanent link"></a></h2>
+<h1 id="client-troubleshooting">Client Troubleshooting<a class="headerlink" href="#client-troubleshooting" title="Permanent link"></a></h1>
 <ul>
-<li>TRaSH Integration requires the notifiarr client to be running locally, <a href="../../website/clientConfig/">configured and working (i.e. communicating with) on the Notifiarr site</a>, and the Starr Apps configured.</li>
-<li>Add Starr Apps to the Client in the <code>Starr Apps</code> Tab of the Local Client</li>
-<li>Note that <code>Time Out</code> for the Starr Apps <strong>cannot</strong> be set to <code>Disabled</code> for the app to be enabled</li>
-<li>Note that a <code>Name</code> value <strong>is required</strong> for the Starr Apps you wish to sync</li>
+<li>Find help on Discord: <a href="https://discord.gg/AURf8Yz">Notifiarr</a> (preferred) or <a href="https://golift.io/discord">Go Lift</a> (if you like Go).</li>
 </ul>
-<h3 id="integration-card">Integration Card<a class="headerlink" href="#integration-card" title="Permanent link"></a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/trigger-channels.png" data-desc-position="bottom"><img alt="trigger-channels.png" src="../../../assets/screenshots/integrations/trash/trigger-channels.png"></a></p>
-<ol>
-<li><code>CFs/Scores</code> - The amount of CF's and scores you have synced.</li>
-<li><code>Channel</code> - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)</li>
-</ol>
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link"></a></h2>
-<p>Click the <strong>cog icon</strong>&nbsp;in the card header to open the configuration options for TRaSH. To get started, you will need to go to Help → How-to.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/how-to.png.png" data-desc-position="bottom"><img alt="how-to.png" src="../../../assets/screenshots/integrations/trash/how-to.png.png"></a></p>
-<h2 id="client-settings">Client Settings<a class="headerlink" href="#client-settings" title="Permanent link"></a></h2>
-<p>here you can change the interval for your profile's sync.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/client-sync.png" data-desc-position="bottom"><img alt="client-sync.png" src="../../../assets/screenshots/integrations/trash/client-sync.png"></a></p>
-<h3 id="notifications">Notifications<a class="headerlink" href="#notifications" title="Permanent link"></a></h3>
-<p>Here we can individually select what we would want to be notified of. For this example we selected all available triggers.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/notifications.png.png" data-desc-position="bottom"><img alt="notifications.png" src="../../../assets/screenshots/integrations/trash/notifications.png.png"></a></p>
-<h3 id="profiles">Profiles<a class="headerlink" href="#profiles" title="Permanent link"></a></h3>
-<p>here we can manange existing profiles or add new profiles/link predefined TRaSH profiles. For this guide we are going to add the TRaSH <strong>HD Bluray + WEB</strong> profile</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/profiles-add-new.png" data-desc-position="bottom"><img alt="profiles-add-new.png" src="../../../assets/screenshots/integrations/trash/profiles-add-new.png"></a></p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>After selecting the profile as shown above you will be directed to the profile settings.</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/profiles-1.png" data-desc-position="bottom"><img alt="profiles-1.png" src="../../../assets/screenshots/integrations/trash/profiles-1.png"></a></p>
-<ol>
-<li><code>Sync</code> - Enable this to sync your profile.</li>
-<li><code>Starr instance profile</code> - Either create a new profile or select one of the TRaSH profiles available.</li>
-<li><code>Profile name</code> - Here you can set your profile name <strong>This needs to be unique</strong>.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you plan to use TRaSH as default you can stop here and save your settings. Below we will got into customizing the profile, quality, and CF's.</p>
-</div>
-<div class="admonition warning save profile sync">
-<p class="admonition-title">Warning</p>
-<p><strong>MAKE SURE TO SAVE YOUR PROFILE SYNC, THIS IS DIFFERENT FROM SAVE CLIENT SETTINGS</strong></p>
-</div>
-<h3 id="profile-customization">Profile Customization<a class="headerlink" href="#profile-customization" title="Permanent link"></a></h3>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Check-box means you want to sync TRaSH values and cannot change them in your ARR's as they will revert back after each sync is made. Uncheck any that you want to customize, And do so inside of your ARR's.</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/profile-customization-1.png" data-desc-position="bottom"><img alt="profile-customization-1.png" src="../../../assets/screenshots/integrations/trash/profile-customization-1.png"></a></p>
-<ol>
-<li><code>Language</code> - If you want to sync your prefered language, **Disable this if you plan to use something other then the TRaSH default.</li>
-<li><code>Upgrades allowed</code> - Enable this if you plan to allow upgrades in your profile.</li>
-<li><code>Minimum score</code> - Enable this to set the minimum download score to 0.</li>
-<li><code>Minimum upgrade score</code> - enable this to set the minimim score increase to allow a upgrade.</li>
-<li><code>Cutoff score</code> - Enable this to set the cutoff score. <strong>default set 10000</strong></li>
-</ol>
-<h3 id="quality-settings">Quality Settings<a class="headerlink" href="#quality-settings" title="Permanent link"></a></h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you plan on changing the qualities in the profile, you will need to enable the allow custom quality order/groupings, if this is not enabled any changes made to the quality grouping will be reverted after each sync.</p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/quality.png" data-desc-position="bottom"><img alt="quality.png" src="../../../assets/screenshots/integrations/trash/quality.png"></a></p>
-<ol>
-<li><code>Cutoff quality</code> - Cutoff quality is the quality that you want your starr instance to stop upgrading at. <code>Bluray-1080p</code></li>
-<li><code>Qualities</code> - You can choose to either match the TRaSH quality groups, or you can set this to allow custom set groups. For example we want to use the TRaSH <code>HD Bluray + WEB</code> profile but we don't want to include <code>720p</code>.</li>
-</ol>
-<h3 id="custom-formats-cf">Custom Formats "CF"<a class="headerlink" href="#custom-formats-cf" title="Permanent link"></a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/custom-formats-1.png" data-desc-position="bottom"><img alt="custom-formats-1.png" src="../../../assets/screenshots/integrations/trash/custom-formats-1.png"></a></p>
-<ol>
-<li><code>Add</code> - You can choose to either automatically add new formats, add missing formats, or add none.</li>
-<li>
-<p><code>Remove</code> - You can choose to remove custom scores on each sync, or if you want to set your own scores you would want to <code>allow custom scores from formats assigned to this profile</code>. If your planning to set scores different then what TRaSH has then you would want to set this to <code>allow</code>.</p>
-</li>
-<li>
-<p><code>Groups</code> - This is where you can select each group that you want in your profile sync, along with the available CF's within that group.</p>
-</li>
-</ol>
-<h3 id="formats">Formats<a class="headerlink" href="#formats" title="Permanent link"></a></h3>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Here you will find all of the available TRaSH guide formats. You can find more info on these at <a href="https://trash-guides.info/">TRaSH Guides</a></p>
-</div>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/formats-1.png" data-desc-position="bottom"><img alt="formats-1.png" src="../../../assets/screenshots/integrations/trash/formats-1.png"></a></p>
-<ol>
-<li><code>Sync TRaSH CF names</code> - If you want to sync the names set for the TRaSH CFs.</li>
-<li><code>Interactive flowchart</code> - Useful interactive flow charts for TRaSH profiles.</li>
-</ol>
-<h3 id="scores">Scores<a class="headerlink" href="#scores" title="Permanent link"></a></h3>
-<p>Here you can setup custom scores to your liking, and choose to sync them.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/scores-1.png" data-desc-position="bottom"><img alt="scores-1.png" src="../../../assets/screenshots/integrations/trash/scores-1.png"></a></p>
-<ol>
-<li><code>Filter</code> - Filter between witch profile you're editing/looking at.</li>
-<li><code>Multiplier</code> - (multiplier * TRaSH = your score)</li>
-<li><code>Starr score/Custom</code> - Here you can set personal scores while still keeping your CF's in sync.</li>
-<li><code>Sync</code> - Check-box to enable sync.</li>
-</ol>
-<h2 id="quality">Quality<a class="headerlink" href="#quality" title="Permanent link"></a></h2>
-<p>Here you can edit quality names within a specific group and choose to sync them to your starr instance.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/quality-1.png" data-desc-position="bottom"><img alt="quality-1.png" src="../../../assets/screenshots/integrations/trash/quality-1.png"></a></p>
-<ol>
-<li><code>Definition group</code>- Here you can choose the starr profile, that you plan to edit or change.</li>
-<li><code>Rename Field</code> - This is where you can customize the name of a quality.</li>
-<li><code>Sync</code> - Check-box to enable sync.</li>
-</ol>
-<h3 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link"></a></h3>
-<p>Here you can choose a default TRaSH naming scheme for your media. There are recommended presets for most applications used today.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/naming-1.png" data-desc-position="bottom"><img alt="naming-1.png" src="../../../assets/screenshots/integrations/trash/naming-1.png"></a></p>
-<h3 id="delete-formats">Delete Formats<a class="headerlink" href="#delete-formats" title="Permanent link"></a></h3>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/integrations/trash/delete-formats.png" data-desc-position="bottom"><img alt="formats-1.png" src="../../../assets/screenshots/integrations/trash/delete-formats.png"></a></p>
-<ol>
-<li><code>Fix Map</code> - This will open the mapping tool options.</li>
-<li><code>Enable sync</code> - This will re-enable all the CF toggles, this is useful if you want to change the selected CF's.</li>
-<li><code>Enable sync + scores</code> - This will re-enable all the CF toggles, and scores. This is useful if you want to change CF's and scores.</li>
-<li><code>Unlink starr</code> - This will unlink your starr id's from the map. This is useful if your moving your starr install to a different server or if your changing databases.</li>
-<li><code>Relink starr</code> - This will attempt to re-link your starr instance id's and CF's to the map.</li>
-<li><code>Delete map</code> - This will delete all of your sync settings. Useful for starting fresh.</li>
-<li><code>Delete Selected CFs</code> - This will delete all of the selected CF's in your profile.</li>
-<li><code>Delete Selected CFs &amp; Map</code> - This will delete all of your CF's and the profile mapping.</li>
-<li><code>Fresh Start CFs</code> - This will delete all the formats but leave the map so a sync would put everything back that is in sync. This is useful to clean things up without loosing your sync settings.</li>
-<li><code>Fresh Start All</code> - This would delete all CF's/scores/ect. Only do this if you want to nuke everything and start over.</li>
-</ol>
+<h3 id="tmp-not-found">Tmp not found<a class="headerlink" href="#tmp-not-found" title="Permanent link"></a></h3>
+<p>Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more.
+Set the <code>TMPDIR</code> environment variable to a writable path, or mount <code>/tmp</code> to resolve the error.</p>
+<h3 id="resolving-duplicate-clients">Resolving Duplicate Clients<a class="headerlink" href="#resolving-duplicate-clients" title="Permanent link"></a></h3>
+<p>If you have duplicate clients on the website and are setting a hostname after the fact,
+<a href="../../website/clientConfig/#resolving-duplicate-clients">see these instructions</a>
+for resolving the duplicates after setting a hostname.</p>
+<h3 id="compressed-config-file">Compressed Config File<a class="headerlink" href="#compressed-config-file" title="Permanent link"></a></h3>
+<p>Once you click save in the Web UI, the config file is compressed.
+It will look like gibberish when you try to edit it.
+In the rare case the UI is not accessible and the conf file must be edited,
+you will need to decompress the file with <code>bzcat</code> prior to making your edits.
+Example:</p>
+<div class="highlight"><pre><span></span><code>bzcat<span class="w"> </span>/path/to/notifiarr.conf<span class="w"> </span>&gt;<span class="w"> </span>/output/path/to/notifiarr_decomp.conf
+</code></pre></div>
+<h3 id="clearing-logs">Clearing Logs<a class="headerlink" href="#clearing-logs" title="Permanent link"></a></h3>
+<ul>
+<li>To <code>clear</code> logs to make troubleshooting easier - stop the client
+  and rename/remove the log file, then restart the client.</li>
+<li>If you have not previously enabled debug logs you do not need to clear anything.</li>
+</ul>
 
 
 
@@ -3189,7 +2699,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../synology/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Synology">
+          <a href="../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Additional Setup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -3199,20 +2709,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Synology
+                Additional Setup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../unpackerr/" class="md-footer__link md-footer__link--next" aria-label="Next: Unpackerr">
+          <a href="../../website/clientConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Client setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Unpackerr
+                Client setup
               </div>
             </div>
             <div class="md-footer__button md-icon">

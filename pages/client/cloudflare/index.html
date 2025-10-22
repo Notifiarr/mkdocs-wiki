@@ -23,7 +23,7 @@
     
     
       
-        <title>Cloudflare config - Wiki</title>
+        <title>Cloudflare Proxy - Wiki</title>
       
     
     
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cloudflare config
+              Cloudflare Proxy
             
           </span>
         </div>
@@ -669,7 +669,7 @@
   
   
   <span class="md-ellipsis">
-    Client configuration
+    Configuration
     
   </span>
   
@@ -692,7 +692,7 @@
   
   
   <span class="md-ellipsis">
-    Client UI
+    Web UI
     
   </span>
   
@@ -724,7 +724,7 @@
   
   
   <span class="md-ellipsis">
-    Cloudflare config
+    Cloudflare Proxy
     
   </span>
   
@@ -737,7 +737,7 @@
   
   
   <span class="md-ellipsis">
-    Cloudflare config
+    Cloudflare Proxy
     
   </span>
   
@@ -789,7 +789,7 @@
   
   
   <span class="md-ellipsis">
-    Reverse proxy
+    Reverse Proxy
     
   </span>
   
@@ -812,7 +812,30 @@
   
   
   <span class="md-ellipsis">
-    Setup
+    Additional Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
     
   </span>
   
@@ -2563,38 +2586,35 @@
 <h1 id="notifiarr-client-cloudflare-configuration">Notifiarr Client - Cloudflare Configuration<a class="headerlink" href="#notifiarr-client-cloudflare-configuration" title="Permanent link"></a></h1>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>None of this is required or necessary. **We recommend NOT exposing your</p>
+<p>None of this is required or necessary. <strong>We recommend NOT exposing your
+Notifiarr client to the Internet at all. In other words, don't do any of this.</strong>
+But you can if you want to access your local Notifiarr Client from the Internet.</p>
 </div>
-<p>Notifiarr client to the Internet at all. In other words, don't do any of this.** But you can if you want to access your local Notifiarr Client from the internet</p>
-<p>Many users use Cloudflare's "Cloudflare Tunnel" feature or additional Cloudflare security features to provide / protect external access to their Notifiarr Client box.  Specific configuration required for Cloudflare's various options are detailed below.</p>
+<p>Some users use Cloudflare's "Cloudflare Tunnel" feature or additional Cloudflare security
+features to provide protected external access to their Notifiarr Client and other services.
+Specific configuration required for Cloudflare's various options are detailed below.</p>
 <h2 id="cloudflare-tunnel">Cloudflare Tunnel<a class="headerlink" href="#cloudflare-tunnel" title="Permanent link"></a></h2>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>This assumes that you already have a Cloudflare Tunnel set up on your system. If you want to get started with Cloudflare Tunnels follow this YouTube guide first: <a href="https://www.youtube.com/watch?v=RUJy9fjoiy4">Cloudflare Tunnel: Creating Tunnels via GUI - Bypass CG-NAT by IBRACORP</a></p>
+<p>This assumes that you already have a Cloudflare Tunnel set up on your system.
+If you want to get started with Cloudflare Tunnels follow this YouTube guide first:
+<a href="https://www.youtube.com/watch?v=RUJy9fjoiy4">Cloudflare Tunnel: Creating Tunnels via GUI - Bypass CG-NAT by IBRACORP</a></p>
 </div>
 <ol>
 <li>Login to your Cloudflare teams account at <a href="https://dash.teams.Cloudflare.com/">dash.teams.Cloudflare.com</a></li>
-<li>
-<p>Click <strong>Tunnels</strong> and then <strong>configure</strong> next to the Cloudflare Tunnel you would like to use
-<a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_sm2.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_sm2.png" src="../../../assets/screenshots/client/cf-tunnel-configure_sm2.png"></a></p>
-</li>
-<li>
-<p>In your Tunnel section click on <strong>Public Hostname</strong> and add a new hostname by clicking on <strong>Add a public hostname</strong></p>
-</li>
-</ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_publichostname.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_publichostname.png" src="../../../assets/screenshots/client/cf-tunnel-configure_publichostname.png"></a></p>
-<ol>
-<li>
-<p>Fill in the public hostname information</p>
-</li>
-<li>
-<p><code>Subdomain</code>: Notifiarr (or whatever else you want it to be)</p>
-</li>
+<li>Click <strong>Tunnels</strong> and then <strong>configure</strong> next to the Cloudflare Tunnel you would like to use.
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_sm2.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_sm2.png" src="../../../assets/screenshots/client/cf-tunnel-configure_sm2.png"></a></li>
+<li>In your Tunnel section click on <strong>Public Hostname</strong> and add a new hostname by clicking on <strong>Add a public hostname</strong>.
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_publichostname.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_publichostname.png" src="../../../assets/screenshots/client/cf-tunnel-configure_publichostname.png"></a></li>
+<li>Fill in the public hostname information on the next screen.
+    <a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_hostnamepage.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_hostnamepage.png" src="../../../assets/screenshots/client/cf-tunnel-configure_hostnamepage.png"></a><ol>
+<li><code>Subdomain</code>: Notifiarr (or whatever else you want it to be)</li>
 <li><code>Domain</code>: choose one of your domains</li>
 <li><code>Service</code>: HTTP + Your Local IP Address for Notifiarr</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../../assets/screenshots/client/cf-tunnel-configure_hostnamepage.png" data-desc-position="bottom"><img alt="cf-tunnel-configure_hostnamepage.png" src="../../../assets/screenshots/client/cf-tunnel-configure_hostnamepage.png"></a></p>
-<p>Save your host name settings, that's it! Your client is now exposed to the internet! <img alt="😄" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f604.svg" title=":smile:"></p>
+</li>
+</ol>
+<p>Save your host name settings, that's it! Your client is now exposed to the Internet!</p>
 
 
 
@@ -2632,7 +2652,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Client UI">
+          <a href="../gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web UI">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2642,20 +2662,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Client UI
+                Web UI
               </div>
             </div>
           </a>
         
         
           
-          <a href="../reverseProxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Reverse proxy">
+          <a href="../reverseProxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Reverse Proxy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Reverse proxy
+                Reverse Proxy
               </div>
             </div>
             <div class="md-footer__button md-icon">
