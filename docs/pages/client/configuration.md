@@ -1,43 +1,11 @@
 # Notifiarr Client Configuration
 
-Log into the Web UI to configure the client. Skim through the rest of this page for important information.
+!!!danger "Deprecated Page"
+    This page is deprecated and the application configuration is now documented in the
+    application [Web UI](gui.md). Log into the user interface in a web browser to read
+    about all the configuration options.
 
-## Web UI
-
-When you open the application on MacOS or Windows for the first time, you're
-prompted for your API key. Enter it. This is an "All" key from notifiarr.com.
-
-If you're on Linux or FreeBSD and installed with root, you should set the API
-key in the config file @ `/etc/notifiarr/notifiarr.conf` or
-`/usr/local/etc/notifiarr/notifiarr.conf`. If you installed on a seed box, set
-the API key in the config file in your home folder.
-
-You will use the API key as the password to login into the client's WebUI for
-the first time. You can set a dedicated password after logging in. The default
-username is `admin`.
-
-The login URL will usually look like one of these. The default listen port is `5454`.
-
-- `http://localhost:5454`
-- `http://notifiarr`
-- `http://192.168.1.10:5454`
-
-## Docker Users
-
-When a new docker image is deployed with an empty `/config` folder mounted, the app will do two things:
-
-- *If the API Key is not configured or invalid:* Create a new Web UI `admin` and print it into the log file and docker logs.
-- Write a brand new config file with this password already saved.
-- Find the password by running `docker logs Notifiarr`.
-
-!!! danger "Unraid Users"
-    The Official Unraid Template for Notifiarr Client contains the API Key and Plex Token as pre-defined inputs.
-    Normally, you can just go ahead and set those there. Alternatively, you can delete them from the template, and
-    configure these values using the client's Web UI. For consistency, we recommend setting the API key and Plex token
-    in the Unraid template.
-
-!!! info "Docker Users"
-    Note that Environment Variables - and the Unraid Template - override settings in the Config file.
+**Use the Web UI to change the application configuration.**
 
 ## `.conf` File
 
@@ -48,39 +16,9 @@ client with automation such as puppet or ansible, then you should use environmen
 variables for configuration. It's possible the config file format may change in the
 future, and the env variables are more likely to remain unaffected.
 
-**Use the WebUI to change the application configuration.**
-
-- Must provide the "All" API key from your
-  [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
-- **The Notifiarr client uses the API key for bi-directional authorization between the Site and the Client.**
-
-## Hostname
-
-It is important that a static hostname is set so the site can keep track of multiple clients' settings.
-Some examples of how to do that:
-
-- Docker Run users add `-h notifiarr` to your `docker run` command.
-- Docker Compose users add `hostname: notifiarr` to your docker-compose.yaml file.
-- Unraid users add `-h notifiarr` to `Extra Parameters`.
-- Kubernetes hostnames are automatically determined based on the pod name.
-
-!!! note
-    Failure to set a hostname will result in duplicate clients that need to be
-    [fixed once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
-
-### WSL2 users
-
-Add this volume to your Notifiarr container. This is used for a unique UUID for each client instance.
-
-```yaml
-volumes:
-  /etc/machine-id:/etc/machine-id
-```
-
 ## Configuration Options
 
 Config File and Environment Variables are listed below.
-**This data is often out of date.**
 The up-to-date data now lives in the client's Web UI.
 
 - Any variable not provided takes the default.
@@ -90,6 +28,8 @@ The up-to-date data now lives in the client's Web UI.
 - You may provide multiple Sonarr, Radarr or Readarr instances using `DN_SONARR_1_URL`,
   `DN_SONARR_2_URL`, etc or by duplicating the starr block in the conf file.
 - Note the header of `[[radarr]]`, `[[sonarr]]`, `[[readarr]]`, etc. is required.
+
+**The following data is out of date, and may not be updated very often.**
 
 ### Global Configuration
 
@@ -125,7 +65,21 @@ Recommend not messing with these unless instructed to do so.
 
 *Note: You may disable the GUI (menu item) on Windows and MacOS by setting the env variable `USEGUI` to `false`.*
 
-#### MySQL Snapshots
+### Snapshots
+
+Many of the snapshot settings are on the website, but a few are configured locally.
+
+#### Nvidia
+
+The app can collect Nvidia GPU stats for snapshot notifications.
+
+| Config Name              | Variable Name                 | Note                                           |
+| ------------------------ | ----------------------------- | ---------------------------------------------- |
+| snapshot.nvidia.disabled | `DN_SNAPSHOT_NVIDIA_DISABLED` | Set this to true to turn off this feature.    |
+
+**Busids and smi path are missing. ^** This is incomplete.
+
+#### MySQL
 
 You may add mysql credentials to your notifiarr configuration to snapshot mysql
 service health. This feature snapshots `SHOW PROCESSLIST` and `SHOW STATUS` data.
@@ -262,15 +216,7 @@ This has three different features:
 - Notify all sessions on a longer interval (30+ minutes).
 - Notify on session nearing completion (percent complete).
 - Notify on session change (Plex Webhook) ie. pause/resume.
-
-You [must provide the Plex Token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/) for this to work.
-You also need to add a webhook to Plex so it sends notices to this application.
-
-- In Plex Media Server, add this URL to webhooks:
-  - `http://localhost:5454/plex?token=plex-token-here`
-- Replace `localhost` with the IP or host of the notifiarr application.
-- Replace `plex-token-here` with your plex token.
-- **The Notifiarr application uses the Plex token to authorize incoming webhooks.**
+- See Plex Webhook in the [After Install](afterInstall.md#plex-webhook) page for more info.
 
 | Config Name | Variable Name   | Note                                                                                                                                            |
 | ----------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -288,6 +234,11 @@ your Plex users and it allows you to easily enable a service check.
 | tautulli.name    | `DN_TAUTULLI_NAME`    | Defaults to the URL if left unset.                                      |
 | tautulli.url     | `DN_TAUTULLI_URL`     | No Default. Something like: `http://localhost:8181`                     |
 | tautulli.api_key | `DN_TAUTULLI_API_KEY` | No Default. Provide URL and API key if you want name maps from Tautulli |
+
+### Endpoint URL Relay
+
+The application can poll (download) a URL on a schedule and relay it as a notification.
+**This is incomplete.**
 
 ### Service Checks
 
