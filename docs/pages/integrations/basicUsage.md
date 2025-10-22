@@ -45,6 +45,6 @@ Each integration is split up into sections and there is a sub menu on the right 
 
 5. Reset the color back to default
 
-6. Trigger ping settings which will allow picking a role that gets pinged everytime a notification is received for the selected trigger. (Pro tip: Press `Ctrl` when clicking to unselect the last item)
+6. Trigger ping settings which will allow picking a role that gets pinged every time a notification is received for the selected trigger. (Pro tip: Press `Ctrl` when clicking to unselect the last item)
 
 7. The button with the grid box allows you to customize where each field in the notification goes with a drag/drop interface

@@ -35,6 +35,6 @@ Edit the MDBList integration, scroll down to the Extra settings modify the add m
 5. Minimum Availability
 6. Root folder
 
-When setup how you like, select save. When you now find a show or movie on MDBList, you have the option to add to Radarr and Sonarr, the above enables that. You will find it is added to the instance and a search takes place imediately.
+When setup how you like, select save. When you now find a show or movie on MDBList, you have the option to add to Radarr and Sonarr, the above enables that. You will find it is added to the instance and a search takes place immediately.
 
 ![mdblist-movieaddsettings2.jpg](../../assets/screenshots/integrations/mdblist/mdblist-movieaddsettings2.jpg)

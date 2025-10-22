@@ -1,6 +1,6 @@
 # Transcode History
 
-Transcode History is a history of all Plex Streams Notifiarr recieved from your Plex Server.
+Transcode History is a history of all Plex Streams Notifiarr received from your Plex Server.
 
 It is required that you have a Notifiarr Profile retention of 1 or more days to see this data. This information is gathered from the following Notifiarr Plex Notifications:
 

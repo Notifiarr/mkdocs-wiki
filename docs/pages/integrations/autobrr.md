@@ -21,7 +21,7 @@
 
 ### Configuration
 
-Here you can customize the layout and color of your notifcation for each avaiable `trigger`
+Here you can customize the layout and color of your notification for each available `trigger`
 
 ![configuration.png](../../assets/screenshots/integrations/autobrr/configuration.png)
 
@@ -34,7 +34,7 @@ Here you can customize the layout and color of your notifcation for each avaiabl
 3. Always save.
 
 !!! info
-    Here is how to setup your notifcations in autobrr.
+    Here is how to setup your notifications in autobrr.
 
 ![autobrr-instructions.png](../../assets/screenshots/integrations/autobrr/autobrr-instructions.png)
 

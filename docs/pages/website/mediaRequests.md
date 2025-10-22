@@ -24,6 +24,6 @@
 1. TMDb collection name and link to the collection
 1. List of movies in the collection and if you have them or not
 1. Percentage of the collection that is completed
-1. A check before the movie means the movie is in Radarr's list exclusion and will not be added even if automatically monitoing the collection
+1. A check before the movie means the movie is in Radarr's list exclusion and will not be added even if automatically monitoring the collection
 1. Manual settings if you want to add missing movies from collections now
 1. Monitor settings for how automation will be handled

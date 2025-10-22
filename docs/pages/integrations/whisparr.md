@@ -32,7 +32,7 @@
 1. Instructions on how to setup the notifiarr connect in prowlarr
 
 !!! info
-    Add the Connect using its built in Connection for **Notifiarr**. In Whisparr click Settings → Connect → <kb>+</kb> → Notifiarr, once done correctly you will recieve a test notification :smile:
+    Add the Connect using its built in Connection for **Notifiarr**. In Whisparr click Settings → Connect → <kb>+</kb> → Notifiarr, once done correctly you will receive a test notification :smile:
 
 Whisparr Connect            |  Test Notification
 :-------------------------:|:-------------------------:
@@ -45,9 +45,9 @@ Whisparr Connect            |  Test Notification
 ![configuration-1.png](../../assets/screenshots/integrations/whisparr/configuration-1.png)
 
 1. click the `Customize` toggle to open the trigger settings.
-2. Choose the color of your notifcation
+2. Choose the color of your notification.
 
-- here are all the avialable `Notification Fields` under the `Grab` trigger as you can see there is alot of customization for your specific needs :smile:
+- here are all the available `Notification Fields` under the `Grab` trigger as you can see there is a lot of customization for your specific needs :smile:
 
 ![configuration-2.png](../../assets/screenshots/integrations/whisparr/configuration-2.png)
 

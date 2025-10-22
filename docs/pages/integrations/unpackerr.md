@@ -11,6 +11,6 @@ As a premium feature you may elect to have Unpackerr notifications automatically
 
 ![reaction.png](../../assets/screenshots/integrations/unpackerr/reaction.png)
 
-## Notifiation Example
+## Notification Example
 
 ![extracted_notification.png](../../assets/screenshots/integrations/unpackerr/extracted_notification.png)
