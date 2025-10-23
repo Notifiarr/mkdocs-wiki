@@ -79,7 +79,7 @@ This script is on the computer and the command to run `plexRestart.ps1` is added
 
 ## Duplicate Clients
 
-- This typically occurs in Docker or \*BSD when a [hostname is not configured](../../pages/client/configuration.md#hostname) everytime the container is restarted.
+- This typically occurs in Docker or containerized environment when a [hostname is not configured](../../pages/client/afterInstall.md#hostname) every time the container is restarted.
 - For other installations this would occur if the unique attributes of your host system and installation change.
 
 ### Resolving Duplicate Clients

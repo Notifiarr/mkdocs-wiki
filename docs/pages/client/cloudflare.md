@@ -1,4 +1,4 @@
-# Notifiarr Client - Cloudflare Configuration
+# Notifiarr Client Cloudflare Proxy
 
 !!! danger
     None of this is required or necessary. **We recommend NOT exposing your
