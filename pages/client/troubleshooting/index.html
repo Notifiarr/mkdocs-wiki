@@ -12,10 +12,10 @@
         <link rel="canonical" href="https://notifiarr.wiki/pages/client/troubleshooting/">
       
       
-        <link rel="prev" href="../setup/">
+        <link rel="prev" href="../gui/">
       
       
-        <link rel="next" href="../../website/clientConfig/">
+        <link rel="next" href="../reverseProxy/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -664,12 +664,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../afterInstall/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuration
+    After Install
     
   </span>
   
@@ -693,75 +693,6 @@
   
   <span class="md-ellipsis">
     Web UI
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cloudflare/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Cloudflare Proxy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reverseProxy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reverse Proxy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Additional Setup
     
   </span>
   
@@ -828,39 +759,109 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#tmp-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tmp not found
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#tmp-not-found">
+    <span class="md-ellipsis"> Tmp not found </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#resolving-duplicate-clients" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resolving Duplicate Clients
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#duplicate-clients">
+    <span class="md-ellipsis"> Duplicate Clients </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#compressed-config-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compressed Config File
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#gibberish-config-file">
+    <span class="md-ellipsis"> Gibberish Config File </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#clearing-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clearing Logs
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#clearing-logs">
+    <span class="md-ellipsis"> Clearing Logs </span>
   </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#forgotten-passwords">
+    <span class="md-ellipsis"> Forgotten Passwords </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+  <nav class="md-nav" aria-label="Forgotten Passwords">
+    <ul class="md-nav__list">
+       <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#fresh-installs">
+    <span class="md-ellipsis"> Fresh Installs </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#liunx-freebsd">
+    <span class="md-ellipsis"> Liunx &amp; FreeBSD </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#windows">
+    <span class="md-ellipsis"> Windows </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#docker-unraid">
+    <span class="md-ellipsis"> Docker &amp; Unraid </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li> 
+    </ul>
+  </nav>
   
 </li>
       
@@ -868,6 +869,52 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverseProxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reverse Proxy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cloudflare/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloudflare Proxy
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2582,39 +2629,109 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#tmp-not-found" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tmp not found
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#tmp-not-found">
+    <span class="md-ellipsis"> Tmp not found </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#resolving-duplicate-clients" class="md-nav__link">
-    <span class="md-ellipsis">
-      Resolving Duplicate Clients
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#duplicate-clients">
+    <span class="md-ellipsis"> Duplicate Clients </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#compressed-config-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      Compressed Config File
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#gibberish-config-file">
+    <span class="md-ellipsis"> Gibberish Config File </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#clearing-logs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clearing Logs
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#clearing-logs">
+    <span class="md-ellipsis"> Clearing Logs </span>
   </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#forgotten-passwords">
+    <span class="md-ellipsis"> Forgotten Passwords </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+  <nav class="md-nav" aria-label="Forgotten Passwords">
+    <ul class="md-nav__list">
+       <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#fresh-installs">
+    <span class="md-ellipsis"> Fresh Installs </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#liunx-freebsd">
+    <span class="md-ellipsis"> Liunx &amp; FreeBSD </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#windows">
+    <span class="md-ellipsis"> Windows </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#docker-unraid">
+    <span class="md-ellipsis"> Docker &amp; Unraid </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li> 
+    </ul>
+  </nav>
   
 </li>
       
@@ -2639,28 +2756,76 @@
 
 <h1 id="client-troubleshooting">Client Troubleshooting<a class="headerlink" href="#client-troubleshooting" title="Permanent link"></a></h1>
 <ul>
-<li>Find help on Discord: <a href="https://discord.gg/AURf8Yz">Notifiarr</a> (preferred) or <a href="https://golift.io/discord">Go Lift</a> (if you like Go).</li>
+<li>Find help on <a href="http://notifiarr.com/discord">Notifiarr's Discord</a> (preferred).</li>
+<li>Or <a href="https://golift.io/discord">Go Lift</a> if you want to chat about the client <em>code</em>.</li>
 </ul>
-<h3 id="tmp-not-found">Tmp not found<a class="headerlink" href="#tmp-not-found" title="Permanent link"></a></h3>
+<p>Find tips for common problems on this page.</p>
+<h2 id="tmp-not-found">Tmp not found<a class="headerlink" href="#tmp-not-found" title="Permanent link"></a></h2>
 <p>Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more.
 Set the <code>TMPDIR</code> environment variable to a writable path, or mount <code>/tmp</code> to resolve the error.</p>
-<h3 id="resolving-duplicate-clients">Resolving Duplicate Clients<a class="headerlink" href="#resolving-duplicate-clients" title="Permanent link"></a></h3>
-<p>If you have duplicate clients on the website and are setting a hostname after the fact,
-<a href="../../website/clientConfig/#resolving-duplicate-clients">see these instructions</a>
-for resolving the duplicates after setting a hostname.</p>
-<h3 id="compressed-config-file">Compressed Config File<a class="headerlink" href="#compressed-config-file" title="Permanent link"></a></h3>
+<h2 id="duplicate-clients">Duplicate Clients<a class="headerlink" href="#duplicate-clients" title="Permanent link"></a></h2>
+<p>If you have duplicate clients on the website:</p>
+<ol>
+<li>Make sure your client has a <a href="../afterInstall/#hostname">static hostname</a>.</li>
+<li>Then <a href="../../website/clientConfig/#resolving-duplicate-clients">see these instructions</a>
+    to remove the duplicates.</li>
+</ol>
+<h2 id="gibberish-config-file">Gibberish Config File<a class="headerlink" href="#gibberish-config-file" title="Permanent link"></a></h2>
 <p>Once you click save in the Web UI, the config file is compressed.
 It will look like gibberish when you try to edit it.
 In the rare case the UI is not accessible and the conf file must be edited,
 you will need to decompress the file with <code>bzcat</code> prior to making your edits.
 Example:</p>
 <div class="highlight"><pre><span></span><code>bzcat<span class="w"> </span>/path/to/notifiarr.conf<span class="w"> </span>&gt;<span class="w"> </span>/output/path/to/notifiarr_decomp.conf
+<span class="c1"># or</span>
+mv<span class="w"> </span>/path/to/notifiarr.conf<span class="w"> </span>/path/to/notifiarr.conf.bz
+bunzip2<span class="w"> </span>/path/to/notifiarr.conf.bz
 </code></pre></div>
-<h3 id="clearing-logs">Clearing Logs<a class="headerlink" href="#clearing-logs" title="Permanent link"></a></h3>
+<h2 id="clearing-logs">Clearing Logs<a class="headerlink" href="#clearing-logs" title="Permanent link"></a></h2>
 <ul>
 <li>To <code>clear</code> logs to make troubleshooting easier - stop the client
-  and rename/remove the log file, then restart the client.</li>
+  and rename/remove the log file(s), then restart the client.</li>
 <li>If you have not previously enabled debug logs you do not need to clear anything.</li>
+</ul>
+<h2 id="forgotten-passwords">Forgotten Passwords<a class="headerlink" href="#forgotten-passwords" title="Permanent link"></a></h2>
+<h3 id="fresh-installs">Fresh Installs<a class="headerlink" href="#fresh-installs" title="Permanent link"></a></h3>
+<p>Execute the below command to print the unencrypted first-start password.
+<strong>This only works for brand new installations.</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Fix the path yourself:</span>
+grep<span class="w"> </span>ui_password<span class="w">  </span>/path/to/notifiarr/notifiarr.conf
+
+<span class="c1"># Unraid usually:</span>
+grep<span class="w"> </span>ui_password<span class="w">  </span>/mnt/user/appdata/Notifiarr/notifiarr.conf
+</code></pre></div>
+<h3 id="liunx-freebsd">Liunx &amp; FreeBSD<a class="headerlink" href="#liunx-freebsd" title="Permanent link"></a></h3>
+<ul>
+<li>Run these commands to reset the password and restart the application.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="c1"># Reset password.</span>
+notifiarr<span class="w"> </span>--reset
+<span class="c1"># Restart client (linux).</span>
+systemctl<span class="w"> </span>restart<span class="w"> </span>notifiarr
+</code></pre></div>
+<h3 id="windows">Windows<a class="headerlink" href="#windows" title="Permanent link"></a></h3>
+<ul>
+<li>Run this command, and then restart the application.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>notifiarr.exe<span class="w"> </span>--reset
+</code></pre></div>
+<h3 id="docker-unraid">Docker &amp; Unraid<a class="headerlink" href="#docker-unraid" title="Permanent link"></a></h3>
+<ul>
+<li>Run these two commands in your host system's terminal (console or ssh) while the Notifiarr container is running.
+   <em>If your container is named <code>notifiarr</code> then replace <code>Notifiarr</code> with the lowercase version.</em></li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>Notifiarr<span class="w"> </span>/notifiarr<span class="w"> </span>--reset
+docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>--signal<span class="o">=</span>HUP<span class="w"> </span>Notifiarr
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Example output with new password:</span>
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="m">2023</span>/09/08<span class="w"> </span><span class="m">09</span>:32:11<span class="w"> </span>New<span class="w"> </span><span class="s1">'admin'</span><span class="w"> </span>user<span class="w"> </span>password:<span class="w"> </span><span class="nv">four38</span><span class="o">=</span>Draw
+<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="m">2023</span>/09/08<span class="w"> </span><span class="m">09</span>:32:11<span class="w"> </span>Writing<span class="w"> </span>Config<span class="w"> </span>File:<span class="w"> </span>/config/notifiarr.conf
+</code></pre></div>
+<ul>
+<li>If you still can't login, restart the container.</li>
 </ul>
 
 
@@ -2668,6 +2833,9 @@ Example:</p>
 
 
 
+
+  
+  
 
 
 
@@ -2699,7 +2867,7 @@ Example:</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../setup/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Additional Setup">
+          <a href="../gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web UI">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2709,20 +2877,20 @@ Example:</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Additional Setup
+                Web UI
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../website/clientConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Client setup">
+          <a href="../reverseProxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Reverse Proxy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Client setup
+                Reverse Proxy
               </div>
             </div>
             <div class="md-footer__button md-icon">

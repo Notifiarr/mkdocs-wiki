@@ -12,10 +12,10 @@
         <link rel="canonical" href="https://notifiarr.wiki/pages/client/cloudflare/">
       
       
-        <link rel="prev" href="../gui/">
+        <link rel="prev" href="../reverseProxy/">
       
       
-        <link rel="next" href="../reverseProxy/">
+        <link rel="next" href="../../website/clientConfig/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notifiarr-client-cloudflare-configuration" class="md-skip">
+        <a href="#notifiarr-client-cloudflare-proxy" class="md-skip">
           Skip to content
         </a>
       
@@ -664,12 +664,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../configuration/" class="md-nav__link">
+      <a href="../afterInstall/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuration
+    After Install
     
   </span>
   
@@ -693,6 +693,52 @@
   
   <span class="md-ellipsis">
     Web UI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reverseProxy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reverse Proxy
     
   </span>
   
@@ -759,12 +805,15 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#cloudflare-tunnel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloudflare Tunnel
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#cloudflare-tunnel">
+    <span class="md-ellipsis"> Cloudflare Tunnel </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
@@ -772,75 +821,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../reverseProxy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Reverse Proxy
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Additional Setup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -2555,12 +2535,15 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#cloudflare-tunnel" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cloudflare Tunnel
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#cloudflare-tunnel">
+    <span class="md-ellipsis"> Cloudflare Tunnel </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
@@ -2583,7 +2566,7 @@
   
 
 
-<h1 id="notifiarr-client-cloudflare-configuration">Notifiarr Client - Cloudflare Configuration<a class="headerlink" href="#notifiarr-client-cloudflare-configuration" title="Permanent link"></a></h1>
+<h1 id="notifiarr-client-cloudflare-proxy">Notifiarr Client Cloudflare Proxy<a class="headerlink" href="#notifiarr-client-cloudflare-proxy" title="Permanent link"></a></h1>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>None of this is required or necessary. <strong>We recommend NOT exposing your
@@ -2652,7 +2635,7 @@ If you want to get started with Cloudflare Tunnels follow this YouTube guide fir
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web UI">
+          <a href="../reverseProxy/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Reverse Proxy">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2662,20 +2645,20 @@ If you want to get started with Cloudflare Tunnels follow this YouTube guide fir
                 Previous
               </span>
               <div class="md-ellipsis">
-                Web UI
+                Reverse Proxy
               </div>
             </div>
           </a>
         
         
           
-          <a href="../reverseProxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Reverse Proxy">
+          <a href="../../website/clientConfig/" class="md-footer__link md-footer__link--next" aria-label="Next: Client setup">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Reverse Proxy
+                Client setup
               </div>
             </div>
             <div class="md-footer__button md-icon">

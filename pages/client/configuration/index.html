@@ -12,10 +12,6 @@
         <link rel="canonical" href="https://notifiarr.wiki/pages/client/configuration/">
       
       
-        <link rel="prev" href="../install/">
-      
-      
-        <link rel="next" href="../gui/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -23,7 +19,7 @@
     
     
       
-        <title>Configuration - Wiki</title>
+        <title>Notifiarr Client Configuration - Wiki</title>
       
     
     
@@ -122,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration
+              Notifiarr Client Configuration
             
           </span>
         </div>
@@ -272,12 +268,10 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../install/" class="md-tabs__link">
           
   
@@ -590,31 +584,26 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   
@@ -627,7 +616,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Client
@@ -661,293 +650,20 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Configuration
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../afterInstall/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Configuration
+    After Install
     
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#web-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web UI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Users
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conf-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      .conf File
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hostname
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hostname">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wsl2-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      WSL2 users
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Options
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configuration Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#global-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global Configuration
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Secret Settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Secret Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mysql-snapshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      MySQL Snapshots
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lidarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lidarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prowlarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prowlarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#radarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Radarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Readarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sonarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sonarr
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#downloaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Downloaders
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Downloaders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#qbittorrent" class="md-nav__link">
-    <span class="md-ellipsis">
-      QbitTorrent
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rtorrent" class="md-nav__link">
-    <span class="md-ellipsis">
-      rTorrent
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sabnzbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      SABnzbd
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deluge" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deluge
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nzbget" class="md-nav__link">
-    <span class="md-ellipsis">
-      NZBGet
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plex" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plex
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tautulli" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tautulli
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#service-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Service Checks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -983,12 +699,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloudflare/" class="md-nav__link">
+      <a href="../troubleshooting/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Cloudflare Proxy
+    Troubleshooting
     
   </span>
   
@@ -1029,35 +745,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/" class="md-nav__link">
+      <a href="../cloudflare/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Additional Setup
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting
+    Cloudflare Proxy
     
   </span>
   
@@ -2777,234 +2470,245 @@
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
-        <li class="md-nav__item">
-  <a href="#web-ui" class="md-nav__link">
-    <span class="md-ellipsis">
-      Web UI
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#conf-file">
+    <span class="md-ellipsis"> .conf File </span>
   </a>
+
+  <!-- Table of contents list -->
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#docker-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker Users
-    </span>
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#configuration-options">
+    <span class="md-ellipsis"> Configuration Options </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conf-file" class="md-nav__link">
-    <span class="md-ellipsis">
-      .conf File
-    </span>
+  <nav class="md-nav" aria-label="Configuration Options">
+    <ul class="md-nav__list">
+       <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#global-configuration">
+    <span class="md-ellipsis"> Global Configuration </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hostname" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hostname
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#secret-settings">
+    <span class="md-ellipsis"> Secret Settings </span>
   </a>
+
+  <!-- Table of contents list -->
   
-    <nav class="md-nav" aria-label="Hostname">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wsl2-users" class="md-nav__link">
-    <span class="md-ellipsis">
-      WSL2 users
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#snapshots">
+    <span class="md-ellipsis"> Snapshots </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuration-options" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuration Options
-    </span>
+  <nav class="md-nav" aria-label="Snapshots">
+    <ul class="md-nav__list">
+       <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#nvidia">
+    <span class="md-ellipsis"> Nvidia </span>
   </a>
+
+  <!-- Table of contents list -->
   
-    <nav class="md-nav" aria-label="Configuration Options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#global-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Global Configuration
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#mysql">
+    <span class="md-ellipsis"> MySQL </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#secret-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Secret Settings
-    </span>
+</li> 
+    </ul>
+  </nav>
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#lidarr">
+    <span class="md-ellipsis"> Lidarr </span>
   </a>
+
+  <!-- Table of contents list -->
   
-    <nav class="md-nav" aria-label="Secret Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mysql-snapshots" class="md-nav__link">
-    <span class="md-ellipsis">
-      MySQL Snapshots
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#prowlarr">
+    <span class="md-ellipsis"> Prowlarr </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lidarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Lidarr
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#radarr">
+    <span class="md-ellipsis"> Radarr </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#prowlarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prowlarr
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#readarr">
+    <span class="md-ellipsis"> Readarr </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#radarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Radarr
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#sonarr">
+    <span class="md-ellipsis"> Sonarr </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#readarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Readarr
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#downloaders">
+    <span class="md-ellipsis"> Downloaders </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sonarr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sonarr
-    </span>
+  <nav class="md-nav" aria-label="Downloaders">
+    <ul class="md-nav__list">
+       <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#qbittorrent">
+    <span class="md-ellipsis"> QbitTorrent </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#downloaders" class="md-nav__link">
-    <span class="md-ellipsis">
-      Downloaders
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#rtorrent">
+    <span class="md-ellipsis"> rTorrent </span>
   </a>
+
+  <!-- Table of contents list -->
   
-    <nav class="md-nav" aria-label="Downloaders">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#qbittorrent" class="md-nav__link">
-    <span class="md-ellipsis">
-      QbitTorrent
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#sabnzbd">
+    <span class="md-ellipsis"> SABnzbd </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rtorrent" class="md-nav__link">
-    <span class="md-ellipsis">
-      rTorrent
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#deluge">
+    <span class="md-ellipsis"> Deluge </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sabnzbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      SABnzbd
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#nzbget">
+    <span class="md-ellipsis"> NZBGet </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#deluge" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deluge
-    </span>
+</li> 
+    </ul>
+  </nav>
+  
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#plex">
+    <span class="md-ellipsis"> Plex </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nzbget" class="md-nav__link">
-    <span class="md-ellipsis">
-      NZBGet
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#tautulli">
+    <span class="md-ellipsis"> Tautulli </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#plex" class="md-nav__link">
-    <span class="md-ellipsis">
-      Plex
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#endpoint-url-relay">
+    <span class="md-ellipsis"> Endpoint URL Relay </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tautulli" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tautulli
-    </span>
+</li>  <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#service-checks">
+    <span class="md-ellipsis"> Service Checks </span>
   </a>
+
+  <!-- Table of contents list -->
   
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#service-checks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Service Checks
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
+</li> 
+    </ul>
+  </nav>
   
 </li>
       
@@ -3028,41 +2732,13 @@
 
 
 <h1 id="notifiarr-client-configuration">Notifiarr Client Configuration<a class="headerlink" href="#notifiarr-client-configuration" title="Permanent link"></a></h1>
-<p>Log into the Web UI to configure the client. Skim through the rest of this page for important information.</p>
-<h2 id="web-ui">Web UI<a class="headerlink" href="#web-ui" title="Permanent link"></a></h2>
-<p>When you open the application on MacOS or Windows for the first time, you're
-prompted for your API key. Enter it. This is an "All" key from notifiarr.com.</p>
-<p>If you're on Linux or FreeBSD and installed with root, you should set the API
-key in the config file @ <code>/etc/notifiarr/notifiarr.conf</code> or
-<code>/usr/local/etc/notifiarr/notifiarr.conf</code>. If you installed on a seed box, set
-the API key in the config file in your home folder.</p>
-<p>You will use the API key as the password to login into the client's WebUI for
-the first time. You can set a dedicated password after logging in. The default
-username is <code>admin</code>.</p>
-<p>The login URL will usually look like one of these. The default listen port is <code>5454</code>.</p>
-<ul>
-<li><code>http://localhost:5454</code></li>
-<li><code>http://notifiarr</code></li>
-<li><code>http://192.168.1.10:5454</code></li>
-</ul>
-<h2 id="docker-users">Docker Users<a class="headerlink" href="#docker-users" title="Permanent link"></a></h2>
-<p>When a new docker image is deployed with an empty <code>/config</code> folder mounted, the app will do two things:</p>
-<ul>
-<li><em>If the API Key is not configured or invalid:</em> Create a new Web UI <code>admin</code> and print it into the log file and docker logs.</li>
-<li>Write a brand new config file with this password already saved.</li>
-<li>Find the password by running <code>docker logs Notifiarr</code>.</li>
-</ul>
 <div class="admonition danger">
-<p class="admonition-title">Unraid Users</p>
-<p>The Official Unraid Template for Notifiarr Client contains the API Key and Plex Token as pre-defined inputs.
-Normally, you can just go ahead and set those there. Alternatively, you can delete them from the template, and
-configure these values using the client's Web UI. For consistency, we recommend setting the API key and Plex token
-in the Unraid template.</p>
+<p class="admonition-title">Deprecated Page</p>
+<p>This page is deprecated and the application configuration is now documented in the
+application <a href="../gui/">Web UI</a>. Log into the user interface in a web browser to read
+about all the configuration options.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Docker Users</p>
-<p>Note that Environment Variables - and the Unraid Template - override settings in the Config file.</p>
-</div>
+<p><strong>Use the Web UI to change the application configuration.</strong></p>
 <h2 id="conf-file"><code>.conf</code> File<a class="headerlink" href="#conf-file" title="Permanent link"></a></h2>
 <p>The config file used to be the preferred way to change the application's behavior,
 but now days the config file is compressed and direct edits are discouraged.
@@ -3070,34 +2746,8 @@ The format has become too much to properly document. If you're configuring your
 client with automation such as puppet or ansible, then you should use environment
 variables for configuration. It's possible the config file format may change in the
 future, and the env variables are more likely to remain unaffected.</p>
-<p><strong>Use the WebUI to change the application configuration.</strong></p>
-<ul>
-<li>Must provide the "All" API key from your
-  <a href="https://notifiarr.com/user.php?page=profile">Profile page on notifiarr.com</a></li>
-<li><strong>The Notifiarr client uses the API key for bi-directional authorization between the Site and the Client.</strong></li>
-</ul>
-<h2 id="hostname">Hostname<a class="headerlink" href="#hostname" title="Permanent link"></a></h2>
-<p>It is important that a static hostname is set so the site can keep track of multiple clients' settings.
-Some examples of how to do that:</p>
-<ul>
-<li>Docker Run users add <code>-h notifiarr</code> to your <code>docker run</code> command.</li>
-<li>Docker Compose users add <code>hostname: notifiarr</code> to your docker-compose.yaml file.</li>
-<li>Unraid users add <code>-h notifiarr</code> to <code>Extra Parameters</code>.</li>
-<li>Kubernetes hostnames are automatically determined based on the pod name.</li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Failure to set a hostname will result in duplicate clients that need to be
-<a href="../../website/clientConfig/#resolving-duplicate-clients">fixed once a hostname is set</a>.</p>
-</div>
-<h3 id="wsl2-users">WSL2 users<a class="headerlink" href="#wsl2-users" title="Permanent link"></a></h3>
-<p>Add this volume to your Notifiarr container. This is used for a unique UUID for each client instance.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">/etc/machine-id:/etc/machine-id</span>
-</code></pre></div>
 <h2 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link"></a></h2>
 <p>Config File and Environment Variables are listed below.
-<strong>This data is often out of date.</strong>
 The up-to-date data now lives in the client's Web UI.</p>
 <ul>
 <li>Any variable not provided takes the default.</li>
@@ -3108,6 +2758,7 @@ The up-to-date data now lives in the client's Web UI.</p>
   <code>DN_SONARR_2_URL</code>, etc or by duplicating the starr block in the conf file.</li>
 <li>Note the header of <code>[[radarr]]</code>, <code>[[sonarr]]</code>, <code>[[readarr]]</code>, etc. is required.</li>
 </ul>
+<p><strong>The following data is out of date, and may not be updated very often.</strong></p>
 <h3 id="global-configuration">Global Configuration<a class="headerlink" href="#global-configuration" title="Permanent link"></a></h3>
 <table>
 <thead>
@@ -3234,7 +2885,28 @@ The up-to-date data now lives in the client's Web UI.</p>
 </tbody>
 </table>
 <p><em>Note: You may disable the GUI (menu item) on Windows and MacOS by setting the env variable <code>USEGUI</code> to <code>false</code>.</em></p>
-<h4 id="mysql-snapshots">MySQL Snapshots<a class="headerlink" href="#mysql-snapshots" title="Permanent link"></a></h4>
+<h3 id="snapshots">Snapshots<a class="headerlink" href="#snapshots" title="Permanent link"></a></h3>
+<p>Many of the snapshot settings are on the website, but a few are configured locally.</p>
+<h4 id="nvidia">Nvidia<a class="headerlink" href="#nvidia" title="Permanent link"></a></h4>
+<p>The app can collect Nvidia GPU stats for snapshot notifications.</p>
+<table>
+<thead>
+<tr>
+<th>Config Name</th>
+<th>Variable Name</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>snapshot.nvidia.disabled</td>
+<td><code>DN_SNAPSHOT_NVIDIA_DISABLED</code></td>
+<td>Set this to true to turn off this feature.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Busids and smi path are missing. ^</strong> This is incomplete.</p>
+<h4 id="mysql">MySQL<a class="headerlink" href="#mysql" title="Permanent link"></a></h4>
 <p>You may add mysql credentials to your notifiarr configuration to snapshot mysql
 service health. This feature snapshots <code>SHOW PROCESSLIST</code> and <code>SHOW STATUS</code> data.</p>
 <p>Access to a database is not required. Example Grant:</p>
@@ -3645,15 +3317,7 @@ This has three different features:</p>
 <li>Notify all sessions on a longer interval (30+ minutes).</li>
 <li>Notify on session nearing completion (percent complete).</li>
 <li>Notify on session change (Plex Webhook) ie. pause/resume.</li>
-</ul>
-<p>You <a href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/">must provide the Plex Token</a> for this to work.
-You also need to add a webhook to Plex so it sends notices to this application.</p>
-<ul>
-<li>In Plex Media Server, add this URL to webhooks:</li>
-<li><code>http://localhost:5454/plex?token=plex-token-here</code></li>
-<li>Replace <code>localhost</code> with the IP or host of the notifiarr application.</li>
-<li>Replace <code>plex-token-here</code> with your plex token.</li>
-<li><strong>The Notifiarr application uses the Plex token to authorize incoming webhooks.</strong></li>
+<li>See Plex Webhook in the <a href="../afterInstall/#plex-webhook">After Install</a> page for more info.</li>
 </ul>
 <table>
 <thead>
@@ -3706,6 +3370,9 @@ your Plex users and it allows you to easily enable a service check.</p>
 </tr>
 </tbody>
 </table>
+<h3 id="endpoint-url-relay">Endpoint URL Relay<a class="headerlink" href="#endpoint-url-relay" title="Permanent link"></a></h3>
+<p>The application can poll (download) a URL on a schedule and relay it as a notification.
+<strong>This is incomplete.</strong></p>
 <h3 id="service-checks">Service Checks<a class="headerlink" href="#service-checks" title="Permanent link"></a></h3>
 <p>The Notifiarr client can also check URLs for health. If you set names on your Starr apps they will be automatically checked and reports sent to Notifiarr.
 If you provide a log file for service checks, those logs will no longer write to the app log nor to console stdout.</p>
@@ -3825,44 +3492,6 @@ ie. use this <code>expect = "/^/usr/bin/smtpd$/"</code> to match an exact string
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Footer">
-        
-          
-          <a href="../install/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              <div class="md-ellipsis">
-                Install
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../gui/" class="md-footer__link md-footer__link--next" aria-label="Next: Web UI">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              <div class="md-ellipsis">
-                Web UI
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">
