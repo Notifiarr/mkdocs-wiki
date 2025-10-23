@@ -44,6 +44,6 @@ Click the cog icon too open the configuration settings
 
 ### Example Notifications
 
-Here is an example with all `notifcation fields` enabled for the `Login` and `Authorize apps` triggers
+Here is an example with all `notification fields` enabled for the `Login` and `Authorize apps` triggers
 
 ![example.png](../../assets/screenshots/integrations/authentik/example.png)

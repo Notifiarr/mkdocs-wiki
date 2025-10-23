@@ -42,9 +42,9 @@ Prowlarr Connect            |  Test Notification
 ![configuration-1.png](../../assets/screenshots/integrations/prowlarr/configuration-1.png)
 
 1. click the `Customize` toggle to open the trigger settings.
-2. Choose the color of your notifcation
+2. Choose the color of your notification
 
-- here are all the avialable `Notification Fields` under the `Grab` trigger as you can see there is alot of customization for your specific needs :smile:
+- here are all the available `Notification Fields` under the `Grab` trigger as you can see there is a lot of customization for your specific needs :smile:
 
 ![configuration-2.png](../../assets/screenshots/integrations/prowlarr/configuration-2.png)
 

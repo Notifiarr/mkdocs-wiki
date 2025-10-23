@@ -1,7 +1,7 @@
 # Persistent
 
 !!! info
-     This integration allows for notifications to always stay in the channel. Anytime someone posts, it will remove its previous post and readd it to the bottom of the channel.
+     This integration allows for notifications to always stay in the channel. Anytime someone posts, it will remove its previous post and re-add it to the bottom of the channel.
 
 ## Trigger options
 

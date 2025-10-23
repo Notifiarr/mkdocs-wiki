@@ -16,5 +16,5 @@ Once the client is setup locally and you can see it internally (example: `localh
 First thing, [turn on a couple](../../pages/website/integrationsSetup.md#main-setup) that you want to use
 (or all of them at once that you want to use if you want but less is more while learning).
 Once you have them turned on the page will reload and you'll see a card for each one.
-If you cant figure out how to turn things on etc, each integration has a wiki page for it (well most do).
+If you can't figure out how to turn things on etc, each integration has a wiki page for it (well most do).
 Click the `Wiki` link in the integration card to get more information about that specific one.

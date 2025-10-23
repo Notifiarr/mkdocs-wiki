@@ -22,7 +22,7 @@
 ![instructions.png](../../assets/screenshots/integrations/Dockwatch/instructions.png)
 
 !!! note
-    It is recomended to setup a API specifically for dockwatch.
+    It is recommended to setup a API specifically for dockwatch.
 
 Here is the setup on dockwatch's end.
 
