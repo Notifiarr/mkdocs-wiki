@@ -1,4 +1,4 @@
-# Client Reverse Proxy Configuration
+# Notifiarr Client Reverse Proxy
 
 !!! danger
     None of this is required or necessary. **We recommend NOT exposing your
@@ -17,7 +17,7 @@ it is recommended that you put it behind a reverse proxy if you're going to expo
 ## Cloudflare Users
 
 If you use Cloudflare Firewall or ZeroTrust see
-[the Client:CloudFlare page](../../pages/client/cloudflare.md)
+[the CloudFlare Proxy page](../../pages/client/cloudflare.md)
 to ensure Notifiarr is allowed through Cloudflare.
 
 ## NGINX Subfolder Example

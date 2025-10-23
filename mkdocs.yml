@@ -12,12 +12,12 @@ nav:
       - Quick Start: pages/quickstart/quickStart.md
   - Client:
       - Install: pages/client/install.md
-      - Configuration: pages/client/configuration.md
+      - After Install: pages/client/afterInstall.md
       - Web UI: pages/client/gui.md
-      - Cloudflare Proxy: pages/client/cloudflare.md
-      - Reverse Proxy: pages/client/reverseProxy.md
-      - Additional Setup: pages/client/setup.md
       - Troubleshooting: pages/client/troubleshooting.md
+      - Reverse Proxy: pages/client/reverseProxy.md
+      - Cloudflare Proxy: pages/client/cloudflare.md
+      #- Configuration: pages/client/configuration.md
   - Website:
       - Client setup: pages/website/clientConfig.md
       - Integrations setup: pages/website/integrationsSetup.md
@@ -88,6 +88,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.ico
   language: en

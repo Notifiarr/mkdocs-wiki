@@ -1,7 +1,11 @@
+---
+toc_depth: 1
+---
+
 # Notifiarr Client Installation
 
 Click your OS in the table of contents and follow the provided directions to get the client installed.
-**After you install, review the [Configuration Page](../../pages/client/configuration.md) for next steps.**
+**Review the [After Install](../../pages/client/afterInstall.md) page for next steps.**
 
 ## Linux
 
@@ -12,7 +16,11 @@ This works on any system with `apt` or `yum`. **If your system does not use APT 
 download a binary from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page and install it.
 
 !!! important
-    On Linux, Notifiarr runs as `user:group` of `notifiarr:notifiarr`.
+    When you install from a deb or apt package, the logs folder `/var/log/notifiarr` and config
+    folder `/etc/notifiarr` are automatically created. The `notifiarr` user and group are also
+    created; the application runs as `notifiarr:notifiarr`. If you remove the package, these things
+    will not be fully removed. If you do not install from a package, they will not be created
+    automatically either.
 
 1. Install the Go Lift package repo and Notifiarr with this command:
 
@@ -46,32 +54,35 @@ vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
 
-## TrueNAS Scale
+## TrueNAS Scale <!-- Make the line number below match this line's number. -->
 
 !!! warning "TrueNAS"
-    If you figure out how to install Notifiarr on TrueNAS, please update these instructions.
+    If you figure out how to install Notifiarr on TrueNAS, please
+    [update these instructions](https://github.com/Notifiarr/mkdocs-wiki/blob/main/docs/pages/client/install.md?plain=1#L57).
     Notifiarr support and developers have very little experience with TrueNAS.
 
 ## macOS
 
 1. Download the signed `dmg` file from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
+1. Mount it and copy *Notifiarr.app* to */Applications* then double-click it there.
 1. When you open it for the first time it will create a config file and log file:
     1. `~/.notifiarr/notifiarr.conf`
     1. `~/.notifiarr/Notifiarr.log`
 1. Use the menu bar icon to access the WebUI.
+1. Head on over to [After Install](afterInstall.md).
 
 ## Windows
 
 !!! info
     Suggested location and structure based on experience with permissions.
 
-##### Desired Outcome
+### Desired Outcome
 
 - `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
 - `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
 - `C:\ProgramData\notifiarr\logs` - Folder for log files.
 
-##### Create the folders
+### Create the folders
 
 1. Open C:\ProgramData and create a folder `notifiarr`
 1. Create a new folder named `logs`, so you now have `C:\ProgramData\notifiarr\logs`
@@ -80,7 +91,7 @@ service notifiarr start
       - `C:\ProgramData\notifiarr\logs\debug.log`
       - `C:\ProgramData\notifiarr\logs\http.log`
 
-##### New Install
+### New Install
 
 1. Download `notifiarr.amd64.exe.zip` from [the Releases page](https://github.com/Notifiarr/notifiarr/releases)
 1. Save it in `C:\ProgramData\notifiarr`
@@ -90,14 +101,14 @@ service notifiarr start
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
 
-##### Fix Existing Install
+### Fix Existing Install
 
 1. Stop the client
 1. Copy the existing `.exe` to `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
 1. Copy the existing conf file to `C:\ProgramData\notifiarr\notifiarr.conf`
 1. If the `C:\users\<your home folder>\.notifiarr` folder exists, delete it
 
-##### Autostart & Password
+### Autostart & Password
 
 - At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome).
 
@@ -125,14 +136,14 @@ and creates [ready-to-use multi-architecture images](https://hub.docker.com/r/go
 The `latest` tag is always a tagged release in GitHub.
 It also builds in a GitHub Action and publishes to GHCR (ghcr.io).
 
-##### Compose
+### Compose
 
 A sample docker compose file may be found
 [in the Github repo here](https://github.com/Notifiarr/notifiarr/blob/main/examples/compose.yml).
 
-##### `docker run`
+### `docker run`
 
-1. Mount a `/config` folder and the application will automatically write the config file there.
+1. Mount an empty `/config` folder and the application will automatically write the config file there.
 1. Pull the image from docker hub or ghcr and run it.
 1. You must enable `privileged` to use `smartctl` (`monitor_drives`) and/or `MegaCli` (`monitor_raid`).
 1. Map the `/var/run/utmp` volume if you want to count users.
@@ -141,7 +152,8 @@ A sample docker compose file may be found
 
 !!! warning "Static Hostname"
     Why `-h notifiarr` ?
-    You MUST [set a static hostname](../../pages/client/configuration.md#hostname). Each client is identified by hostname.
+    You MUST [set a static hostname](../../pages/client/afterInstall.md#hostname).
+    Each client is identified by hostname.
 
 ```bash
 docker pull golift/notifiarr
@@ -151,7 +163,7 @@ docker run --name Notifiarr -h notifiarr --restart unless-stopped \
 docker logs Notifiarr
 ```
 
-##### Docker Environment Variables
+### Docker Environment Variables
 
 You can find all the environment variables in the client's Web UI.
 You can run the app without a config file like this,
