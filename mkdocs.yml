@@ -14,6 +14,7 @@ nav:
       - Install: pages/client/install.md
       - After Install: pages/client/afterInstall.md
       - Web UI: pages/client/gui.md
+      - Health Checks: pages/client/healthChecks.md
       - Troubleshooting: pages/client/troubleshooting.md
       - Reverse Proxy: pages/client/reverseProxy.md
       - Cloudflare Proxy: pages/client/cloudflare.md
