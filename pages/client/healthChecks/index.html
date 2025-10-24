@@ -9,9 +9,13 @@
         <meta name="author" content="nitsua">
       
       
-        <link rel="canonical" href="https://notifiarr.wiki/pages/client/serviceChecks/">
+        <link rel="canonical" href="https://notifiarr.wiki/pages/client/healthChecks/">
       
       
+        <link rel="prev" href="../gui/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
       
       
       <link rel="icon" href="../../../assets/favicon.ico">
@@ -19,7 +23,7 @@
     
     
       
-        <title>Notifiarr Client Service Checks - Wiki</title>
+        <title>Health Checks - Wiki</title>
       
     
     
@@ -83,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notifiarr-client-service-checks" class="md-skip">
+        <a href="#notifiarr-client-health-checks" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notifiarr Client Service Checks
+              Health Checks
             
           </span>
         </div>
@@ -268,10 +272,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../install/" class="md-tabs__link">
           
   
@@ -584,26 +590,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -616,7 +627,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Client
@@ -687,6 +698,107 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Health Checks
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Health Checks
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#automatic-instance-checks">
+    <span class="md-ellipsis"> Automatic Instance Checks </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#custom-health-checks">
+    <span class="md-ellipsis"> Custom Health Checks </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#monitoring">
+    <span class="md-ellipsis"> Monitoring </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2464,6 +2576,50 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#automatic-instance-checks">
+    <span class="md-ellipsis"> Automatic Instance Checks </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#custom-health-checks">
+    <span class="md-ellipsis"> Custom Health Checks </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#monitoring">
+    <span class="md-ellipsis"> Monitoring </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2481,15 +2637,56 @@
   
 
 
-<h1 id="notifiarr-client-service-checks">Notifiarr Client Service Checks<a class="headerlink" href="#notifiarr-client-service-checks" title="Permanent link"></a></h1>
-<p>This is one of the most powerful feature we provide. And it's free.
-You can configure an unlimited number of service checks in the Notifiarr Client.
-These checks can check URLs for specific response codes, look for processes, or check TCP ports.</p>
+<h1 id="notifiarr-client-health-checks">Notifiarr Client Health Checks<a class="headerlink" href="#notifiarr-client-health-checks" title="Permanent link"></a></h1>
+<p>This is one of the most powerful features we provide. And it's free.
+You can configure an unlimited number of service checks in the Notifiarr
+Client. These checks can check URLs for specific response codes, look for
+running processes, or check TCP ports.</p>
+<div class="admonition warning">
+<p class="admonition-title">Enable Network Integration</p>
 <ul>
-<li><strong>Add examples with screenshots. This page is not ready yet.</strong></li>
-<li>Make sure it closes this:</li>
-<li><a href="https://github.com/Notifiarr/notifiarr/issues/605">Document difference between test and service check.</a></li>
+<li>This client feature sends reports to the <a href="https://nightly.notifiarr.app/user.php?page=integrations#">website</a> using the <em>Network Integration</em>.</li>
+<li>Make sure you enable that Integration on the website and choose a chat channel for notifications.</li>
 </ul>
+</div>
+<p>This page explains the logic the <a href="https://github.com/Notifiarr/notifiarr/tree/main/pkg/services">service check module</a> uses.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/starr.png" data-desc-position="bottom"><img align="right" alt="Starr Page" src="../images/starr.png" width="250"></a></p>
+<h2 id="automatic-instance-checks">Automatic Instance Checks<a class="headerlink" href="#automatic-instance-checks" title="Permanent link"></a></h2>
+<p>The application will automatically add service checks for any instances you configure.
+An instance is just an application like Radarr or Transmission. When you add the instance,
+all you need to do is choose a <em>Check Interval</em> duration. That determines how often the
+client checks the instance's health.</p>
+<div class="admonition danger">
+<p class="admonition-title">Assumptions</p>
+<p>Some of the automatic service checks may set the HTTP expect code to something other
+than 200 / OK. This is normal. There are few configurations for the automatic service
+checks, most settings are hard coded assumptions. The <a href="https://github.com/Notifiarr/notifiarr/blob/04ae29c5d0e7c01bd0dd9cfa53302ca7bf4f8d5b/pkg/checkapp/downloaders.go">test buttons</a> in the Web UI
+use different logic than the <a href="https://github.com/Notifiarr/notifiarr/blob/04ae29c5d0e7c01bd0dd9cfa53302ca7bf4f8d5b/pkg/services/apps.go">automatic service checks</a>.</p>
+</div>
+<p><strong>The automatic service checks do not work in every environment.</strong>
+You should disable them, and create custom checks if they are not working for you.</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/services.png" data-desc-position="bottom"><img align="right" alt="Services Page" src="../images/services.png" width="250"></a></p>
+<h2 id="custom-health-checks">Custom Health Checks<a class="headerlink" href="#custom-health-checks" title="Permanent link"></a></h2>
+<p>Health checks currently supported are <code>HTTP</code>, <code>TCP port</code>, <code>ICMP</code>, and <code>UDP Ping</code>.
+Future versions may include the ability for <a href="../../faq/faq/#q-what-are-the-user-level-differences">subscribers</a> to run commands and scripts.</p>
+<p>Configure custom checks in the Web UI on the <em>Settings =&gt; Services</em> page.
+The Web UI does a good job of documenting the service check configuration, so
+this section is light on words. Go check out the Web UI for information about
+how to configure a service check. The screenshot to the right does not do it justice.</p>
+<h2 id="monitoring">Monitoring<a class="headerlink" href="#monitoring" title="Permanent link"></a></h2>
+<ul>
+<li>Find current statuses on the <em>Insights =&gt; Monitoring</em> page in the client Web UI.</li>
+<li>Configure a custom <em>Service Status Page</em> on the <a href="https://nightly.notifiarr.app/user.php?page=integrations#">website</a> in the <strong>Network Integration</strong>.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../images/monitoring.png" data-desc-position="bottom"><img align="right" alt="Monitoring Page" src="../images/monitoring.png" width="250"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Website Configuration</p>
+<p>Configure the notifications chat channel, which role gets pinged, and a few
+other notification settings in the <strong>Network Integration</strong> on the <a href="https://nightly.notifiarr.app/user.php?page=integrations#">website</a>.</p>
+</div>
+<p>When a service changes state the new state is immediately reported to the website.
+By default the website will turn this state change into an immediate notification.
+The notification goes to the <em>Network Integration</em> channel that has been selected.</p>
 
 
 
@@ -2522,6 +2719,44 @@ These checks can check URLs for specific response codes, look for processes, or 
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Web UI">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Web UI
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
