@@ -24,7 +24,7 @@
 ![configuration.png](../../assets/screenshots/integrations/uptimekuma/configuration.png)
 
 1. click the `Customize` toggle to open the trigger settings.
-2. Choose the color of your notifcation
+2. Choose the color of your notification.
 
 ## Examples
 

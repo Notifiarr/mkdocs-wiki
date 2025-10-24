@@ -47,7 +47,7 @@ The following Trigger options are available.
 1. `Value` - What value shall be used to trigger the alert.
 1. `@mention` - Pick a user or role and Discord will ping you if there is an alert.
 1. `Add or Delete` - Here you can delete any existing alerts you may have or you can add a new alert.
-1. Select this if you only want notifications when an alert is triggered. If left unchecked, you will receive continous notifications as specified in the interval selection time (e.g. every 30min). This is found under client settings and discussed below.
+1. Select this if you only want notifications when an alert is triggered. If left unchecked, you will receive continuous notifications as specified in the interval selection time (e.g. every 30min). This is found under client settings and discussed below.
 
 ### Triggers and Allowed Values
 
@@ -78,7 +78,7 @@ Allows the user to update existing messages and change between Fahrenheit and Ce
 
 ## Client Settings
 
-Here are all the different settings for your client. These selections will determin what notifications will be monitored and reported on.
+Here are all the different settings for your client. These selections will determine what notifications will be monitored and reported on.
 
 ![client_settings.jpg](../../assets/screenshots/integrations/snapshots/client_settings.jpg)
 

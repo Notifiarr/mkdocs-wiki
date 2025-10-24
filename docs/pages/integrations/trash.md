@@ -4,7 +4,7 @@
     This integration allows you to setup and sync TRaSH guides with Radarr and Sonarr. Keep in mind this requires the Notifiarr client.
 
 !!! warning "patrons/subscribers"
-    **Patron Feature** - Acessible to [Patrons and Subscribers](../../pages/faq/faq.md#q-what-are-the-user-level-differences) only
+    **Patron Feature** - Accessible to [Patrons and Subscribers](../../pages/faq/faq.md#q-what-are-the-user-level-differences) only
 
 !!! note
     If you have questions about what the formats, profiles, scores, etc do then please use the TRaSH [discord](https://trash-guides.info/discord) server for help or check their guide. This wiki is for setting up and getting things in sync.
@@ -75,7 +75,7 @@ Here we can individually select what we would want to be notified of. For this e
 
 ### Profiles
 
-here we can manange existing profiles or add new profiles/link predefined TRaSH profiles. For this guide we are going to add the TRaSH **HD Bluray + WEB** profile
+here we can manage existing profiles or add new profiles/link predefined TRaSH profiles. For this guide we are going to add the TRaSH **HD Bluray + WEB** profile
 
 ![profiles-add-new.png](../../assets/screenshots/integrations/trash/profiles-add-new.png)
 
@@ -101,10 +101,10 @@ here we can manange existing profiles or add new profiles/link predefined TRaSH 
 
 ![profile-customization-1.png](../../assets/screenshots/integrations/trash/profile-customization-1.png)
 
-1. `Language` - If you want to sync your prefered language, **Disable this if you plan to use something other then the TRaSH default.
+1. `Language` - If you want to sync your preferred language, **Disable this if you plan to use something other then the TRaSH default.
 2. `Upgrades allowed` - Enable this if you plan to allow upgrades in your profile.
 3. `Minimum score` - Enable this to set the minimum download score to 0.
-4. `Minimum upgrade score` - enable this to set the minimim score increase to allow a upgrade.
+4. `Minimum upgrade score` - enable this to set the minimum score increase to allow a upgrade.
 5. `Cutoff score` - Enable this to set the cutoff score. **default set 10000**
 
 ### Quality Settings
@@ -175,5 +175,5 @@ Here you can choose a default TRaSH naming scheme for your media. There are reco
 6. `Delete map` - This will delete all of your sync settings. Useful for starting fresh.
 7. `Delete Selected CFs` - This will delete all of the selected CF's in your profile.
 8. `Delete Selected CFs & Map` - This will delete all of your CF's and the profile mapping.
-9. `Fresh Start CFs` - This will delete all the formats but leave the map so a sync would put everything back that is in sync. This is useful to clean things up without loosing your sync settings.
-10. `Fresh Start All` - This would delete all CF's/scores/ect. Only do this if you want to nuke everything and start over.
+9. `Fresh Start CFs` - This will delete all the formats but leave the map so a sync would put everything back that is in sync. This is useful to clean things up without losing your sync settings.
+10. `Fresh Start All` - This would delete all CF's/scores/etc. Only do this if you want to nuke everything and start over.

@@ -63,7 +63,7 @@ Here you can select individual color schemes for each available trigger.
 
 ![integration_settings.png](../../assets/screenshots/integrations/network/integration_settings.png)
 
-1. `Order` - This is the order of your services, you cant change this here. You will need to use `groups` (this is covered in the next section below).
+1. `Order` - This is the order of your services, you can't change this here. You will need to use `groups` (this is covered in the next section below).
 
 2. `Ping` - Enable this to ping the selected role when the corresponding service goes into a down status.
 

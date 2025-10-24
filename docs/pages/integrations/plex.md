@@ -86,7 +86,7 @@ Here you can adjust the settings for this integration.
 3. `Trash Settings` - The time and frequency of the automated cleanup
     - `Frequency` - How frequently this should try to clear the trash.
     - `Time` - What time of day this should try to clear the trash.
-    - `Max` - Do not empty if trash items is more than this number (incase of a drive failure for example).
+    - `Max` - Do not empty if trash items is more than this number (in case of a drive failure for example).
     - `Copy` - Copy applied settings to all libraries. *Note: This only appears on the first listed library.*
 4. `Times` - The times for the library
 
