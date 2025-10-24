@@ -9,7 +9,7 @@ interface to configure Integrations for use with Notifiarr.
 Head back to [After Install](afterInstall.md#web-ui) or
 [Troubleshooting](troubleshooting.md#forgotten-passwords) for help getting logged in.
 
-![login](../../assets/screenshots/client/login.png)
+![Login Form](./images/login.png)
 
 ## Landing Page
 
@@ -17,7 +17,7 @@ Once logged in you will be taken to the Landing page.
 From here you are free to navigate the Client and have the power to
 update settings, configure and trigger integrations and much, much more.
 
-![landing](../../assets/screenshots/client/landing.png)
+![Landing Page](./images/landing.png)
 
 The Web UI is full of documentation. **It's even available in multiple languages.**
 If you have suggestions where the UI can be improved, or documentation added,

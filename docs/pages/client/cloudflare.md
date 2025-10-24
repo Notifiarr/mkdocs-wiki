@@ -18,11 +18,11 @@ Specific configuration required for Cloudflare's various options are detailed be
 
 1. Login to your Cloudflare teams account at [dash.teams.Cloudflare.com](https://dash.teams.Cloudflare.com/)
 1. Click **Tunnels** and then **configure** next to the Cloudflare Tunnel you would like to use.
-    ![cf-tunnel-configure_sm2.png](../../assets/screenshots/client/cf-tunnel-configure_sm2.png)
+    ![cf-tunnel-configure_sm2.png](./images/cf-tunnel/configure_sm2.png)
 1. In your Tunnel section click on **Public Hostname** and add a new hostname by clicking on **Add a public hostname**.
-    ![cf-tunnel-configure_publichostname.png](../../assets/screenshots/client/cf-tunnel-configure_publichostname.png)
+    ![cf-tunnel-configure_publichostname.png](./images/cf-tunnel/configure_publichostname.png)
 1. Fill in the public hostname information on the next screen.
-    ![cf-tunnel-configure_hostnamepage.png](../../assets/screenshots/client/cf-tunnel-configure_hostnamepage.png)
+    ![cf-tunnel-configure_hostnamepage.png](./images/cf-tunnel/configure_hostnamepage.png)
     1. `Subdomain`: Notifiarr (or whatever else you want it to be)
     1. `Domain`: choose one of your domains
     1. `Service`: HTTP + Your Local IP Address for Notifiarr

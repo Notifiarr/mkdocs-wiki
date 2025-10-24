@@ -31,7 +31,7 @@
   },
   "link-image-style": {
     "collapsed": false,
-    "shortcut": false,
+    "shortcut": true,
     "url_inline": false
   },
   "no-duplicate-heading": {

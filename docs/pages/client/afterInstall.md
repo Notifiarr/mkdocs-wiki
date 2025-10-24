@@ -4,7 +4,13 @@ toc_depth: 2
 
 # Notifiarr Client After Install
 
-Log into the Web UI to configure the client. Skim through the rest of this page for important information.
+Do these things:
+
+1. [Log into the Web UI](#web-ui) to configure the client.
+1. [Set a Hostname](#hostname).
+1. [Setup Plex Webhook](#plex-webhook).
+1. [Install Snapshot Dependencies](#snapshot-dependencies).
+1. Do all the things under [Configure the client](#configure-the-client).
 
 ## Web UI
 
@@ -21,8 +27,8 @@ key in the config file @ `/etc/notifiarr/notifiarr.conf` or
 the API key in the config file in your home folder.
 
 Most users will use the API key as the password to login into the client's WebUI for
-the first time. You can set a dedicated password after logging in.
-**The default username is `admin`**.
+the first time. You can set a dedicated password after logging in by clicking your
+*username in the menu => Trust Profile*. **The default username is `admin`**.
 
 The login URL will usually look like one of these. The default listen port is `5454`.
 
@@ -41,9 +47,10 @@ Some examples of how to do that:
 - Unraid users add `-h notifiarr` to `Extra Parameters`.
 - Kubernetes hostnames are automatically determined based on the pod name.
 
-!!! note
+!!!note
     Failure to set a hostname will result in duplicate clients that need to be
     [fixed once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
+    **Restart the client if you set or change the hostname.**
 
 ## WSL2 users
 
@@ -69,19 +76,6 @@ Environment Variables - and the Unraid Template - override settings in the Confi
     Normally, you can just go ahead and set those there. Alternatively, you can delete them from the template, and
     configure these values using the client's Web UI. For consistency, we recommend setting the API key and Plex token
     in the Unraid template.
-
-## Log Files
-
-Find your logs here:
-
-- Linux: `/var/log/notifiarr/{app,http,services}.log`
-  - Log paths for linux apt/deb installations are hardcoded
-- FreeBSD: `/var/log/syslog` (w/ default syslog)
-- macOS: `~/.notifiarr/Notifiarr.log`
-- Windows: `<home folder>/.notifiarr/Notifiarr.log`
-
-In the Web UI log settings can be found under `Logging` in *Settings => Configuration*.
-Log file contents can be viewed in the UI under *Insights => Log Files*.
 
 ## Plex Webhook
 
@@ -118,7 +112,7 @@ for it, shown below. This feature is enabled on the website.
 
 ### Snapshot Sudoers
 
-The following sudoers entries are used by various snapshot features. Add them if you use the respective feature.
+The following sudoers entries are used by various snapshot features. Add them if you use the respective feature. **Restart the client after modifying sudoers entries.**
 You can usually just put the following content into `/etc/sudoers` or `/etc/sudoers.d/00-notifiarr`.
 Make sure the 00-notifiarr file has the proper permissions needed `chmod 400 /etc/sudoers.d/00-notifiarr`.
 
@@ -150,3 +144,65 @@ Install optional package(s) for snapshot data collection.
 - **Synology**: `opkg install smartmontools`, but first get Entware:
   - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
   - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+
+## Configure The Client
+
+![Profile Page](./images/profile.png){ width="250" align="right" }
+
+- **This is your after install check list.**
+
+It does not cover everything, but it's the things you should get done first.
+You should definitely check out the stuff above though, a lot of it is important prerequisites.
+
+### Set a password
+
+Set a password, or configure your auth proxy header on the *Trust Profile* page.
+Find this page by clicking your username in the Web UI menu. There's a screenshot
+of it to the left; click that to see a larger version.
+
+### Setup Log Files
+
+Head to the *Settings => Configuration* page and scroll down to *Logging*.
+If you don't see an *Application Log File* (and only a placeholder), then add one,
+and click Save Configuration.
+
+![Logging Configuration](./images/logging.png){ width="400" }
+
+Click the Folder icon to open a server-side file browser.
+You may optionally add Services, HTTP and Debug log files. These are not strictly necessary.
+
+![Starr Page](./images/starr.png){ width="250" align="right" }
+
+### Configure Apps
+
+!!!info "Test Button"
+    Click the Test button while adding instances. Make sure it works. The test button is
+    the green double-check mark button next to the URL.
+
+1. On the Starr Apps pages, configure your apps.
+    1. We recommend adding them all. If you have all the starr apps, add them all.
+    1. All you need is a URL and an API key.
+    1. If you turn on database backup checks (on the website), a username and password is also required.
+1. Add all your download apps too. And Plex, and add Tautulli if you use it.
+    Find these on their respective pages: *Download Apps* and *Media Apps*.
+
+### Health Checks
+
+Set the health check intervals on all your apps if you want notifications when an app goes down.
+See the [Health Checks](./healthChecks.md) page for more information about that.
+
+## Log Files
+
+![Log Files Page](./images/logFiles.png){ width="250" align="right" }
+
+**Log file contents can be viewed in the UI under *Insights => Log Files*.**
+
+These are the default location for application output (logs).
+Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
+
+- Linux: `/var/log/notifiarr/{app,http,services}.log`
+  - Log paths for linux apt/deb installations are hardcoded
+- FreeBSD: `/var/log/syslog` (w/ default syslog)
+- macOS: `~/.notifiarr/Notifiarr.log`
+- Windows: `<home folder>/.notifiarr/Notifiarr.log`
+- Docker: `docker logs Notifiarr` (recommend [setting a log file](#setup-log-files))
