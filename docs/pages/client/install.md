@@ -229,6 +229,8 @@ When you finish here, head on over to the [After Install](./afterInstall.md) pag
     1. Copy and paste the following content.
     1. Replace `YOUR-API-KEY-FROM-NOTIFIARR.COM` with your API key.
     1. **Replace `$USER` with your username.**
+    1. Press `ctrl+x` and then `y` to save the file and close the editor.
+        [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
 
     ```none
     # Systemd service unit for notifiarr.
@@ -273,6 +275,8 @@ Setting up the proxy is optional, but recommended so you can access the client l
 1. Type `cd /home/$USER/.apps/nginx/proxy.d`
 1. Type `nano notifiarr.conf`
 1. Paste the following content without changing it.
+    1. Press `ctrl+x` and then `y` to save the file and close the editor.
+        [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
 
 ```nginx
 location /notifiarr {
