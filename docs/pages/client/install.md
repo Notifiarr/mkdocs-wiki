@@ -243,30 +243,30 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
         1. Replace `YOUR-API-KEY-FROM-NOTIFIARR.COM` with your API key.
         1. **Replace `$USER` with your username.**
         1. Press `ctrl+x` and then `y` to save the file and close the editor.
-            [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
+        [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
 
-        ```none
-        # Systemd service unit for notifiarr.
+    ```ini
+    # Systemd service unit for notifiarr.
 
-        [Unit]
-        Description=notifiarr - Official chat integration client for Notifiarr.com
+    [Unit]
+    Description=notifiarr - Official chat integration client for Notifiarr.com
 
-        [Service]
-        ExecStart=/home/$USER/notifiarr/notifiarr
-        Restart=always
-        RestartSec=10
-        Type=simple
-        WorkingDirectory=/home/$USER/notifiarr
-        Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
-        Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
-        Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
-        Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
-        Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
-        Environment=DN_QUIET=true
+    [Service]
+    ExecStart=/home/$USER/notifiarr/notifiarr
+    Restart=always
+    RestartSec=10
+    Type=simple
+    WorkingDirectory=/home/$USER/notifiarr
+    Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
+    Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
+    Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
+    Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
+    Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
+    Environment=DN_QUIET=true
 
-        [Install]
-        WantedBy=default.target
-        ```
+    [Install]
+    WantedBy=default.target
+    ```
 
     ### Start Client
 
