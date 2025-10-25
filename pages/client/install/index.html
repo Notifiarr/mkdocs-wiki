@@ -3056,38 +3056,36 @@ systemd service unit file to your home folder, enabling it (so it starts when th
 <li>Type <code>mkdir -p /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>cd /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>id</code> to see your username.</li>
-<li>
-<ol>
+<li>Type <code>nano notifiarr.service</code><ol>
 <li>Copy and paste the following content.</li>
 <li>Replace <code>YOUR-API-KEY-FROM-NOTIFIARR.COM</code> with your API key.</li>
 <li><strong>Replace <code>$USER</code> with your username.</strong></li>
 <li>Press <code>ctrl+x</code> and then <code>y</code> to save the file and close the editor.
-    <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">Nano cheatsheet</a>.</li>
+<a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">Nano cheatsheet</a>.</li>
 </ol>
-<p>Type <code>nano notifiarr.service</code></p>
-<div class="highlight"><pre><span></span><code># Systemd service unit for notifiarr.
-
-[Unit]
-Description=notifiarr - Official chat integration client for Notifiarr.com
-
-[Service]
-ExecStart=/home/$USER/notifiarr/notifiarr
-Restart=always
-RestartSec=10
-Type=simple
-WorkingDirectory=/home/$USER/notifiarr
-Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
-Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
-Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
-Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
-Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
-Environment=DN_QUIET=true
-
-[Install]
-WantedBy=default.target
-</code></pre></div>
 </li>
 </ol>
+<div class="highlight"><pre><span></span><code><span class="c1"># Systemd service unit for notifiarr.</span>
+
+<span class="k">[Unit]</span>
+<span class="na">Description</span><span class="o">=</span><span class="s">notifiarr - Official chat integration client for Notifiarr.com</span>
+
+<span class="k">[Service]</span>
+<span class="na">ExecStart</span><span class="o">=</span><span class="s">/home/$USER/notifiarr/notifiarr</span>
+<span class="na">Restart</span><span class="o">=</span><span class="s">always</span>
+<span class="na">RestartSec</span><span class="o">=</span><span class="s">10</span>
+<span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+<span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/home/$USER/notifiarr</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_LOG_FILE=/home/$USER/notifiarr/app.log</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_HTTP_LOG=/home/$USER/notifiarr/http.log</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log</span>
+<span class="na">Environment</span><span class="o">=</span><span class="s">DN_QUIET=true</span>
+
+<span class="k">[Install]</span>
+<span class="na">WantedBy</span><span class="o">=</span><span class="s">default.target</span>
+</code></pre></div>
 <h3 id="start-client">Start Client<a class="headerlink" href="#start-client" title="Permanent link"></a></h3>
 <p>Use these commands to control systemd. Systemd is what launches apps like notifiarr client.
 The <code>stop</code> and <code>restart</code> commands are not listed below, but you can use those too if you need them.</p>
