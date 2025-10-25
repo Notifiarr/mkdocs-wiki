@@ -194,7 +194,7 @@ If they are no longer a member, try their Github.
 !!! warning "Proxmox Users"
     This is community provided. The Notifiarr developers have very little experience with Proxmox.
 
-- [Proxmox Helper script](https://helper-scripts.com/scripts?id=Notifiarr)
+- [Proxmox Helper script](https://community-scripts.github.io/ProxmoxVE/scripts?id=notifiarr)
 
 ## UltraCC Seedbox
 
