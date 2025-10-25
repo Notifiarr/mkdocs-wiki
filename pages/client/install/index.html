@@ -3021,10 +3021,19 @@ If they are no longer a member, try their Github.</p>
 <li><a href="https://community-scripts.github.io/ProxmoxVE/scripts?id=notifiarr">Proxmox Helper script</a></li>
 </ul>
 <h2 id="ultracc-seedbox">UltraCC Seedbox<a class="headerlink" href="#ultracc-seedbox" title="Permanent link"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">UltraCC Seedbox Users</p>
-<p>This is community provided. The Notifiarr developers have very little experience with UltraCC.</p>
-</div>
+<p>You can use the <a href="https://github.com/Notifiarr/notifiarr/blob/main/userscripts/install-local.sh">install-local.sh</a>
+script to install the Notifiarr client in your home folder on Linux. This works for seed boxes where you don't have root.</p>
+<p>Have your Notifiarr API key ready and run this while SSH'd into your seed box.</p>
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>-sSL<span class="w"> </span>https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install-local.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
+<ul>
+<li><strong>Now you should be able to browse to <code>https://your-ultraseedbox-url/notifiarr</code></strong></li>
+<li>Head to the <a href="../afterInstall/">After Install</a> page for next steps.</li>
+</ul>
+<details class="abstract">
+<summary>Manual installation instructions.</summary>
+<p><!-- markdownlint-disable MD046 -->
+<strong>These are the instructions we had before the script above was created. Recommend using the script.</strong></p>
 <h3 id="install-client">Install Client<a class="headerlink" href="#install-client" title="Permanent link"></a></h3>
 <p>The outcome of these steps is that you make a new folder named <code>notifiarr</code> in your home folder,
 and it contains the <code>notifiarr</code> binary and <code>notifiarr.conf</code> config file. We're also adding a user-level
@@ -3048,7 +3057,6 @@ systemd service unit file to your home folder, enabling it (so it starts when th
 <li>Type <code>cd /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>id</code> to see your username.</li>
 <li>
-<p>Type <code>nano notifiarr.service</code></p>
 <ol>
 <li>Copy and paste the following content.</li>
 <li>Replace <code>YOUR-API-KEY-FROM-NOTIFIARR.COM</code> with your API key.</li>
@@ -3056,6 +3064,7 @@ systemd service unit file to your home folder, enabling it (so it starts when th
 <li>Press <code>ctrl+x</code> and then <code>y</code> to save the file and close the editor.
     <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">Nano cheatsheet</a>.</li>
 </ol>
+<p>Type <code>nano notifiarr.service</code></p>
 <div class="highlight"><pre><span></span><code># Systemd service unit for notifiarr.
 
 [Unit]
@@ -3124,6 +3133,7 @@ The <code>stop</code> and <code>restart</code> commands are not listed below, bu
 <li>Type <code>systemctl --user restart nginx</code></li>
 <li>Now you should be able to browse to <code>https://your-ultraseedbox-url/notifiarr</code></li>
 </ol>
+</details>
 
 
 
