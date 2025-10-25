@@ -232,7 +232,7 @@ RestartSec=10
 Type=simple
 WorkingDirectory=/home/$USER/notifiarr
 Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
-Environment=DN_LOG_FILE/home/$USER/notifiarr/app.log
+Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
 Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
 Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
 Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
