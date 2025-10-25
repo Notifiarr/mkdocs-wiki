@@ -206,14 +206,18 @@ If they are no longer a member, try their Github.
 1. Type `cd notifiarr`
 1. On [Github](https://github.com/Notifiarr/notifiarr/releases) find the latest release asset labelled `notifiarr.amd64.linux.gz`,
     right click on that and click copy link.
-1. Back on your terminal type `wget '<paste link>'`
-1. Type `gzip -d notifiarr.*`
-1. Type `mv notifiarr.* notifiarr`
-1. Type `chmod +x notifiarr`
-1. In the notifiarr folder create notifiarr.conf from this: [Github page](https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example)
+1. Download it; Back on your terminal type `wget '<paste link>'`
+1. Decompress it; Type `gzip -d notifiarr.amd64.linux.gz`
+1. Rename it; Type `mv notifiarr.amd64.linux notifiarr`
+1. Make it executable; Type `chmod +x notifiarr`
+1. Download config file; Type `wget -O notifiarr.conf https://raw.githubusercontent.com/Notifiarr/notifiarr/refs/heads/main/examples/notifiarr.conf.example`
+1. Type `mkdir -p cd /home/$USER/.config/systemd/user`
 1. Type `cd /home/$USER/.config/systemd/user`
 1. Type `nano notifiarr.service`
-1. Paste the below
+1. Type `id` to see your username.
+1. Copy and paste the following content.
+    1. Replace `YOUR-API-KEY-FROM-NOTIFIARR.COM` with your API key.
+    1. **Replace `$USER` with your username.**
 
 ```none
 # Systemd service unit for notifiarr.
@@ -222,11 +226,12 @@ If they are no longer a member, try their Github.
 Description=notifiarr - Official chat integration client for Notifiarr.com
 
 [Service]
-ExecStart=/home/$USER/notifiarr/notifiarr \$DAEMON_OPTS
+ExecStart=/home/$USER/notifiarr/notifiarr
 Restart=always
 RestartSec=10
 Type=simple
 WorkingDirectory=/home/$USER/notifiarr
+Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
 Environment=DN_LOG_FILE/home/$USER/notifiarr/app.log
 Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
 Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
@@ -240,12 +245,13 @@ WantedBy=default.target
 1. Type `systemctl --user enable notifiarr`
 1. Type `systemctl --user start notifiarr`
 1. Type `systemctl --user status notifiarr` to check if there are any errors.
+1. Type `systemctl --user daemon-reload` if you make changes to the above file (to re-load it).
 1. On your browser go to `http://your-ultraseedbox-url:5454`
-1. Log into your Notifarr client and change the base url to /notifiarr and save changes
+1. Log into your Notifarr client and change the base url to `/notifiarr` and save changes
 1. Go back to your ssh console
 1. Type `cd /home/$USER/.apps/nginx/proxy.d`
 1. Type `nano notifiarr.conf`
-1. Paste the below
+1. Paste the following content without changing it.
 
 ```nginx
 location /notifiarr {
@@ -269,3 +275,4 @@ location /notifiarr/api {
 
 1. Type `systemctl --user restart nginx`
 1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+1. Head on over to the [After Install](./afterInstall.md) page.
