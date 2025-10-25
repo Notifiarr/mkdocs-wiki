@@ -3025,26 +3025,34 @@ If they are no longer a member, try their Github.</p>
 <p class="admonition-title">UltraCC Seedbox Users</p>
 <p>This is community provided. The Notifiarr developers have very little experience with UltraCC.</p>
 </div>
+<h3 id="install-client">Install Client<a class="headerlink" href="#install-client" title="Permanent link"></a></h3>
+<p>The outcome of these steps is that you make a new folder named <code>notifiarr</code> in your home folder,
+and it contains the <code>notifiarr</code> binary and <code>notifiarr.conf</code> config file. We're also adding a user-level
+systemd service unit file to your home folder, enabling it (so it starts when the server boots).</p>
+<p>When you finish here, head on over to the <a href="../afterInstall/">After Install</a> page for next steps.</p>
 <ol>
-<li>SSH into your Ultra Seedbox</li>
-<li>On your landing directory type <code>mkdir notifiarr</code></li>
+<li>SSH into your Ultra Seedbox.</li>
+<li>In your home folder type <code>mkdir notifiarr</code></li>
 <li>Type <code>cd notifiarr</code></li>
-<li>On <a href="https://github.com/Notifiarr/notifiarr/releases">Github</a> find the latest release asset labelled <code>notifiarr.amd64.linux.gz</code>,
+<li>On <a href="https://github.com/Notifiarr/notifiarr/releases">Github</a> find the latest release asset labeled <code>notifiarr.amd64.linux.gz</code>,
     right click on that and click copy link.</li>
 <li>Download it; Back on your terminal type <code>wget '&lt;paste link&gt;'</code></li>
 <li>Decompress it; Type <code>gzip -d notifiarr.amd64.linux.gz</code></li>
 <li>Rename it; Type <code>mv notifiarr.amd64.linux notifiarr</code></li>
 <li>Make it executable; Type <code>chmod +x notifiarr</code></li>
 <li>Download config file; Type <code>wget -O notifiarr.conf https://raw.githubusercontent.com/Notifiarr/notifiarr/refs/heads/main/examples/notifiarr.conf.example</code></li>
-<li>Type <code>mkdir -p cd /home/$USER/.config/systemd/user</code></li>
+</ol>
+<h3 id="install-service-unit">Install Service Unit<a class="headerlink" href="#install-service-unit" title="Permanent link"></a></h3>
+<ol>
+<li>Type <code>mkdir -p /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>cd /home/$USER/.config/systemd/user</code></li>
-<li>Type <code>nano notifiarr.service</code></li>
 <li>Type <code>id</code> to see your username.</li>
-<li>Copy and paste the following content.<ol>
+<li>
+<p>Type <code>nano notifiarr.service</code></p>
+<ol>
+<li>Copy and paste the following content.</li>
 <li>Replace <code>YOUR-API-KEY-FROM-NOTIFIARR.COM</code> with your API key.</li>
 <li><strong>Replace <code>$USER</code> with your username.</strong></li>
-</ol>
-</li>
 </ol>
 <div class="highlight"><pre><span></span><code># Systemd service unit for notifiarr.
 
@@ -3067,12 +3075,21 @@ Environment=DN_QUIET=true
 [Install]
 WantedBy=default.target
 </code></pre></div>
+</li>
+</ol>
+<h3 id="start-client">Start Client<a class="headerlink" href="#start-client" title="Permanent link"></a></h3>
+<p>Use these commands to control systemd. Systemd is what launches apps like notifiarr client.
+The <code>stop</code> and <code>restart</code> commands are not listed below, but you can use those too if you need them.</p>
 <ol>
-<li>Type <code>systemctl --user enable notifiarr</code></li>
-<li>Type <code>systemctl --user start notifiarr</code></li>
+<li>Type <code>systemctl --user enable notifiarr</code> to make notifiarr auto-start.</li>
+<li>Type <code>systemctl --user start notifiarr</code> to start notifiarr now.</li>
 <li>Type <code>systemctl --user status notifiarr</code> to check if there are any errors.</li>
 <li>Type <code>systemctl --user daemon-reload</code> if you make changes to the above file (to re-load it).</li>
 <li>On your browser go to <code>http://your-ultraseedbox-url:5454</code></li>
+</ol>
+<h3 id="configure-proxy">Configure Proxy<a class="headerlink" href="#configure-proxy" title="Permanent link"></a></h3>
+<p>Setting up the proxy is optional, but recommended so you can access the client like your other apps.</p>
+<ol>
 <li>Log into your Notifarr client and change the base url to <code>/notifiarr</code> and save changes</li>
 <li>Go back to your ssh console</li>
 <li>Type <code>cd /home/$USER/.apps/nginx/proxy.d</code></li>
@@ -3100,7 +3117,6 @@ WantedBy=default.target
 <ol>
 <li>Type <code>systemctl --user restart nginx</code></li>
 <li>Now you should be able to browse to <code>https://your-ultraseedbox-url/notifiarr</code></li>
-<li>Head on over to the <a href="../afterInstall/">After Install</a> page.</li>
 </ol>
 
 
