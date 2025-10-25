@@ -198,105 +198,118 @@ If they are no longer a member, try their Github.
 
 ## UltraCC Seedbox
 
-!!! warning "UltraCC Seedbox Users"
-    This is community provided. The Notifiarr developers have very little experience with UltraCC.
+You can use the [install-local.sh](https://github.com/Notifiarr/notifiarr/blob/main/userscripts/install-local.sh)
+script to install the Notifiarr client in your home folder on Linux. This works for seed boxes where you don't have root.
 
-### Install Client
+Have your Notifiarr API key ready and run this while SSH'd into your seed box.
 
-The outcome of these steps is that you make a new folder named `notifiarr` in your home folder,
-and it contains the `notifiarr` binary and `notifiarr.conf` config file. We're also adding a user-level
-systemd service unit file to your home folder, enabling it (so it starts when the server boots).
-
-When you finish here, head on over to the [After Install](./afterInstall.md) page for next steps.
-
-1. SSH into your Ultra Seedbox.
-1. In your home folder type `mkdir notifiarr`
-1. Type `cd notifiarr`
-1. On [Github](https://github.com/Notifiarr/notifiarr/releases) find the latest release asset labeled `notifiarr.amd64.linux.gz`,
-    right click on that and click copy link.
-1. Download it; Back on your terminal type `wget '<paste link>'`
-1. Decompress it; Type `gzip -d notifiarr.amd64.linux.gz`
-1. Rename it; Type `mv notifiarr.amd64.linux notifiarr`
-1. Make it executable; Type `chmod +x notifiarr`
-1. Download config file; Type `wget -O notifiarr.conf https://raw.githubusercontent.com/Notifiarr/notifiarr/refs/heads/main/examples/notifiarr.conf.example`
-
-### Install Service Unit
-
-1. Type `mkdir -p /home/$USER/.config/systemd/user`
-1. Type `cd /home/$USER/.config/systemd/user`
-1. Type `id` to see your username.
-1. Type `nano notifiarr.service`
-    1. Copy and paste the following content.
-    1. Replace `YOUR-API-KEY-FROM-NOTIFIARR.COM` with your API key.
-    1. **Replace `$USER` with your username.**
-    1. Press `ctrl+x` and then `y` to save the file and close the editor.
-        [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
-
-    ```none
-    # Systemd service unit for notifiarr.
-
-    [Unit]
-    Description=notifiarr - Official chat integration client for Notifiarr.com
-
-    [Service]
-    ExecStart=/home/$USER/notifiarr/notifiarr
-    Restart=always
-    RestartSec=10
-    Type=simple
-    WorkingDirectory=/home/$USER/notifiarr
-    Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
-    Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
-    Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
-    Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
-    Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
-    Environment=DN_QUIET=true
-
-    [Install]
-    WantedBy=default.target
-    ```
-
-### Start Client
-
-Use these commands to control systemd. Systemd is what launches apps like notifiarr client.
-The `stop` and `restart` commands are not listed below, but you can use those too if you need them.
-
-1. Type `systemctl --user enable notifiarr` to make notifiarr auto-start.
-1. Type `systemctl --user start notifiarr` to start notifiarr now.
-1. Type `systemctl --user status notifiarr` to check if there are any errors.
-1. Type `systemctl --user daemon-reload` if you make changes to the above file (to re-load it).
-1. On your browser go to `http://your-ultraseedbox-url:5454`
-
-### Configure Proxy
-
-Setting up the proxy is optional, but recommended so you can access the client like your other apps.
-
-1. Log into your Notifarr client and change the base url to `/notifiarr` and save changes
-1. Go back to your ssh console
-1. Type `cd /home/$USER/.apps/nginx/proxy.d`
-1. Type `nano notifiarr.conf`
-1. Paste the following content without changing it.
-    1. Press `ctrl+x` and then `y` to save the file and close the editor.
-        [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
-
-```nginx
-location /notifiarr {
-    # <put proxy auth directives here> Optional:
-    # proxy_set_header X-WebAuth-User $auth_user;
-    proxy_set_header X-Forwarded-For $remote_addr;
-    set $notifiarr http://127.0.0.1:5454;
-    proxy_pass $notifiarr$request_uri;
-    proxy_http_version 1.1;
-    proxy_set_header Upgrade $http_upgrade;
-    proxy_set_header Connection $http_connection;
-    proxy_set_header Host $host;
-}
-# Notifiarr Client
-location /notifiarr/api {
-    proxy_set_header X-Forwarded-For $remote_addr;
-    set $notifiarr http://127.0.0.1:5454;
-    proxy_pass $notifiarr$request_uri;
-}
+```shell
+curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install-local.sh | bash
 ```
 
-1. Type `systemctl --user restart nginx`
-1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+- **Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`**
+- Head to the [After Install](./afterInstall.md) page for next steps.
+
+??? abstract "Manual installation instructions."
+    <!-- markdownlint-disable MD046 -->
+    **These are the instructions we had before the script above was created. Recommend using the script.**
+
+    ### Install Client
+
+    The outcome of these steps is that you make a new folder named `notifiarr` in your home folder,
+    and it contains the `notifiarr` binary and `notifiarr.conf` config file. We're also adding a user-level
+    systemd service unit file to your home folder, enabling it (so it starts when the server boots).
+
+    When you finish here, head on over to the [After Install](./afterInstall.md) page for next steps.
+
+    1. SSH into your Ultra Seedbox.
+    1. In your home folder type `mkdir notifiarr`
+    1. Type `cd notifiarr`
+    1. On [Github](https://github.com/Notifiarr/notifiarr/releases) find the latest release asset labeled `notifiarr.amd64.linux.gz`,
+        right click on that and click copy link.
+    1. Download it; Back on your terminal type `wget '<paste link>'`
+    1. Decompress it; Type `gzip -d notifiarr.amd64.linux.gz`
+    1. Rename it; Type `mv notifiarr.amd64.linux notifiarr`
+    1. Make it executable; Type `chmod +x notifiarr`
+    1. Download config file; Type `wget -O notifiarr.conf https://raw.githubusercontent.com/Notifiarr/notifiarr/refs/heads/main/examples/notifiarr.conf.example`
+
+    ### Install Service Unit
+
+    1. Type `mkdir -p /home/$USER/.config/systemd/user`
+    1. Type `cd /home/$USER/.config/systemd/user`
+    1. Type `id` to see your username.
+    1. Type `nano notifiarr.service`
+        1. Copy and paste the following content.
+        1. Replace `YOUR-API-KEY-FROM-NOTIFIARR.COM` with your API key.
+        1. **Replace `$USER` with your username.**
+        1. Press `ctrl+x` and then `y` to save the file and close the editor.
+            [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
+
+        ```none
+        # Systemd service unit for notifiarr.
+
+        [Unit]
+        Description=notifiarr - Official chat integration client for Notifiarr.com
+
+        [Service]
+        ExecStart=/home/$USER/notifiarr/notifiarr
+        Restart=always
+        RestartSec=10
+        Type=simple
+        WorkingDirectory=/home/$USER/notifiarr
+        Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
+        Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
+        Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
+        Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
+        Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
+        Environment=DN_QUIET=true
+
+        [Install]
+        WantedBy=default.target
+        ```
+
+    ### Start Client
+
+    Use these commands to control systemd. Systemd is what launches apps like notifiarr client.
+    The `stop` and `restart` commands are not listed below, but you can use those too if you need them.
+
+    1. Type `systemctl --user enable notifiarr` to make notifiarr auto-start.
+    1. Type `systemctl --user start notifiarr` to start notifiarr now.
+    1. Type `systemctl --user status notifiarr` to check if there are any errors.
+    1. Type `systemctl --user daemon-reload` if you make changes to the above file (to re-load it).
+    1. On your browser go to `http://your-ultraseedbox-url:5454`
+
+    ### Configure Proxy
+
+    Setting up the proxy is optional, but recommended so you can access the client like your other apps.
+
+    1. Log into your Notifarr client and change the base url to `/notifiarr` and save changes
+    1. Go back to your ssh console
+    1. Type `cd /home/$USER/.apps/nginx/proxy.d`
+    1. Type `nano notifiarr.conf`
+    1. Paste the following content without changing it.
+        1. Press `ctrl+x` and then `y` to save the file and close the editor.
+            [Nano cheatsheet](https://www.nano-editor.org/dist/latest/cheatsheet.html).
+
+    ```nginx
+    location /notifiarr {
+        # <put proxy auth directives here> Optional:
+        # proxy_set_header X-WebAuth-User $auth_user;
+        proxy_set_header X-Forwarded-For $remote_addr;
+        set $notifiarr http://127.0.0.1:5454;
+        proxy_pass $notifiarr$request_uri;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection $http_connection;
+        proxy_set_header Host $host;
+    }
+    # Notifiarr Client
+    location /notifiarr/api {
+        proxy_set_header X-Forwarded-For $remote_addr;
+        set $notifiarr http://127.0.0.1:5454;
+        proxy_pass $notifiarr$request_uri;
+    }
+    ```
+
+    1. Type `systemctl --user restart nginx`
+    1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
