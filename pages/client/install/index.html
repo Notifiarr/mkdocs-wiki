@@ -3053,6 +3053,8 @@ systemd service unit file to your home folder, enabling it (so it starts when th
 <li>Copy and paste the following content.</li>
 <li>Replace <code>YOUR-API-KEY-FROM-NOTIFIARR.COM</code> with your API key.</li>
 <li><strong>Replace <code>$USER</code> with your username.</strong></li>
+<li>Press <code>ctrl+x</code> and then <code>y</code> to save the file and close the editor.
+    <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">Nano cheatsheet</a>.</li>
 </ol>
 <div class="highlight"><pre><span></span><code># Systemd service unit for notifiarr.
 
@@ -3094,7 +3096,11 @@ The <code>stop</code> and <code>restart</code> commands are not listed below, bu
 <li>Go back to your ssh console</li>
 <li>Type <code>cd /home/$USER/.apps/nginx/proxy.d</code></li>
 <li>Type <code>nano notifiarr.conf</code></li>
-<li>Paste the following content without changing it.</li>
+<li>Paste the following content without changing it.<ol>
+<li>Press <code>ctrl+x</code> and then <code>y</code> to save the file and close the editor.
+    <a href="https://www.nano-editor.org/dist/latest/cheatsheet.html">Nano cheatsheet</a>.</li>
+</ol>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/notifiarr</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># &lt;put proxy auth directives here&gt; Optional:</span>
