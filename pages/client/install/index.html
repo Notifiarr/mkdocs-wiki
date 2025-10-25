@@ -3031,14 +3031,20 @@ If they are no longer a member, try their Github.</p>
 <li>Type <code>cd notifiarr</code></li>
 <li>On <a href="https://github.com/Notifiarr/notifiarr/releases">Github</a> find the latest release asset labelled <code>notifiarr.amd64.linux.gz</code>,
     right click on that and click copy link.</li>
-<li>Back on your terminal type <code>wget '&lt;paste link&gt;'</code></li>
-<li>Type <code>gzip -d notifiarr.*</code></li>
-<li>Type <code>mv notifiarr.* notifiarr</code></li>
-<li>Type <code>chmod +x notifiarr</code></li>
-<li>In the notifiarr folder create notifiarr.conf from this: <a href="https://github.com/Notifiarr/notifiarr/blob/main/examples/notifiarr.conf.example">Github page</a></li>
+<li>Download it; Back on your terminal type <code>wget '&lt;paste link&gt;'</code></li>
+<li>Decompress it; Type <code>gzip -d notifiarr.amd64.linux.gz</code></li>
+<li>Rename it; Type <code>mv notifiarr.amd64.linux notifiarr</code></li>
+<li>Make it executable; Type <code>chmod +x notifiarr</code></li>
+<li>Download config file; Type <code>wget -O notifiarr.conf https://raw.githubusercontent.com/Notifiarr/notifiarr/refs/heads/main/examples/notifiarr.conf.example</code></li>
+<li>Type <code>mkdir -p cd /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>cd /home/$USER/.config/systemd/user</code></li>
 <li>Type <code>nano notifiarr.service</code></li>
-<li>Paste the below</li>
+<li>Type <code>id</code> to see your username.</li>
+<li>Copy and paste the following content.<ol>
+<li>Replace <code>YOUR-API-KEY-FROM-NOTIFIARR.COM</code> with your API key.</li>
+<li><strong>Replace <code>$USER</code> with your username.</strong></li>
+</ol>
+</li>
 </ol>
 <div class="highlight"><pre><span></span><code># Systemd service unit for notifiarr.
 
@@ -3046,11 +3052,12 @@ If they are no longer a member, try their Github.</p>
 Description=notifiarr - Official chat integration client for Notifiarr.com
 
 [Service]
-ExecStart=/home/$USER/notifiarr/notifiarr \$DAEMON_OPTS
+ExecStart=/home/$USER/notifiarr/notifiarr
 Restart=always
 RestartSec=10
 Type=simple
 WorkingDirectory=/home/$USER/notifiarr
+Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
 Environment=DN_LOG_FILE/home/$USER/notifiarr/app.log
 Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
 Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
@@ -3064,12 +3071,13 @@ WantedBy=default.target
 <li>Type <code>systemctl --user enable notifiarr</code></li>
 <li>Type <code>systemctl --user start notifiarr</code></li>
 <li>Type <code>systemctl --user status notifiarr</code> to check if there are any errors.</li>
+<li>Type <code>systemctl --user daemon-reload</code> if you make changes to the above file (to re-load it).</li>
 <li>On your browser go to <code>http://your-ultraseedbox-url:5454</code></li>
-<li>Log into your Notifarr client and change the base url to /notifiarr and save changes</li>
+<li>Log into your Notifarr client and change the base url to <code>/notifiarr</code> and save changes</li>
 <li>Go back to your ssh console</li>
 <li>Type <code>cd /home/$USER/.apps/nginx/proxy.d</code></li>
 <li>Type <code>nano notifiarr.conf</code></li>
-<li>Paste the below</li>
+<li>Paste the following content without changing it.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="k">location</span><span class="w"> </span><span class="s">/notifiarr</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1"># &lt;put proxy auth directives here&gt; Optional:</span>
@@ -3092,6 +3100,7 @@ WantedBy=default.target
 <ol>
 <li>Type <code>systemctl --user restart nginx</code></li>
 <li>Now you should be able to browse to <code>https://your-ultraseedbox-url/notifiarr</code></li>
+<li>Head on over to the <a href="../afterInstall/">After Install</a> page.</li>
 </ol>
 
 
