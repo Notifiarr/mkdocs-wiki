@@ -12,7 +12,7 @@
 ## Features
 
 | Feature | Patron | Subscriber |
-|---|---|---|
+| --- | --- | --- |
 | GUI | ✅ | ✅ |
 | Multiple instances | ✅ | ✅ |
 | <center><b>Formats</b></center> | | |
@@ -48,6 +48,8 @@
   - Note that `Time Out` for the Starr Apps **cannot** be set to `Disabled` for the app to be enabled
   - Note that a `Name` value **is required** for the Starr Apps you wish to sync
 
+## Website Setup
+
 ### Integration Card
 
 ![trigger-channels.png](../../assets/screenshots/integrations/trash/trigger-channels.png)
@@ -55,125 +57,123 @@
 1. `CFs/Scores` - The amount of CF's and scores you have synced.
 2. `Channel` - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
 
-## Getting Started
+### Client Settings
 
-Click the **cog icon** in the card header to open the configuration options for TRaSH. To get started, you will need to go to Help → How-to.
-
-![how-to.png](../../assets/screenshots/integrations/trash/how-to.png.png)
-
-## Client Settings
-
-here you can change the interval for your profile's sync.
+This is where you set the interval at which you want the system to compare your current starr settings to the TRaSH guide. If any changes are found on the guide when this interval runs then a sync will trigger and any changes needed will be applied.
 
 ![client-sync.png](../../assets/screenshots/integrations/trash/client-sync.png)
 
-### Notifications
+##### Getting Started
 
-Here we can individually select what we would want to be notified of. For this example we selected all available triggers.
+The layout is pretty simple with a row of tabs for "actions" and a row of tabs for "instances". Use the top row to navigate between the different settings and the second row to apply things to the desired instance. The toggle to the right is for "advanced" items that most will not need to utilize often (or at all) if you simply want to follow the guide profiles.
 
-![notifications.png](../../assets/screenshots/integrations/trash/notifications.png.png)
+### Help
+
+Click the **cog icon** in the card header to open the configuration options for TRaSH. To get started, take a look at the "Help" tab, it will only take a few seconds to read over and has some helpful information
+
+![help.png](../../assets/screenshots/integrations/trash/help.png)
 
 ### Profiles
 
-here we can manage existing profiles or add new profiles/link predefined TRaSH profiles. For this guide we are going to add the TRaSH **HD Bluray + WEB** profile
+Here we can manage existing profiles or add new profiles
 
-![profiles-add-new.png](../../assets/screenshots/integrations/trash/profiles-add-new.png)
+![profiles.png](../../assets/screenshots/integrations/trash/profiles.png)
 
-!!! info
-    After selecting the profile as shown above you will be directed to the profile settings.
+1. Starr instances
+1. Sync on/off for existing profiles added
+1. Tools for existing profile
+    - Edit: Make changes to how the profile is synced
+    - Clone: Copy the profile as is to another profile or instance
+    - Delete: Delete the sync (THIS DOES NOT DELETE THE PROFILE IN THE STARR APP)
+1. New profile sync
+1. Groups of pre-made profiles
 
-![profiles-1.png](../../assets/screenshots/integrations/trash/profiles-1.png)
+![profiles-add.png](../../assets/screenshots/integrations/trash/profiles-add.png)
 
-1. `Sync` - Enable this to sync your profile.
-2. `Starr instance profile` - Either create a new profile or select one of the TRaSH profiles available.
-3. `Profile name` - Here you can set your profile name **This needs to be unique**.
+1. New profile to sync
+    - Click the info icons for what this profile does
+1. Profile settings based on what you want
+    - Click the help icons for assistance
 
-!!! Note
-    If you plan to use TRaSH as default you can stop here and save your settings. Below we will got into customizing the profile, quality, and CF's.
-
-!!! warning SAVE PROFILE SYNC
-    **MAKE SURE TO SAVE YOUR PROFILE SYNC, THIS IS DIFFERENT FROM SAVE CLIENT SETTINGS**
-
-### Profile Customization
-
-!!! info
-    Check-box means you want to sync TRaSH values and cannot change them in your ARR's as they will revert back after each sync is made. Uncheck any that you want to customize, And do so inside of your ARR's.
-
-![profile-customization-1.png](../../assets/screenshots/integrations/trash/profile-customization-1.png)
-
-1. `Language` - If you want to sync your preferred language, **Disable this if you plan to use something other then the TRaSH default.
-2. `Upgrades allowed` - Enable this if you plan to allow upgrades in your profile.
-3. `Minimum score` - Enable this to set the minimum download score to 0.
-4. `Minimum upgrade score` - enable this to set the minimum score increase to allow a upgrade.
-5. `Cutoff score` - Enable this to set the cutoff score. **default set 10000**
-
-### Quality Settings
-
-!!! warning
-    If you plan on changing the qualities in the profile, you will need to enable the allow custom quality order/groupings, if this is not enabled any changes made to the quality grouping will be reverted after each sync.
-
-![quality.png](../../assets/screenshots/integrations/trash/quality.png)
-
-1. `Cutoff quality` - Cutoff quality is the quality that you want your starr instance to stop upgrading at. `Bluray-1080p`
-2. `Qualities` - You can choose to either match the TRaSH quality groups, or you can set this to allow custom set groups. For example we want to use the TRaSH `HD Bluray + WEB` profile but we don't want to include `720p`.
-
-### Custom Formats "CF"
-
-![custom-formats-1.png](../../assets/screenshots/integrations/trash/custom-formats-1.png)
-
-1. `Add` - You can choose to either automatically add new formats, add missing formats, or add none.
-2. `Remove` - You can choose to remove custom scores on each sync, or if you want to set your own scores you would want to `allow custom scores from formats assigned to this profile`. If your planning to set scores different then what TRaSH has then you would want to set this to `allow`.
-
-3. `Groups` - This is where you can select each group that you want in your profile sync, along with the available CF's within that group.
-
-### Formats
+### <span style="color:orange;">Formats</span>
 
 !!! info
-    Here you will find all of the available TRaSH guide formats. You can find more info on these at [TRaSH Guides](https://trash-guides.info/)
+    This tab only shows when the toggle is enabled. If you want to follow the guides based on their profiles you likely do not need to make changes here. If you want to add more formats that are not part of a profile you have in sync, make sure the profile setting for "Remove" is set to allow custom so the sync does not remove it.
 
-![formats-1.png](../../assets/screenshots/integrations/trash/formats-1.png)
+![formats-tab.png](../../assets/screenshots/integrations/trash/formats-tab.png)
 
-1. `Sync TRaSH CF names` - If you want to sync the names set for the TRaSH CFs.
-2. `Interactive flowchart` - Useful interactive flow charts for TRaSH profiles.
+1. Filter: You can limit what you see on the page if you know the profile or format group you are working with
+1. Format: This is the given format and what group it belongs to
+1. Sync: Should this format be added to the instance
+1. Times: This is the time when the format was added to the guide and the last time it was modified
+1. Scores: Pick which profile you want to sync this format score to
+1. Save: After making the changes you want, click the save changes button
 
-### Scores
+### <span style="color:orange;">Scores</span>
 
-Here you can setup custom scores to your liking, and choose to sync them.
+!!! info
+    This tab only shows when the toggle is enabled. If you want to follow the guides based on their profiles you likely do not need to make changes here. If you want to add more formats that are not part of a profile you have in sync, make sure the profile setting for "Remove" is set to allow custom so the sync does not remove it.
 
-![scores-1.png](../../assets/screenshots/integrations/trash/scores-1.png)
+![scores-tab.png](../../assets/screenshots/integrations/trash/scores-tab.png)
 
-1. `Filter` - Filter between witch profile you're editing/looking at.
-2. `Multiplier` - (multiplier * TRaSH = your score)
-3. `Starr score/Custom` - Here you can set personal scores while still keeping your CF's in sync.
-4. `Sync` - Check-box to enable sync.
+1. Filter: You can limit what you see on the page if you know the profile you are working with
+1. Format: This is the given format to make score adjustments to
+1. Profile: Which profile you want to apply the score changes to
+1. Multiplier: Fine tune the scores for your setup while still keeping the CF in sync (Multiplier * Trash = Yours)
+1. Custom: Set personal scores for your setup while still keeping the CF in sync
+1. Sync: Should this format score be added to the profile
+1. Save: After making the changes you want, click the save changes button
 
-## Quality
+### Quality
 
 Here you can edit quality names within a specific group and choose to sync them to your starr instance.
 
-![quality-1.png](../../assets/screenshots/integrations/trash/quality-1.png)
+![quality-tab.png](../../assets/screenshots/integrations/trash/quality-tab.png)
 
-1. `Definition group`- Here you can choose the starr profile, that you plan to edit or change.
-2. `Rename Field` - This is where you can customize the name of a quality.
-3. `Sync` - Check-box to enable sync.
+1. Definition group: Preset quality value groups
+1. Sync: Decide which values to keep in sync
+1. Save: After making the changes you want, click the save changes button
 
 ### Naming
 
 Here you can choose a default TRaSH naming scheme for your media. There are recommended presets for most applications used today.
 
-![naming-1.png](../../assets/screenshots/integrations/trash/naming-1.png)
+![naming-tab.png](../../assets/screenshots/integrations/trash/naming-tab.png)
 
-### Delete Formats
+After making the changes you want, click the save changes button
 
-![formats-1.png](../../assets/screenshots/integrations/trash/delete-formats.png)
+### Settings
 
-1. `Fix Map` - This will open the mapping tool options.
-2. `Enable sync` - This will re-enable all the CF toggles, this is useful if you want to change the selected CF's.
-3. `Enable sync + scores` - This will re-enable all the CF toggles, and scores. This is useful if you want to change CF's and scores.
-4. `Unlink starr` - This will unlink your starr id's from the map. This is useful if your moving your starr install to a different server or if your changing databases.
-5. `Relink starr` - This will attempt to re-link your starr instance id's and CF's to the map.
-6. `Delete map` - This will delete all of your sync settings. Useful for starting fresh.
-7. `Delete Selected CFs` - This will delete all of the selected CF's in your profile.
-8. `Delete Selected CFs & Map` - This will delete all of your CF's and the profile mapping.
-9. `Fresh Start CFs` - This will delete all the formats but leave the map so a sync would put everything back that is in sync. This is useful to clean things up without losing your sync settings.
-10. `Fresh Start All` - This would delete all CF's/scores/etc. Only do this if you want to nuke everything and start over.
+![settings-tab.png](../../assets/screenshots/integrations/trash/settings-tab.png)
+
+1. The last time a sync was ran that checked for changes (triggered by a change in the guide or a manual sync)
+1. Usually these will want to be enabled to keep the format names etc. matching the guides
+1. Some areas have a dialog that will popup with the status of the changes, when this is on that popup will auto close for you once completed
+1. Decide which notifications you want for which sync options
+
+### <span style="color:orange;">Tools</span>
+
+!!! info
+    This tab only shows when the toggle is enabled
+
+This section has "one off" actions that can be applied to an instance but really isnt needed very often if ever. Each tool has a description of what it will do, we suggest not using them unless you have talked with us and that is where we send you to fix the given problem.
+
+![tools-tab.png](../../assets/screenshots/integrations/trash/tools-tab.png)
+
+### <span style="color:orange;">Guides</span>
+
+!!! info
+    This tab only shows when the toggle is enabled
+
+This section is not important in terms of syncing but contains all the formats from the guides in a readable/searchable table
+
+![guides-tab.png](../../assets/screenshots/integrations/trash/guides-tab.png)
+
+### Community
+
+!!! warning
+    This section is still under development and only available on nightly. It is complete to the point of syncing the selected community formats.
+
+### Syncing
+
+After you have made all the changes you want to make, click the `Sync` button at the top right. This will trigger a client reload to fetch any new settings it needs and then tell the client to check for changes and apply them. It will bypass any pre-checks such as guide changes or intervals.
