@@ -71,45 +71,67 @@ service notifiarr start
 1. Use the menu bar icon to access the WebUI.
 1. Head on over to [After Install](afterInstall.md).
 
-## Windows Installation
+## Windows
 
-### Directory Structure
+!!! info
+Suggested location and structure based on experience with permissions.
 
-Create the following in 
+### Desired Outcome
 
-`C:\ProgramData\notifiarr\`:
+- `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
+- `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
+- `C:\ProgramData\notifiarr\logs` - Folder for log files.
 
-```none
-notifiarr.amd64.exe
-notifiarr.conf
-logs\
-```
+### Create the folders
+
+1. Open C:\ProgramData and create a folder `notifiarr`
+1. Create a new folder named `logs`, so you now have `C:\ProgramData\notifiarr\logs`
+- When you add the log paths in the client UI (later steps), make sure you point them to a file such as:
+  - `C:\ProgramData\notifiarr\logs\app.log`
+  - `C:\ProgramData\notifiarr\logs\debug.log`
+  - `C:\ProgramData\notifiarr\logs\http.log`
 
 ### New Install
 
-1. Download `notifiarr.amd64.exe.zip` from the [Releases page](https://github.com/Notifiarr/notifiarr/releases)
-1. Extract to `C:\ProgramData\notifiarr\`
-1. Move the `.exe` and `.conf.example` files to the root of that folder
+1. Download `notifiarr.amd64.exe.zip` from [the Releases page](https://github.com/Notifiarr/notifiarr/releases)
+1. Save it in `C:\ProgramData\notifiarr`
+1. Open the folder that was created from extracting and copy the `.exe` + example `.conf` files up one directory so it is located at:
+- `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
+- `C:\ProgramData\notifiarr\notifiarr.conf.example`
+1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
-1. Delete the downloaded `.zip` and extracted folder
+1. Double-click `notifiarr.amd64.exe` to launch
+1. Enter your API key when prompted
 
-### Migrating Existing Install
+### Fix Existing Install
 
 1. Stop the client
-1. Copy your existing `.exe` and `.conf` to `C:\ProgramData\notifiarr\`
-1. Delete `C:\Users\<username>\.notifiarr` if it exists
+1. Copy the existing `.exe` to `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
+1. Copy the existing conf file to `C:\ProgramData\notifiarr\notifiarr.conf`
+1. If the `C:\users\<your home folder>\.notifiarr` folder exists, delete it
 
 ### First Run & Autostart
 
-1. Double-click the `.exe` to launch
+- At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome).
+
+#### First Run
+
+1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at `127.0.0.1:5454` using `admin` as the username and your API key as the password
+1. Access the Web UI at `localhost:5454`
+- Username: `admin`
+- Password: Your API key
 
-To enable autostart:
+#### Autostart
 
-1. Right-click the `.exe` and create a shortcut
-1. Press `Win+R`, type `shell:startup`, press Enter
-1. Move the shortcut to the opened Startup folder
+1. Right-click on the `.exe` and create a shortcut
+1. Press Windows key + R, type `shell:startup`, then select OK
+1. Copy the shortcut to the opened Startup folder
+
+#### Finding Password in Logs (if needed)
+
+- **Option A:** Check `notifiarr.log` (or `app.log`) - password is at the top of the file
+- **Option B:** Right-click the notifiarr tray icon → Logs → View
 
 ## Synology
 
@@ -304,5 +326,6 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
 
 
