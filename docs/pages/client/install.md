@@ -124,7 +124,7 @@ Suggested location and structure based on experience with permissions.
 
 #### Autostart
 
-1. Right-click on the `.exe` and create a shortcut
+1. Right-click on `notifiarr.amd64.exe` and create a shortcut.
 1. Press Windows key + R, type `shell:startup`, then select OK
 1. Copy the shortcut to the opened Startup folder
 
