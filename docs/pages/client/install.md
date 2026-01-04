@@ -100,7 +100,7 @@ Suggested location and structure based on experience with permissions.
 - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
-1. Double-click `notifiarr.amd64.exe` to launch
+1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at `http://127.0.0.1:5454`
 1. Enter your API key when prompted
 
 ### Fix Existing Install
@@ -118,7 +118,7 @@ Suggested location and structure based on experience with permissions.
 
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at `localhost:5454`
+1. Access the Web UI at `http://127.0.0.1:5454`
 - Username: `admin`
 - Password: Your API key
 
@@ -326,6 +326,3 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
-
-
-
