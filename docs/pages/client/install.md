@@ -71,9 +71,9 @@ service notifiarr start
 1. Use the menu bar icon to access the WebUI.
 1. Head on over to [After Install](afterInstall.md).
 
-# Windows Installation
+## Windows Installation
 
-## Directory Structure
+### Directory Structure
 
 Create the following in 
 
@@ -85,7 +85,7 @@ notifiarr.conf
 logs\
 ```
 
-## New Install
+### New Install
 
 1. Download `notifiarr.amd64.exe.zip` from the [Releases page](https://github.com/Notifiarr/notifiarr/releases)
 1. Extract to `C:\ProgramData\notifiarr\`
@@ -93,17 +93,17 @@ logs\
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
 1. Delete the downloaded `.zip` and extracted folder
 
-## Migrating Existing Install
+### Migrating Existing Install
 
 1. Stop the client
 1. Copy your existing `.exe` and `.conf` to `C:\ProgramData\notifiarr\`
 1. Delete `C:\Users\<username>\.notifiarr` if it exists
 
-## First Run & Autostart
+### First Run & Autostart
 
 1. Double-click the `.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at `localhost:5454` using `admin` as the username and your API key as the password
+1. Access the Web UI at `127.0.0.1:5454` using `admin` as the username and your API key as the password
 
 To enable autostart:
 
@@ -304,4 +304,5 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
 
