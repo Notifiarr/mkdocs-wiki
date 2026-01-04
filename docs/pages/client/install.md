@@ -118,7 +118,7 @@ Suggested location and structure based on experience with permissions.
 
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at `http://127.0.0.1:5454`
+1. Access the Web UI at [http://127.0.0.1:5454](http://127.0.0.1:5454)
 - Username: `admin`
 - Password: Your API key
 
