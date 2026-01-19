@@ -66,8 +66,8 @@ service notifiarr start
 1. Download the signed `dmg` file from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
 1. Mount it and copy *Notifiarr.app* to */Applications* then double-click it there.
 1. When you open it for the first time it will create a config file and log file:
-    1. `~/.notifiarr/notifiarr.conf`
-    1. `~/.notifiarr/Notifiarr.log`
+    - `~/.notifiarr/notifiarr.conf`
+    - `~/.notifiarr/Notifiarr.log`
 1. Use the menu bar icon to access the WebUI.
 1. Head on over to [After Install](afterInstall.md).
 
@@ -78,9 +78,9 @@ Suggested location and structure based on experience with permissions.
 
 ### Desired Outcome
 
-- `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
-- `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
-- `C:\ProgramData\notifiarr\logs` - Folder for log files.
+    - `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
+    - `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
+    - `C:\ProgramData\notifiarr\logs` - Folder for log files.
 
 ### Create the folders
 
@@ -96,8 +96,8 @@ Suggested location and structure based on experience with permissions.
 1. Download `notifiarr.amd64.exe.zip` from [the Releases page](https://github.com/Notifiarr/notifiarr/releases)
 1. Save it in `C:\ProgramData\notifiarr`
 1. Open the folder that was created from extracting and copy the `.exe` + example `.conf` files up one directory so it is located at:
-- `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
-- `C:\ProgramData\notifiarr\notifiarr.conf.example`
+    - `C:\ProgramData\notifiarr\notifiarr.amd64.exe`
+    - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
 1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at [http://127.0.0.1:5454](http://127.0.0.1:5454)
@@ -326,3 +326,4 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
