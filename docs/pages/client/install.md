@@ -87,9 +87,9 @@ service notifiarr start
 1. Open C:\ProgramData and create a folder `notifiarr`
 1. Create a new folder named `logs`, so you now have `C:\ProgramData\notifiarr\logs`
     - When you add the log paths in the client UI (later steps), make sure you point them to a file such as:
-        - `C:\ProgramData\notifiarr\logs\app.log`
-        - `C:\ProgramData\notifiarr\logs\debug.log`
-        - `C:\ProgramData\notifiarr\logs\http.log`
+      - `C:\ProgramData\notifiarr\logs\app.log`
+      - `C:\ProgramData\notifiarr\logs\debug.log`
+      - `C:\ProgramData\notifiarr\logs\http.log`
 
 ### New Install
 
@@ -326,3 +326,4 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
