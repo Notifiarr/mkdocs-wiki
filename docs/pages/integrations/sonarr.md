@@ -1,7 +1,7 @@
 # Sonarr
 
 !!! info
-    This integration allows for notifications from Sonarr using the connect for Webhooks. In Sonarr click Settings → Connect → <kb>+</kb> → Webhook.
+    This integration allows for notifications from Radarr using its built in Connection for Notifiarr. In Radarr click Settings → Connect → + → Notifiarr
 
 ## Current Versions
 
