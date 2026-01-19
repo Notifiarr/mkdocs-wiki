@@ -74,13 +74,13 @@ service notifiarr start
 ## Windows
 
 !!! info
-Suggested location and structure based on experience with permissions.
+    Suggested location and structure based on experience with permissions.
 
 ### Desired Outcome
 
-    - `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
-    - `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
-    - `C:\ProgramData\notifiarr\logs` - Folder for log files.
+- `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
+- `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
+- `C:\ProgramData\notifiarr\logs` - Folder for log files.
 
 ### Create the folders
 
@@ -326,4 +326,5 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
 
