@@ -54,12 +54,19 @@ vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
 
-## TrueNAS Scale <!-- Make the line number below match this line's number. -->
+## TrueNAS Community (formerly Scale, current as of Version 25.10.1) <!-- Make the line number below match this line's number. -->
 
-!!! warning "TrueNAS"
-    If you figure out how to install Notifiarr on TrueNAS, please
-    [update these instructions](https://github.com/Notifiarr/mkdocs-wiki/blob/main/docs/pages/client/install.md?plain=1#L57).
-    Notifiarr support and developers have very little experience with TrueNAS.
+1. Install the notifiarr app from the "Apps" menu category.
+1. Set your timezone, config directory UID, GID, etc. as normal.
+1. Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.
+1. Copy either your global API key (or a client-specific API key you generate) from the "API Keys" section of your Profile menu on the notifiarr.com.
+1. Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI. 
+
+    For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password, 
+    nor does it log the password correctly. We can fix this by manually setting a password with an environment variable.
+    
+    1. Name: `DN_UI_PASSWORD`
+    1. Value: `your_password`
 
 ## macOS
 
@@ -313,3 +320,4 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
+
