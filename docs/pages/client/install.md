@@ -54,8 +54,9 @@ vi /usr/local/etc/notifiarr/notifiarr.conf
 service notifiarr start
 ```
 
-## TrueNAS Community (formerly Scale, current as of Version 25.10.1) <!-- Make the line number below match this line's number. -->
+## TrueNAS Community (formerly Scale)
 
+Current as of Version 25.10.1.
 1. Install the notifiarr app from the "Apps" menu category.
 1. Set your timezone, config directory UID, GID, etc. as normal.
 1. Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.
