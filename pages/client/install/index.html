@@ -730,8 +730,8 @@
 
 <!-- Table of contents item -->
 <li class="md-nav__item">
-  <a class="md-nav__link" href="#truenas-scale">
-    <span class="md-ellipsis"> TrueNAS Scale </span>
+  <a class="md-nav__link" href="#truenas-community-formerly-scale">
+    <span class="md-ellipsis"> TrueNAS Community (formerly Scale) </span>
   </a>
 
   <!-- Table of contents list -->
@@ -2718,8 +2718,8 @@
 
 <!-- Table of contents item -->
 <li class="md-nav__item">
-  <a class="md-nav__link" href="#truenas-scale">
-    <span class="md-ellipsis"> TrueNAS Scale </span>
+  <a class="md-nav__link" href="#truenas-community-formerly-scale">
+    <span class="md-ellipsis"> TrueNAS Community (formerly Scale) </span>
   </a>
 
   <!-- Table of contents list -->
@@ -2876,13 +2876,19 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class=
 vi<span class="w"> </span>/usr/local/etc/notifiarr/notifiarr.conf
 service<span class="w"> </span>notifiarr<span class="w"> </span>start
 </code></pre></div>
-<h2 id="truenas-scale">TrueNAS Scale <!-- Make the line number below match this line's number. --><a class="headerlink" href="#truenas-scale" title="Permanent link"></a></h2>
-<div class="admonition warning">
-<p class="admonition-title">TrueNAS</p>
-<p>If you figure out how to install Notifiarr on TrueNAS, please
-<a href="https://github.com/Notifiarr/mkdocs-wiki/blob/main/docs/pages/client/install.md?plain=1#L57">update these instructions</a>.
-Notifiarr support and developers have very little experience with TrueNAS.</p>
-</div>
+<h2 id="truenas-community-formerly-scale">TrueNAS Community (formerly Scale)<a class="headerlink" href="#truenas-community-formerly-scale" title="Permanent link"></a></h2>
+<p>Current as of Version 25.10.1.
+1. Install the notifiarr app from the "Apps" menu category.
+1. Set your timezone, config directory UID, GID, etc. as normal.
+1. Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.
+1. Copy either your global API key (or a client-specific API key you generate) from the "API Keys" section of your Profile menu on the notifiarr.com.
+1. Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI. </p>
+<pre><code>For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password, 
+nor does it log the password correctly. We can fix this by manually setting a password with an environment variable.
+
+1. Name: `DN_UI_PASSWORD`
+1. Value: `your_password`
+</code></pre>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link"></a></h2>
 <ol>
 <li>Download the signed <code>dmg</code> file from the <a href="https://github.com/Notifiarr/notifiarr/releases">Releases</a> page.</li>
