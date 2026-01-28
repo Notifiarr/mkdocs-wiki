@@ -39,8 +39,14 @@ Everything is configurable, even how much data we keep on our servers. You get t
 
 Over on [discord](https://notifiarr.com/discord)
 we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel.
-!!! info
-    For Patron access - Link your GitHub from the Profile Page on the Notifiarr Website
+!!! note "Patron Features"
+    To unlock patron features, link your sponsorship account from the Profile Page on the Notifiarr Website.
+    
+    **GitHub Sponsors** - If linking fails, GitHub may still be processing your sponsorship (up to 24 hours) or there may be a payment issue. Check your [GitHub Sponsors dashboard](https://github.com/sponsors/account).
+    
+    **Ko-Fi** - If linking fails, Ko-Fi may not have synced yet or there may be a payment issue. Check your [Ko-Fi account settings](https://ko-fi.com/manage/supportreceived).
+    
+    Once processed, return to your Profile Page and click "Auth & Link Account."
 
 ## From the author
 
@@ -74,3 +80,4 @@ joined the crew in December 2020, and the two of us run the servers and write th
   Automated continuous add/sync for the custom formats TRaSH has made to use with Radarr
 - Radarr Collections - A fully automated way to monitor all your Radarr collections with auto add new
   items to your library as they are put into the collection on TMDb for any monitored collections, etc.
+
