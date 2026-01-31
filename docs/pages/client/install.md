@@ -102,6 +102,7 @@ service notifiarr start
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
 1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at [http://127.0.0.1:5454](http://127.0.0.1:5454)
 1. Enter your API key when prompted
+1. Login for the first time with your Notifiarr.com email address and password.
 
 ### Fix Existing Install
 
@@ -119,8 +120,9 @@ service notifiarr start
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
 1. Access the Web UI at [http://127.0.0.1:5454](http://127.0.0.1:5454)
-- Username: `admin`
-- Password: Your API key
+    - Username: email address you login to notifiarr.com with
+    - Password: password for notifiarr.com
+1. You may set a local password after you login.
 
 #### Autostart
 
@@ -128,10 +130,10 @@ service notifiarr start
 1. Press Windows key + R, type `shell:startup`, then select OK
 1. Copy the shortcut to the opened Startup folder
 
-#### Finding Password in Logs (if needed)
+#### Setting a Local Password
 
-- **Option A:** Check `notifiarr.log` (or `app.log`) - password is at the top of the file
-- **Option B:** Right-click the notifiarr tray icon → Logs → View
+- **Option A:** In the Web UI, go to Config → Password
+- **Option B:** Right-click the notifiarr tray icon → Config → Password - and set a new password.
 
 ## Synology
 
