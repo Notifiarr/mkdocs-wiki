@@ -4,32 +4,19 @@ The Log Watcher (aka File Watcher) allows the Notifiarr Client to monitor log fi
 
 ## Configuration
 
-Add `[[watch_file]]` blocks to your `notifiarr.conf`:
+Add a new Log Watcher entry in the Notifiarr Client UI under **Configuration** > **Log Watch**.
 
-```toml
-[[watch_file]]
-  path       = '/var/log/radarr/radarr.debug.txt'
-  regex      = '(?i)(\|warn\||\|error\||^\[v5.+\])'
-  skip       = '(?i)Invalid date found|Validation failed'
-  poll       = false
-  pipe       = false
-  must_exist = false
-  log_match  = true
-  disabled   = false
-```
+### Fields
 
-### Options
-
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `path` | string | *required* | Full path to the log file to watch |
-| `regex` | string | *required* | Regular expression to match - matching lines trigger notifications |
-| `skip` | string | `''` | Regular expression for lines to ignore (even if they match `regex`) |
-| `poll` | bool | `false` | Use polling instead of inotify (useful for network mounts) |
-| `pipe` | bool | `false` | Treat path as a named pipe (FIFO) instead of a file |
-| `must_exist` | bool | `false` | Fail if the file doesn't exist at startup |
-| `log_match` | bool | `true` | Log matched lines to notifiarr debug log |
-| `disabled` | bool | `false` | Disable this watcher without removing the config |
+| Field | Required | Default | Description |
+|-------|----------|---------|-------------|
+| **Path** | Yes | - | Full path to the log file to watch |
+| **Regex** | Yes | - | Regular expression to match - matching lines trigger notifications |
+| **Skip** | No | *empty* | Regular expression for lines to ignore (even if they match Regex) |
+| **Poll** | No | `false` | Use polling instead of inotify (useful for network mounts) |
+| **Pipe** | No | `false` | Treat path as a named pipe (FIFO) instead of a file |
+| **Must Exist** | No | `false` | Fail if the file doesn't exist at startup |
+| **Log Match** | No | `true` | Log matched lines to notifiarr debug log |
 
 !!! tip "Regex Tips"
     - Use `(?i)` at the start for case-insensitive matching
@@ -43,79 +30,225 @@ Add `[[watch_file]]` blocks to your `notifiarr.conf`:
 
 These patterns catch warnings, errors, and stack traces while filtering common noise.
 
+---
+
 #### Radarr
 
-```toml
-[[watch_file]]
-  path  = '/var/log/radarr/radarr.debug.txt'
-  regex = '(?i)(\|warn\||\|error\||^\[v5.+\]|database is locked)'
-  skip  = '(?i)Download client failed to add torrent|Movie with IMDBId|It will not be added|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|429.TooManyRequests'
+**Path:**
+```text
+/var/log/radarr/radarr.debug.txt
 ```
+
+**Regex:**
+```text
+(?i)(\|warn\||\|error\||^\[v[0-9].+\]|database is locked)
+```
+
+??? info "Why this regex?"
+    - `(?i)` - Case-insensitive matching for all patterns
+    - `\|warn\|` - Matches `|Warn|` log level delimiter in *arr logs
+    - `\|error\|` - Matches `|Error|` log level delimiter
+    - `^\[v[0-9].+\]` - Matches stack traces that start with any version header (v4, v5, v6, etc.)
+    - `database is locked` - SQLite locking issues that indicate problems
+
+**Skip:**
+```text
+(?i)Download client failed to add torrent|Movie with IMDBId|It will not be added|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|429.TooManyRequests
+```
+
+??? info "Why skip these?"
+    - `Download client failed to add torrent` - Usually duplicate detection, not a real error
+    - `Movie with IMDBId` / `It will not be added` - Informational about skipped movies
+    - `Invalid date found` - Common indexer feed parsing noise
+    - `Validation failed` - API validation errors (usually user input issues)
+    - `An unhandled exception...` - Generic wrapper, the actual error is elsewhere
+    - `HttpClient error` - Transient network issues that resolve themselves
+    - `TaskManager failed` / `Task Error` - Background task noise
+    - `Name does not resolve` - DNS failures that are usually transient
+    - `429.TooManyRequests` - Rate limiting (expected behavior)
+
+---
 
 #### Sonarr
 
-```toml
-[[watch_file]]
-  path  = '/var/log/sonarr/sonarr.debug.txt'
-  regex = '(?i)(\|warn\||\|error\||^\[v[0-9].+\]|database is locked)'
-  skip  = '(?i)Download client failed to add torrent|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|Unable to find exact quality|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|InvalidDateException|429.TooManyRequests'
+**Path:**
+```text
+/var/log/sonarr/sonarr.debug.txt
 ```
+
+**Regex:**
+```text
+(?i)(\|warn\||\|error\||^\[v[0-9].+\]|database is locked)
+```
+
+??? info "Why this regex?"
+    - Same pattern as Radarr - matches warnings, errors, stack traces, and database locks
+
+**Skip:**
+```text
+(?i)Download client failed to add torrent|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|Unable to find exact quality|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|InvalidDateException|429.TooManyRequests
+```
+
+??? info "Why skip these?"
+    - Same reasons as Radarr, plus:
+    - `Unable to find exact quality` - Quality parsing noise from release names
+    - `InvalidDateException` - Date parsing errors from indexers
+
+---
 
 #### Prowlarr
 
-```toml
-[[watch_file]]
-  path  = '/var/log/prowlarr/prowlarr.debug.txt'
-  regex = '(?i)(\|warn\||\|error\||^\[v[0-9].+\])'
-  skip  = '(?i)Validation failed|An unhandled exception has occurred while executing the request|(?:CinemaZ|PrivateHD)[.a-z0-9/=&?: ]+404\.NotFound|HttpClient error|System.Net.CookieException|TaskManager failed while processing|Task Error|Name does not resolve|NzbDrone.Common.Http.HttpException: HTTP request failed|Retrying in'
+**Path:**
+```text
+/var/log/prowlarr/prowlarr.debug.txt
 ```
+
+**Regex:**
+```text
+(?i)(\|warn\||\|error\||^\[v[0-9].+\])
+```
+
+**Skip:**
+```text
+(?i)Validation failed|An unhandled exception has occurred while executing the request|(?:CinemaZ|PrivateHD)[.a-z0-9/=&?: ]+404\.NotFound|HttpClient error|System.Net.CookieException|TaskManager failed while processing|Task Error|Name does not resolve|NzbDrone.Common.Http.HttpException: HTTP request failed|Retrying in
+```
+
+??? info "Why skip these?"
+    - `(?:CinemaZ|PrivateHD)...404` - Known indexers that return 404 for certain searches
+    - `System.Net.CookieException` - Cookie handling issues that don't affect functionality
+    - `HTTP request failed` / `Retrying in` - Transient errors with automatic retry
+
+---
 
 #### Readarr
 
-```toml
-[[watch_file]]
-  path  = '/var/log/readarr/readarr.debug.txt'
-  regex = '(?i)(\|warn\||\|error\||^\[v[0-9].+\])'
-  skip  = '(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error'
+**Path:**
+```text
+/var/log/readarr/readarr.debug.txt
 ```
+
+**Regex:**
+```text
+(?i)(\|warn\||\|error\||^\[v[0-9].+\])
+```
+
+**Skip:**
+```text
+(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error
+```
+
+---
 
 #### Lidarr
 
-```toml
-[[watch_file]]
-  path  = '/var/log/lidarr/lidarr.debug.txt'
-  regex = '(?i)(\|warn\||\|error\||^\[v[0-9].+\])'
-  skip  = '(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error'
+**Path:**
+```text
+/var/log/lidarr/lidarr.debug.txt
 ```
+
+**Regex:**
+```text
+(?i)(\|warn\||\|error\||^\[v[0-9].+\])
+```
+
+**Skip:**
+```text
+(?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error
+```
+
+---
 
 ### Other Applications
 
 #### Kometa (formerly Plex Meta Manager)
 
-```toml
-[[watch_file]]
-  path  = '/var/log/kometa/meta.log'
-  regex = '(?i)(\[ERROR\]|\[CRITICAL\])'
-  skip  = '(?i)Convert Error:|ID not found|TVDb Error: Name not found|Plex Error: No Items found in Plex|Trakt Error: No TVDb ID found for|TMDb Error: No Movie found for TMDb ID'
+**Path:**
+```text
+/var/log/kometa/meta.log
 ```
+
+**Regex:**
+```text
+(?i)(\[ERROR\]|\[CRITICAL\])
+```
+
+??? info "Why this regex?"
+    - Kometa uses `[ERROR]` and `[CRITICAL]` log level markers
+    - Only matches actual errors, not warnings (which are often informational)
+
+**Skip:**
+```text
+(?i)Convert Error:|ID not found|TVDb Error: Name not found|Plex Error: No Items found in Plex|Trakt Error: No TVDb ID found for|TMDb Error: No Movie found for TMDb ID
+```
+
+??? info "Why skip these?"
+    - `Convert Error` - Image conversion issues that don't affect functionality
+    - `ID not found` / `Name not found` - Missing metadata that can't be fixed
+    - `No Items found in Plex` - Empty collections (expected for new libraries)
+    - `No TVDb ID found` / `No Movie found` - External service lookup failures
+
+---
 
 #### Nginx Error Log
 
-```toml
-[[watch_file]]
-  path  = '/var/log/nginx/error.log'
-  regex = '(?i)(emerg|alert|crit|\[error\].*upstream.*failed|502|503|504|connect\(\) failed|no live upstreams)'
-  skip  = '(?i)(client closed connection|upstream timed out.*reading response header|recv\(\) failed|connection reset by peer|SSL_do_handshake)'
+**Path:**
+```text
+/var/log/nginx/error.log
 ```
+
+**Regex:**
+```text
+(?i)(emerg|alert|crit|\[error\].*upstream.*failed|502|503|504|connect\(\) failed|no live upstreams)
+```
+
+??? info "Why this regex?"
+    - `emerg|alert|crit` - Nginx severity levels for serious issues
+    - `\[error\].*upstream.*failed` - Backend connection failures
+    - `502|503|504` - Gateway errors indicating backend problems
+    - `connect\(\) failed` - Can't reach upstream servers
+    - `no live upstreams` - All backends are down
+
+**Skip:**
+```text
+(?i)(client closed connection|upstream timed out.*reading response header|recv\(\) failed|connection reset by peer|SSL_do_handshake)
+```
+
+??? info "Why skip these?"
+    - `client closed connection` - User navigated away or closed browser
+    - `upstream timed out` - Often caused by slow backends, not errors
+    - `recv\(\) failed` / `connection reset` - Network glitches
+    - `SSL_do_handshake` - SSL negotiation failures from bots/scanners
+
+---
 
 #### Rustic Backup
 
-```toml
-[[watch_file]]
-  path  = '/var/log/rustic/rustic.log'
-  regex = '(\[ERROR\]|\[WARN\]|starting to backup|successfully saved|backup of.*done)'
-  skip  = '(?i)(flush_task.*graceful shutdown|Requesting graceful shutdown|read_end_buffer_size|write_end_buffer_size|repository opendal.*password is correct)'
+**Path:**
+```text
+/var/log/rustic/rustic.log
 ```
+
+**Regex:**
+```text
+(\[ERROR\]|\[WARN\]|starting to backup|successfully saved|backup of.*done)
+```
+
+??? info "Why this regex?"
+    - `\[ERROR\]|\[WARN\]` - Actual problems with backups
+    - `starting to backup` - Notification that backup started
+    - `successfully saved|backup of.*done` - Confirmation backup completed
+
+**Skip:**
+```text
+(?i)(flush_task.*graceful shutdown|Requesting graceful shutdown|read_end_buffer_size|write_end_buffer_size|repository opendal.*password is correct)
+```
+
+??? info "Why skip these?"
+    - `graceful shutdown` - Normal shutdown messages
+    - `buffer_size` - Configuration warnings that don't affect functionality
+    - `password is correct` - Informational message, not an error
+
+---
 
 ## Pattern Reference
 
@@ -123,21 +256,21 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 
 | Pattern | Matches |
 |---------|---------|
-| `\|warn\|` | Warning log level |
-| `\|error\|` | Error log level |
-| `^\[v5.+\]` | Stack traces (version header) |
-| `database is locked` | SQLite locking issues |
+| `\|warn\|` | Warning log level in *arr format: `2024-01-30 12:00:00.000\|Warn\|...` |
+| `\|error\|` | Error log level in *arr format |
+| `^\[v[0-9].+\]` | Stack traces that start with any version header (e.g., `[v5.0.0.1234]`) |
+| `database is locked` | SQLite concurrency issues |
 
 ### Common Skip Patterns
 
 | Pattern | Reason to Skip |
 |---------|---------------|
-| `Invalid date found` | Indexer feed parsing noise |
-| `Validation failed` | API validation errors |
-| `HttpClient error` | Transient network issues |
-| `429.TooManyRequests` | Rate limiting (expected) |
-| `Name does not resolve` | DNS failures (transient) |
-| `Download client failed to add torrent` | Often due to duplicate detection |
+| `Invalid date found` | Indexer feed parsing - benign noise |
+| `Validation failed` | User input issues, not system errors |
+| `HttpClient error` | Transient network issues that auto-resolve |
+| `429.TooManyRequests` | Rate limiting - expected behavior |
+| `Name does not resolve` | DNS failures - usually transient |
+| `Download client failed to add torrent` | Usually duplicate detection |
 
 ## Troubleshooting
 
@@ -145,18 +278,18 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 
 1. Verify the path exists: `ls -la /path/to/log`
 2. Check file permissions - notifiarr user must have read access
-3. Try `poll = true` for network-mounted files
+3. Try enabling **Poll** for network-mounted files
 4. Check notifiarr logs: `journalctl -u notifiarr | grep -i watch`
 
 ### Too Many Notifications
 
-1. Add patterns to `skip` for false positives
-2. Use more specific `regex` patterns
+1. Add patterns to **Skip** for false positives
+2. Use more specific **Regex** patterns
 3. Consider watching `.debug.txt` instead of `.txt` for less verbose logs
 
 ### No Notifications
 
 1. Test your regex at [regex101.com](https://regex101.com/) with Go flavor
-2. Verify `disabled = false`
+2. Verify the watcher is not disabled
 3. Check that lines actually match with: `tail -f /path/to/log | grep -E 'your-regex'`
 4. Review notifiarr debug log for "watch" entries
