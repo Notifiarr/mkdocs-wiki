@@ -68,7 +68,7 @@ When a new docker image is deployed with an empty `/config` folder mounted, the 
 - Write a brand new config to `/config/notifiarr.conf` file.
 - On first run, the WebUI will prompt you for your API key.
 - After entering your API key, login with your **Notifiarr.com email address and password**.
-- You can set a local password after logging in via *Config → Password*.
+- You can set a local password after logging in via *Trust Profile* (click your username in the top right).
 
 Environment Variables - and the Unraid Template - override settings in the Config file.
 

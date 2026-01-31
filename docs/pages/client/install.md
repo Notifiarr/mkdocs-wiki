@@ -111,11 +111,9 @@ service notifiarr start
 1. Copy the existing conf file to `C:\ProgramData\notifiarr\notifiarr.conf`
 1. If the `C:\users\<your home folder>\.notifiarr` folder exists, delete it
 
-### First Run & Autostart
-
 - At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome).
 
-#### First Run
+### First Run
 
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
@@ -124,15 +122,15 @@ service notifiarr start
     - Password: password for notifiarr.com
 1. You may set a local password after you login.
 
-#### Autostart
+### Autostart
 
 1. Right-click on `notifiarr.amd64.exe` and create a shortcut.
 1. Press Windows key + R, type `shell:startup`, then select OK
 1. Copy the shortcut to the opened Startup folder
 
-#### Setting a Local Password
+### Setting a Local Password
 
-- **Option A:** In the Web UI, go to Config → Password
+- **Option A:** In the Web UI, click your username → Trust Profile
 - **Option B:** Right-click the notifiarr tray icon → Config → Password - and set a new password.
 
 ## Synology
