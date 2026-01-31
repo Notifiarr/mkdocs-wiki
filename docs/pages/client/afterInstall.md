@@ -26,9 +26,9 @@ key in the config file @ `/etc/notifiarr/notifiarr.conf` or
 `/usr/local/etc/notifiarr/notifiarr.conf`. If you installed on a seed box, set
 the API key in the config file in your home folder.
 
-Most users will use the API key as the password to login into the client's WebUI for
-the first time. You can set a dedicated password after logging in by clicking your
-*username in the menu => Trust Profile*. **The default username is `admin`**.
+Login to the client's WebUI for the first time with your **Notifiarr.com email address and password**.
+You can set a dedicated local password after logging in by clicking your
+*username in the menu => Trust Profile*.
 
 The login URL will usually look like one of these. The default listen port is `5454`.
 
@@ -63,11 +63,12 @@ volumes:
 
 ## Docker Users
 
-When a new docker image is deployed with an empty `/config` folder mounted, the app will do two things:
+When a new docker image is deployed with an empty `/config` folder mounted, the app will:
 
-- *If the API Key is not configured or invalid:* Create a new Web UI `admin` **password** and print it into the log file and docker logs.
-- Write a brand new config to `/config/notifiarr.conf` file with this password already saved.
-- Find the password by running `docker logs Notifiarr`.
+- Write a brand new config to `/config/notifiarr.conf` file.
+- On first run, the WebUI will prompt you for your API key.
+- After entering your API key, login with your **Notifiarr.com email address and password**.
+- You can set a local password after logging in via *Trust Profile* (click your username in the top right).
 
 Environment Variables - and the Unraid Template - override settings in the Config file.
 

@@ -87,10 +87,7 @@ docker exec Notifiarr /notifiarr --reset
 docker kill --signal=HUP Notifiarr
 ```
 
-```bash
-# Example output with new password:
-[INFO] 2023/09/08 09:32:11 New 'admin' user password: four38=Draw
-[INFO] 2023/09/08 09:32:11 Writing Config File: /config/notifiarr.conf
-```
+!!! note "About Reset"
+    The `--reset` command creates a local admin password as a recovery fallback. This is only needed if you can't login with your Notifiarr.com credentials. After reset, you can login with username `admin` and the generated password, then set up your normal authentication.
 
 - If you still can't login, restart the container.
