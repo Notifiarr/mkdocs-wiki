@@ -20,7 +20,7 @@ Click on the `Notifiarr` role and then pick `Permissions`.
     - Many notifications have links (such as TMDb, TVDb, IMDb, Website links, etc.)
 1. `Add Reactions`
     - *arr and Plex notifications add reactions to notifications to signify things such as the indexer, manual or rss grab, imported, failed, unpacked, subtitles, etc.
-1. `Mention @everyone, @here and All Roles`
+1. `Mention @everyone, @here, and All Roles`
     - Needed if you have alerts setup with Snapshots or Media Request integrations so the proper user/role can be @mentioned
 1. `Manage Messages`
     - This is used for the Media Request integration so the bot can remove all the back and forth posts when adding new things to leave a clean channel history
@@ -29,7 +29,7 @@ Click on the `Notifiarr` role and then pick `Permissions`.
 
 ## **Optional Permissions**
 
-1. `Use External Emojis`
+1. `Use External Emoji`
     - Only required if the reactions you use are from another server
 1. `Manage Channels`
     - Only required with the Channel stats integration
