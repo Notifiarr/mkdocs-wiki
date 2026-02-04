@@ -935,6 +935,18 @@
   
 </li>
       
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#prometheus-grafana">
+    <span class="md-ellipsis"> Prometheus &amp; Grafana </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3316,6 +3328,18 @@
   
 </li>
       
+        <!-- Source: https://github.com/squidfunk/mkdocs-material/issues/4827#issuecomment-2792866850 -->
+
+<!-- Table of contents item -->
+<li class="md-nav__item">
+  <a class="md-nav__link" href="#prometheus-grafana">
+    <span class="md-ellipsis"> Prometheus &amp; Grafana </span>
+  </a>
+
+  <!-- Table of contents list -->
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3510,6 +3534,25 @@ Make sure you <a href="#setup-log-files">setup a log file</a> if you can't find 
 <li>Windows: <code>&lt;home folder&gt;/.notifiarr/Notifiarr.log</code></li>
 <li>Docker: <code>docker logs Notifiarr</code> (recommend <a href="#setup-log-files">setting a log file</a>)</li>
 </ul>
+<h2 id="prometheus-grafana">Prometheus &amp; Grafana<a class="headerlink" href="#prometheus-grafana" title="Permanent link"></a></h2>
+<p>If you use Prometheus, you can configure it to scrape your Notifiarr client.
+Import this <a href="https://grafana.com/grafana/dashboards/24776-notifiarr-client/">Grafana Dashboard</a>. ID: <strong>24776</strong></p>
+<p>To set a key for Prometheus, head to the <em>Configuration</em> page and add a 20-30 character string to <strong>Extra Keys</strong>.
+Use that in the <code>secrets</code> array for the X-Api-Key header in this sample Prometheus scrape configuration.
+Modify the target hostname and api key secret to match your setup.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">global</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span>
+<span class="w">  </span><span class="nt">evaluation_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span>
+
+<span class="nt">scrape_configs</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">'notifiarr'</span>
+<span class="w">    </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">60s</span><span class="w"> </span><span class="c1"># It is unnecessary to scrape more often than 60s.</span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'Notifiarr:5454'</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">http_headers</span><span class="p">:</span>
+<span class="w">      </span><span class="s">'X-Api-Key'</span><span class="p p-Indicator">:</span>
+<span class="w">        </span><span class="nt">secrets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">'custom-client-api-key-here'</span><span class="p p-Indicator">]</span>
+</code></pre></div>
 
 
 

@@ -3312,18 +3312,22 @@ vi<span class="w"> </span>/usr/local/etc/notifiarr/notifiarr.conf
 service<span class="w"> </span>notifiarr<span class="w"> </span>start
 </code></pre></div>
 <h2 id="truenas-community-formerly-scale">TrueNAS Community (formerly Scale)<a class="headerlink" href="#truenas-community-formerly-scale" title="Permanent link"></a></h2>
-<p>Current as of Version 25.10.1.
-1. Install the notifiarr app from the "Apps" menu category.
-1. Set your timezone, config directory UID, GID, etc. as normal.
-1. Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.
-1. Copy either your global API key (or a client-specific API key you generate) from the "API Keys" section of your Profile menu on the notifiarr.com.
-1. Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI. </p>
-<pre><code>For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password, 
-nor does it log the password correctly. We can fix this by manually setting a password with an environment variable.
-
-1. Name: `DN_UI_PASSWORD`
-1. Value: `your_password`
-</code></pre>
+<p>Current as of Version 25.10.1.</p>
+<ol>
+<li>Install the notifiarr app from the "Apps" menu category.</li>
+<li>Set your timezone, config directory UID, GID, etc. as normal.</li>
+<li>Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.</li>
+<li>Copy either your global API key (or a client-specific API key you generate) from the "API Keys" section of your Profile menu on the notifiarr.com.</li>
+<li>
+<p>Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI.</p>
+<p>For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password,
+nor does it log the password correctly. We can fix this by manually setting a password with an environment variable.</p>
+<ol>
+<li>Name: <code>DN_UI_PASSWORD</code></li>
+<li>Value: <code>your_password</code></li>
+</ol>
+</li>
+</ol>
 <h2 id="macos">macOS<a class="headerlink" href="#macos" title="Permanent link"></a></h2>
 <ol>
 <li>Download the signed <code>dmg</code> file from the <a href="https://github.com/Notifiarr/notifiarr/releases">Releases</a> page.</li>
@@ -3369,7 +3373,7 @@ nor does it log the password correctly. We can fix this by manually setting a pa
 </li>
 <li>You can now delete the <code>.zip</code> file that was downloaded and the folder that was extracted</li>
 <li>Rename <code>notifiarr.conf.example</code> to <code>notifiarr.conf</code></li>
-<li>Double-click <code>notifiarr.amd64.exe</code> to launch the client. The webui will be available at <a href="http://127.0.0.1:5454">http://127.0.0.1:5454</a></li>
+<li>Double-click <code>notifiarr.amd64.exe</code> to launch the client. The webui will be available at http://127.0.0.1:5454</li>
 <li>Enter your API key when prompted</li>
 <li>Login for the first time with your Notifiarr.com email address and password.</li>
 </ol>
@@ -3389,7 +3393,7 @@ nor does it log the password correctly. We can fix this by manually setting a pa
 <ol>
 <li>Double-click <code>notifiarr.amd64.exe</code> to launch</li>
 <li>Enter your API key when prompted</li>
-<li>Access the Web UI at <a href="http://127.0.0.1:5454">http://127.0.0.1:5454</a><ul>
+<li>Access the Web UI at http://127.0.0.1:5454<ul>
 <li>Username: email address you login to notifiarr.com with</li>
 <li>Password: password for notifiarr.com</li>
 </ul>
