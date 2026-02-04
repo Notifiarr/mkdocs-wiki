@@ -74,8 +74,8 @@ Current as of Version 25.10.1.
 1. Download the signed `dmg` file from the [Releases](https://github.com/Notifiarr/notifiarr/releases) page.
 1. Mount it and copy *Notifiarr.app* to */Applications* then double-click it there.
 1. When you open it for the first time it will create a config file and log file:
-    1. `~/.notifiarr/notifiarr.conf`
-    1. `~/.notifiarr/Notifiarr.log`
+    - `~/.notifiarr/notifiarr.conf`
+    - `~/.notifiarr/Notifiarr.log`
 1. Use the menu bar icon to access the WebUI.
 1. Head on over to [After Install](afterInstall.md).
 
@@ -108,6 +108,9 @@ Current as of Version 25.10.1.
     - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
+1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at [http://127.0.0.1:5454](http://127.0.0.1:5454)
+1. Enter your API key when prompted
+1. Login for the first time with your Notifiarr.com email address and password.
 
 ### Fix Existing Install
 
@@ -116,17 +119,27 @@ Current as of Version 25.10.1.
 1. Copy the existing conf file to `C:\ProgramData\notifiarr\notifiarr.conf`
 1. If the `C:\users\<your home folder>\.notifiarr` folder exists, delete it
 
-### Autostart & Password
-
 - At this point, the structure should look like the [Desired Outcome mentioned above](#desired-outcome).
 
-1. Right click on the `.exe` and create a shortcut
-1. Windows logo key + R, type `shell:startup`, then select OK. This opens the Startup folder.
-1. Copy and paste the newly created shortcut from its current location to the opened Startup folder.
-1. Double click on the shortcut and the client is now running
-1. If this is the first time you have ran it:
-    1. Option A: Look at the notifiarr.log (or app.log) and you will see the password at the top of the file.
-    1. Option B: Right click on the notifiarr icon and pick Logs -> View and get the login credentials from there.
+### First Run
+
+1. Double-click `notifiarr.amd64.exe` to launch
+1. Enter your API key when prompted
+1. Access the Web UI at [http://127.0.0.1:5454](http://127.0.0.1:5454)
+    - Username: email address you login to notifiarr.com with
+    - Password: password for notifiarr.com
+1. You may set a local password after you login.
+
+### Autostart
+
+1. Right-click on `notifiarr.amd64.exe` and create a shortcut.
+1. Press Windows key + R, type `shell:startup`, then select OK
+1. Copy the shortcut to the opened Startup folder
+
+### Setting a Local Password
+
+- **Option A:** In the Web UI, click your username → Trust Profile
+- **Option B:** Right-click the notifiarr tray icon → Config → Password - and set a new password.
 
 ## Synology
 
