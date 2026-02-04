@@ -57,15 +57,16 @@ service notifiarr start
 ## TrueNAS Community (formerly Scale)
 
 Current as of Version 25.10.1.
+
 1. Install the notifiarr app from the "Apps" menu category.
 1. Set your timezone, config directory UID, GID, etc. as normal.
 1. Assign a hostname to the container under the "Hostname" field. This field is required, but something simple like "notifiarr" works.
 1. Copy either your global API key (or a client-specific API key you generate) from the "API Keys" section of your Profile menu on the notifiarr.com.
-1. Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI. 
+1. Create a new environment variable under the "Additional Environment Variables" section. This will be the password for the web UI.
 
-    For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password, 
+    For whatever reason on TrueNAS, the container does not assign the API key you specify as the web UI password,
     nor does it log the password correctly. We can fix this by manually setting a password with an environment variable.
-    
+
     1. Name: `DN_UI_PASSWORD`
     1. Value: `your_password`
 
@@ -108,7 +109,7 @@ Current as of Version 25.10.1.
     - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
-1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at [http://127.0.0.1:5454](http://127.0.0.1:5454)
+1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at http://127.0.0.1:5454
 1. Enter your API key when prompted
 1. Login for the first time with your Notifiarr.com email address and password.
 
@@ -125,7 +126,7 @@ Current as of Version 25.10.1.
 
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at [http://127.0.0.1:5454](http://127.0.0.1:5454)
+1. Access the Web UI at http://127.0.0.1:5454
     - Username: email address you login to notifiarr.com with
     - Password: password for notifiarr.com
 1. You may set a local password after you login.
@@ -334,4 +335,3 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     1. Type `systemctl --user restart nginx`
     1. Now you should be able to browse to `https://your-ultraseedbox-url/notifiarr`
-

@@ -207,3 +207,27 @@ Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
 - macOS: `~/.notifiarr/Notifiarr.log`
 - Windows: `<home folder>/.notifiarr/Notifiarr.log`
 - Docker: `docker logs Notifiarr` (recommend [setting a log file](#setup-log-files))
+
+## Prometheus & Grafana
+
+If you use Prometheus, you can configure it to scrape your Notifiarr client.
+Import this [Grafana Dashboard](https://grafana.com/grafana/dashboards/24776-notifiarr-client/). ID: **24776**
+
+To set a key for Prometheus, head to the *Configuration* page and add a 20-30 character string to **Extra Keys**.
+Use that in the `secrets` array for the X-Api-Key header in this sample Prometheus scrape configuration.
+Modify the target hostname and api key secret to match your setup.
+
+```yaml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'notifiarr'
+    scrape_interval: 60s # It is unnecessary to scrape more often than 60s.
+    static_configs:
+      - targets: ['Notifiarr:5454']
+    http_headers:
+      'X-Api-Key':
+        secrets: ['custom-client-api-key-here']
+```
