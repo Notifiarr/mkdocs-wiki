@@ -3278,10 +3278,10 @@ systemctl<span class="w"> </span>restart<span class="w"> </span>notifiarr
 <div class="highlight"><pre><span></span><code>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>Notifiarr<span class="w"> </span>/notifiarr<span class="w"> </span>--reset
 docker<span class="w"> </span><span class="nb">kill</span><span class="w"> </span>--signal<span class="o">=</span>HUP<span class="w"> </span>Notifiarr
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="c1"># Example output with new password:</span>
-<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="m">2023</span>/09/08<span class="w"> </span><span class="m">09</span>:32:11<span class="w"> </span>New<span class="w"> </span><span class="s1">'admin'</span><span class="w"> </span>user<span class="w"> </span>password:<span class="w"> </span><span class="nv">four38</span><span class="o">=</span>Draw
-<span class="o">[</span>INFO<span class="o">]</span><span class="w"> </span><span class="m">2023</span>/09/08<span class="w"> </span><span class="m">09</span>:32:11<span class="w"> </span>Writing<span class="w"> </span>Config<span class="w"> </span>File:<span class="w"> </span>/config/notifiarr.conf
-</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">About Reset</p>
+<p>The <code>--reset</code> command creates a local admin password as a recovery fallback. This is only needed if you can't login with your Notifiarr.com credentials. After reset, you can login with username <code>admin</code> and the generated password, then set up your normal authentication.</p>
+</div>
 <ul>
 <li>If you still can't login, restart the container.</li>
 </ul>

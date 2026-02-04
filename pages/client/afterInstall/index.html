@@ -3357,9 +3357,9 @@ prompted for your API key. Enter it. Must provide the "All" API key from your
 key in the config file @ <code>/etc/notifiarr/notifiarr.conf</code> or
 <code>/usr/local/etc/notifiarr/notifiarr.conf</code>. If you installed on a seed box, set
 the API key in the config file in your home folder.</p>
-<p>Most users will use the API key as the password to login into the client's WebUI for
-the first time. You can set a dedicated password after logging in by clicking your
-<em>username in the menu =&gt; Trust Profile</em>. <strong>The default username is <code>admin</code></strong>.</p>
+<p>Login to the client's WebUI for the first time with your <strong>Notifiarr.com email address and password</strong>.
+You can set a dedicated local password after logging in by clicking your
+<em>username in the menu =&gt; Trust Profile</em>.</p>
 <p>The login URL will usually look like one of these. The default listen port is <code>5454</code>.</p>
 <ul>
 <li><code>http://localhost:5454</code></li>
@@ -3388,11 +3388,12 @@ Some examples of how to do that:</p>
 <span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">/etc/machine-id:/etc/machine-id</span>
 </code></pre></div>
 <h2 id="docker-users">Docker Users<a class="headerlink" href="#docker-users" title="Permanent link"></a></h2>
-<p>When a new docker image is deployed with an empty <code>/config</code> folder mounted, the app will do two things:</p>
+<p>When a new docker image is deployed with an empty <code>/config</code> folder mounted, the app will:</p>
 <ul>
-<li><em>If the API Key is not configured or invalid:</em> Create a new Web UI <code>admin</code> <strong>password</strong> and print it into the log file and docker logs.</li>
-<li>Write a brand new config to <code>/config/notifiarr.conf</code> file with this password already saved.</li>
-<li>Find the password by running <code>docker logs Notifiarr</code>.</li>
+<li>Write a brand new config to <code>/config/notifiarr.conf</code> file.</li>
+<li>On first run, the WebUI will prompt you for your API key.</li>
+<li>After entering your API key, login with your <strong>Notifiarr.com email address and password</strong>.</li>
+<li>You can set a local password after logging in <em>Trust Profile</em> by clicking your username in the bottom left.</li>
 </ul>
 <p>Environment Variables - and the Unraid Template - override settings in the Config file.</p>
 <div class="admonition danger">

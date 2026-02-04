@@ -3328,10 +3328,10 @@ nor does it log the password correctly. We can fix this by manually setting a pa
 <ol>
 <li>Download the signed <code>dmg</code> file from the <a href="https://github.com/Notifiarr/notifiarr/releases">Releases</a> page.</li>
 <li>Mount it and copy <em>Notifiarr.app</em> to <em>/Applications</em> then double-click it there.</li>
-<li>When you open it for the first time it will create a config file and log file:<ol>
+<li>When you open it for the first time it will create a config file and log file:<ul>
 <li><code>~/.notifiarr/notifiarr.conf</code></li>
 <li><code>~/.notifiarr/Notifiarr.log</code></li>
-</ol>
+</ul>
 </li>
 <li>Use the menu bar icon to access the WebUI.</li>
 <li>Head on over to <a href="../afterInstall/">After Install</a>.</li>
@@ -3369,30 +3369,43 @@ nor does it log the password correctly. We can fix this by manually setting a pa
 </li>
 <li>You can now delete the <code>.zip</code> file that was downloaded and the folder that was extracted</li>
 <li>Rename <code>notifiarr.conf.example</code> to <code>notifiarr.conf</code></li>
+<li>Double-click <code>notifiarr.amd64.exe</code> to launch the client. The webui will be available at <a href="http://127.0.0.1:5454">http://127.0.0.1:5454</a></li>
+<li>Enter your API key when prompted</li>
+<li>Login for the first time with your Notifiarr.com email address and password.</li>
 </ol>
 <h3 id="fix-existing-install">Fix Existing Install<a class="headerlink" href="#fix-existing-install" title="Permanent link"></a></h3>
 <ol>
 <li>Stop the client</li>
 <li>Copy the existing <code>.exe</code> to <code>C:\ProgramData\notifiarr\notifiarr.amd64.exe</code></li>
 <li>Copy the existing conf file to <code>C:\ProgramData\notifiarr\notifiarr.conf</code></li>
-<li>If the <code>C:\users\&lt;your home folder&gt;\.notifiarr</code> folder exists, delete it</li>
-</ol>
-<h3 id="autostart-password">Autostart &amp; Password<a class="headerlink" href="#autostart-password" title="Permanent link"></a></h3>
-<ul>
+<li>
+<p>If the <code>C:\users\&lt;your home folder&gt;\.notifiarr</code> folder exists, delete it</p>
+</li>
 <li>
 <p>At this point, the structure should look like the <a href="#desired-outcome">Desired Outcome mentioned above</a>.</p>
 </li>
-<li>
-<p>Right click on the <code>.exe</code> and create a shortcut</p>
-</li>
-<li>Windows logo key + R, type <code>shell:startup</code>, then select OK. This opens the Startup folder.</li>
-<li>Copy and paste the newly created shortcut from its current location to the opened Startup folder.</li>
-<li>Double click on the shortcut and the client is now running</li>
-<li>If this is the first time you have ran it:<ol>
-<li>Option A: Look at the notifiarr.log (or app.log) and you will see the password at the top of the file.</li>
-<li>Option B: Right click on the notifiarr icon and pick Logs -&gt; View and get the login credentials from there.</li>
 </ol>
+<h3 id="first-run">First Run<a class="headerlink" href="#first-run" title="Permanent link"></a></h3>
+<ol>
+<li>Double-click <code>notifiarr.amd64.exe</code> to launch</li>
+<li>Enter your API key when prompted</li>
+<li>Access the Web UI at <a href="http://127.0.0.1:5454">http://127.0.0.1:5454</a><ul>
+<li>Username: email address you login to notifiarr.com with</li>
+<li>Password: password for notifiarr.com</li>
+</ul>
 </li>
+<li>You may set a local password after you login.</li>
+</ol>
+<h3 id="autostart">Autostart<a class="headerlink" href="#autostart" title="Permanent link"></a></h3>
+<ol>
+<li>Right-click on <code>notifiarr.amd64.exe</code> and create a shortcut.</li>
+<li>Press Windows key + R, type <code>shell:startup</code>, then select OK</li>
+<li>Copy the shortcut to the opened Startup folder</li>
+</ol>
+<h3 id="setting-a-local-password">Setting a Local Password<a class="headerlink" href="#setting-a-local-password" title="Permanent link"></a></h3>
+<ul>
+<li><strong>Option A:</strong> In the Web UI, click your username → Trust Profile</li>
+<li><strong>Option B:</strong> Right-click the notifiarr tray icon → Config → Password - and set a new password.</li>
 </ul>
 <h2 id="synology">Synology<a class="headerlink" href="#synology" title="Permanent link"></a></h2>
 <ol>
