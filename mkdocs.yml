@@ -132,6 +132,7 @@ extra_css:
   - stylesheets/github-permalink-style.css
 
 plugins:
+  - search
   - glightbox:
       touchNavigation: true
       loop: false
@@ -142,7 +143,12 @@ plugins:
       draggable: true
       auto_caption: false
       caption_position: bottom
-  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
 
 markdown_extensions:
   - attr_list
