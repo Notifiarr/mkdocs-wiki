@@ -161,4 +161,4 @@ markdown_extensions:
   - md_in_html
   - toc:
       toc_depth: 4
-      permalink: ''
+      permalink: true
