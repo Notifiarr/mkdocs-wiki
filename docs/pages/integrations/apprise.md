@@ -26,7 +26,7 @@ notifiarr://{api_key}/{channel1_id}/{channel2_id}/{channelN_id}
 
 | Parameter | Required | Description |
 |-----------|----------|-------------|
-| `api_key` | Yes | Your **global** Notifiarr API key (integration-specific keys will not work) |
+| `api_key` | Yes | Your Notifiarr API key — either a global key or an integration-specific key. An **Apprise integration key** generated on your [Notifiarr profile page](https://notifiarr.com) is recommended. |
 | `channel_id` | Yes | Numeric Discord channel ID (enable Developer Mode in Discord to find this) |
 
 ---
