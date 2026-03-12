@@ -107,6 +107,8 @@ theme:
     - navigation.top
     - navigation.tracking
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
     - toc.follow
     - search.suggest
     - search.highlight
