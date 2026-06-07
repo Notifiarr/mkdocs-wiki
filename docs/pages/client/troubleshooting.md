@@ -58,7 +58,7 @@ grep ui_password  /path/to/notifiarr/notifiarr.conf
 grep ui_password  /mnt/user/appdata/Notifiarr/notifiarr.conf
 ```
 
-### Liunx & FreeBSD
+### Linux & FreeBSD
 
 - Run these commands to reset the password and restart the application.
 
@@ -91,3 +91,22 @@ docker kill --signal=HUP Notifiarr
     The `--reset` command creates a local admin password as a recovery fallback. This is only needed if you can't login with your Notifiarr.com credentials. After reset, you can login with username `admin` and the generated password, then set up your normal authentication.
 
 - If you still can't login, restart the container.
+
+## Useful CLI Flags
+
+The Notifiarr client binary accepts several command-line flags useful for debugging:
+
+- `--ps` - Print the system process list. Helpful when creating Process health checks to see exact process names.
+- `--curl <url>` - GET a URL and display response headers and payload. Useful for testing connectivity to app instances. Use `--header "Key: Value"` to add request headers.
+- `--version` - Print the full version string and exit.
+- `--write <path>` - Write a new default config file to the specified path. Use `-` to overwrite the current config file path.
+- `--config <path>` / `-c <path>` - Specify the config file path. Can also be set with the `DN_CONFIG_FILE` environment variable.
+- `--extraconfig <path>` / `-e <path>` - Load additional config files. Can be specified multiple times.
+- `--prefix <prefix>` / `-p <prefix>` - Change the environment variable prefix (default: `DN`).
+
+## Config File Compression
+
+When you save the configuration from the Web UI, the config file is bzip2 compressed.
+Set the `DN_ENCODE_CONFIG_FILE` environment variable to `false` to keep the config file
+in plain text. See the [Gibberish Config File](#gibberish-config-file) section for
+decompression instructions.

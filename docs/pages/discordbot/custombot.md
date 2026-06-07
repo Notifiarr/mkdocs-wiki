@@ -17,7 +17,7 @@ After you have created the bot, invite it to your server. It will show offline f
 
 ## Your Server
 
-Now that you have added the bot to your server you need to get the bots id. Right click on the bot and select the bottom option "Copy User ID"
+Now that you have added the bot to your server you need to get the bot's ID. Right click on the bot and select the bottom option "Copy User ID"
 
 ## Notifiarr Website
 

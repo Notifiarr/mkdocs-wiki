@@ -8,3 +8,5 @@ If you wish to translate Notifiarr you'll need to:
 1. Notify Notifiarr Staff on Discord so your role can be applied
 
 [Notifiarr Translations](https://translate.notifiarr.com/projects/notifiarr/) only impact Notifications and not the site itself.
+
+See also: [Website Translations](../../pages/website/translations.md)

@@ -8,6 +8,22 @@ Depending on your layout (Grid or List) you will see:
 
 ![client-config-card.png](../../assets/screenshots/website/client-config-card.png) ![client-config-list.png](../../assets/screenshots/website/client-config-list.png)
 
+## Keywords
+
+At the top of the client configuration is a Keywords section. These are Discord keywords that the bot will respond to in the configured keyword channels.
+
+| Keyword | Description |
+|---------|-------------|
+| `triggers` | The bot replies with all available triggers that can be run from Discord |
+| `clients` | The bot replies with the status of all clients and connected apps |
+| `commands` | The bot replies with local commands the client can execute |
+| `timers` | The bot replies with the last timer runtimes on all clients |
+| `status` | The bot replies with the status of all clients |
+
+Each keyword is customizable and requires a corresponding Discord channel to be configured via the `Keyword Channels` link.
+
+## Client Settings
+
 When you open the client settings you will see:
 
 ![client_config_settings2.jpg](../../assets/screenshots/website/client_config_settings2.jpg)
@@ -19,13 +35,35 @@ When you open the client settings you will see:
 5. Use this client for timers that are not part of a specific integration (non client integrated timers, daily overview posts for example)
 6. Client triggers: If the URL is provided, you can trigger the client to run any of these actions by clicking the cloud icon
 7. Save button: Once done, click this and it will update all your settings. If a URL is provided it will trigger the client to fetch the new settings right then. If no URL is provided then you can restart the client manually to pull the changed settings or wait 5 minutes for the client poller to request any changed settings and update
-8. If you have a duplicate client showup (change the user, hostname changed, etc) you can merge the new client with the old one so all the settings copy over and the old one is removed
+8. If a duplicate client appears (user change, hostname change, etc.), merge the new client into the old one — all settings copy over and the old entry is removed
 9. If you no longer have the client installed on a specific hostname, you can remove it
+
+### Client Info
+
+The info section at the top of each client tab displays:
+
+- `Tunnel SHA` - The tunnel hash for the client connection
+- `Host ID` - Unique host identifier
+- `UUID` - Client unique identifier
+- `Version` - Client version
+- `Branch` - Client branch (stable/unstable)
+- `Client UI` - Link to the local client web interface
+- `Uptime` - How long the client has been running
+- `Platform` - Operating system the client is running on
+- `Last conf change` - When the configuration was last modified
+- `Last conf sync` - When the client last synced its configuration
+
+### Connection Options
+
+- `Tunnel` - Select which tunnel endpoint the site uses to communicate with the client
+- `Disabled` - Disables the client without removing it
+- `Mute client down alerts` - Suppresses notifications when this client goes offline
+- `Use this client for custom timers` - Designates this client for non-integration timers (daily overview posts, etc.)
 
 ## Commands
 
 !!! info "Subscribers Only"
-     This is a **subscriber** feature, you can add them in the client and run them from the client without being a subscriber but no automation will be available from the site.
+     This is a **subscriber** feature. Non-subscribers can add and run commands from the local client. Site-side automation (auto-trigger on notifications) is a subscriber feature.
 
 ### Client
 
@@ -56,7 +94,7 @@ At the bottom of the client configuration is a `Commands` section
 
 1. Pick which command (must be added to the client already) to configure automation for
 2. What type of command
-3. Witch channel
+3. Which channel
 4. Role
 
 ### Command Example

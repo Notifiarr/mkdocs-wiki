@@ -4,12 +4,12 @@ Almost everything needed is available in different parts of the wiki. This will 
 
 ## Assumptions
 
-- You already have an account setup on notifiarr.com with a valid apikey to use in the client but if you dont, stop here and go make one.
+- You already have an account setup on notifiarr.com with a valid apikey to use in the client but if you don't, stop here and go make one.
 - You have [setup the notifiarr client](../client/install.md) if you plan to use it. To know if you will need it or not you can view the faq [for information on if it is required](../faq/faq.md#q-is-the-notifiarr-client-required)
 
 ## Client Connection
 
-Once the client is setup locally and you can see it internally (example: `localhost:5454`) and externally (example: `http://<your-external-ip>:5454` or `https://notifiarr.<your-domain>.com`).
+Once the client is setup locally and you can see it internally (example: `localhost:5454`) and externally (example: `http://<your-external-ip>:5454` or `https://notifiarr.<your-domain>.com`), you can move on to enabling integrations below.
 
 ## Integrations
 
