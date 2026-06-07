@@ -1,46 +1,10 @@
 # Overseerr
 
----
+!!! warning "Moved upstream — see Seerr"
+    In February 2026 Overseerr and Jellyseerr merged upstream into a single application called [**Seerr**](https://seerr.dev). Notifiarr followed by replacing the separate Overseerr and Jellyseerr integrations with a unified [**Seerr** integration](seerr.md).
 
-## Integration Card
+    Upstream announcement: [docs.seerr.dev — Seerr Release: Unifying Overseerr and Jellyseerr](https://docs.seerr.dev/blog/seerr-release/).
 
-![instructions2.png](../../assets/screenshots/integrations/overseerr/instructions2.png)
+If you are still running Overseerr during the upstream sunset period, configure it as a webhook source on the [Seerr integration page](seerr.md). The Notifiarr webhook URL works for both pre-migration Overseerr / Jellyseerr and current Seerr installations.
 
-1. Configuration
-2. Channel picker for the notifications
-
----
-
-### Channel Picker
-
-![instructions3.png](../../assets/screenshots/integrations/overseerr/instructions3.png)
-
-1. List of channels `Dropdown menu`
-2. Test bot channel permissions
-3. Copy Channel to all
-
----
-
-## Configuration
-
-![instructions4.png](../../assets/screenshots/integrations/overseerr/instructions4.png)
-
-1. Notification triggers
-2. Notification Options
-3. Notification Color
-
-!!! note
-    **Be sure to save settings**
-
----
-
-## Instructions
-
-![instructions1.png](../../assets/screenshots/integrations/overseerr/instructions1.png)
-
-1. Notifications Settings
-2. Webhook
-3. Enable the webhook agent
-4. Add the notification URL `https://notifiarr.com/api/v1/notification/overseerr/api_key_here` - Make sure to make a api key specific to overseerr
-5. Notification types you want to receive
-6. Save changes and enable the webhook
+For upstream Overseerr documentation, see the [Overseerr notification docs](https://docs.overseerr.dev/using-overseerr/notifications).
