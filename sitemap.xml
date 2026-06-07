@@ -5,6 +5,10 @@
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
+         <loc>https://notifiarr.wiki/pages/client/actions/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
          <loc>https://notifiarr.wiki/pages/client/afterInstall/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
@@ -13,7 +17,15 @@
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
-         <loc>https://notifiarr.wiki/pages/client/configuration/</loc>
+         <loc>https://notifiarr.wiki/pages/client/commands/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://notifiarr.wiki/pages/client/endpoints/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://notifiarr.wiki/pages/client/fileWatcher/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
@@ -29,11 +41,19 @@
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
+         <loc>https://notifiarr.wiki/pages/client/metrics/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
          <loc>https://notifiarr.wiki/pages/client/reverseProxy/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
-         <loc>https://notifiarr.wiki/pages/client/setup/</loc>
+         <loc>https://notifiarr.wiki/pages/client/siteTunnel/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://notifiarr.wiki/pages/client/system/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
@@ -185,6 +205,10 @@
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
+         <loc>https://notifiarr.wiki/pages/integrations/qui/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
          <loc>https://notifiarr.wiki/pages/integrations/radarr/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
@@ -206,6 +230,10 @@
     </url>
     <url>
          <loc>https://notifiarr.wiki/pages/integrations/rssWatcher/</loc>
+         <lastmod>2026-06-07</lastmod>
+    </url>
+    <url>
+         <loc>https://notifiarr.wiki/pages/integrations/seerr/</loc>
          <lastmod>2026-06-07</lastmod>
     </url>
     <url>
