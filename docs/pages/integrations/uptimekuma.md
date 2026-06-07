@@ -7,15 +7,30 @@
 
 ![trigger-channel.png](../../assets/screenshots/integrations/uptimekuma/trigger-channel.png)
 
-- `issues` - be notified of any issues
-- `restored` - be notified when sites are back up
+- `Issue` - Be notified of any issues.
+- `Restored` - Be notified when sites are back up.
+
+### Notification Fields
+
+Each trigger has the following notification fields that can be toggled on or off:
+
+| Field | Description |
+|-------|-------------|
+| `Name` | Monitor name |
+| `Status` | Current monitor status |
+| `URL` | Monitored URL |
+| `Type` | Monitor type |
+| `Timeout` | Monitor timeout value |
+| `Method` | HTTP method used |
+| `Maintenance` | Maintenance status |
+| `Codes` | Expected status codes |
 
 ## Instructions
 
 ![instructions.png](../../assets/screenshots/integrations/uptimekuma/instructions.png)
 
 !!! info
-    Add the webhook too your Uptime Kuma via Uptime-Kuma &rarr; Settings &rarr; Notifications &rarr; Setup Notifications
+    Add the webhook to your Uptime Kuma via Uptime-Kuma &rarr; Settings &rarr; Notifications &rarr; Setup Notifications
 
 ![uptime-webhook](../../assets/screenshots/integrations/uptimekuma/uptime-webhook.png)
 
@@ -28,6 +43,6 @@
 
 ## Examples
 
-uptime-Kuma UP         |  Uptime-Kuma DOWN
+Uptime-Kuma UP         |  Uptime-Kuma DOWN
 :-------------------------:|:-------------------------:
 ![example-2.png](../../assets/screenshots/integrations/uptimekuma/example-2.png)  |  ![example-1.png](../../assets/screenshots/integrations/uptimekuma/example-1.png)

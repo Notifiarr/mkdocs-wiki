@@ -1,5 +1,38 @@
 # Fail2ban
 
+!!! info
+    This integration allows for notifications from Fail2ban ban and jail events
+
+---
+
+## Trigger options
+
+### Triggers
+
+- `Ban` - Receive a notification when an IP is banned by Fail2ban
+- `Unban` - Receive a notification when an IP is unbanned by Fail2ban
+- `Jail Start` - Receive a notification when a Fail2ban jail starts
+- `Jail Stop` - Receive a notification when a Fail2ban jail stops
+
+### Channels
+
+- Setup the channel(s) to use for sending Fail2ban notifications
+
+---
+
+## Configuration
+
+### Integration Settings
+
+- `Show IP Map` - Display a map for the banned IP address in the notification
+- `Unban Command` - The command to execute when unbanning an IP (default: `fail2ban-client unban {ip}`)
+
+Each trigger has customizable notification color, pings, and layout options.
+
+---
+
+## Setup
+
 - To make setup easier; set the following variables
 
 ## Variables
@@ -58,5 +91,5 @@ F2B_HOST="$(hostname)"
 7. **Restart Fail2ban to apply the changes.**
 
    ```bash
-   fail2ban-client restart
+   sudo systemctl restart fail2ban
    ```

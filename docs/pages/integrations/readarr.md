@@ -12,12 +12,13 @@
 ### Triggers
 
 - `Grab` - Receive a notification when media is initially grabbed (RSS or manual)
-- `Download` - Receive a notification when media **new** is successfully imported
-- `Update` - Receive a notification when the application updates
+- `Imported` - Receive a notification when media **new** is successfully imported
+- `Updates` - Receive a notification when the application updates
 - `Upgrade` - Receive a notification when **upgraded** media is successfully imported
-- `Health` - Receive a notification when the application reports an issue
-- `Backup` - Receive a notification when a backup occurs
-- `Corrupt` - Monitor backups for corruption and size loss
+- `Author Added` - Receive a notification when an author is added
+- `Health Check` - Receive a notification when the application reports an issue
+- `Database Backup` - Receive a notification when a backup occurs
+- `Database Corrupt` - Monitor backups for corruption and size loss
 - `Deleted` - Be notified when media is deleted
 
 ---
@@ -49,7 +50,7 @@ Click the **cog icon** to open the configuration options for Readarr.
 
 ![configuration.png](../../assets/screenshots/integrations/readarr/configuration.png)
 
-1. Use the `Customize` toggle too drop down
+1. Use the `Customize` toggle to expand the trigger settings
 2. Set the color of the notification
 3. All available `notification fields` in this case we used the `grab` trigger
 

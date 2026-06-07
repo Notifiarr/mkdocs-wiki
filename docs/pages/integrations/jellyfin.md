@@ -8,13 +8,17 @@
 ![trigger-channels.png](../../assets/screenshots/integrations/jellyfin/trigger-channels.png)
 
 1. Triggers
-    - `Items` - Receive a notification when media is added
+    - `Item added` - Receive a notification when media is added
     - `Play` - Receive a notification when media has started playing
     - `Stop` - Receive a notification when media has stopped playing
-    - `Plugin Install` - Receive a notification when a plugin has been installed
-    - `Plugin Uninstall` - Receive a notification when a plugin has been removed
-1. More Triggers
-    - Open the configuration to enable/disable more triggers
+    - `Finished` - Receive a notification when media has finished playing
+    - `Plugin installing` - Receive a notification when a plugin is being installed
+    - `Plugin uninstalled` - Receive a notification when a plugin has been removed
+    - `Session start` - Receive a notification when a new session starts
+    - `User created` - Receive a notification when a new user is created
+    - `User deleted` - Receive a notification when a user is deleted
+    - `User account locked` - Receive a notification when a user account is locked
+    - `User password changed` - Receive a notification when a user changes their password
 1. Channel
     - Setup all the channels needed for each trigger
 
@@ -35,16 +39,16 @@ Click the **cog icon** to open the configuration options for Jellyfin.
 
 1. Notification content options that you can turn on/off to show in the notifications
 
-### NOTIFIARR
+### Notifiarr
 
 ![instructions.png](../../assets/screenshots/integrations/jellyfin/instructions.png)
 
 1. This needs to be done in Jellyfin before webhooks can be used
 1. After the webhook plugin is installed, this is how you add the webhook for Notifiarr
 
-### JELLYFIN
+### Jellyfin
 
-To configure your Jellyfin server to work with Notifiarr, we will first have to configure a few things, such as our webhook and notification settings - the latter required to for new content notifications.
+To configure your Jellyfin server to work with Notifiarr, we will first have to configure a few things, such as our webhook and notification settings - the latter required for new content notifications.
 
 ## Install the Webhook Plugin
 

@@ -5,19 +5,24 @@
 
 ## Trigger Options
 
-![triggers.ping](../../assets/screenshots/integrations/autobrr/triggers.png)
+![triggers.png](../../assets/screenshots/integrations/autobrr/triggers.png)
 
-`Approved` - Be notified of approved media.
+- `Approved` - Be notified of approved pushes
+- `Rejected` - Be notified of rejected pushes
+- `Error` - Be notified of any errors that may occur
+- `IRC Down` - Be notified when an IRC connection goes down
+- `IRC Up` - Be notified when an IRC connection comes back up
+- `Updates` - Be notified of any updates available
 
-`Rejected` - Be notified of rejected media.
+Each trigger has the following settings:
 
-`Error` - Be notified of any errors that may occur.
+- Notification color
+- Notification pings
+- Notification layout
 
-`IRC Down` - Be notified of any Down IRC.
+### Settings
 
-`IRC Up` - Be notified when the IRC is back Up.
-
-`Updates` - Be notified of any updates available.
+- `Remove forced (Prowlarr) from indexer name` - Strips the `(Prowlarr)` suffix that Prowlarr appends to indexer names in notifications
 
 ### Configuration
 

@@ -1,4 +1,4 @@
-# Snapshot
+# Snapshots
 
 ![overview.png](../../assets/screenshots/integrations/snapshots/overview.png)
 
@@ -31,10 +31,6 @@ Click the **cog icon** to open the integration settings for the Snapshot integra
 
 Before all the configuration options are available you must "Pick a client" from the drop-down list. This will typically be the hostname you have for your locally installed Notifiarr client.
 
-![integration_settings1.png](../../assets/screenshots/integrations/snapshots/integration_settings1.png)
-
-These are all the configurable options available to the user.
-
 ![integration_settings.png](../../assets/screenshots/integrations/snapshots/integration_settings.png)
 
 1. `Pick a client` - Select the local Notifiarr client you wish to configure for alerting.
@@ -53,18 +49,21 @@ The following Trigger options are available.
 
 The triggers used by the snapshot integration have the following allowed values.
 
-1. `Raid` - Using the Comparator "contains" with a Value of "_" will alert of a failure.
-1. `MegaCLI` - Using the Comparator "contains" with a Value of "degraded".
-1. `Load` - Value can be a decimal or whole number.
-1. `Users` - Value can be a whole Number.
-1. `Drive Age (Days)` - Value can be a number in days.
-1. `Drive Temp` - Value can be a decimal or whole number.
-1. `Drive SMART` - Using the Comparator "contains" with a Value of either "fail" OR "pass"
-1. `Storage (Free GB)` - Value can be a whole number or decimal followed by G for Gigabyte or T for Terabyte. e.g. 500G or 0.5T
-1. `Quota (Free GB)` - Value can be a whole number or decimal followed by G for Gigabyte or T for Terabyte. e.g. 500G or 0.5T
-1. `CPU Temp` - Value can be a decimal or whole number.
 1. `CPU Load` - Value can be a decimal or whole number.
+1. `CPU Temp` - Value can be a decimal or whole number.
+1. `Drive SMART` - Using the Comparator "contains" with a Value of either "fail" OR "pass"
+1. `Drive Temp` - Value can be a decimal or whole number.
+1. `Load` - Value can be a decimal or whole number.
+1. `MegaCLI` - Using the Comparator "contains" with a Value of "degraded".
+1. `Quota (Free GB)` - Value can be a whole number or decimal followed by G for Gigabyte or T for Terabyte. e.g. 500G or 0.5T
+1. `Raid` - Using the Comparator "contains" with a Value of "_" will alert of a failure.
 1. `RAM Load` - Value can be a decimal or whole number.
+1. `Storage (Free GB)` - Value can be a whole number or decimal followed by G for Gigabyte or T for Terabyte. e.g. 500G or 0.5T
+1. `Synology HA Status` - Synology High Availability cluster status monitoring.
+1. `Users` - Value can be a whole Number.
+
+!!! note
+    Some triggers are OS specific. Create rules based on your notification output.
 
 ---
 
@@ -73,6 +72,10 @@ The triggers used by the snapshot integration have the following allowed values.
 Allows the user to update existing messages and change between Fahrenheit and Celsius.
 
 ![extra_settings.jpg](../../assets/screenshots/integrations/snapshots/extra_settings.jpg)
+
+- `Temperature units` - Switch between Fahrenheit and Celsius for temperature displays.
+- `Update existing messages` - When enabled, new snapshots update the existing Discord message instead of posting a new one.
+- `Drive map` - Remap drive paths in notifications. Format: `/find,/replace` (one mapping per line). Example: `/mnt/remotes/nas/pool-a,/pool-a`
 
 ---
 
@@ -86,6 +89,6 @@ Here are all the different settings for your client. These selections will deter
 
 ## Custom Icon
 
-If you are AWESOME and are one of our Sub's then you will see this option and can upload your own custom icon.
+(Subscriber Feature) Assign another icon to notifications from this integration.
 
 ![custom_icon.jpg](../../assets/screenshots/integrations/snapshots/custom_icon.jpg)

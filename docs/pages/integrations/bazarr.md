@@ -42,7 +42,7 @@ Click the **cog icon** to open the configuration options for Bazarr.
 ![configuration.png](../../assets/screenshots/integrations/bazarr/configuration.png)
 
 1. Open integration specific instructions
-1. Choose the notification format
+1. Choose the notification style (Simple or Formatted)
 1. Enable reactions for `*arr` notifications when a subtitle is found if the associated `*arr` notification can be found
 
 Reaction example:

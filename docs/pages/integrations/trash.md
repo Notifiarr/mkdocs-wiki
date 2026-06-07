@@ -38,7 +38,7 @@
 | <center><b>Extras</b></center> | | |
 | Access to community sync<br>-- Upload your own formats for public/private use | ✅ | ✅ |
 | Instant sync when TRaSH updates | | ✅ |
-| Jump to top of the querue | | ✅ |
+| Jump to top of the queue | | ✅ |
 | Trigger a sync from Discord | | ✅ |
 
 ## Client Setup
@@ -54,7 +54,7 @@
 
 ![trigger-channels.png](../../assets/screenshots/integrations/trash/trigger-channels.png)
 
-1. `CFs/Scores` - The amount of CF's and scores you have synced.
+1. Sync counts — the card shows a **Radarr** panel and a **Sonarr** panel side-by-side, each displaying the number of `CFs` (Custom Formats) and `Scores` you currently have synced for that app.
 2. `Channel` - Which channel to send TRaSH update notifications to (when TRaSH updates them, removes them, when you sync them or unsync them)
 
 ### Client Settings
@@ -63,7 +63,7 @@ This is where you set the interval at which you want the system to compare your 
 
 ![client-sync.png](../../assets/screenshots/integrations/trash/client-sync.png)
 
-##### Getting Started
+#### Getting Started
 
 The layout is pretty simple with a row of tabs for "actions" and a row of tabs for "instances". Use the top row to navigate between the different settings and the second row to apply things to the desired instance. The toggle to the right is for "advanced" items that most will not need to utilize often (or at all) if you simply want to follow the guide profiles.
 
@@ -128,6 +128,9 @@ Here we can manage existing profiles or add new profiles
 
 Here you can edit quality names within a specific group and choose to sync them to your starr instance.
 
+!!! note
+    When quality sync is used, optional groups that are part of the TRaSH quality profile may be enabled or disabled as you wish. No further settings are needed.
+
 ![quality-tab.png](../../assets/screenshots/integrations/trash/quality-tab.png)
 
 1. Definition group: Preset quality value groups
@@ -156,7 +159,7 @@ After making the changes you want, click the save changes button
 !!! info
     This tab only shows when the toggle is enabled
 
-This section has "one off" actions that can be applied to an instance but really isnt needed very often if ever. Each tool has a description of what it will do, we suggest not using them unless you have talked with us and that is where we send you to fix the given problem.
+This section has "one off" actions that can be applied to an instance but really isn't needed very often, if ever. Each tool has a description of what it will do, we suggest not using them unless you have talked with us and that is where we send you to fix the given problem.
 
 ![tools-tab.png](../../assets/screenshots/integrations/trash/tools-tab.png)
 

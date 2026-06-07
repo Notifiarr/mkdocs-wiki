@@ -7,12 +7,12 @@
 
 ![trigger-channels.png](../../assets/screenshots/integrations/prowlarr/trigger-channels.png)
 
-- `Updates` - Notification for prowlarr updates available
-- `Health` - Notification for health errors
+- `Update Notifications` - Notification for prowlarr updates available
+- `Health Notifications` - Notification for health errors
 - `Health Restored` - Notification for health status restored to normal
-- `Grab` - Notification for grabs
-- `Backup` - Notification for when backups occur
-- `Corrupt` - Notification for corrupted database
+- `Grab Notifications` - Notification for grabs
+- `Database Backup` - Notification for when backups occur
+- `Database Corrupt` - Notification for corrupted database
 
 ---
 
@@ -41,7 +41,7 @@ Prowlarr Connect            |  Test Notification
 
 ![configuration-1.png](../../assets/screenshots/integrations/prowlarr/configuration-1.png)
 
-1. click the `Customize` toggle to open the trigger settings.
+1. Click the `Customize` toggle to open the trigger settings.
 2. Choose the color of your notification
 
 - here are all the available `Notification Fields` under the `Grab` trigger as you can see there is a lot of customization for your specific needs :smile:

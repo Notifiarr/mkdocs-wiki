@@ -7,6 +7,33 @@
 
 The frequency of dashboard updates is controlled by the Notifiarr Client Configuration for the Dashboard for the specified client. All other Dashboard settings are noted below and within the Dashboard Integration.
 
+!!! note
+    The bot needs **Manage Messages** permission for this to work properly.
+
+## Supported Apps
+
+The Dashboard supports the following applications, organized by category:
+
+**Starr Apps**
+
+- Lidarr
+- Radarr
+- Readarr
+- Sonarr
+
+**Download Clients**
+
+- Deluge
+- NZBGet
+- qBittorrent
+- rTorrent
+- SABnzbd
+- Transmission
+
+**Media**
+
+- Plex
+
 ## Trigger options
 
 ![trigger_channels_new.png](../../assets/screenshots/integrations/dashboard/trigger_channels_new.png)
@@ -42,12 +69,29 @@ Click the **cog icon** to open the configuration options for the Dashboard integ
 1. Here you can set the update interval of the Dashboard
 1. Allows you to change the default icon (Subscriber feature).
 1. Some examples of the Dashboard output.
-1. The apps you want to get info from.
-1. How many of the newest items to see in the message (1-5).
-1. How many of the upcoming items to see in the message (1-10).
-1. How the Dashboard should display your completion ratio. Two options are available,
-1. `In Database` - Compares your downloaded items against what the App considers a complete list
-1. `On Disk` - Compares your downloaded items to what you have on your disk.
+
+### Per-App Settings
+
+Each app has the following configurable options:
+
+1. **Enabled** - Toggle the app on or off in the Dashboard
+1. **Newest** - How many of the newest items to see in the message (0-5 for Starr apps, 0-5 for download clients)
+1. **Upcoming** - How many of the upcoming items to see in the message (0-10)
+1. **Total Is** (Starr apps only) - How the Dashboard should display your completion ratio:
+    - `In Database` - Compares your downloaded items against what the App considers a complete list
+    - `On Disk` - Compares your downloaded items to what you have on your disk
+1. **Order** - The display order of the app in the Dashboard (minimum 1)
+1. **Template** - Customize the notification layout
+
+!!! note
+    Starr apps also allow selecting specific instances to include in the Dashboard.
+
+### Settings
+
+- `Hostname in notifications` - Include the client hostname in dashboard notifications
+- `Notification behavior` - Choose between `Update existing` (edits the existing message) or `New messages` (posts a new message each time)
+- `Force repost` - Marks all notifications to be deleted on the next update and reposts new ones
+- `Reorder dashboard` - Clears content hashes and allows all messages to update to fix the order
 
 ---
 

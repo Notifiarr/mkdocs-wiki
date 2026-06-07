@@ -21,7 +21,23 @@ Click the **cog icon** to open the configuration options for the Reddit integrat
 
 ![configuration2.png](../../assets/screenshots/integrations/reddit/configuration2.png)
 
-1. `Select Channel` - Pick a channel for the subreddit notification to go to.
-2. `Subreddit Config` - Either enter in the subreddit or custom domain. After which you can include or exclude key words using Regex.
-3. `Add Reddit Monitoring` - Add the subreddit to your account to monitor.
-4. `Update/Delete` - Save or remove the modified subreddit from being monitored.
+### Existing Subreddits
+
+Each monitored subreddit has the following settings:
+
+1. `Channel` - Pick a Discord channel for the subreddit notification to go to
+2. `/r/` - The subreddit name
+3. `Exclude regex` - Only notify if the title or user does **not** contain this regex pattern
+4. `Include regex` - Only notify if the title or user **does** contain this regex pattern
+5. `Domain` - Use a custom domain in place of reddit for those using libreddit or similar frontends (e.g. `https://reddit.com`)
+6. `Update` - Save changes to the subreddit's settings
+7. `Delete` - Remove the subreddit from being monitored
+
+### Adding a New Subreddit
+
+1. `Channel` - Pick a channel for the subreddit notification to go to
+2. `/r/` - Enter the subreddit name (e.g. `OpenSignups`)
+3. `Exclude regex` - Optional regex pattern to exclude matching posts
+4. `Include regex` - Optional regex pattern to only include matching posts
+5. `Domain` - Optional custom domain to use in notification links
+6. `Add` - Add the subreddit to your account to monitor
