@@ -40,3 +40,17 @@ notifiarr://{api_key}/{channel1_id}/{channel2_id}/{channelN_id}
 
 !!! warning
     As of this writing, the upstream Apprise webhook to Notifiarr only supports one user/role mention per payload.
+
+---
+
+## App History
+
+The Notifiarr Apprise integration page tracks notification history from all connected Apprise apps. Each row in the **App History** table represents an application that has sent at least one notification through Apprise to Notifiarr.
+
+| Column | Description |
+|--------|-------------|
+| **App** | The name of the application |
+| **First** | When the first notification was received |
+| **Last** | When the most recent notification was received |
+| **Total** | Total number of notifications received |
+| **Delete** | Remove the app from the history |

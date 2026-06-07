@@ -9,6 +9,23 @@
 
 1. Once you open the `Integration Configuration` you only need to toggle on/off what you want to use.
 
+## View Modes
+
+The integrations page supports two layout modes:
+
+- **Card View** - Displays each integration as a card with a summary, settings cog, and reload button
+- **List View** - Displays integrations in a sidebar list; select one to view its settings in the main area
+
+Toggle between views using the icons in the top right corner of the page.
+
+## Integration Configuration Card
+
+The first card on the page shows:
+
+- `Active` / `Inactive` / `Total` - Counts of your enabled vs. available integrations
+- `Daily overview` - Select a Discord channel to receive a daily summary of notifications sent per integration (sent around 11:50 PM)
+- `DND` (Do Not Disturb) - Configure time windows to stop notifications for specific integrations
+
 ## Reactions Setup
 
 ![reaction-setup.png](../../assets/screenshots/website/reaction-setup.png)

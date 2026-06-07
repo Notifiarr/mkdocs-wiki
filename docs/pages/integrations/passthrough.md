@@ -9,7 +9,10 @@ By sending them through this integration you can keep track of how many it has s
 
 ## Payload field breakdown
 
-```json
+!!! note
+    The comments in the block below are for documentation only and must be removed before sending.
+
+```jsonc
 notification: {
     update: false, // Optional (Bool) - This is used to update an existing message with the same id, true will update existing & false will always post new
     name: "Local App", // Required (Str) - This is the name of the custom app/script, should be unique
@@ -147,6 +150,9 @@ subprocess.call(webhook)
 
 ## Powershell Example Usage
 
+!!! note
+    Define `$NOTIFIARR_APIKEY`, `$DISCORD_CHANNEL_ID`, `$PING_USER_ID`, and `$PING_ROLE_ID` before running.
+
 ```powershell
 $payload = @{
     notification = @{
@@ -209,7 +215,7 @@ $payload = @{
 
     $response = Invoke-RestMethod @params
 
-    if ($request.details.response -eq 'Pass through payload processed.'){
+    if ($response.details.response -eq 'Pass through payload processed.'){
         Write-Host "Notification sent successfully!" -ForegroundColor Green
     } else {
         Write-Warning "Failed to send notification."

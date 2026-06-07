@@ -88,7 +88,7 @@ Current as of Version 25.10.1.
 ### Desired Outcome
 
 - `C:\ProgramData\notifiarr\notifiarr.amd64.exe` - The Application.
-- `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just the add the API key.
+- `C:\ProgramData\notifiarr\notifiarr.conf` - The config file. Just add the API key.
 - `C:\ProgramData\notifiarr\logs` - Folder for log files.
 
 ### Create the folders
@@ -109,7 +109,7 @@ Current as of Version 25.10.1.
     - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
-1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at http://127.0.0.1:5454
+1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at `http://127.0.0.1:5454`
 1. Enter your API key when prompted
 1. Login for the first time with your Notifiarr.com email address and password.
 
@@ -126,7 +126,7 @@ Current as of Version 25.10.1.
 
 1. Double-click `notifiarr.amd64.exe` to launch
 1. Enter your API key when prompted
-1. Access the Web UI at http://127.0.0.1:5454
+1. Access the Web UI at `http://127.0.0.1:5454`
     - Username: email address you login to notifiarr.com with
     - Password: password for notifiarr.com
 1. You may set a local password after you login.
@@ -145,7 +145,7 @@ Current as of Version 25.10.1.
 ## Synology
 
 1. Run the below command while ssh'd in to the NAS.
-    It will run the [Syno Install Script located on the Notifiarr Repository](https://github.com/Notifiarr/notifiarr/blob/main/userscripts/install.sh)
+    It will run the [Syno Install Script located on the Notifiarr Repository](https://github.com/Notifiarr/notifiarr/blob/main/userscripts/install-synology.sh)
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install-synology.sh | sudo bash
@@ -156,7 +156,8 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 This project builds automatically in [Docker Cloud](https://hub.docker.com/r/golift/notifiarr)
 and creates [ready-to-use multi-architecture images](https://hub.docker.com/r/golift/notifiarr/tags).
 The `latest` tag is always a tagged release in GitHub.
-It also builds in a GitHub Action and publishes to GHCR (ghcr.io).
+It also builds in a GitHub Action and publishes to GHCR (`ghcr.io/notifiarr/notifiarr`).
+A CUDA-enabled image is available for Nvidia GPU monitoring: `ghcr.io/notifiarr/notifiarr:cuda`.
 
 ### Compose
 
@@ -195,6 +196,7 @@ but it's not recommended and only for advanced-needs.
 docker pull golift/notifiarr
 docker run --hostname $(hostname) -d --privileged \
   -v /var/run/utmp:/var/run/utmp \
+  -v /etc/machine-id:/etc/machine-id \
   -e "DN_API_KEY=abcdef-12345-bcfead-43312-bbbaaa-123" \
   -e "DN_SONARR_0_URL=http://localhost:8989" \
   -e "DN_SONARR_0_API_KEY=kjsdkasjdaksdj" \
@@ -282,7 +284,7 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
     Environment=DN_API_KEY=YOUR-API-KEY-FROM-NOTIFIARR.COM
     Environment=DN_LOG_FILE=/home/$USER/notifiarr/app.log
     Environment=DN_HTTP_LOG=/home/$USER/notifiarr/http.log
-    Environment=DN_DEBUG_LOG=/home/$USR/notifiarr/debug.log
+    Environment=DN_DEBUG_LOG=/home/$USER/notifiarr/debug.log
     Environment=DN_SERVICES_LOG_FILE=/home/$USER/notifiarr/services.log
     Environment=DN_QUIET=true
 
@@ -305,7 +307,7 @@ curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts
 
     Setting up the proxy is optional, but recommended so you can access the client like your other apps.
 
-    1. Log into your Notifarr client and change the base url to `/notifiarr` and save changes
+    1. Log into your Notifiarr client and change the base url to `/notifiarr` and save changes
     1. Go back to your ssh console
     1. Type `cd /home/$USER/.apps/nginx/proxy.d`
     1. Type `nano notifiarr.conf`

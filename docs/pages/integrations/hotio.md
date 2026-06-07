@@ -28,7 +28,22 @@ Click the **cog icon** to open the configuration options for Hotio apps.
 
 ![configuration.png](../../assets/screenshots/integrations/hotio/configuration.png)
 
-1. Pick the colors for the different Pullio update states
+### Triggers
+
+There are three trigger states for Pullio, each with its own settings:
+
+- `Available update` - Notifies when an update is available for a container
+    - Notification color
+    - Notification pings
+    - Notification layout
+- `Successful update` - Notifies when a container update completes successfully
+    - Notification color
+    - Notification pings
+    - Notification layout
+- `Failed update` - Notifies when a container update fails
+    - Notification color
+    - Notification pings
+    - Notification layout
 
 ---
 

@@ -11,7 +11,7 @@
 
 - `Ban` - Be notified of any bans that occur
 
-Click the cog icon too open the configuration settings
+Click the cog icon to open the configuration settings
 
 ![open-configuration.png](../../assets/screenshots/integrations/crowdsec/open-configuration.png)
 
@@ -19,7 +19,7 @@ Click the cog icon too open the configuration settings
 
 ## Instructions
 
-- you will need too edit your `/etc/crowdsec/notifications/http.yaml` file to look like this
+- you will need to edit your `/etc/crowdsec/notifications/http.yaml` file to look like this
 
 ```yaml
 type: http          # Don't change
@@ -34,7 +34,7 @@ headers:
   x-api-key: YOUR_APIKEY_HERE
 ```
 
-make sure too replace `YOUR_API_KEY` with either your `global` API KEY or as its recommended you can create a API KEY for Crowdsec.
+make sure to replace `YOUR_APIKEY_HERE` with either your `global` API KEY or, as recommended, an API KEY created specifically for Crowdsec.
 
 you will register notifiarr in the `profiles.yaml` in your crowdsec directory
 
@@ -50,8 +50,8 @@ notifications:
 on_success: break
 ```
 
-!!! info "Crowdec Notifications"
-    - Please refer too [Crowdsec-Notifications](https://docs.crowdsec.net/docs/notification_plugins/intro/) for issues with setup
+!!! info "Crowdsec Notifications"
+    - Please refer to [Crowdsec-Notifications](https://docs.crowdsec.net/docs/notification_plugins/intro/) for issues with setup
 
 ---
 
@@ -59,10 +59,10 @@ on_success: break
 
 ![configuration-options.png](../../assets/screenshots/integrations/crowdsec/configuration-options.png)
 
-1. Click the `Customize` toggle too show all available options for the `Ban` trigger
+1. Click the `Customize` toggle to show all available options for the `Ban` trigger
 2. All available `notification fields`
-3. Use this if you want to be pings
-4. Enable GEO map locations in your notification
+3. Use this to ping a role/user when a ban occurs
+4. `Show a map for the IP` - include a geo-located map image of the offending IP in the notification
 
 ---
 

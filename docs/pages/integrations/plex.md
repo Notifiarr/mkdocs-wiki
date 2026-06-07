@@ -18,17 +18,27 @@ Reaction example:
 1. Opens the integrations settings.
 1. Reloads the integration.
 1. Triggers
-    - `Play` - Notify when a user starts playing media.
-    - `Resume` - Notify when a user resumes playing media.
-    - `Finished` - Notify when a user finishes playing media.
-    - `Rating` - Notify when a user rates a movie/show.
-    - `New Item` - Notify when a new item is added to plex (requires push notifications enabled in Plex - Server -> General).
-    - `Sessions` - Get notifications about streaming sessions and minimal server information.
-    - `Devices` - Notify when a new device is added.
-    - `Backup` - Notify when a backup was completed.
-    - `Corruption` - Notify when database corruption is detected.
+    - `Play` - When media starts playing
+    - `Direct Play` - Requires play enabled, sends notifications for direct play streams
+    - `Single Transcode` - Requires play enabled, sends notifications for single transcode streams (audio or video)
+    - `Full Transcode` - Requires play enabled, sends notifications for full transcode streams (audio and video)
+    - `Resume` - When media starts playing after being paused
+    - `Finished` - When media stops playing, this uses the client to track plex sessions (do not use with Scrobble enabled)
+    - `Scrobble` - When media stops playing, this uses the plex webhook (requires Plex Pass)
+    - `Rating` - Notify when a user rates a movie/show (requires Plex Pass)
+    - `New Item` - Notify when a new item is added to plex (requires push notifications enabled in Plex and Plex Pass)
+    - `Sessions` - A snapshot of what is playing, transcoding, server info, etc
+    - `New Devices` - Notify when a new device is added (requires push notifications and Plex Pass)
+    - `Db Backup` - Notify when a database backup was completed (requires push notifications and Plex Pass)
+    - `Db Corruption` - Notify when database corruption is detected (requires push notifications and Plex Pass)
 1. Discord Channels
-    - Channel(s) to use for sending plex notifications.
+    - Channel(s) to use for sending plex notifications
+
+!!! note "Trigger notes"
+    - Triggers marked with push notifications require push notifications enabled in the Plex settings (Server -> General)
+    - Delete and unmonitor features require valid Radarr/Sonarr connections in the local client
+    - Rating, New Item, Scrobble, New Devices, Db Backup, and Db Corruption triggers require the Plex Pass for webhooks
+    - Finished uses the client to track the Plex API; do not use with Scrobble enabled
 
 ## Integration Settings Menu
 
@@ -94,6 +104,18 @@ Here you can adjust the settings for this integration.
 
 Additional settings such as automatically unmonitor an episode or movie once a user has watched it. You are able to select multiple users by holding down ctrl and highlighting the names.
 ![extra-settings.png](../../assets/screenshots/integrations/plex/extra-settings.png)
+
+- `Item Ratings` - How to display ratings when media is rated (plain text, stars, or stars with label)
+- `Split by Rating` - Send notifications with selected content ratings to a separate channel
+- `Unmonitor movie on finish` - Automatically unmonitor a movie after selected users finish watching in selected Radarr instances (Patron feature, requires finished/scrobble notifications enabled)
+- `Unmonitor episode on finish` - Automatically unmonitor an episode after selected users finish watching in selected Sonarr instances (Patron feature, requires finished/scrobble notifications enabled)
+- `Delete movie & file on finish` - Delete movie and file after selected users finish watching in selected Radarr instances (Patron feature, requires finished/scrobble notifications enabled)
+- `Delete movie file on finish` - Delete only the movie file after selected users finish watching in selected Radarr instances (Patron feature, requires finished/scrobble notifications enabled)
+- `Delete episode on finish` - Delete episode after selected users finish watching in selected Sonarr instances (Patron feature, requires finished/scrobble notifications enabled)
+- `Delete delay` - How long to wait after the finished notification before deleting, in minutes (Patron feature)
+- `Delete exclusions (TMDb)` - TMDb IDs to exclude from automatic movie deletion, separated by commas (Patron feature)
+- `Delete exclusions (TVDb)` - TVDb IDs to exclude from automatic episode deletion, separated by commas (Patron feature)
+- `Library exclusion` - Ignore notifications from specific libraries
 
 ### Client Settings
 

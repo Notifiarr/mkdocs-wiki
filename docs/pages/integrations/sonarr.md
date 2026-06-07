@@ -1,7 +1,7 @@
 # Sonarr
 
 !!! info
-    This integration allows for notifications from Radarr using its built in Connection for Notifiarr. In Radarr click Settings → Connect → + → Notifiarr
+    This integration allows for notifications from Sonarr using its built in Connection for **Notifiarr**. In Sonarr click Settings → Connect → <kb>+</kb> → Notifiarr
 
 ## Current Versions
 
@@ -15,14 +15,16 @@
 ### 1. Triggers
 
 - `Grab` - Receive a notification when media is initially grabbed (RSS or manual)
-- `Download` - Receive a notification when media **new** is successfully imported
+- `Imported` - Receive a notification when media **new** is successfully imported
 - `Upgrade` - Receive a notification when **upgraded** media is successfully imported
+- `Series Added` - Receive a notification when a series is added
 - `Deleted` - Be notified when media is deleted
-- `Update` - Receive a notification when the application updates
-- `Backup` - Receive a notification when a backup occurs
-- `Corrupt` - Monitor backups for corruption and size loss
+- `Updates` - Receive a notification when the application updates
+- `Database Backup` - Receive a notification when a backup occurs
+- `Database Corrupt` - Monitor backups for corruption and size loss
 - `Failed` - Custom notification type based on previous grabs. If the system detects a grab for the same media with the same quality or better before the previous one was imported then it will set the previous one as failed
-- `Health` - Receive a notification when the application reports an issue
+- `Health Check` - Receive a notification when the application reports an issue
+- `Health Restored` - Receive a notification when a health issue is resolved
 
 ### 2. Channels
 
@@ -38,7 +40,7 @@ Click the **cog icon** to open the configuration options for Sonarr.
 
 ![layout-editor.png](../../assets/screenshots/integrations/sonarr/instructions.png)
 
-1. In Sonarr navigate to Connect => Add New (Plus Button) => Webhook
+1. In Sonarr navigate to Connect => Add New (Plus Button) => Notifiarr
 2. Enter the webhook URL in the URL field
 Enter a name for the Notification in Sonarr `Notifiarr` is suggested, but use what you like
 Enable the notification triggers you wish to have sent from Sonarr to the Notifiarr Site

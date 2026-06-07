@@ -11,12 +11,12 @@
 ![trigger-channels.png](../../assets/screenshots/integrations/whisparr/trigger-channels.png)
 
 - `Grab` - Notifications for grabs that occur
-- `Imports` - Notifications for when media is imported
+- `Import` - Notifications for when media is imported
 - `Upgrade` - Notifications for media upgrades
 - `Added` - Notifications for new media added
 - `Deleted` - Notifications for when media is deleted
 - `Updates` - Notifications for system updates
-- `Health Check` Notifications for health checks
+- `Health Check` - Notifications for health checks
 - `Health Restored` - Notifications for health restored to normal
 
 ---
@@ -29,14 +29,14 @@
 
 ![instructions.png](../../assets/screenshots/integrations/whisparr/instructions.png)
 
-1. Instructions on how to setup the notifiarr connect in prowlarr
+1. Instructions on how to setup the notifiarr connect in Whisparr
 
 !!! info
     Add the Connect using its built in Connection for **Notifiarr**. In Whisparr click Settings → Connect → <kb>+</kb> → Notifiarr, once done correctly you will receive a test notification :smile:
 
 Whisparr Connect            |  Test Notification
 :-------------------------:|:-------------------------:
-![prowlarr.connect](../../assets/screenshots/integrations/whisparr/whisparr-connect.png)  |  ![test-notification](../../assets/screenshots/integrations/whisparr/test-notification.png)
+![whisparr.connect](../../assets/screenshots/integrations/whisparr/whisparr-connect.png)  |  ![whisparr-test-notification](../../assets/screenshots/integrations/whisparr/test-notification.png)
 
 ---
 
@@ -57,4 +57,4 @@ Whisparr Connect            |  Test Notification
 
 Whisparr Imported         |  Whisparr Grabbed
 :-------------------------:|:-------------------------:
-![prowlarr.connect](../../assets/screenshots/integrations/whisparr/example-1.png)  |  ![test-notification](../../assets/screenshots/integrations/whisparr/example-2.png)
+![whisparr.connect](../../assets/screenshots/integrations/whisparr/example-1.png)  |  ![whisparr-test-notification](../../assets/screenshots/integrations/whisparr/example-2.png)

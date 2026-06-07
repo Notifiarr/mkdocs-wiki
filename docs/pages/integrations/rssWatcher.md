@@ -22,7 +22,30 @@
 1. Page to configure the RSS Watcher.
 2. Custom Icon `Subscriber Feature`
 3. Example screenshots of what you can expect the notification to look like.
-4. List of preset RSS feeds you can toggle on to get notifications from
-5. Name of custom feed
-6. URL for the RSS feed you wanna add
-7. regex filter of things to post
+
+### Preset Feeds
+
+Toggle on the preset RSS feeds you want to receive notifications from. In addition to the standard preset feeds, there are two special feeds:
+
+- **Movie News** - Sourced from `filmjabber.com`. When enabled, you can select which sub-feeds to include:
+    - Recent theaters
+    - Upcoming theaters
+    - Recent physical
+    - Upcoming physical
+- **Show News** - Sourced from `ismyshowcancelled.com`. When enabled, you can select which sub-feeds to include:
+    - Announced
+    - Renewed
+    - Cancelled
+
+### Custom Feeds
+
+You can add your own RSS feeds with the following settings:
+
+1. **Active** - Enable or disable the custom feed
+2. **Name** - A display name for the custom feed
+3. **URL** - The URL for the RSS feed (must be a valid Atom RSS feed)
+4. **Include** - An inclusive regex filter to only post matching items
+5. **Delete** - Remove an existing custom feed
+
+!!! note
+    Open the channel picker after adding a feed to assign its channel.

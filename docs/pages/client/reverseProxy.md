@@ -5,14 +5,26 @@
     Notifiarr client to the Internet at all. In other words, don't do any of this.**
     But you can if you want to access your local Notifiarr Client from the Internet.
 
-While you can certainly poke a hole your firewall and send the traffic directly to this app,
+While you can certainly poke a hole in your firewall and send the traffic directly to this app,
 it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
 
 - You'll want to tune the `upstreams` and `urlbase` client settings for your environment.
   - If your reverse proxy IP is `192.168.3.45` then set `upstreams`
     in the Trust Profile page of the local Notifiarr Client to `192.168.3.45/32`
+  - You can also set this with the `DN_UPSTREAMS_0` environment variable.
 - The `urlbase` on the local Notifiarr client configuration page can be left at `/`,
   but change it if you serve this app from a subfolder like `/notifiarr`.
+  - You can also set this with the `DN_URLBASE` environment variable.
+
+!!! info "WebSocket Support"
+    The Notifiarr client Web UI uses WebSocket connections. Your reverse proxy configuration
+    must include the `Upgrade` and `Connection` headers for the UI to function correctly.
+    The examples below include these headers.
+
+!!! warning "API Path"
+    The `/api` path must not be protected by external authentication (Authelia, Organizr, LDAP, etc.).
+    It uses API key authentication handled by the client. If you protect it, integrations from
+    notifiarr.com will fail. The examples below handle this correctly.
 
 ## Cloudflare Users
 
@@ -55,9 +67,9 @@ That's all there is to it.
 !!! info
     If using Authelia or Organizr ensure they are passing the username header.
 
-There is working a SWAG example (with authelia, organizr, ldap) at the bottom of this page.
+A working SWAG example (with Authelia, Organizr, LDAP) is shown in the NGINX Subdomain Example below.
 
-For example in NGINX: if `auth_user` is the variable your authentication app is passing (and it probably isn't) then your would need:
+For example in NGINX: if `auth_user` is the variable your authentication app is passing (and it probably isn't) then you would need:
 
 ```nginx
 proxy_set_header X-WebAuth-User $auth_user;

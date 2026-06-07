@@ -1,4 +1,4 @@
-# network
+# Network
 
 !!! info
     This integration allows for notifications from the local Notifiarr client app to monitor network machines or services.
@@ -11,7 +11,7 @@
 
 2. Opens the integrations settings.
 
-3. A list of everything you are monitoring with the Notifiarr client and show a green arrow if it is available or red arrow if it isn't.
+3. A list of everything you are monitoring with the Notifiarr client; shows a green arrow if it is available or a red arrow if it is not.
 
 4. Opens up the Discord channel selection menu.
 
@@ -57,6 +57,10 @@ These are all the configurable options available to the user.
 
 Here you can select individual color schemes for each available trigger.
 
+- `Up` - When a monitored service is restored.
+- `Down` - When a monitored service is unreachable.
+- `Both` - When a monitored service is restored and another service is unreachable at the same time.
+
 ![triggers.png](../../assets/screenshots/integrations/network/triggers.png)
 
 ## Integration Settings (Monitor Settings)
@@ -85,7 +89,7 @@ Here you can select individual color schemes for each available trigger.
 
 ![status_page.png](../../assets/screenshots/integrations/network/status_page.png)
 
-1. `Status Page` - Enables a web page status overview of all your monitored items. Past events are also shown. (This requires a API set for the network integration)
+1. `Status Page` - Enables a web page status overview of all your monitored items. Past events are also shown. (This requires the Status Page API key to be set on the Network integration)
 
 2. `Website Status` - Include current status of websites being tracked with the Website Status integration.
 

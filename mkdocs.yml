@@ -14,6 +14,13 @@ nav:
       - Install: pages/client/install.md
       - After Install: pages/client/afterInstall.md
       - Web UI: pages/client/gui.md
+      - Site Tunnel: pages/client/siteTunnel.md
+      - File Watcher: pages/client/fileWatcher.md
+      - Endpoints: pages/client/endpoints.md
+      - Commands: pages/client/commands.md
+      - Actions: pages/client/actions.md
+      - Metrics: pages/client/metrics.md
+      - System: pages/client/system.md
       - Health Checks: pages/client/healthChecks.md
       - Troubleshooting: pages/client/troubleshooting.md
       - Reverse Proxy: pages/client/reverseProxy.md
@@ -62,6 +69,7 @@ nav:
       - Plex: pages/integrations/plex.md
       - Prowlarr: pages/integrations/prowlarr.md
       - Qbit Manage: pages/integrations/qbitmanage.md
+      - qui: pages/integrations/qui.md
       - Radarr: pages/integrations/radarr.md
       - Readarr: pages/integrations/readarr.md
       - Reciperr: pages/integrations/reciperr.md
@@ -70,6 +78,7 @@ nav:
       - RSS Watcher: pages/integrations/rssWatcher.md
       - Simon Says: pages/integrations/simonSays.md
       - Snapshots: pages/integrations/snapshots.md
+      - Seerr: pages/integrations/seerr.md
       - Sonarr: pages/integrations/sonarr.md
       - Starr Proxy: pages/integrations/starrproxy.md
       - Synology: pages/integrations/synology.md

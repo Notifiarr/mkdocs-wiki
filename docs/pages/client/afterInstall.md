@@ -15,7 +15,7 @@ Do these things:
 ## Web UI
 
 When you open the application on MacOS or Windows for the first time, you're
-prompted for your API key. Enter it. Must provide the "All" API key from your
+prompted for your API key. Enter it — you must provide the "All" API key from your
 [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
 
 !!! info "API Key"
@@ -68,7 +68,7 @@ When a new docker image is deployed with an empty `/config` folder mounted, the 
 - Write a brand new config to `/config/notifiarr.conf` file.
 - On first run, the WebUI will prompt you for your API key.
 - After entering your API key, login with your **Notifiarr.com email address and password**.
-- You can set a local password after logging in *Trust Profile* by clicking your username in the bottom left.
+- After logging in, click your username in the bottom left and go to *Trust Profile* to set a local password.
 
 Environment Variables - and the Unraid Template - override settings in the Config file.
 
@@ -127,6 +127,10 @@ notifiarr ALL=(root) NOPASSWD:/usr/sbin/iotop *
 # Allows monitoring megaraid volumes on macOS, Linux/Docker and FreeBSD.
 # Rarely needed, and you'll know if you need this.
 notifiarr ALL=(root) NOPASSWD:/usr/sbin/MegaCli64 -LDInfo -Lall -aALL
+
+# Allows IPMI sensor monitoring on Linux (requires ipmitool or freeipmi-tools).
+notifiarr ALL=(root) NOPASSWD:/usr/bin/ipmitool sensor
+notifiarr ALL=(root) NOPASSWD:/usr/sbin/ipmi-sensors
 ```
 
 ### Snapshot Packages
@@ -145,6 +149,15 @@ Install optional package(s) for snapshot data collection.
 - **Synology**: `opkg install smartmontools`, but first get Entware:
   - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
   - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+
+### Additional Snapshot Features
+
+The following snapshot capabilities are configured on the Notifiarr.com website or in the client Web UI:
+
+- **IPMI Sensors** - Monitor hardware sensor data using `ipmitool` or `ipmi-sensors`. Install the `ipmitool` or `freeipmi-tools` package and add the sudoers entries above. Enable IPMI monitoring on the website.
+- **ZFS Pools** - Monitor ZFS pool health and usage. Configure pool names in the snapshot settings on the website.
+- **Nvidia GPU** - Monitor GPU utilization and temperature. Configure on the *Snapshot Apps* page in the client Web UI. For Docker, use the CUDA image: `ghcr.io/notifiarr/notifiarr:cuda`.
+- **MySQL** - Monitor MySQL process lists and status. Add MySQL server credentials on the *Snapshot Apps* page in the client Web UI.
 
 ## Configure The Client
 

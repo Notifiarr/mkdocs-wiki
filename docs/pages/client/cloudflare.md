@@ -16,7 +16,7 @@ Specific configuration required for Cloudflare's various options are detailed be
     If you want to get started with Cloudflare Tunnels follow this YouTube guide first:
     [Cloudflare Tunnel: Creating Tunnels via GUI - Bypass CG-NAT by IBRACORP](https://www.youtube.com/watch?v=RUJy9fjoiy4)
 
-1. Login to your Cloudflare teams account at [dash.teams.Cloudflare.com](https://dash.teams.Cloudflare.com/)
+1. Login to your Cloudflare teams account at [one.dash.cloudflare.com](https://one.dash.cloudflare.com/)
 1. Click **Tunnels** and then **configure** next to the Cloudflare Tunnel you would like to use.
     ![cf-tunnel-configure_sm2.png](./images/cf-tunnel/configure_sm2.png)
 1. In your Tunnel section click on **Public Hostname** and add a new hostname by clicking on **Add a public hostname**.
@@ -28,3 +28,19 @@ Specific configuration required for Cloudflare's various options are detailed be
     1. `Service`: HTTP + Your Local IP Address for Notifiarr
 
 Save your host name settings, that's it! Your client is now exposed to the Internet!
+
+## Cloudflare WAF / ZeroTrust
+
+If you use Cloudflare WAF rules or ZeroTrust to protect your Notifiarr client, you must
+ensure that the Notifiarr.com website can still communicate with the client's `/api` path.
+
+The client communicates with `https://notifiarr.com` and the website communicates back
+through the Site Tunnel (websocket). If you expose your client directly through Cloudflare
+and have WAF or ZeroTrust rules, create a bypass rule or application policy that allows
+requests from the Notifiarr.com servers to reach the `/api` path on your client's domain.
+
+!!! tip "Site Tunnel"
+    The recommended approach is to use the built-in **Site Tunnel** feature instead of
+    exposing the client to the Internet. The Site Tunnel creates a persistent websocket
+    connection from the client to notifiarr.com, so no inbound port or firewall rules
+    are needed. Configure this on the *Settings => Site Tunnel* page in the client Web UI.
