@@ -40,7 +40,16 @@ jobs:
             echo "from=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
             echo "to=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
           else
-            echo "from=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+            from="${{ github.event.before }}"
+            # First push of a new branch reports before=0000... — fall back to HEAD~1
+            if [ "$from" = "0000000000000000000000000000000000000000" ] || [ -z "$from" ]; then
+              from=$(git rev-parse HEAD~1 2>/dev/null || echo "")
+            fi
+            # If branch has only one commit, lint just the HEAD commit
+            if [ -z "$from" ]; then
+              from="${{ github.sha }}"
+            fi
+            echo "from=$from" >> "$GITHUB_OUTPUT"
             echo "to=${{ github.sha }}" >> "$GITHUB_OUTPUT"
           fi
       - uses: pre-commit/action@v3.0.1
