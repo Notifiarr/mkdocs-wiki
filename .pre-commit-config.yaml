@@ -1,0 +1,33 @@
+default_install_hook_types: [pre-commit, pre-push]
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: ^docs/.*\.md$
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: ['--fix=lf']
+
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.42.0
+    hooks:
+      - id: markdownlint
+        args: ['--config', '.markdownlint.yaml', '--ignore', 'site/', '--ignore', '.venv/']
+
+  - repo: https://github.com/tcort/markdown-link-check
+    rev: v3.13.6
+    hooks:
+      - id: markdown-link-check
+        args: ['--quiet', '--config', '.markdown-link-check.json']
+        exclude: ^(site/|\.venv/)
+
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v8.17.3
+    hooks:
+      - id: cspell
+        args: ['--no-progress', '--no-summary', '--quiet', '--gitignore', '--config', '.cspell.json']
+        files: \.(md|markdown)$
+        exclude: ^(site/|\.venv/)

@@ -1,0 +1,41 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": [
+    ".git/**",
+    "node_modules/**",
+    "site/**",
+    ".venv/**",
+    "*.json",
+    "*.lock",
+    "*.svg",
+    "*.png",
+    "*.jpg"
+  ],
+  "dictionaries": ["en_US", "softwareTerms", "filetypes", "node", "html", "css", "markdown"],
+  "words": [
+    "Notifiarr",
+    "Sonarr",
+    "Radarr",
+    "Lidarr",
+    "Readarr",
+    "Prowlarr",
+    "Bazarr",
+    "Tautulli",
+    "Overseerr",
+    "Jellyseerr",
+    "qBittorrent",
+    "rTorrent",
+    "Deluge",
+    "Plex",
+    "Jellyfin",
+    "Emby",
+    "Mkdocs",
+    "mkdocs",
+    "Webhook",
+    "webhooks",
+    "Telegraf",
+    "Plexpass"
+  ],
+  "allowCompoundWords": true
+}
