@@ -20,10 +20,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Need full history so pre-commit can diff against the PR base.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      # Only check files changed in the PR / push. Adding pre-commit to a
+      # repo with existing content shouldn't fail on legacy violations —
+      # only new/modified files get linted. Maintainers can clean up the
+      # backlog with `pre-commit run --all-files` in follow-up sweeps.
+      - name: Resolve change range
+        id: range
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "from=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
+            echo "to=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "from=${{ github.event.before }}" >> "$GITHUB_OUTPUT"
+            echo "to=${{ github.sha }}" >> "$GITHUB_OUTPUT"
+          fi
       - uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: --from-ref ${{ steps.range.outputs.from }} --to-ref ${{ steps.range.outputs.to }}
