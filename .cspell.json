@@ -35,7 +35,9 @@
     "Webhook",
     "webhooks",
     "Telegraf",
-    "Plexpass"
+    "Plexpass",
+    "venv",
+    "Plexpy"
   ],
   "allowCompoundWords": true
 }
