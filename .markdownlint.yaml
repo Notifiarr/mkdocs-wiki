@@ -1,0 +1,23 @@
+# markdownlint config — see https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+default: true
+
+# MkDocs Material uses content tabs + admonitions that look like HTML to
+# markdownlint. Trust the strict mkdocs build to catch true breakage.
+MD033: false  # inline HTML allowed (mermaid blocks, admonition raw HTML)
+
+# Heading siblings on the same level often differ in case (proper nouns).
+MD024:
+  siblings_only: true
+
+# MkDocs Material rewrites bare links; allow them.
+MD034: false  # bare URLs
+
+# Material themes encourage 4-space indent under nested list items.
+MD007:
+  indent: 4
+
+# Line length: don't enforce — wiki paragraphs are long-form prose.
+MD013: false
+
+# Allow trailing punctuation in headings.
+MD026: false
