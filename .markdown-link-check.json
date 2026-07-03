@@ -1,0 +1,21 @@
+{
+  "ignorePatterns": [
+    { "pattern": "^http://127\\.0\\.0\\.1" },
+    { "pattern": "^http://localhost" },
+    { "pattern": "^https?://example\\." }
+  ],
+  "replacementPatterns": [
+    { "pattern": "^/", "replacement": "{{BASEURL}}/" }
+  ],
+  "httpHeaders": [
+    {
+      "urls": ["https://github.com", "https://raw.githubusercontent.com"],
+      "headers": { "Accept": "text/html", "User-Agent": "Mozilla/5.0 (compatible; markdown-link-check)" }
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206, 301, 302, 304, 308, 401, 403]
+}
