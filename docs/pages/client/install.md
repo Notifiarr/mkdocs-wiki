@@ -109,9 +109,7 @@ Current as of Version 25.10.1.
     - `C:\ProgramData\notifiarr\notifiarr.conf.example`
 1. You can now delete the `.zip` file that was downloaded and the folder that was extracted
 1. Rename `notifiarr.conf.example` to `notifiarr.conf`
-1. Double-click `notifiarr.amd64.exe` to launch the client. The webui will be available at `http://127.0.0.1:5454`
-1. Enter your API key when prompted
-1. Login for the first time with your Notifiarr.com email address and password.
+1. Continue to [First Run](#first-run) below to launch the client and log in.
 
 ### Fix Existing Install
 
