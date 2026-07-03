@@ -227,15 +227,16 @@ Set the credentials either way:
 - **Config file** — add `username` and `password` to the app's block in the client
   config (`notifiarr.conf`):
 
-    ```yaml
-    radarr:
-      - url: "http://localhost:7878"
-        apiKey: "your-api-key"
-        username: "your-web-ui-username"
-        password: "your-web-ui-password"
+    ```toml
+    [[radarr]]
+      name     = "Radarr"
+      url      = "http://127.0.0.1:7878"
+      api_key  = "your-api-key"
+      username = "your-web-ui-username"
+      password = "your-web-ui-password"
     ```
 
-    The same keys apply to the `sonarr`, `lidarr`, `readarr`, and `prowlarr` blocks.
+    The same keys apply to the `[[sonarr]]`, `[[lidarr]]`, `[[readarr]]`, and `[[prowlarr]]` blocks.
 
 ### Health Checks
 
