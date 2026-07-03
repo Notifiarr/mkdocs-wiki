@@ -23,7 +23,7 @@ jobs:
         with:
           # Need full history so pre-commit can diff against the PR base.
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - uses: actions/setup-node@v4
