@@ -53,6 +53,12 @@ ping origin-proxy.notifiarr.com
 
 - If you want the notifications to stop coming for a specific item, click the `Acknowledge` link in the notification. This is useful if something has a low amount of peers for example so it could take some time to complete it.
 
+## Q. Why do I get "you may need to set a username and password to download backup files"?
+
+- The **Database Corrupt** check downloads backup `.zip` files from the Starr app's web UI, which requires a logged-in session when the app has authentication enabled. An API key alone is not enough.
+
+- Add the app's web UI `username` and `password` in the client's WebUI on the *Starr Apps* page (or in the config file). See [Backup Corruption Checks](../client/afterInstall.md#backup-corruption-checks).
+
 ## Q. How do I test/troubleshoot Plex?
 
 ### Locating the Plex Token
