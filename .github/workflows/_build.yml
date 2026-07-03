@@ -1,0 +1,39 @@
+# Reusable MkDocs build — called by build.yml (PR validation) and deploy.yml (Pages publish)
+name: Build (reusable)
+
+on:
+  workflow_call:
+    inputs:
+      upload-site:
+        description: "Upload built ./site as the 'site' artifact"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - run: python3 -m pip install --upgrade pip
+      - id: pip-cache
+        run: echo "dir=$(pip cache dir)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache@v6
+        with:
+          path: ${{ steps.pip-cache.outputs.dir }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+      - run: |
+          python3 -m pip install -r requirements.txt
+          mkdocs build --strict
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.upload-site }}
+        with:
+          name: site
+          path: ./site

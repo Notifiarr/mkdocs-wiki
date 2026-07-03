@@ -1,11 +1,9 @@
+# Lint all files with pre-commit on every PR to main
 name: Pre-commit
 
 on:
   pull_request:
     branches:
-      - main
-  push:
-    branches-ignore:
       - main
 
 permissions:
@@ -20,38 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-        with:
-          # Need full history so pre-commit can diff against the PR base.
-          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: "3.14"
       - uses: actions/setup-node@v7
         with:
           node-version: "24"
-      # Only check files changed in the PR / push. Adding pre-commit to a
-      # repo with existing content shouldn't fail on legacy violations —
-      # only new/modified files get linted. Maintainers can clean up the
-      # backlog with `pre-commit run --all-files` in follow-up sweeps.
-      - name: Resolve change range
-        id: range
-        run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "from=${{ github.event.pull_request.base.sha }}" >> "$GITHUB_OUTPUT"
-            echo "to=${{ github.event.pull_request.head.sha }}" >> "$GITHUB_OUTPUT"
-          else
-            from="${{ github.event.before }}"
-            # First push of a new branch reports before=0000... — fall back to HEAD~1
-            if [ "$from" = "0000000000000000000000000000000000000000" ] || [ -z "$from" ]; then
-              from=$(git rev-parse HEAD~1 2>/dev/null || echo "")
-            fi
-            # If branch has only one commit, lint just the HEAD commit
-            if [ -z "$from" ]; then
-              from="${{ github.sha }}"
-            fi
-            echo "from=$from" >> "$GITHUB_OUTPUT"
-            echo "to=${{ github.sha }}" >> "$GITHUB_OUTPUT"
-          fi
       - uses: pre-commit/action@v3.0.1
-        with:
-          extra_args: --from-ref ${{ steps.range.outputs.from }} --to-ref ${{ steps.range.outputs.to }}
