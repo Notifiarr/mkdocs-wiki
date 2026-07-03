@@ -9,12 +9,12 @@ While you can certainly poke a hole in your firewall and send the traffic direct
 it is recommended that you put it behind a reverse proxy if you're going to expose it. It's pretty easy.
 
 - You'll want to tune the `upstreams` and `urlbase` client settings for your environment.
-  - If your reverse proxy IP is `192.168.3.45` then set `upstreams`
+    - If your reverse proxy IP is `192.168.3.45` then set `upstreams`
     in the Trust Profile page of the local Notifiarr Client to `192.168.3.45/32`
-  - You can also set this with the `DN_UPSTREAMS_0` environment variable.
+    - You can also set this with the `DN_UPSTREAMS_0` environment variable.
 - The `urlbase` on the local Notifiarr client configuration page can be left at `/`,
   but change it if you serve this app from a subfolder like `/notifiarr`.
-  - You can also set this with the `DN_URLBASE` environment variable.
+    - You can also set this with the `DN_URLBASE` environment variable.
 
 !!! info "WebSocket Support"
     The Notifiarr client Web UI uses WebSocket connections. Your reverse proxy configuration

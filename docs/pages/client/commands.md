@@ -12,7 +12,7 @@ Commands allow the Notifiarr client to execute custom scripts or shell commands.
 Each command instance has the following settings:
 
 | Setting | Environment Variable | Description |
-|---------|---------------------|-------------|
+| --------- | --------------------- | ------------- |
 | **Name** | `COMMANDS_{n}_NAME` | Command name, shown in logs and notifications (required, must be unique) |
 | **Notify** | `COMMANDS_{n}_NOTIFY` | Send a notification after command execution, including command output |
 | **Command** | `COMMANDS_{n}_COMMAND` | The command or script to run (required) |

@@ -68,7 +68,7 @@ Click the **cog icon** to open the configuration options for *arr apps.
 These keywords control how users interact with the bot in Discord. Each can be customized to your preference.
 
 | Keyword | Default | Description |
-|---------|---------|-------------|
+| --------- | --------- | ------------- |
 | `search` | search | Opens the search/request UI (always enabled) |
 | `discover` | discover | Browse available media (can be disabled) |
 | `approve` | approve | Approve pending requests (always enabled) |
@@ -77,7 +77,7 @@ These keywords control how users interact with the bot in Discord. Each can be c
 ### Bot Ping/Pong Keywords
 
 | Keyword | Default | Description |
-|---------|---------|-------------|
+| --------- | --------- | ------------- |
 | `help` | help | Show help information (always enabled) |
 | `cancel` | cancel | Cancel an active request session (always enabled) |
 | `details` | details | Show details about media (can be disabled) |

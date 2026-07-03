@@ -9,7 +9,7 @@ Add a new Log Watcher entry in the Notifiarr Client UI under **Configuration** >
 ### Fields
 
 | Field | Required | Default | Description |
-|-------|----------|---------|-------------|
+| ------- | ---------- | --------- | ------------- |
 | **Path** | Yes | - | Full path to the log file to watch |
 | **Regex** | Yes | - | Regular expression to match - matching lines trigger notifications |
 | **Skip** | No | *empty* | Regular expression for lines to ignore (even if they match Regex) |
@@ -35,11 +35,13 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Radarr
 
 **Path:**
+
 ```text
 /var/log/radarr/radarr.debug.txt
 ```
 
 **Regex:**
+
 ```text
 (?i)(\|warn\||\|error\||^\[v[0-9].+\]|database is locked)
 ```
@@ -52,6 +54,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
     - `database is locked` - SQLite locking issues that indicate problems
 
 **Skip:**
+
 ```text
 (?i)Download client failed to add torrent|Movie with IMDBId|It will not be added|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|429.TooManyRequests
 ```
@@ -72,11 +75,13 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Sonarr
 
 **Path:**
+
 ```text
 /var/log/sonarr/sonarr.debug.txt
 ```
 
 **Regex:**
+
 ```text
 (?i)(\|warn\||\|error\||^\[v[0-9].+\]|database is locked)
 ```
@@ -85,6 +90,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
     - Same pattern as Radarr - matches warnings, errors, stack traces, and database locks
 
 **Skip:**
+
 ```text
 (?i)Download client failed to add torrent|Invalid date found|Validation failed|An unhandled exception has occurred while executing the request.|Unable to find exact quality|HttpClient error|TaskManager failed while processing|Task Error|Name does not resolve|InvalidDateException|429.TooManyRequests
 ```
@@ -99,16 +105,19 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Prowlarr
 
 **Path:**
+
 ```text
 /var/log/prowlarr/prowlarr.debug.txt
 ```
 
 **Regex:**
+
 ```text
 (?i)(\|warn\||\|error\||^\[v[0-9].+\])
 ```
 
 **Skip:**
+
 ```text
 (?i)Validation failed|An unhandled exception has occurred while executing the request|(?:CinemaZ|PrivateHD)[.a-z0-9/=&?: ]+404\.NotFound|HttpClient error|System.Net.CookieException|TaskManager failed while processing|Task Error|Name does not resolve|NzbDrone.Common.Http.HttpException: HTTP request failed|Retrying in
 ```
@@ -123,16 +132,19 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Readarr
 
 **Path:**
+
 ```text
 /var/log/readarr/readarr.debug.txt
 ```
 
 **Regex:**
+
 ```text
 (?i)(\|warn\||\|error\||^\[v[0-9].+\])
 ```
 
 **Skip:**
+
 ```text
 (?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error
 ```
@@ -142,16 +154,19 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Lidarr
 
 **Path:**
+
 ```text
 /var/log/lidarr/lidarr.debug.txt
 ```
 
 **Regex:**
+
 ```text
 (?i)(\|warn\||\|error\||^\[v[0-9].+\])
 ```
 
 **Skip:**
+
 ```text
 (?i)Validation failed|An unhandled exception has occurred while executing the request.|HttpClient error
 ```
@@ -163,11 +178,13 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Kometa (formerly Plex Meta Manager)
 
 **Path:**
+
 ```text
 /var/log/kometa/meta.log
 ```
 
 **Regex:**
+
 ```text
 (?i)(\[ERROR\]|\[CRITICAL\])
 ```
@@ -177,6 +194,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
     - Only matches actual errors, not warnings (which are often informational)
 
 **Skip:**
+
 ```text
 (?i)Convert Error:|ID not found|TVDb Error: Name not found|Plex Error: No Items found in Plex|Trakt Error: No TVDb ID found for|TMDb Error: No Movie found for TMDb ID
 ```
@@ -192,11 +210,13 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Nginx Error Log
 
 **Path:**
+
 ```text
 /var/log/nginx/error.log
 ```
 
 **Regex:**
+
 ```text
 (?i)(emerg|alert|crit|\[error\].*upstream.*failed|502|503|504|connect\(\) failed|no live upstreams)
 ```
@@ -209,6 +229,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
     - `no live upstreams` - All backends are down
 
 **Skip:**
+
 ```text
 (?i)(client closed connection|upstream timed out.*reading response header|recv\(\) failed|connection reset by peer|SSL_do_handshake)
 ```
@@ -224,11 +245,13 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 #### Rustic Backup
 
 **Path:**
+
 ```text
 /var/log/rustic/rustic.log
 ```
 
 **Regex:**
+
 ```text
 (\[ERROR\]|\[WARN\]|starting to backup|successfully saved|backup of.*done)
 ```
@@ -239,6 +262,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
     - `successfully saved|backup of.*done` - Confirmation backup completed
 
 **Skip:**
+
 ```text
 (?i)(flush_task.*graceful shutdown|Requesting graceful shutdown|read_end_buffer_size|write_end_buffer_size|repository opendal.*password is correct)
 ```
@@ -255,7 +279,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 ### Common *arr Log Patterns
 
 | Pattern | Matches |
-|---------|---------|
+| --------- | --------- |
 | `\|warn\|` | Warning log level in *arr format: `2024-01-30 12:00:00.000\|Warn\|...` |
 | `\|error\|` | Error log level in *arr format |
 | `^\[v[0-9].+\]` | Stack traces that start with any version header (e.g., `[v5.0.0.1234]`) |
@@ -264,7 +288,7 @@ These patterns catch warnings, errors, and stack traces while filtering common n
 ### Common Skip Patterns
 
 | Pattern | Reason to Skip |
-|---------|---------------|
+| --------- | --------------- |
 | `Invalid date found` | Indexer feed parsing - benign noise |
 | `Validation failed` | User input issues, not system errors |
 | `HttpClient error` | Transient network issues that auto-resolve |

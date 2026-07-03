@@ -6,7 +6,7 @@
 
 ### macOS
 
-```
+```bash
 brew install python3
 python3 -m venv .venv
 source .venv/bin/activate
@@ -20,7 +20,7 @@ This section needs filling out.
 
 ### Linux
 
-```
+```bash
 sudo apt install python3 || sudo yum install python3
 python3 -m venv .venv
 source .venv/bin/activate

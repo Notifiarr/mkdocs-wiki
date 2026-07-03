@@ -14,14 +14,14 @@ The frequency of dashboard updates is controlled by the Notifiarr Client Configu
 
 The Dashboard supports the following applications, organized by category:
 
-**Starr Apps**
+### Starr Apps
 
 - Lidarr
 - Radarr
 - Readarr
 - Sonarr
 
-**Download Clients**
+### Download Clients
 
 - Deluge
 - NZBGet
@@ -30,7 +30,7 @@ The Dashboard supports the following applications, organized by category:
 - SABnzbd
 - Transmission
 
-**Media**
+### Media
 
 - Plex
 

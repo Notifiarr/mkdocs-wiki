@@ -29,7 +29,7 @@
 
 Here is the setup on dockwatch's end.
 
-![instuctions-dockwatch.png](../../assets/screenshots/integrations/Dockwatch/instructions-dockwatch.png)
+![instructions-dockwatch.png](../../assets/screenshots/integrations/Dockwatch/instructions-dockwatch.png)
 
 1. Click the Three lines to extend the menu.
 

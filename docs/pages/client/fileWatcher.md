@@ -12,7 +12,7 @@ The File Watcher feature monitors files for lines matching a regular expression,
 Each file watcher instance has the following settings:
 
 | Setting | Environment Variable | Description |
-|---------|---------------------|-------------|
+| --------- | --------------------- | ------------- |
 | **Path** | `WATCH_FILE_{n}_PATH` | File path to monitor (required) |
 | **Disabled** | `WATCH_FILE_{n}_DISABLED` | Toggle the watcher on or off |
 | **Regex** | `WATCH_FILE_{n}_REGEX` | Regular expression to match against file lines (required). Automatically wrapped in `.*` wildcards. Use `(?i)` for case-insensitive matching |

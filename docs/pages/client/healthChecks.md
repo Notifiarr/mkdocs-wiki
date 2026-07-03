@@ -78,4 +78,3 @@ The Monitoring page offers two view modes: a classic table view and a card view.
 [automatic service checks]: https://github.com/Notifiarr/notifiarr/tree/main/pkg/services
 [test buttons]: https://github.com/Notifiarr/notifiarr/tree/main/pkg/checkapp
 [service check module]: https://github.com/Notifiarr/notifiarr/tree/main/pkg/services
-[subscribers]: ../faq/faq.md#q-what-are-the-user-level-differences

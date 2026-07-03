@@ -21,3 +21,14 @@ MD013: false
 
 # Allow trailing punctuation in headings.
 MD026: false
+
+# Fenced code blocks nested inside admonitions / list items are indented 4
+# spaces, which markdownlint misreads as indented code blocks — conflicting
+# with the fenced style used elsewhere. Fenced blocks carry the language label
+# MkDocs Material needs for highlighting, so keep them fenced and disable the
+# style check rather than degrade the rendered docs.
+MD046: false  # code-block-style (fenced vs indented)
+
+# The homepage (docs/index.md) intentionally leads with small badge-section
+# labels before the main H1, so the first heading is not top-level.
+MD041: false  # first-line-h1

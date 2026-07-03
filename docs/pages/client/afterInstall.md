@@ -91,7 +91,7 @@ It also checks the Plex API for sessions after it gets a webhook so it can provi
     in the client Web UI *Media Apps* page for this to work.
 
 - In Plex Media Server, add this URL to webhooks:
-  - `http://localhost:5454/plex?token=plex-token-here`
+    - `http://localhost:5454/plex?token=plex-token-here`
 - Replace `localhost` with the IP or host of the notifiarr client application.
 - Replace `plex-token-here` with your plex token.
 - **The Notifiarr application uses the Plex token to authorize incoming webhooks.**
@@ -147,8 +147,8 @@ Install optional package(s) for snapshot data collection.
 - RedHat/CentOS: `yum install smartmontools`
 - **Docker**:    It's already in the container. Lucky you! Just run the container in `--privileged` mode.
 - **Synology**: `opkg install smartmontools`, but first get Entware:
-  - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
-  - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+    - Entware (synology):  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
+    - Entware Package List:  <https://github.com/Entware/Entware-ng/wiki/Install-on-Synology-NAS>
 
 ### Additional Snapshot Features
 
@@ -253,7 +253,7 @@ These are the default location for application output (logs).
 Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
 
 - Linux: `/var/log/notifiarr/{app,http,services}.log`
-  - Log paths for linux apt/deb installations are hardcoded
+    - Log paths for linux apt/deb installations are hardcoded
 - FreeBSD: `/var/log/syslog` (w/ default syslog)
 - macOS: `~/.notifiarr/Notifiarr.log`
 - Windows: `<home folder>/.notifiarr/Notifiarr.log`

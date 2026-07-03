@@ -15,7 +15,7 @@
 Each trigger has the following notification fields that can be toggled on or off:
 
 | Field | Description |
-|-------|-------------|
+| ------- | ------------- |
 | `Name` | Monitor name |
 | `Status` | Current monitor status |
 | `URL` | Monitored URL |
@@ -43,6 +43,6 @@ Each trigger has the following notification fields that can be toggled on or off
 
 ## Examples
 
-Uptime-Kuma UP         |  Uptime-Kuma DOWN
-:-------------------------:|:-------------------------:
-![example-2.png](../../assets/screenshots/integrations/uptimekuma/example-2.png)  |  ![example-1.png](../../assets/screenshots/integrations/uptimekuma/example-1.png)
+| Uptime-Kuma UP | Uptime-Kuma DOWN |
+| :-------------------------: | :-------------------------: |
+| ![example-2.png](../../assets/screenshots/integrations/uptimekuma/example-2.png) | ![example-1.png](../../assets/screenshots/integrations/uptimekuma/example-1.png) |

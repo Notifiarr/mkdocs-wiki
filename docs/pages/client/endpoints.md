@@ -9,7 +9,7 @@ Endpoints allow the Notifiarr client to fetch data from local services on a sche
 Each endpoint instance has the following settings:
 
 | Setting | Environment Variable | Description |
-|---------|---------------------|-------------|
+| --------- | --------------------- | ------------- |
 | **Name** | `ENDPOINT_{n}_NAME` | Name of the endpoint (required, must be unique) |
 | **Template** | `ENDPOINT_{n}_TEMPLATE` | Payload template name used by the website to parse the response into notifications (required) |
 | **Follow Redirects** | — | Follow HTTP redirects when fetching the URL |

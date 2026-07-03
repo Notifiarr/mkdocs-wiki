@@ -28,7 +28,7 @@ Select a secondary tunnel server from the dropdown. This tunnel will be used aut
 The stats table shows connection information for each tunnel socket:
 
 | Column | Description |
-|--------|-------------|
+| -------- | ------------- |
 | **Socket** | The tunnel endpoint URL (highlighted if active) |
 | **Disconnects** | Number of disconnections since client start |
 | **Pool Size** | Connection pool size |

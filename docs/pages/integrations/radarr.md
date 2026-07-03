@@ -32,6 +32,7 @@
     The corruption check downloads backup files from Radarr's web UI, so it needs a
     `username` and `password` in addition to the API key when Radarr has authentication
     enabled. See [Backup Corruption Checks](../client/afterInstall.md#backup-corruption-checks).
+
 - `Failed` - Custom notification type based on previous grabs. If the system detects a grab for the same media with the same quality or better before the previous one was imported then it will set the previous one as failed
 - `Health Check` - Receive a notification when the application reports an issue
 - `Health Restored` - Receive a notification when a health issue is resolved

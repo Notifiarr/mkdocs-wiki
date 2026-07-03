@@ -12,7 +12,7 @@ If you wish to translate Notifiarr you'll need to:
 ## Supported Languages
 
 | Code | Language |
-|------|----------|
+| ------ | ---------- |
 | `de` | German |
 | `dk` | Danish |
 | `en` | English |

@@ -13,7 +13,7 @@ Depending on your layout (Grid or List) you will see:
 At the top of the client configuration is a Keywords section. These are Discord keywords that the bot will respond to in the configured keyword channels.
 
 | Keyword | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `triggers` | The bot replies with all available triggers that can be run from Discord |
 | `clients` | The bot replies with the status of all clients and connected apps |
 | `commands` | The bot replies with local commands the client can execute |
@@ -116,6 +116,7 @@ This script is on the computer and the command to run `plexRestart.ps1` is added
 - App in the client is taking too long to respond causing timeouts. Disable all apps and re-enable 1x1 to identify the culprit
 
 ## Duplicate Clients
+
 - This typically occurs in Docker or containerized environments when a [hostname is not configured](../../pages/client/afterInstall.md#hostname) every time the container is restarted.
 - For other installations this would occur if the unique attributes of your host system and installation change.
 
