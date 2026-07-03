@@ -196,9 +196,46 @@ You may optionally add Services, HTTP and Debug log files. These are not strictl
 1. On the Starr Apps pages, configure your apps.
     1. We recommend adding them all. If you have all the starr apps, add them all.
     1. All you need is a URL and an API key.
-    1. If you turn on database backup checks (on the website), a username and password is also required.
+    1. If you turn on database backup checks, a username and password is also required. See [Backup Corruption Checks](#backup-corruption-checks) below.
 1. Add all your download apps too. And Plex, and add Tautulli if you use it.
     Find these on their respective pages: *Download Apps* and *Media Apps*.
+
+### Backup Corruption Checks
+
+The client can monitor the scheduled database backups produced by your Starr apps
+(Lidarr, Prowlarr, Radarr, Readarr, Sonarr) for corruption and unexpected size loss.
+Enable it per app with the **Database Corrupt** trigger. The check runs on a cron,
+every 5 hours by default (with a small random offset so all apps don't fire at once).
+
+To inspect a backup, the client downloads the backup `.zip` from the app's **web UI**
+(e.g. `/backup/scheduled/*.zip`) — not from the API. When the app has authentication
+enabled, that download requires a logged-in session, so an **API key alone is not
+enough**: you must also provide the app's login `username` and `password`.
+
+!!! warning "authenticating as user \"\" failed"
+    If the username and password are missing when authentication is enabled, the
+    corruption check fails with:
+
+    ```text
+    authenticating as user "" failed: you may need to set a username and password to download backup files
+    ```
+
+Set the credentials either way:
+
+- **Client WebUI** — on the *Starr Apps* page, edit the app and fill in the Username
+  and Password fields alongside the URL and API key.
+- **Config file** — add `username` and `password` to the app's block in the client
+  config (`notifiarr.conf`):
+
+    ```yaml
+    radarr:
+      - url: "http://localhost:7878"
+        apiKey: "your-api-key"
+        username: "your-web-ui-username"
+        password: "your-web-ui-password"
+    ```
+
+    The same keys apply to the `sonarr`, `lidarr`, `readarr`, and `prowlarr` blocks.
 
 ### Health Checks
 
