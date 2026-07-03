@@ -45,8 +45,8 @@
 
 - TRaSH Integration requires the notifiarr client to be running locally, [configured and working (i.e. communicating with) on the Notifiarr site](../../pages/website/clientConfig.md), and the Starr Apps configured.
 - Add Starr Apps to the Client in the `Starr Apps` Tab of the Local Client
-  - Note that `Time Out` for the Starr Apps **cannot** be set to `Disabled` for the app to be enabled
-  - Note that a `Name` value **is required** for the Starr Apps you wish to sync
+    - Note that `Time Out` for the Starr Apps **cannot** be set to `Disabled` for the app to be enabled
+    - Note that a `Name` value **is required** for the Starr Apps you wish to sync
 
 ## Website Setup
 

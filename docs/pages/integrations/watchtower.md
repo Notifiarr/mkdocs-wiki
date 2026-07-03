@@ -36,7 +36,7 @@ Click the **cog icon** to open the configuration options for Watchtower.
 1. Configure Watchtower to send notifications to your Notifiarr webhook URL
 2. In your Watchtower configuration, set the notification URL:
 
-    ```
+    ```text
     https://notifiarr.com/api/v1/notification/watchtower/YOUR_API_KEY
     ```
 

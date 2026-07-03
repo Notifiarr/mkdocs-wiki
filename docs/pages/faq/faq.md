@@ -34,7 +34,7 @@ ping origin-proxy.notifiarr.com
 - Sonarr (Backup, Corruption & Stuck Queue notifications)
 - TRaSH Custom Format & Profile Sync (Patron)
 - Client Commands
-  - Discord triggering, automation, and advanced features (Sub)
+    - Discord triggering, automation, and advanced features (Sub)
 
 ### Features
 
@@ -79,8 +79,8 @@ curl -I -H "X-Plex-Token: <token>" <url>/status/sessions
 - `<token>` The plex token from your config (Unraid: ENV | All: UI) Ex: `ZQonMnitLFbFsuaLXT9Yj`
 - `<url>` The plex URL from your config (ENV or conf file). Ex: `http://localhost:32400`
 
-  - Expected result: HTTP/1.1 200 OK
-  - Incorrect result: HTTP/1.1 401 Unauthorized
+    - Expected result: HTTP/1.1 200 OK
+    - Incorrect result: HTTP/1.1 401 Unauthorized
 
 - Adjust the token and url until it is 200.
 - Update the Notifiarr Client's configuration with the correct url and token
@@ -113,7 +113,7 @@ If session info is missing from notifications or the sessions notification is no
 
 | User | Patron | Subscriber | Integration | Setting |
 | :- | :- | :- | :- | :- |
-| 12,000 / day 500 / hour | 24,000 / day 1,000 / hour| Unlimited | Core | Notifications |
+| 12,000 / day 500 / hour | 24,000 / day 1,000 / hour | Unlimited | Core | Notifications |
 | All but TRaSH Sync | All | All | Core | Integrations |
 | 7 days | 14 days | Unlimited | Network | Status retention (used for the network status page to show uptime and for detail links in notifications) |
 | 14 days | 30 days | Unlimited | Plex | Session retention (used for tracking transcodes by device, app, user, media type, etc and sessions notifications) |

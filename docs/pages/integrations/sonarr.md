@@ -27,6 +27,7 @@
     The corruption check downloads backup files from Sonarr's web UI, so it needs a
     `username` and `password` in addition to the API key when Sonarr has authentication
     enabled. See [Backup Corruption Checks](../client/afterInstall.md#backup-corruption-checks).
+
 - `Failed` - Custom notification type based on previous grabs. If the system detects a grab for the same media with the same quality or better before the previous one was imported then it will set the previous one as failed
 - `Health Check` - Receive a notification when the application reports an issue
 - `Health Restored` - Receive a notification when a health issue is resolved
@@ -57,7 +58,7 @@ Save
 ![configuration.png](../../assets/screenshots/integrations/sonarr/configuration.png)
 
 1. Notification color selector
-2. all `notification fields` available under `grabbbed` trigger
+2. all `notification fields` available under `grabbed` trigger
 3. Notification for corrupted database
 4. Sends an overview once a day of your Sonarr history at your specified time
 5. Send notifications with selected ratings (considered 'adult') to another channel

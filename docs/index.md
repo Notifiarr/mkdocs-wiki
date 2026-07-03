@@ -31,7 +31,7 @@ Notifiarr provides native custom integrations with dozens, maybe hundreds of app
 That means these applications or websites can send data to Notifiarr, and we'll format a message according to
 your configuration then send it to your chat server.
 
-What sets us apart from direct integrations are the options we provide to format your messages. We also maintain and provide, for your conveince, a local agent you may run on any server or network you wish to monitor. The agent is fully configurable to collect network and system data so you can get health reports from your servers.
+What sets us apart from direct integrations are the options we provide to format your messages. We also maintain and provide, for your convenience, a local agent you may run on any server or network you wish to monitor. The agent is fully configurable to collect network and system data so you can get health reports from your servers.
 
 Everything is configurable, even how much data we keep on our servers. You get to decide how long your transaction log files live for, or if your transactions even get logged at all.
 
@@ -41,7 +41,7 @@ Over on [discord](https://notifiarr.com/discord)
 we have a big community, if you need assistance you can ask there by opening a support thread in the `#support` channel.
 !!! note "Patron Features"
     To unlock patron features, link your sponsorship account from the Profile Page on the Notifiarr Website.
-    
+
     **GitHub Sponsors** - If linking fails, GitHub may still be processing your sponsorship (up to 24 hours) or there may be a payment issue. Check your [GitHub Sponsors dashboard](https://github.com/sponsors/account).
     
     **Ko-Fi** - If linking fails, Ko-Fi may not have synced yet or there may be a payment issue. Check your [Ko-Fi account settings](https://ko-fi.com/manage/supportreceived).
@@ -66,18 +66,17 @@ joined the crew in December 2020, and the two of us run the servers and write th
 - Layout configuration for some notifications
 - Content configuration for most notifications (color, content, etc)
 - Media Requests Bot - Discord Bot for all 4 \*Arr apps with:
-  - Media Requests
-  - User Permissions
-  - Approvals
-  - Sonarr Profiles
-  - Default Options
-  - Series Following
-  - Discover features
-  - Multi-Instance Support
+    - Media Requests
+    - User Permissions
+    - Approvals
+    - Sonarr Profiles
+    - Default Options
+    - Series Following
+    - Discover features
+    - Multi-Instance Support
 - Minimal Access - No \*Arr apikeys or anything of the sort is used or saved on the site.
   All requests to the client are verified with your Notifiarr apikey and thrown out if they don't match up
 - TRaSH Custom Format Sync [*\*Patron Feature\**](pages/faq/faq.md#q-what-are-the-user-level-differences) -
   Automated continuous add/sync for the custom formats TRaSH has made to use with Radarr
 - Radarr Collections - A fully automated way to monitor all your Radarr collections with auto add new
   items to your library as they are put into the collection on TMDb for any monitored collections, etc.
-
