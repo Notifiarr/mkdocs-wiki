@@ -138,7 +138,7 @@ Automatically moderate spam/compromised accounts posting in designated "trap" ch
 
 - Configure one or more trap channels — any message posted in a trap channel triggers moderation immediately
 - Exclude specific roles from moderation (excluded roles still produce an ignored mod-log notice instead)
-- `Kick if member longer than (days)` - Members newer than this threshold are **banned**; members older than it are **kicked** (temporary ban, messages deleted after 15 minutes, then unbanned). Default is 30 days.
+- `Kick if member longer than (days)` - Members newer than this threshold are **banned**; members older than it are **kicked** (a "soft ban" — Discord bans the member with a 15-minute message-delete window, purging their messages from **every channel** they posted in during that window, then immediately removes the ban). Default is 30 days.
 - Notification color customization
 - Requires the bot to have the **Ban Members** and **Manage Messages** permissions, and the bot's role must be **higher than** the target user's highest role
 - Trap channel(s) must allow **@everyone** (or the roles you expect spammers to use) to **send messages**, otherwise the trap will not trigger
