@@ -132,6 +132,17 @@ Automatically archive stale threads.
 - Select which channels to monitor
 - Restrict to specific roles
 
+### Spam Trap
+
+Automatically moderate spam/compromised accounts posting in designated "trap" channels.
+
+- Configure one or more trap channels — any message posted in a trap channel triggers moderation immediately
+- Exclude specific roles from moderation (excluded roles still produce an ignored mod-log notice instead)
+- `Kick if member longer than (days)` - Members newer than this threshold are **banned**; members older than it are **kicked** (temporary ban, messages deleted after 15 minutes, then unbanned). Default is 30 days.
+- Notification color customization
+- Requires the bot to have the **Ban Members** and **Manage Messages** permissions, and the bot's role must be **higher than** the target user's highest role
+- Trap channel(s) must allow **@everyone** (or the roles you expect spammers to use) to **send messages**, otherwise the trap will not trigger
+
 ### Ban Sync
 
 Participate in ban synchronization across Notifiarr-connected Discord servers.

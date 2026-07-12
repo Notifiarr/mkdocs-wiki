@@ -20,6 +20,10 @@
 
 6. `Security` - Trigger a notification when DockWatch detects a security issue with a container.
 
+7. `Intrusion` - Trigger a notification when DockWatch itself detects a security event on its own UI/API, such as an invalid login, login lockout, direct access attempt, invalid API key, unauthorized request, invalid CSRF token, or a WebSocket connection with missing params or an invalid token.
+    - Notification field: `IP map` - When enabled, includes a generated map image showing the country/state/city/ISP for the offending IP (skipped for private/local IPs).
+    - Depending on the event type, the notification may also include the request method, username, container, endpoint, API key, token, referrer, and user agent.
+
 ## Instructions
 
 ![instructions.png](../../assets/screenshots/integrations/Dockwatch/instructions.png)
@@ -51,6 +55,7 @@ Here is the setup on dockwatch's end.
 
 1. `Customize` - Under the customize tab you can change the color of your notification for each available trigger.
 2. `Full image names` - Show the full image name instead of truncating with ellipsis.
+3. `IP map` - Under the Intrusion trigger, include a map image with the offending IP's geolocation in the notification.
 
 ### Notification Examples
 
