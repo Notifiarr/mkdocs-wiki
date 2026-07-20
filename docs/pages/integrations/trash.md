@@ -163,6 +163,15 @@ This section has "one off" actions that can be applied to an instance but really
 
 ![tools-tab.png](../../assets/screenshots/integrations/trash/tools-tab.png)
 
+#### Keywords
+
+The Tools tab also has a Keywords table for Discord-triggered format/profile search:
+
+- `!format {query}` - Fuzzy-searches your synced formats and replies with the closest matches
+- `!profile {query}` - Fuzzy-searches your synced profiles and replies with the closest matches
+- Each keyword can be independently enabled, restricted to specific channels (or any channel), and restricted to specific roles (or any role)
+- Optional: Disable the random "no permission" response and use a simple message instead
+
 ### <span style="color:orange;">Guides</span>
 
 !!! info
