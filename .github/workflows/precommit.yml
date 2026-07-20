@@ -23,10 +23,10 @@ jobs:
         with:
           # Need full history so pre-commit can diff against the PR base.
           fetch-depth: 0
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.14"
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
       # Only check files changed in the PR / push. Adding pre-commit to a
