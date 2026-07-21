@@ -1,3 +1,4 @@
+# Build and publish MkDocs site to GitHub Pages on every push to main
 name: GitHub Pages
 
 on:
@@ -5,47 +6,33 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  build:
+    uses: ./.github/workflows/_build.yml
+    with:
+      upload-site: true
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
     steps:
       - name: Clone repository
         uses: actions/checkout@v7
 
-      - name: Setup Python environment
-        uses: actions/setup-python@v7
+      - name: Download built site
+        uses: actions/download-artifact@v4
         with:
-          python-version: "3.14"
-
-      - name: Upgrade pip
-        run: python3 -m pip install --upgrade pip
-
-      - name: Get pip cache directory
-        id: pip-cache
-        run: echo "dir=$(pip cache dir)" >> $GITHUB_OUTPUT
-
-      - name: Cache dependencies
-        uses: actions/cache@v6
-        with:
-          path: ${{ steps.pip-cache.outputs.dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip-
-
-      - name: Install dependencies
-        run: python3 -m pip install -r ./requirements.txt
-
-      - name: Build Docs
-        run: mkdocs build --strict
+          name: site
+          path: ./site
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
