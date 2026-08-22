@@ -15,10 +15,10 @@ At the top of the client configuration is a Keywords section. These are Discord 
 | Keyword | Description |
 | --------- | ------------- |
 | `triggers` | The bot replies with all available triggers that can be run from Discord |
-| `clients` | The bot replies with the status of all clients and connected apps |
+| `clients` | The bot replies with each client's details: online status, version, uptime, platform, and last config change/sync |
 | `commands` | The bot replies with local commands the client can execute |
 | `timers` | The bot replies with the last timer runtimes on all clients |
-| `status` | The bot replies with the status of all clients |
+| `status` | The bot replies with the online status of all clients and their connected apps |
 
 Each keyword is customizable and requires a corresponding Discord channel to be configured via the `Keyword Channels` link.
 

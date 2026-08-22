@@ -18,14 +18,16 @@ Notification counts per integration: Better Uptime, Lidarr, Plex, Radarr, Readar
 
 ## History Tab
 
-A sortable table showing all notification history with the following columns:
+The History tab opens with a *Notification volume over time* chart. Switch the range with the Yearly, Monthly, Weekly, Daily, and Hourly buttons. A notification-retention line above the chart shows how long your history is kept.
+
+Below the chart is a sortable table of all notification history with the following columns:
 
 - `ID` - Notification identifier
 - `Sent` - When the notification was sent (formatted per your profile date format)
 - `Source` - Which integration sent it. If a Discord server is configured and a message ID exists, the source links directly to the Discord message
 - `Trigger` - The event type that triggered the notification (e.g., Grab, Import, etc.)
 - `Title` - The media or event title
-- Actions column with external links and a blacklist icon for Sonarr/Plex series
+- Actions column with external links, a blacklist icon for Sonarr/Plex series, and a raw transcode info icon for Plex sessions that have transcode data
 
 ## Blacklist Tab
 
