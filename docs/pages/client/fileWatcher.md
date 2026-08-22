@@ -13,14 +13,21 @@ Each file watcher instance has the following settings:
 
 | Setting | Environment Variable | Description |
 | --------- | --------------------- | ------------- |
-| **Path** | `DN_WATCH_FILE_{n}_PATH` | File path to monitor |
+| **Path** | `DN_WATCH_FILE_{n}_PATH` | File path to monitor (required) |
 | **Disabled** | `DN_WATCH_FILE_{n}_DISABLED` | Toggle the watcher on or off |
-| **Regex** | `DN_WATCH_FILE_{n}_REGEX` | Regular expression to match against file lines |
+| **Regex** | `DN_WATCH_FILE_{n}_REGEX` | Regular expression to match against file lines (required). Use `(?i)` for case-insensitive matching |
 | **Skip** | `DN_WATCH_FILE_{n}_SKIP` | Lines matching this expression are ignored |
 | **Poll** | `DN_WATCH_FILE_{n}_POLL` | Enable file polling when filesystem events are not available |
 | **Pipe** | `DN_WATCH_FILE_{n}_PIPE` | Enable if the path is a named FIFO pipe |
 | **Must Exist** | `DN_WATCH_FILE_{n}_MUST_EXIST` | Require the file to exist at startup |
 | **Log Match** | `DN_WATCH_FILE_{n}_LOG_MATCH` | Write matched lines to the Notifiarr application log |
+
+!!! warning "Watching the client's own log"
+    You can't point a watcher at the Notifiarr client's own log file; the
+    client silently ignores watch entries that target its own log paths.
+    Client errors already reach the website through the separate
+    `client_error_log` event, so you don't need to watch the client log
+    yourself.
 
 ### Adding Watchers
 
