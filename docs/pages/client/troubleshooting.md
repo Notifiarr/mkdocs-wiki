@@ -88,9 +88,19 @@ docker kill --signal=HUP Notifiarr
 ```
 
 !!! note "About Reset"
-    The `--reset` command creates a local admin password as a recovery fallback. This is only needed if you can't login with your Notifiarr.com credentials. After reset, you can login with username `admin` and the generated password, then set up your normal authentication.
+    The `--reset` command creates a local admin password as a recovery fallback. This is only needed if you can't login with your Notifiarr.com credentials. After reset, login with username `admin` and the generated password.
 
 - If you still can't login, restart the container.
+
+### Change the Reset Password
+
+The generated `admin` password is random. Once you're logged in, change it to something you'll remember so you don't have to reset again:
+
+1. Click your username in the bottom-left of the Web UI menu.
+1. Open the *Trust Profile* page.
+1. Enter the current (reset) password, set a new password of at least 9 characters, and save. You can also configure an auth proxy header here instead.
+
+See [Set a password](afterInstall.md#set-a-password) for more detail.
 
 ## Useful CLI Flags
 
