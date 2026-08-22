@@ -37,4 +37,4 @@ At the bottom of the page are JSON list URLs that can be used as custom lists in
 
 ### Series Exclusion Filter
 
-The series JSON lists include an exclusion filter with checkboxes for TVDB networks. Check the networks you want to exclude, then append the generated `&filter=` parameter to the list URL.
+The series JSON lists include an exclusion filter with checkboxes for TVDB genres. Check the genres you want to exclude, then append the generated `&filter=` parameter to the list URL.

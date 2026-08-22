@@ -12,4 +12,4 @@ The Metrics page shows notification leaderboards across all Notifiarr users.
     - The number of active users for that integration (top right)
     - Today's notification count for that integration (footer)
 
-Your own name is highlighted in red if you appear on any leaderboard.
+Your own name is highlighted in red on the Per Integration cards when you appear on one.
