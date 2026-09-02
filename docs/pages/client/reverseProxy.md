@@ -29,7 +29,7 @@ it is recommended that you put it behind a reverse proxy if you're going to expo
 ## Cloudflare Users
 
 If you use Cloudflare Firewall or ZeroTrust see
-[the CloudFlare Proxy page](../../pages/client/cloudflare.md)
+[the CloudFlare Proxy page](cloudflare.md)
 to ensure Notifiarr is allowed through Cloudflare.
 
 ## NGINX Subfolder Example
@@ -163,4 +163,4 @@ server {
 1. Save
 
 You will need to use Notifiarr Login/Password setup, not the webauth method with the above NPM configuration.
-See [client Web UI](../../pages/client/gui.md) for more details
+See [client Web UI](gui.md) for more details

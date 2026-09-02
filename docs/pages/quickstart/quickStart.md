@@ -5,7 +5,7 @@ Almost everything needed is available in different parts of the wiki. This will 
 ## Assumptions
 
 - You already have an account setup on notifiarr.com with a valid apikey to use in the client but if you don't, stop here and go make one.
-- You have [setup the notifiarr client](../client/install.md) if you plan to use it. To know if you will need it or not you can view the faq [for information on if it is required](../faq/faq.md#q-is-the-notifiarr-client-required)
+- You have [set up the Notifiarr client](../client/install.md) if you plan to use it. To know if you will need it or not you can view the FAQ [for information on whether it is required](../faq/faq.md#q-is-the-notifiarr-client-required)
 
 ## Client Connection
 
@@ -13,7 +13,7 @@ Once the client is setup locally and you can see it internally (example: `localh
 
 ## Integrations
 
-First thing, [turn on a couple](../../pages/website/integrationsSetup.md#main-setup) that you want to use
+First thing, [turn on a couple](../website/integrationsSetup.md#main-setup) that you want to use
 (or all of them at once that you want to use if you want but less is more while learning).
 Once you have them turned on the page will reload and you'll see a card for each one.
 If you can't figure out how to turn things on etc, each integration has a wiki page for it (well most do).

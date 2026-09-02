@@ -47,7 +47,7 @@ ping origin-proxy.notifiarr.com
 
 ## Q. How do I monitor the queue for stuck items?
 
-- Open the [Client Settings](../../pages/website/clientConfig.md) on the site and expand the **Starr** section to set the notify times.
+- Open the [Client Settings](../website/clientConfig.md) on the site and expand the **Starr** section to set the notify times.
 
 - It will notify once when it thinks it is stuck and then update the existing message every 5 minutes until it is imported so you can see the amount of time it is stuck and why. Messages go to the shared `Errors` channel.
 
@@ -90,10 +90,10 @@ curl -I -H "X-Plex-Token: <token>" <url>/status/sessions
 
 If session info is missing from notifications or the sessions notification is not working:
 
-- Make sure you don't have duplicated clients in the [Client Settings](../../pages/website/clientConfig.md)
-- Make sure you have a [client](../../pages/website/clientConfig.md) setup for Plex
-- Make sure you have selected the **Activity** checkbox in the Plex section of the [Client Settings](../../pages/website/clientConfig.md)
-- Try to increase the **Activity Delay** in the Plex section of the [Client Settings](../../pages/website/clientConfig.md) as this will give Plex more time to get the session available in the endpoint
+- Make sure you don't have duplicated clients in the [Client Settings](../website/clientConfig.md)
+- Make sure you have a [client](../website/clientConfig.md) set up for Plex
+- Make sure you have selected the **Activity** checkbox in the Plex section of the [Client Settings](../website/clientConfig.md)
+- Try to increase the **Activity Delay** in the Plex section of the [Client Settings](../website/clientConfig.md) as this will give Plex more time to get the session available in the endpoint
 - Note 1: The sessions notifications will only send when there is at least one item being played or paused
 - Note 2: It doesn't matter what Tautulli shows or the Plex Dashboard shows, they both use the same sessions endpoint.
   If you were to look at them at the same time as the notification is sent (when it doesn't work) they would also not

@@ -49,7 +49,7 @@ Some examples of how to do that:
 
 !!!note
     Failure to set a hostname will result in duplicate clients that need to be
-    [fixed once a hostname is set](../../pages/website/clientConfig.md#resolving-duplicate-clients).
+    [fixed once a hostname is set](../website/clientConfig.md#resolving-duplicate-clients).
     **Restart the client if you set or change the hostname.**
 
 ## WSL2 users
@@ -254,7 +254,7 @@ Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
 
 - Linux: `/var/log/notifiarr/{app,http,services}.log`
     - Log paths for linux apt/deb installations are hardcoded
-- FreeBSD: `/var/log/syslog` (w/ default syslog)
+- FreeBSD packages: `/usr/local/var/log/notifiarr/{app,http,services}.log`
 - macOS: `~/.notifiarr/Notifiarr.log`
 - Windows: `<home folder>/.notifiarr/Notifiarr.log`
 - Docker: `docker logs Notifiarr` (recommend [setting a log file](#setup-log-files))
@@ -263,6 +263,9 @@ Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
 
 If you use Prometheus, you can configure it to scrape your Notifiarr client.
 Import this [Grafana Dashboard](https://grafana.com/grafana/dashboards/24776-notifiarr-client/). ID: **24776**
+
+The client exposes the authenticated Prometheus metrics at `GET /metrics` and
+`GET /api/metrics`. If `urlbase` is not `/`, it also exposes `GET <urlbase>/metrics`.
 
 To set a key for Prometheus, head to the *Configuration* page and add a 20-30 character string to **Extra Keys**.
 Use that in the `secrets` array for the X-Api-Key header in this sample Prometheus scrape configuration.

@@ -19,7 +19,7 @@ Set the `TMPDIR` environment variable to a writable path, or mount `/tmp` to res
 If you have duplicate clients on the website:
 
 1. Make sure your client has a [static hostname](afterInstall.md#hostname).
-1. Then [see these instructions](../../pages/website/clientConfig.md#resolving-duplicate-clients)
+1. Then [see these instructions](../website/clientConfig.md#resolving-duplicate-clients)
     to remove the duplicates.
 
 ## Gibberish Config File
@@ -109,7 +109,7 @@ The Notifiarr client binary accepts several command-line flags useful for debugg
 - `--ps` - Print the system process list. Helpful when creating Process health checks to see exact process names.
 - `--curl <url>` - GET a URL and display response headers and payload. Useful for testing connectivity to app instances. Use `--header "Key: Value"` to add request headers.
 - `--version` - Print the full version string and exit.
-- `--write <path>` - Write a new default config file to the specified path. Use `-` to overwrite the current config file path.
+- `--write <path>` / `-w <path>` - Write a new default config file to the specified path. Use `-` to overwrite the current config file path.
 - `--config <path>` / `-c <path>` - Specify the config file path. Can also be set with the `DN_CONFIG_FILE` environment variable.
 - `--extraconfig <path>` / `-e <path>` - Load additional config files. Can be specified multiple times.
 - `--prefix <prefix>` / `-p <prefix>` - Change the environment variable prefix (default: `DN`).
