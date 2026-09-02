@@ -10,16 +10,16 @@ Each endpoint instance has the following settings:
 
 | Setting | Environment Variable | Description |
 | --------- | --------------------- | ------------- |
-| **Name** | `ENDPOINT_{n}_NAME` | Name of the endpoint (required, must be unique) |
-| **Template** | `ENDPOINT_{n}_TEMPLATE` | Payload template name used by the website to parse the response into notifications (required) |
-| **Follow Redirects** | — | Follow HTTP redirects when fetching the URL |
-| **Timeout** | `ENDPOINT_{n}_TIMEOUT` | HTTP request timeout duration |
-| **Method** | `ENDPOINT_{n}_METHOD` | HTTP method: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS |
-| **URL** | `ENDPOINT_{n}_URL` | The URL to fetch (must begin with `http://` or `https://`) |
-| **Body** | `ENDPOINT_{n}_BODY` | Request body for POST/PUT/PATCH requests |
-| **Query** | `ENDPOINT_{n}_QUERY` | Query parameters, one `key=value` per line |
-| **Headers** | `ENDPOINT_{n}_HEADER` | HTTP headers, one `key: value` per line |
-| **Valid SSL** | `ENDPOINT_{n}_VALID_SSL` | Validate the HTTPS certificate when fetching the URL. Disable for self-signed certificates (default: `false`) |
+| **Name** | `DN_ENDPOINT_{n}_NAME` | Name of the endpoint. If omitted, the URL is used |
+| **Template** | `DN_ENDPOINT_{n}_TEMPLATE` | Payload template name used by the website to parse the response into notifications. Set to `false` to fetch without sending the result to the website |
+| **Follow Redirects** | `DN_ENDPOINT_{n}_FOLLOW` | Follow HTTP redirects when fetching the URL (default: `false`) |
+| **Timeout** | `DN_ENDPOINT_{n}_TIMEOUT` | HTTP request timeout duration |
+| **Method** | `DN_ENDPOINT_{n}_METHOD` | HTTP method; defaults to `GET` |
+| **URL** | `DN_ENDPOINT_{n}_URL` | The URL to fetch |
+| **Body** | `DN_ENDPOINT_{n}_BODY` | Request body |
+| **Query** | `DN_ENDPOINT_{n}_QUERY` | Query parameters |
+| **Headers** | `DN_ENDPOINT_{n}_HEADER` | HTTP headers |
+| **Valid SSL** | `DN_ENDPOINT_{n}_VALID_SSL` | Validate the HTTPS certificate when fetching the URL. Disable for self-signed certificates (default: `false`) |
 
 ### Scheduling
 

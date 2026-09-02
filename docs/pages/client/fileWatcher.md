@@ -13,14 +13,14 @@ Each file watcher instance has the following settings:
 
 | Setting | Environment Variable | Description |
 | --------- | --------------------- | ------------- |
-| **Path** | `WATCH_FILE_{n}_PATH` | File path to monitor (required) |
-| **Disabled** | `WATCH_FILE_{n}_DISABLED` | Toggle the watcher on or off |
-| **Regex** | `WATCH_FILE_{n}_REGEX` | Regular expression to match against file lines (required). Automatically wrapped in `.*` wildcards. Use `(?i)` for case-insensitive matching |
-| **Skip** | `WATCH_FILE_{n}_SKIP` | Lines matching this expression are ignored |
-| **Poll** | `WATCH_FILE_{n}_POLL` | Enable file polling when filesystem events are not available |
-| **Pipe** | `WATCH_FILE_{n}_PIPE` | Enable if the path is a named FIFO pipe |
-| **Must Exist** | `WATCH_FILE_{n}_MUST_EXIST` | Skip watching if the file does not exist at startup |
-| **Log Match** | `WATCH_FILE_{n}_LOG_MATCH` | Write matched lines to the Notifiarr application log |
+| **Path** | `DN_WATCH_FILE_{n}_PATH` | File path to monitor |
+| **Disabled** | `DN_WATCH_FILE_{n}_DISABLED` | Toggle the watcher on or off |
+| **Regex** | `DN_WATCH_FILE_{n}_REGEX` | Regular expression to match against file lines |
+| **Skip** | `DN_WATCH_FILE_{n}_SKIP` | Lines matching this expression are ignored |
+| **Poll** | `DN_WATCH_FILE_{n}_POLL` | Enable file polling when filesystem events are not available |
+| **Pipe** | `DN_WATCH_FILE_{n}_PIPE` | Enable if the path is a named FIFO pipe |
+| **Must Exist** | `DN_WATCH_FILE_{n}_MUST_EXIST` | Require the file to exist at startup |
+| **Log Match** | `DN_WATCH_FILE_{n}_LOG_MATCH` | Write matched lines to the Notifiarr application log |
 
 ### Adding Watchers
 

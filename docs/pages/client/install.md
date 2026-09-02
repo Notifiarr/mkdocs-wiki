@@ -5,7 +5,7 @@ toc_depth: 1
 # Notifiarr Client Installation
 
 Click your OS in the table of contents and follow the provided directions to get the client installed.
-**Review the [After Install](../../pages/client/afterInstall.md) page for next steps.**
+**Review the [After Install](afterInstall.md) page for next steps.**
 
 ## Linux
 
@@ -25,7 +25,7 @@ download a binary from the [Releases](https://github.com/Notifiarr/notifiarr/rel
 1. Install the Go Lift package repo and Notifiarr with this command:
 
     ```bash
-    curl -s https://golift.io/repo.sh | sudo bash -s - notifiarr
+    curl -sSL https://raw.githubusercontent.com/Notifiarr/notifiarr/main/userscripts/install.sh | sudo bash
     ```
 
 1. After install, edit the config, set your apikey, and restart the service:
@@ -173,7 +173,7 @@ A sample docker compose file may be found
 
 !!! warning "Static Hostname"
     Why `-h notifiarr` ?
-    You MUST [set a static hostname](../../pages/client/afterInstall.md#hostname).
+    You MUST [set a static hostname](afterInstall.md#hostname).
     Each client is identified by hostname.
 
 ```bash
