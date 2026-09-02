@@ -37,7 +37,7 @@ The Web UI sidebar is organized into two main sections:
 - **Configuration** - General settings including API key, bind address, URL base, SSL, logging, and system options.
 - **Site Tunnel** - Manage the persistent websocket tunnel to notifiarr.com. Select primary and backup tunnels.
 - **Starr Apps** - Configure Radarr, Sonarr, Lidarr, Readarr, and Prowlarr instances.
-- **Download Apps** - Configure Deluge, qBittorrent, rTorrent, SABnzbd, NZBGet, and Transmission. Remote-playback turtle mode is toggled from Plex and Jellyfin Client Settings on the website; set the alternative limits in qBittorrent first.
+- **Download Apps** - Configure Deluge, qBittorrent, rTorrent, SABnzbd, NZBGet, and Transmission. Remote-playback turtle mode is toggled from Plex, Jellyfin, and Emby Client Settings on the website; set the alternative limits in qBittorrent first.
 - **Media Apps** - Configure Plex and Tautulli.
 - **Snapshot Apps** - Configure MySQL and Nvidia GPU monitoring for snapshots.
 - **File Watcher** - Watch log files for lines matching regular expressions.

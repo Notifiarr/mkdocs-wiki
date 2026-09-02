@@ -41,16 +41,17 @@ Click the **cog icon** to open the configuration options for Jellyfin.
 
 ### Client Settings
 
-The same **qBittorrent Speed Limit** block is on Plex and Jellyfin Client Settings so saving either page keeps the other.
+The same **qBittorrent Speed Limit** block is on Plex, Jellyfin, and Emby Client Settings so saving any of those pages keeps the others.
 
 1. `Enabled` - Turn on qBittorrent alternative (turtle) speed limits when remote playback is active. Set the alternative limits in qBittorrent first.
 1. `Plex WAN` - Throttle while a Plex movie or episode is playing or paused on WAN (not LAN).
 1. `Jellyfin` - Throttle on Jellyfin PlaybackStart and PlaybackStop for movies and episodes.
+1. `Emby` - Throttle on Emby playback.start, playback.unpause, playback.stop, and playback.scrobble for movies and episodes. Pause does not turn turtle off.
 1. `Cooldown` - How long to wait after remote playback ends before turning alternative speed limits back off.
 
 Jellyfin webhooks usually do not include LAN vs WAN. If `RemoteEndPoint` is present and is a private IP, throttle is skipped. If the field is missing, throttle still runs.
 
-Plex uses WAN sessions on the client. Jellyfin uses playback webhooks from the website. Plex and qBit must be on the same Notifiarr client.
+Plex uses WAN sessions on the client. Jellyfin and Emby use playback webhooks from the website. Plex and qBit must be on the same Notifiarr client.
 
 ### Notifiarr
 

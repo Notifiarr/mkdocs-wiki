@@ -137,6 +137,7 @@ Additional settings such as automatically unmonitor an episode or movie once a u
     - `Enabled` - Master switch for this feature.
     - `Plex WAN` - Throttle while a Plex movie or episode is playing or paused on WAN (not LAN).
     - `Jellyfin` - Throttle on Jellyfin PlaybackStart for movies and episodes.
+    - `Emby` - Throttle on Emby playback.start and playback.stop for movies and episodes. Pause does not turn turtle off.
     - `Cooldown` - How long to wait after remote playback ends before turning alternative speed limits back off.
 
 The client only turns turtle mode off if it turned turtle mode on. If alternative limits were already enabled in qBittorrent, they stay on when playback ends.
