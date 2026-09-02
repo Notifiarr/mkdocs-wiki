@@ -155,7 +155,7 @@ This project builds automatically in [Docker Cloud](https://hub.docker.com/r/gol
 and creates [ready-to-use multi-architecture images](https://hub.docker.com/r/golift/notifiarr/tags).
 The `latest` tag is always a tagged release in GitHub.
 It also builds in a GitHub Action and publishes to GHCR (`ghcr.io/notifiarr/notifiarr`).
-A CUDA-enabled image is available for Nvidia GPU monitoring: `ghcr.io/notifiarr/notifiarr:cuda`.
+A CUDA-tagged image is available for Nvidia GPU monitoring: `ghcr.io/notifiarr/notifiarr:cuda` (Ubuntu base with NVIDIA Container Toolkit env; not `nvidia/cuda`).
 
 ### Compose
 
@@ -201,6 +201,26 @@ docker run --hostname $(hostname) -d --privileged \
   golift/notifiarr
 docker logs <container id from docker run>
 ```
+
+### Nvidia GPU snapshots
+
+GPU snapshots run `nvidia-smi` on the host. The client does **not** use the CUDA toolkit, so you do not install a CUDA toolkit version in the container.
+
+1. Install NVIDIA drivers and the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) on the **host**.
+1. Use the CUDA image: `golift/notifiarr:cuda` (same on `ghcr.io/notifiarr/notifiarr`). Alpine `latest` is not recommended (`nvidia-smi` is a glibc binary). The plain `:ubuntu` image does not set `NVIDIA_VISIBLE_DEVICES`.
+1. Pass the GPU into the container. Do not install CUDA inside the image.
+
+```bash
+docker run --name Notifiarr -h notifiarr --restart unless-stopped \
+    --gpus all --privileged -p 5454:5454 \
+    -v /path/to/notifiarrconfig/:/config \
+    -v /var/run/utmp:/var/run/utmp -v /etc/machine-id:/etc/machine-id \
+    golift/notifiarr:cuda
+```
+
+Compose equivalent: set `image: golift/notifiarr:cuda` and `gpus: all`. See the commented example in [`examples/compose.yml`](https://github.com/Notifiarr/notifiarr/blob/main/examples/compose.yml).
+
+If an older `:cuda` image fails with `nvidia-container-cli: requirement error: unsatisfied condition: cuda>=...`, the host driver is older than that image's CUDA base. Current `:cuda` images are Ubuntu-based and do not set that constraint. Pull a new image.
 
 ## Home Assistant OS
 
