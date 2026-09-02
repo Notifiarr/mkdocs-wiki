@@ -52,7 +52,7 @@ Click the **cog icon** to open the integration settings for Plex.
 1. `Triggers` - Adjust which webhooks will send notifications to you.
 1. `Integration Settings` - Allows the user to further configure the integration.
 1. `Extra Settings` - Adjust the extra settings for this integration.
-1. `Client Settings` - Allows the user to set the scanning interval.
+1. `Client Settings` - Allows the user to set the scanning interval and qBittorrent alternative speed limits.
 1. `Custom Icon` - Assign another icon to notifications from this integration. (Subscriber Feature)
 1. `Content Lines` - Add a message to the top of notifications for wearable/toast purposes.
 1. `Screenshots` - Shows the expected output once all correctly configured.
@@ -133,6 +133,14 @@ Additional settings such as automatically unmonitor an episode or movie once a u
 1. `Cooldown` - Minimum time between notifications to ensure duplicates are not sent (such as media.play and playback.started)
 1. `Interval` - This is how often to send a notification for the Plex Sessions trigger, nothing sends if there is no media playing or paused.
 ![interval.png](../../assets/screenshots/integrations/plex/interval.png)
+1. `qBittorrent Speed Limit` - Turn on qBittorrent alternative (turtle) speed limits when remote playback is active. Set the alternative limits in qBittorrent first. Plex and qBit must be on the same client.
+    - `Enabled` - Master switch for this feature.
+    - `Plex WAN` - Throttle while a Plex movie or episode is playing or paused on WAN (not LAN).
+    - `Jellyfin` - Throttle on Jellyfin PlaybackStart for movies and episodes.
+    - `Emby` - Throttle on Emby playback.start and playback.stop for movies and episodes. Pause does not turn turtle off.
+    - `Cooldown` - How long to wait after remote playback ends before turning alternative speed limits back off.
+
+The client only turns turtle mode off if it turned turtle mode on. If alternative limits were already enabled in qBittorrent, they stay on when playback ends.
 
 ### Custom Icon
 
