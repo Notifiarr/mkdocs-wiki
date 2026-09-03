@@ -40,9 +40,12 @@ Each command shows execution statistics:
 
 - **Last execution** - When the command was last run
 - **Execution count** - Total number of times the command has been executed
-- **Failure count** - Number of failed executions
+- **Failure count** - Number of failed executions (non-zero process exit)
 - **Last command** - The exact command string that was executed
-- **Output** - The stdout/stderr output from the last execution
+- **Output** - The stdout/stderr output from the last execution (click the orange button to expand; this opens automatically when the last run failed)
+
+!!! note "Windows PowerShell"
+    Failures increment only when the process exits non-zero. Windows PowerShell cmdlet errors such as `Start-Process` failing are non-terminating, so `powershell.exe -File script.ps1` exits 0 unless the script sets `$ErrorActionPreference = 'Stop'`. The client rewrites direct `powershell.exe`/`pwsh` `-File` invocations (Shell disabled) to run with `$ErrorActionPreference='Stop'` so those errors count as failures. Leave **Shell** off when the command already starts with `powershell.exe`. The console window is hidden; use **Log Output** and the output panel instead of a flashing PowerShell window.
 
 ---
 
