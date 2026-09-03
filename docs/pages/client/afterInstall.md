@@ -254,7 +254,7 @@ Make sure you [setup a log file](#setup-log-files) if you can't find your logs.
 
 - Linux: `/var/log/notifiarr/{app,http,services}.log`
     - Log paths for linux apt/deb installations are hardcoded
-- FreeBSD: `/var/log/syslog` (w/ default syslog)
+- FreeBSD: `/usr/local/var/log/notifiarr/{app,http,services}.log`
 - macOS: `~/.notifiarr/Notifiarr.log`
 - Windows: `<home folder>/.notifiarr/Notifiarr.log`
 - Docker: `docker logs Notifiarr` (recommend [setting a log file](#setup-log-files))

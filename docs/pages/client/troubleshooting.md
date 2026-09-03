@@ -109,7 +109,8 @@ The Notifiarr client binary accepts several command-line flags useful for debugg
 - `--ps` - Print the system process list. Helpful when creating Process health checks to see exact process names.
 - `--curl <url>` - GET a URL and display response headers and payload. Useful for testing connectivity to app instances. Use `--header "Key: Value"` to add request headers.
 - `--version` - Print the full version string and exit.
-- `--write <path>` - Write a new default config file to the specified path. Use `-` to overwrite the current config file path.
+- `-v` - Print the short version string and exit.
+- `--write <path>` / `-w <path>` - Write a config file to the specified path. Pass `example` or `---` to write a fresh default-template config to `<config path>.new` next to your existing config. The client never overwrites an existing config file.
 - `--config <path>` / `-c <path>` - Specify the config file path. Can also be set with the `DN_CONFIG_FILE` environment variable.
 - `--extraconfig <path>` / `-e <path>` - Load additional config files. Can be specified multiple times.
 - `--prefix <prefix>` / `-p <prefix>` - Change the environment variable prefix (default: `DN`).
