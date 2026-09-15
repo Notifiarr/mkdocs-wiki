@@ -104,8 +104,24 @@ The network integration is enabled and Plex is being monitored so when Plex goes
 plexRestart.ps1
 
 ```powershell
+$ErrorActionPreference = 'Stop'
+
 taskkill /IM "Plex Media Server.exe" /F
-Start-Process -FilePath "C:\Program Files (x86)\Plex\Plex Media Server\Plex Media Server.exe"
+# 128 = the process was not running; still try to start Plex.
+if ($LASTEXITCODE -notin 0, 128) {
+    throw "taskkill failed with exit code $LASTEXITCODE"
+}
+
+$plex = @(
+    "$env:ProgramFiles\Plex\Plex Media Server\Plex Media Server.exe",
+    "${env:ProgramFiles(x86)}\Plex\Plex Media Server\Plex Media Server.exe"
+) | Where-Object { Test-Path -LiteralPath $_ } | Select-Object -First 1
+
+if (-not $plex) {
+    throw "Plex Media Server.exe not found under Program Files"
+}
+
+Start-Process -FilePath $plex
 ```
 
 This script is on the computer and the command to run `plexRestart.ps1` is added in the client. With that done, we can now set it up to trigger this command when the network notification comes in that it is down. As seen above there is also a keyword configured with `!plexRestart` so if we want to restart it on demand (maybe it is slow or acting up) we can do that as well.
