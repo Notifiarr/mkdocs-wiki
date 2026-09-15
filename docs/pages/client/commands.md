@@ -15,8 +15,8 @@ Each command instance has the following settings:
 | --------- | --------------------- | ------------- |
 | **Name** | `DN_COMMAND_{n}_NAME` | Command name, shown in logs and notifications. If omitted, the first command token is used |
 | **Notify** | `DN_COMMAND_{n}_NOTIFY` | Send a notification after command execution, including command output |
-| **Command** | `DN_COMMAND_{n}_COMMAND` | The command or script to run |
-| **Shell** | — | Wrap the command in a shell (`/bin/sh` on non-Windows systems, `cmd /C` on Windows) |
+| **Command** | `DN_COMMAND_{n}_COMMAND` | The command or script to run (required) |
+| **Shell** | `DN_COMMAND_{n}_SHELL` | Wrap the command in a shell (`/bin/sh` on non-Windows systems, `cmd /C` on Windows) |
 | **Log Output** | `DN_COMMAND_{n}_LOG` | Write command output to the application log |
 | **Timeout** | `DN_COMMAND_{n}_TIMEOUT` | Maximum run duration before the command is terminated (default: 15s) |
 
