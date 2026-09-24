@@ -52,6 +52,34 @@ Some examples of how to do that:
     [fixed once a hostname is set](../website/clientConfig.md#resolving-duplicate-clients).
     **Restart the client if you set or change the hostname.**
 
+## macOS users
+
+macOS pulls its hostname from **System Settings > General > Sharing**. If **Local hostname**
+is unset, or **Use dynamic global hostname** is on, the hostname can change on reboot or
+network change. That makes the client show up on the website as a duplicate.
+
+1. Open **System Settings > General > Sharing**.
+1. Click **Edit** next to **Local hostname**, type a name (e.g. `Mac-mini`), and turn off
+   **Use dynamic global hostname**.
+1. Restart the client.
+
+If the hostname still drifts, set it directly with `scutil`:
+
+```bash
+sudo scutil --set ComputerName "Mac-mini"
+sudo scutil --set LocalHostName "Mac-mini"
+sudo scutil --set HostName "Mac-mini"
+```
+
+Restart the client after running these commands.
+
+!!! tip "Advanced: host_id"
+    The client also sends a `host_id`, a hardware identifier that (along with the hostname)
+    the website uses to tell clients apart. It's generated automatically and stays stable
+    across reboots, so you normally don't need to touch it. If duplicates persist after
+    fixing the hostname, you can pin it in `notifiarr.conf` (`host_id = "..."`) or with the
+    `DN_HOST_ID` environment variable. Never reuse the same value on two systems.
+
 ## WSL2 users
 
 Add this volume to your Notifiarr container. This is used for a unique UUID for each client instance.
