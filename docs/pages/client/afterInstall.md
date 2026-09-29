@@ -15,16 +15,14 @@ Do these things:
 ## Web UI
 
 When you open the application on MacOS or Windows for the first time, you're
-prompted for your API key. Enter it — you must provide the "All" API key from your
+prompted for your API key. Enter it — you must provide the "Global" API key from your
 [Profile page on notifiarr.com](https://notifiarr.com/user.php?page=profile)
 
 !!! info "API Key"
     The Notifiarr client uses the API key for bi-directional authorization between notifiarr.com and the Client. Keep it safe, and never share it.
 
-If you're on Linux or FreeBSD and installed with root, you should set the API
-key in the config file @ `/etc/notifiarr/notifiarr.conf` or
-`/usr/local/etc/notifiarr/notifiarr.conf`. If you installed on a seed box, set
-the API key in the config file in your home folder.
+If you're on Linux or FreeBSD and installed with root, you should set the API key in the config file @ `/etc/notifiarr/notifiarr.conf` or
+`/usr/local/etc/notifiarr/notifiarr.conf`. If you installed on a seed box, set the API key in the config file in your home folder.
 
 Login to the client's WebUI for the first time with your **Notifiarr.com email address and password**.
 You can set a dedicated local password after logging in by clicking your
