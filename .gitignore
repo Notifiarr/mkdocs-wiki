@@ -1,2 +1,14 @@
-.venv
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Zensical / MkDocs build outputs & cache
 site/
+.cache/
+
+# OS and Editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

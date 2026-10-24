@@ -1,0 +1,162 @@
+[project]
+site_name = "Notifiarr Wiki"
+site_author = "nitsua"
+site_description = "Notifiarr provides native custom integrations with dozens of applications and websites. That means these applications or websites can send data to Notifiarr, and we’ll format a message according to your configuration then send it to your chat server."
+site_url = "https://notifiarr.wiki"
+repo_name = "Notifiarr/mkdocs-wiki"
+repo_url = "https://github.com/Notifiarr/mkdocs-wiki"
+
+nav = [
+  { "Notifiarr" = [ { "About" = "index.md" } ] },
+  { "Quick Start" = [ { "Quick Start" = "pages/quickstart/quickStart.md" } ] },
+  { "Client" = [
+      { "Install" = "pages/client/install.md" },
+      { "After Install" = "pages/client/afterInstall.md" },
+      { "Web UI" = "pages/client/gui.md" },
+      { "Site Tunnel" = "pages/client/siteTunnel.md" },
+      { "File Watcher" = "pages/client/fileWatcher.md" },
+      { "Endpoints" = "pages/client/endpoints.md" },
+      { "Commands" = "pages/client/commands.md" },
+      { "Actions" = "pages/client/actions.md" },
+      { "Metrics" = "pages/client/metrics.md" },
+      { "System" = "pages/client/system.md" },
+      { "Health Checks" = "pages/client/healthChecks.md" },
+      { "Troubleshooting" = "pages/client/troubleshooting.md" },
+      { "Reverse Proxy" = "pages/client/reverseProxy.md" },
+      { "Cloudflare Proxy" = "pages/client/cloudflare.md" }
+  ] },
+  { "Website" = [
+      { "Client setup" = "pages/website/clientConfig.md" },
+      { "Integrations setup" = "pages/website/integrationsSetup.md" },
+      { "Media requests" = "pages/website/mediaRequests.md" },
+      { "Notification history" = "pages/website/notificationHistory.md" },
+      { "Transcode history" = "pages/website/transcodeHistory.md" },
+      { "Trending" = "pages/website/trending.md" },
+      { "Translations" = "pages/website/translations.md" },
+      { "Metrics" = "pages/website/metrics.md" }
+  ] },
+  { "Integrations" = [
+      { "How To Setup Integrations" = "pages/integrations/basicUsage.md" },
+      { "Apprise" = "pages/integrations/apprise.md" },
+      { "Authentik" = "pages/integrations/authentik.md" },
+      { "Autobrr" = "pages/integrations/autobrr.md" },
+      { "Bazarr" = "pages/integrations/bazarr.md" },
+      { "Better Stack" = "pages/integrations/betterstack.md" },
+      { "Channel Stats" = "pages/integrations/channelstats.md" },
+      { "Cronitor" = "pages/integrations/cronitor.md" },
+      { "Cross Seed" = "pages/integrations/crossseed.md" },
+      { "Crowdsec" = "pages/integrations/crowdsec.md" },
+      { "Dashboard" = "pages/integrations/dashboard.md" },
+      { "Discord App" = "pages/integrations/discordApp.md" },
+      { "DockWatch" = "pages/integrations/dockwatch.md" },
+      { "Duplicacy" = "pages/integrations/duplicacy.md" },
+      { "Emby" = "pages/integrations/emby.md" },
+      { "Fail2ban" = "pages/integrations/fail2ban.md" },
+      { "Github" = "pages/integrations/github.md" },
+      { "Hotio" = "pages/integrations/hotio.md" },
+      { "Jellyfin" = "pages/integrations/jellyfin.md" },
+      { "Jellyseerr" = "pages/integrations/jellyseerr.md" },
+      { "Kometa" = "pages/integrations/kometa.md" },
+      { "Lidarr" = "pages/integrations/lidarr.md" },
+      { "Log Watcher" = "pages/integrations/logWatch.md" },
+      { "MDBList" = "pages/integrations/mdblist.md" },
+      { "Media Requests" = "pages/integrations/mediaRequests.md" },
+      { "Network" = "pages/integrations/network.md" },
+      { "Overseerr" = "pages/integrations/overseerr.md" },
+      { "Package Manager" = "pages/integrations/packagemanager.md" },
+      { "Passthrough" = "pages/integrations/passthrough.md" },
+      { "Persistent" = "pages/integrations/persistent.md" },
+      { "Plex" = "pages/integrations/plex.md" },
+      { "Prowlarr" = "pages/integrations/prowlarr.md" },
+      { "Qbit Manage" = "pages/integrations/qbitmanage.md" },
+      { "qui" = "pages/integrations/qui.md" },
+      { "Radarr" = "pages/integrations/radarr.md" },
+      { "Readarr" = "pages/integrations/readarr.md" },
+      { "Reciperr" = "pages/integrations/reciperr.md" },
+      { "Reddit" = "pages/integrations/reddit.md" },
+      { "Release Parser" = "pages/integrations/releaseParser.md" },
+      { "RSS Watcher" = "pages/integrations/rssWatcher.md" },
+      { "Simon Says" = "pages/integrations/simonSays.md" },
+      { "Snapshots" = "pages/integrations/snapshots.md" },
+      { "Seerr" = "pages/integrations/seerr.md" },
+      { "Sonarr" = "pages/integrations/sonarr.md" },
+      { "Starr Proxy" = "pages/integrations/starrproxy.md" },
+      { "Synology" = "pages/integrations/synology.md" },
+      { "TRaSH" = "pages/integrations/trash.md" },
+      { "Unpackerr" = "pages/integrations/unpackerr.md" },
+      { "Uptime-Kuma" = "pages/integrations/uptimekuma.md" },
+      { "Watchtower" = "pages/integrations/watchtower.md" },
+      { "Website Status" = "pages/integrations/websitestatus.md" },
+      { "Whisparr" = "pages/integrations/whisparr.md" }
+  ] },
+  { "Discord Bot" = [
+      { "Permissions" = "pages/discordbot/permissions.md" },
+      { "Custom Bot" = "pages/discordbot/custombot.md" }
+  ] },
+  { "Translations" = [ { "Contribute" = "pages/translations/contribute.md" } ] },
+  { "Faq" = [ { "Faq" = "pages/faq/faq.md" } ] }
+]
+
+extra_css = ["stylesheets/github-permalink-style.css"]
+
+[project.theme]
+name = "material"
+variant = "modern"
+custom_dir = "overrides"
+logo = "assets/logo.png"
+favicon = "assets/favicon.ico"
+language = "en"
+features = [
+  "content.code.annotate",
+  "content.tabs.link",
+  "content.code.copy",
+  "content.tooltips",
+  "header.autohide",
+  "announce.dismiss",
+  "navigation.footer",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.sections",
+  "navigation.top",
+  "navigation.tracking",
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "toc.follow",
+  "search.suggest",
+  "search.highlight",
+  "search.share"
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+[project.theme.palette.toggle]
+icon = "material/weather-sunny"
+name = "Light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "custom"
+[project.theme.palette.toggle]
+icon = "material/weather-night"
+name = "Dark mode"
+
+[project.plugins]
+search = {}
+glightbox = { auto_caption = false, caption_position = "bottom" }
+
+[project.markdown_extensions]
+attr_list = {}
+"pymdownx.emoji" = {}
+admonition = {}
+"pymdownx.details" = {}
+"pymdownx.superfences" = {}
+"pymdownx.highlight" = { anchor_linenums = true }
+"pymdownx.inlinehilite" = {}
+tables = {}
+"pymdownx.tabbed" = { alternate_style = true }
+md_in_html = {}
+toc = { toc_depth = 4, permalink = true }
