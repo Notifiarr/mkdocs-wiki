@@ -6,6 +6,8 @@ site_url = "https://notifiarr.wiki"
 repo_name = "Notifiarr/mkdocs-wiki"
 repo_url = "https://github.com/Notifiarr/mkdocs-wiki"
 
+extra_css = ["stylesheets/github-permalink-style.css"]
+
 nav = [
   { "Notifiarr" = [ { "About" = "index.md" } ] },
   { "Quick Start" = [ { "Quick Start" = "pages/quickstart/quickStart.md" } ] },
@@ -97,66 +99,80 @@ nav = [
   { "Faq" = [ { "Faq" = "pages/faq/faq.md" } ] }
 ]
 
-extra_css = ["stylesheets/github-permalink-style.css"]
+# ----------------------------------------------------------------------------
+# Theme
+# ----------------------------------------------------------------------------
 
 [project.theme]
-name = "material"
-variant = "modern"
+variant = "modern"          # use "classic" for the Material for MkDocs look
 custom_dir = "overrides"
 logo = "assets/logo.png"
 favicon = "assets/favicon.ico"
 language = "en"
 features = [
+  "announce.dismiss",
   "content.code.annotate",
-  "content.tabs.link",
   "content.code.copy",
+  "content.tabs.link",
   "content.tooltips",
   "header.autohide",
-  "announce.dismiss",
   "navigation.footer",
-  "navigation.tabs",
-  "navigation.tabs.sticky",
-  "navigation.sections",
-  "navigation.top",
-  "navigation.tracking",
   "navigation.instant",
   "navigation.instant.prefetch",
   "navigation.instant.progress",
-  "toc.follow",
-  "search.suggest",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.top",
+  "navigation.tracking",
   "search.highlight",
-  "search.share"
+  "search.share",
+  "search.suggest",
+  "toc.follow",
 ]
 
-[[project.theme.palette]]
-media = "(prefers-color-scheme: dark)"
-scheme = "slate"
-primary = "custom"
-[project.theme.palette.toggle]
-icon = "material/weather-sunny"
-name = "Light mode"
-
+# Palette toggle for light mode
 [[project.theme.palette]]
 media = "(prefers-color-scheme: light)"
 scheme = "default"
 primary = "custom"
-[project.theme.palette.toggle]
-icon = "material/weather-night"
-name = "Dark mode"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
 
-[project.plugins]
-search = {}
-glightbox = { auto_caption = false, caption_position = "bottom" }
+# Palette toggle for dark mode
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
 
-[project.markdown_extensions]
-attr_list = {}
-"pymdownx.emoji" = {}
-admonition = {}
-"pymdownx.details" = {}
-"pymdownx.superfences" = {}
-"pymdownx.highlight" = { anchor_linenums = true }
-"pymdownx.inlinehilite" = {}
-tables = {}
-"pymdownx.tabbed" = { alternate_style = true }
-md_in_html = {}
-toc = { toc_depth = 4, permalink = true }
+# ----------------------------------------------------------------------------
+# Markdown extensions
+# Defining any of these replaces Zensical's defaults, so list everything used.
+# ----------------------------------------------------------------------------
+
+[project.markdown_extensions.zensical.extensions.glightbox]
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.toc]
+toc_depth = 4
+permalink = true
+
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style = true
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
