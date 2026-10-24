@@ -3,6 +3,12 @@
 venv/
 env/
 
+# Pinned GLightbox is installed at build time for Zensical only.
+node_modules/
+mkdocs.zensical.yml
+docs/javascripts/glightbox.min.js
+docs/stylesheets/glightbox.min.css
+
 # Zensical / MkDocs build outputs & cache
 site/
 .cache/

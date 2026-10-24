@@ -1,0 +1,8 @@
+{
+  "name": "mkdocs-wiki",
+  "private": true,
+  "description": "Pinned GLightbox copied into the Zensical build. The MkDocs build does not use this package.",
+  "dependencies": {
+    "glightbox": "3.3.1"
+  }
+}
