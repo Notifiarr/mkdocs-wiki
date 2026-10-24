@@ -200,7 +200,7 @@ def test_glightbox_assets_exist(site_dir: Path) -> None:
 
 def local_target(page: Path, site: Path, url: str) -> Path | None:
     parsed = urlparse(url.strip())
-    if parsed.scheme in SKIP_SCHEMES or parsed.scheme:
+    if parsed.scheme in SKIP_SCHEMES or parsed.scheme or parsed.netloc:
         return None
     path = unquote(parsed.path)
     if path == "":
