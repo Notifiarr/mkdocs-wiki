@@ -24,7 +24,7 @@ For Notifiarr application bugs (not docs bugs), please file in the [Notifiarr ap
 
 ## Local development
 
-The wiki is built with [MkDocs](https://www.mkdocs.org/) + Material theme. You need Python 3.12+.
+The wiki is built with [MkDocs](https://www.mkdocs.org/) + Material theme. You need Python 3.15.
 
 ```bash
 git clone https://github.com/Notifiarr/mkdocs-wiki.git

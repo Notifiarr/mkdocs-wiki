@@ -4,6 +4,8 @@
 
 ## Local Build
 
+CI uses Python 3.15.
+
 ### macOS
 
 ```bash
