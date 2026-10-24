@@ -24,14 +24,14 @@ For Notifiarr application bugs (not docs bugs), please file in the [Notifiarr ap
 
 ## Local development
 
-The wiki is built with [MkDocs](https://www.mkdocs.org/) + Material theme. You need Python 3.12+.
+The wiki is built with [MkDocs](https://www.mkdocs.org/) + Material theme. You need Python 3.15.
 
 ```bash
 git clone https://github.com/Notifiarr/mkdocs-wiki.git
 cd mkdocs-wiki
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 mkdocs serve
 ```
 
@@ -40,10 +40,10 @@ Open <http://127.0.0.1:8000>. Edits to `docs/` reload automatically.
 Before opening a PR, run:
 
 ```bash
-mkdocs build --strict
+pytest
 ```
 
-The `--strict` flag fails on any warning (broken internal links, missing nav entries, etc.) and matches what CI runs.
+`pytest` runs `mkdocs build --strict` and checks that every nav page, asset, and internal link is present in the built site. That matches what CI runs.
 
 ## Submitting changes
 
@@ -65,7 +65,7 @@ The `--strict` flag fails on any warning (broken internal links, missing nav ent
 
 4. Push your branch to your fork and open a pull request against `Notifiarr/mkdocs-wiki:main`.
 
-5. CI will run `mkdocs build --strict` against your PR. Address any warnings before requesting review.
+5. CI will run `pytest` against your PR. Address any failures before requesting review.
 
 ## Style notes
 

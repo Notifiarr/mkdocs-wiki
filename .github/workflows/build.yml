@@ -1,10 +1,7 @@
-# Validate MkDocs builds cleanly on every PR to main
+# Validate MkDocs builds cleanly on every pull request
 name: Build
 
-on:
-  pull_request:
-    branches:
-      - main
+on: pull_request
 
 permissions:
   contents: read
