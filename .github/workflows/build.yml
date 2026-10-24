@@ -16,3 +16,16 @@ concurrency:
 jobs:
   build:
     uses: ./.github/workflows/_build.yml
+
+  # Non-blocking: builds the same mkdocs.yml with Zensical for comparison.
+  # MkDocs (the job above) still builds and deploys the live site.
+  zensical:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+      - run: python3 -m pip install -r requirements-zensical.txt
+      - run: zensical build -f mkdocs.yml

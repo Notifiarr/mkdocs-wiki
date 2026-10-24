@@ -31,7 +31,7 @@ jobs:
             ${{ runner.os }}-pip-
       - run: |
           python3 -m pip install -r requirements.txt
-          zensical build
+          mkdocs build --strict
       - uses: actions/upload-artifact@v7
         if: ${{ inputs.upload-site }}
         with:
