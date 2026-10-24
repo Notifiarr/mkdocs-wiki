@@ -49,12 +49,15 @@ pre-commit install
 Every commit is then checked automatically. To run everything manually:
 
 ```bash
+python3 -m pip install -r requirements-dev.txt
 pre-commit run --all-files
-mkdocs build --strict   # catches broken internal links and anchors
+pytest
 ```
+
+`pytest` builds the site with `mkdocs build --strict` and checks that every nav page, asset, and internal link is present in the output.
 
 - **Spelling** — cspell is configured in `.cspell.json`. If it flags a real product name or CLI term, add it to the `words` array. Fix genuine typos in the prose rather than adding them to the dictionary.
 - **Markdown style** — rules are in `.markdownlint.yaml`.
 - **Line endings** — files are normalized to LF via `.gitattributes`; keep your editor set to LF.
 
-Open a pull request against `main`. CI builds the site with `--strict` and runs pre-commit; GitHub Pages deploys on merge.
+Open a pull request against `main`. CI runs pytest and pre-commit; GitHub Pages deploys on merge.

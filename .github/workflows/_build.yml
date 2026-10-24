@@ -26,12 +26,12 @@ jobs:
       - uses: actions/cache@v6
         with:
           path: ${{ steps.pip-cache.outputs.dir }}
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt', 'requirements-dev.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip-
       - run: |
-          python3 -m pip install -r requirements.txt
-          mkdocs build --strict
+          python3 -m pip install -r requirements-dev.txt
+          MKDOCS_SITE_DIR="$PWD/site" python3 -m pytest
       - uses: actions/upload-artifact@v7
         if: ${{ inputs.upload-site }}
         with:
