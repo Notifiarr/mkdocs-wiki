@@ -1,20 +1,45 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "default:automergeDigest",
+    "helpers:pinGitHubActionDigestsToSemver"
   ],
+  "minimumReleaseAge": "7 days",
+  "internalChecksFilter": "strict",
+  "platformAutomerge": true,
   "packageRules": [
     {
-      "matchManagers": [
-        "github-actions"
-      ],
-      "groupName": "github actions"
+      "description": "Group non-major GitHub Actions updates and automerge when checks pass",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "groupName": "github actions",
+      "automerge": true
     },
     {
-      "matchManagers": [
-        "pip_requirements"
-      ],
-      "groupName": "python deps"
+      "description": "Group major GitHub Actions updates for review",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "github actions (major)"
+    },
+    {
+      "description": "Group non-major Python requirements and automerge when the site build passes",
+      "matchManagers": ["pip_requirements"],
+      "matchUpdateTypes": ["minor", "patch", "pin"],
+      "groupName": "python deps",
+      "automerge": true
+    },
+    {
+      "description": "Group major Python requirements for review",
+      "matchManagers": ["pip_requirements"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "python deps (major)"
+    },
+    {
+      "description": "Automerge non-major pre-commit hook updates when lint passes",
+      "matchManagers": ["pre-commit"],
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true
     }
   ]
 }
