@@ -17,10 +17,34 @@ if [ "${1:-}" = --check ]; then
 fi
 
 src=node_modules/glightbox/dist
-mkdir -p docs/javascripts
+mkdir -p docs/javascripts docs/stylesheets
 cp "$src/js/glightbox.min.js" docs/javascripts/
 cp "$src/css/glightbox.min.css" docs/stylesheets/
 grep -q GLightbox docs/javascripts/glightbox.min.js
-marker='  - stylesheets/github-permalink-style.css'
+
+# Target the comment marker placed in mkdocs.yml
+marker='# --ZENSICAL_CSS_MARKER--'
 [ "$(grep -cF "$marker" mkdocs.yml)" -eq 1 ]
-awk -v m="$marker" '$0==m {print; print "  - stylesheets/glightbox.min.css\n\nextra_javascript:\n  - javascripts/glightbox.min.js"; next} {print}' mkdocs.yml > mkdocs.zensical.yml
+
+# The marker must end the extra_css list: the next non-blank line must start at column 0
+next_line=$(awk -v m="$marker" 'f && NF {print; exit} $0==m {f=1}' mkdocs.yml)
+if [[ "$next_line" =~ ^[[:space:]] ]]; then
+  echo "mkdocs.yml: $marker must be the last entry of extra_css (found an indented line after it)" >&2
+  exit 1
+fi
+
+# The generated config adds extra_javascript, so mkdocs.yml must not already define it
+if grep -q '^extra_javascript:' mkdocs.yml; then
+  echo "mkdocs.yml already defines extra_javascript; the generated config would duplicate it" >&2
+  exit 1
+fi
+
+# Use awk to inject the CSS and the extra_javascript block right before the comment marker
+awk -v m="$marker" '$0==m {
+    print "  - stylesheets/glightbox.min.css"
+    print ""
+    print "extra_javascript:"
+    print "  - javascripts/glightbox.min.js"
+    print m
+    next
+} {print}' mkdocs.yml > mkdocs.zensical.yml

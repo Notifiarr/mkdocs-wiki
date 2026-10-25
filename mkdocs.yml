@@ -140,6 +140,7 @@ theme:
 
 extra_css:
   - stylesheets/github-permalink-style.css
+# --ZENSICAL_CSS_MARKER--
 
 plugins:
   - search
