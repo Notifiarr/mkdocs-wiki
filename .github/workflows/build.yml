@@ -13,3 +13,23 @@ concurrency:
 jobs:
   build:
     uses: ./.github/workflows/_build.yml
+
+  # Same config as the MkDocs job, built with Zensical. This job does not deploy.
+  # A failure here fails the workflow. GLightbox is copied from the lockfile
+  # into the site so the theme does not fetch it from unpkg.
+  zensical:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.15"
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: "24"
+          cache: npm
+      - run: python3 -m pip install -r requirements-zensical.txt
+      - run: npm ci
+      - run: scripts/prepare_zensical.sh
+      - run: zensical build -f mkdocs.zensical.yml
+      - run: scripts/prepare_zensical.sh --check

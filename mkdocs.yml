@@ -98,6 +98,7 @@ nav:
 
 theme:
   name: material
+  variant: classic # used by Zensical; MkDocs ignores it
   custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.ico
@@ -139,6 +140,7 @@ theme:
 
 extra_css:
   - stylesheets/github-permalink-style.css
+# --ZENSICAL_CSS_MARKER--
 
 plugins:
   - search
