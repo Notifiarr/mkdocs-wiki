@@ -80,11 +80,14 @@ nav:
       - Snapshots: pages/integrations/snapshots.md
       - Seerr: pages/integrations/seerr.md
       - Sonarr: pages/integrations/sonarr.md
+      - Sportarr: pages/integrations/sportarr.md
       - Starr Proxy: pages/integrations/starrproxy.md
       - Synology: pages/integrations/synology.md
+      - Tracearr: pages/integrations/tracearr.md
       - TRaSH: pages/integrations/trash.md
       - Unpackerr: pages/integrations/unpackerr.md
       - Uptime-Kuma: pages/integrations/uptimekuma.md
+      - Watchsync: pages/integrations/watchsync.md
       - Watchtower: pages/integrations/watchtower.md
       - Website Status: pages/integrations/websitestatus.md
       - Whisparr: pages/integrations/whisparr.md
