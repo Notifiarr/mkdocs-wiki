@@ -114,6 +114,7 @@ The Notifiarr client binary accepts several command-line flags useful for debugg
 - `--config <path>` / `-c <path>` - Specify the config file path. Can also be set with the `DN_CONFIG_FILE` environment variable.
 - `--extraconfig <path>` / `-e <path>` - Load additional config files. Can be specified multiple times.
 - `--prefix <prefix>` / `-p <prefix>` - Change the environment variable prefix (default: `DN`).
+- `--apthook` - Process a payload from a dpkg pre-install hook (Linux only). The deb package installs an apt hook that calls this flag; it does nothing unless `apt = true` is set in the config file. You do not run it by hand.
 
 ## Config File Compression
 

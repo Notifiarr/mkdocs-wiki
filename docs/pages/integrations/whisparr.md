@@ -13,8 +13,8 @@
 - `Grab` - Notifications for grabs that occur
 - `Import` - Notifications for when media is imported
 - `Upgrade` - Notifications for media upgrades
-- `Added` - Notifications for new media added
-- `Deleted` - Notifications for when media is deleted
+- `Site added` - Notifications for when something new is added to the database that was not there before, so it can be searched for and grabbed
+- `Site deleted` - Notifications for when media is deleted
 - `Updates` - Notifications for system updates
 - `Health Check` - Notifications for health checks
 - `Health Restored` - Notifications for health restored to normal

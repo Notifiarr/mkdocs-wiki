@@ -86,7 +86,11 @@ Here we can manage existing profiles or add new profiles
     - Clone: Copy the profile as is to another profile or instance
     - Delete: Delete the sync (THIS DOES NOT DELETE THE PROFILE IN THE STARR APP)
 1. New profile sync
+    - Profile code: Enter a profile code shared by another user and click **Verify**. Name the new profile and click **Clone profile** to add a copy of their profile sync to this instance
 1. Groups of pre-made profiles
+
+!!! info "Sharing a profile"
+    Each profile sync row shows a 10-digit profile code. Click the code to copy it and give it to another user. The code is only valid for the app it was made for, so a Radarr code is rejected on a Sonarr instance. Use the clone icon, not a code, to copy your own profiles. A cloned profile is created in the Starr app on the next sync. A profile cloned from another user is marked with an asterisk that shows who shared it and when.
 
 ![profiles-add.png](../../assets/screenshots/integrations/trash/profiles-add.png)
 
