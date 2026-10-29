@@ -38,11 +38,11 @@ Click the **+** button to add a new command instance. Multiple commands can be c
 
 Each command shows execution statistics:
 
-- **Last execution** - When the command was last run
-- **Execution count** - Total number of times the command has been executed
-- **Failure count** - Number of failed executions (non-zero process exit)
-- **Last command** - The exact command string that was executed
-- **Output** - The stdout/stderr output from the last execution (click the orange button to expand; this opens automatically when the last run failed)
+- **Last execution**: When the command was last run
+- **Execution count**: Total number of times the command has been executed
+- **Failure count**: Number of failed executions (non-zero process exit)
+- **Last command**: The exact command string that was executed
+- **Output**: The stdout/stderr output from the last execution (click the orange button to expand; this opens automatically when the last run failed)
 
 !!! note "Windows PowerShell"
     Failures increment only when the process exits non-zero. Windows PowerShell cmdlet errors such as `Start-Process` failing are non-terminating, so `powershell.exe -File script.ps1` exits 0 unless the script sets `$ErrorActionPreference = 'Stop'`. The client rewrites direct `powershell.exe`/`pwsh` `-File` invocations (Shell disabled) to run with `$ErrorActionPreference='Stop'` so those errors count as failures. Leave **Shell** off when the command already starts with `powershell.exe`. The console window is hidden; use **Log Output** and the output panel instead of a flashing PowerShell window.
@@ -61,6 +61,8 @@ You can fill in a command in the Web UI or paste a `[[command]]` block into `not
 | `notify` | Notify | `true` is Yes, `false` is No |
 | `log` | Log Output | `true` is Yes, `false` is No |
 | `timeout` | Maximum Run Duration | A duration such as `20s` or `2m`. The Web UI fills in `10s` for a new command. An empty or zero value falls back to `15s` |
+
+![commands-form.png](../../assets/screenshots/client/commands-form.png)
 
 The client also writes a `hash` key, a 64-character ID, when it saves the config. Leave it out of a new block and the client generates one. The number of arguments and their regular expressions are not config keys; the client reads them from the `({regex})` patterns in `command`.
 
