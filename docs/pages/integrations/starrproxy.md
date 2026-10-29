@@ -32,3 +32,11 @@ Click the **cog icon** to open the configuration options for Starr Proxy.
 2. Configure the Blocked trigger and select a notification channel
 3. Set up your notification color and pings as desired
 4. Test the notification to ensure it is working
+
+---
+
+## TRaSH Sync Through the Proxy
+
+If a Starr app in the Notifiarr client uses a Starr Proxy URL and key, the [TRaSH sync](../client/afterInstall.md#trash-sync-requirements) needs more than read access.
+Sync creates and updates custom formats, quality profiles, quality definitions, and naming (`POST` and `PUT`, plus `DELETE` for custom formats and quality profiles).
+Use the **Notifiarr** key template for the app, or enable those methods yourself. A key with `GET` only lets the sync read the app and fail every write.
