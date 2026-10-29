@@ -8,6 +8,9 @@
 ![Current Master/Stable](https://img.shields.io/badge/dynamic/json?color=526cfe&style=for-the-badge&label=Main&query=%24%5B%27v4-stable%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases){ .off-glb }
 ![Current Develop/Nightly](https://img.shields.io/badge/dynamic/json?color=526cfe&style=for-the-badge&label=Develop&query=%24%5B%27v4-nightly%27%5D.version&url=https%3A%2F%2Fservices.sonarr.tv%2Fv1%2Freleases){ .off-glb }
 
+!!! note "TRaSH sync"
+    TRaSH sync supports Sonarr v4. Sonarr v5 needs the unstable Notifiarr client for now. See [TRaSH Sync Requirements](../client/afterInstall.md#trash-sync-requirements).
+
 ## Trigger options
 
 ![triggers-channels.png](../../assets/screenshots/integrations/sonarr/triggers-channels.png)

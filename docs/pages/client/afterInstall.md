@@ -264,6 +264,27 @@ Set the credentials either way:
 
     The same keys apply to the `[[sonarr]]`, `[[lidarr]]`, `[[readarr]]`, and `[[prowlarr]]` blocks.
 
+### TRaSH Sync Requirements
+
+The [TRaSH](../integrations/trash.md) sync is a Patron and Subscriber feature. The client reads your profiles,
+custom formats, quality definitions, and naming from each synced app and sends them to the website.
+The website compares them to the TRaSH guide and sends any changes back through the client.
+
+| Item | Current behavior |
+| --- | --- |
+| Apps | Radarr and Sonarr. The website TRaSH card has no Lidarr sync, and the client API returns `501` for a Lidarr sync trigger |
+| Sonarr version | Sonarr v4. The website skips custom formats on Sonarr v3 |
+| Sonarr v5 | Needs the unstable client for now. Unstable `0.9.8` reads and writes through `/api/v5`. Released stable clients use the `v3` API path |
+| Instance state | The app needs a URL, an API key, and a Time Out that is not `-1s` (disabled). Disabled instances are skipped |
+| Schedule | Set the interval in the TRaSH **Client Settings** on the website. The client adds up to 5 seconds of random delay per instance. With no interval there is no timer |
+| Timer runs | A timer run skips the app when the TRaSH guide is unchanged ("repo hash match") |
+| Manual runs | The **Sync** button on the website and a client-triggered sync run a full pass |
+| Results | Discord only. Turn on the Format, Profile, Score, Quality, and Naming toggles in the TRaSH **Settings** tab, per app |
+
+- A failed write is reported only when its toggle is on. With the toggles off, failures are silent.
+- The last sync time on the **Settings** tab means a sync ran. It does not mean every write worked.
+- If the app URL points at [Starr Proxy](../integrations/starrproxy.md), the proxy key must allow write methods. See the proxy page.
+
 ### Health Checks
 
 Set the health check intervals on all your apps if you want notifications when an app goes down.
