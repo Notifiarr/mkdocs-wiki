@@ -14,6 +14,31 @@ Find tips for common problems on this page.
 Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more.
 Set the `TMPDIR` environment variable to a writable path, or mount `/tmp` to resolve the error.
 
+## Unraid: Execution error / Bad parameter
+
+Starting the container on Unraid shows an **Execution error** dialog that says **Bad parameter**.
+That dialog is generic and does not name the cause. Get the real error first:
+
+1. Open the *Docker* tab, click the container, and choose *Edit*. Click *Apply* and read the output.
+   Unraid prints the full `docker run` command and Docker's error text there.
+1. Or run `docker start Notifiarr` in the Unraid terminal. Use your container's name.
+
+Then match the error:
+
+| Error text | Fix |
+| --- | --- |
+| `exec: "/init": permission denied` (or any `permission denied`) | Someone ran *New Permissions* on `appdata` instead of *Docker Safe New Perms*. Stop Docker, rebuild the Docker directory or restore `appdata` from backup, then reinstall from *Apps > Previous Apps*. |
+| Same dialog, no `docker run` error, and other containers fail too | Docker's state or `docker.img` is damaged. Delete `/mnt/user/system/docker/installed/` or recreate `docker.img` (*Settings > Docker*), then reinstall from *Apps > Previous Apps*. |
+
+Template items to check while you are in the editor:
+
+- *Extra Parameters* should only hold `-h notifiarr`. Any other value is passed straight to `docker run`, and its error shows in the output above.
+- Keep the `/config` path, `/etc/machine-id`, and `/var/run/utmp` mappings from the template. See [Install](install.md).
+
+Sources: [Unraid Docker troubleshooting](https://docs.unraid.net/unraid-os/troubleshooting/common-issues/docker-troubleshooting/),
+Unraid forum threads [177037](https://forums.unraid.net/topic/177037-completely-screwed-up-ran-new-permissions-on-every-share-including-appdata-now-no-containers-work-with-execution-error-bad-parameter-message/)
+and [131566](https://forums.unraid.net/topic/131566-docker-container-starting-problem-error-execution-error-bad-parameter/).
+
 ## Duplicate Clients
 
 If you have duplicate clients on the website:
