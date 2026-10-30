@@ -51,7 +51,7 @@ Each command shows execution statistics:
 
 ## Fill In a Command
 
-You can fill in a command in the Web UI or paste a `[[command]]` block into `notifiarr.conf`. Both set the same values. Each example below gives the block to paste. Open **Commands**, click **Create Command**, and copy the value for each field, or add the block to your config file and restart the client.
+Open **Commands**, click **Create Command**, and fill in each field. Each example below shows the command string and a screenshot of the filled-in form.
 
 | TOML key | Web UI field | Value |
 | --- | --- | --- |
@@ -72,18 +72,18 @@ The client also writes a `hash` key, a 64-character ID, when it saves the config
 
 Add this command if you lose the Shield remote. Run it from your phone through the website or a chat server and the remote beeps, so you do not have to dig through the couch. It takes no arguments. It needs `adb` installed where the client runs (or in a container the client can reach), and that host must reach the Shield on port 5555 with ADB debugging enabled.
 
-```toml
-[[command]]
-  name    = 'shield-remote-locator'
-  command = '''adb -s 192.168.1.50:5555 shell input keyevent KEYCODE_WAKEUP && adb -s 192.168.1.50:5555 shell am start -n com.nvidia.remotelocator/.ShieldRemoteLocatorActivity'''
-  shell   = true
-  log     = true
-  notify  = false
-  timeout = "20s"
+Command:
+
+```text
+adb -s 192.168.1.50:5555 shell input keyevent KEYCODE_WAKEUP && adb -s 192.168.1.50:5555 shell am start -n com.nvidia.remotelocator/.ShieldRemoteLocatorActivity
 ```
 
+The Command field cuts off long text, so the full command is above. Tick the shell checkbox at the end of the field (hover text: Run as shell command).
+
+![commands-shield-remote.png](../../assets/screenshots/client/commands-shield-remote.png)
+
 1. Replace `192.168.1.50` with the IP address of your Shield.
-2. `shell = true` lets `&&` run the second `adb` call only if the wake key event succeeds. Without a shell, the client runs a single program and passes `&&` to it as an argument.
+2. The shell checkbox lets `&&` run the second `adb` call only if the wake key event succeeds. Without a shell, the client runs a single program and passes `&&` to it as an argument.
 3. The first call wakes the Shield. The second opens the remote locator screen, which makes the remote buzz.
 4. Save the configuration. A changed command must be saved before you can run it.
 
@@ -93,21 +93,19 @@ Add this command if you lose the Shield remote. Run it from your phone through t
 
 Add these commands to run routine host maintenance without opening an SSH session: restart a container, test a proxy config, or check whether a reboot is due. Run them from the Web UI, the Notifiarr website, or a chat server. None take arguments. They assume the client runs on Linux as the user `notifiarr`; change the user to match your install.
 
-Privileged steps use `sudo`. The client runs a command without a shell by splitting it into a program and arguments, so `sudo docker restart radarr` works with `shell = false`. The client has no password prompt, so each `sudo` call needs a `NOPASSWD` rule in a file under `/etc/sudoers.d/` (edit it with `visudo -f /etc/sudoers.d/notifiarr`). List the full command with its exact arguments. Sudo then allows only that argument list, not other uses of the same program.
+Privileged steps use `sudo`. The client runs a command without a shell by splitting it into a program and arguments, so `sudo docker restart radarr` works with the shell checkbox off. The client has no password prompt, so each `sudo` call needs a `NOPASSWD` rule in a file under `/etc/sudoers.d/` (edit it with `visudo -f /etc/sudoers.d/notifiarr`). List the full command with its exact arguments. Sudo then allows only that argument list, not other uses of the same program.
 
 ### Restart a Container
 
 Use this when an app hangs and a restart fixes it. The notification confirms the restart ran.
 
-```toml
-[[command]]
-  name    = 'restart-radarr'
-  command = '''sudo docker restart radarr'''
-  shell   = false
-  log     = true
-  notify  = true
-  timeout = "60s"
+Command:
+
+```text
+sudo docker restart radarr
 ```
+
+![commands-restart-container.png](../../assets/screenshots/client/commands-restart-container.png)
 
 ```text
 notifiarr ALL=(root) NOPASSWD: /usr/bin/docker restart radarr
@@ -119,15 +117,13 @@ Replace `radarr` with the container name in both places. Use `which docker` to c
 
 Use this after you edit a proxy config, to confirm it parses before the proxy reloads it.
 
-```toml
-[[command]]
-  name    = 'nginx-test'
-  command = '''sudo docker exec swag nginx -t'''
-  shell   = false
-  log     = true
-  notify  = true
-  timeout = "20s"
+Command:
+
+```text
+sudo docker exec swag nginx -t
 ```
+
+![commands-nginx-test.png](../../assets/screenshots/client/commands-nginx-test.png)
 
 ```text
 notifiarr ALL=(root) NOPASSWD: /usr/bin/docker exec swag nginx -t
@@ -139,21 +135,21 @@ Replace `swag` with the name of your nginx or reverse proxy container. `nginx -t
 
 Use this to find out whether a host needs a reboot after updates, and which services still run outdated libraries, without logging in.
 
-```toml
-[[command]]
-  name    = 'reboot-check'
-  command = '''test -f /var/run/reboot-required && echo "reboot required" || echo "no reboot required"; sudo needrestart -b -r l; systemctl --failed --no-legend'''
-  shell   = true
-  log     = true
-  notify  = true
-  timeout = "60s"
+Command:
+
+```text
+test -f /var/run/reboot-required && echo "reboot required" || echo "no reboot required"; sudo needrestart -b -r l; systemctl --failed --no-legend
 ```
+
+The Command field cuts off long text, so the full command is above. Tick the shell checkbox.
+
+![commands-reboot-check.png](../../assets/screenshots/client/commands-reboot-check.png)
 
 ```text
 notifiarr ALL=(root) NOPASSWD: /usr/sbin/needrestart -b -r l
 ```
 
-1. `shell = true` lets the client run `;`, `&&`, and `||` between the checks. On Linux the client wraps the command in `/bin/sh -c`.
+1. The shell checkbox lets the client run `;`, `&&`, and `||` between the checks. On Linux the client wraps the command in `/bin/sh -c`.
 2. `/var/run/reboot-required` exists on Debian and Ubuntu after a package update needs a reboot.
 3. `needrestart -b -r l` lists services that use outdated libraries in machine-readable form (`-b`) and does not restart anything (`-r l`).
 4. `systemctl --failed --no-legend` lists failed units and needs no `sudo`. It exits 0 even when units have failed, so read the output rather than relying on the failure count.
