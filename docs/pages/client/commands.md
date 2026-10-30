@@ -70,7 +70,7 @@ The client also writes a `hash` key, a 64-character ID, when it saves the config
 
 ## Example: Locate an NVIDIA Shield Remote
 
-Add this command if you lose the Shield remote. Run it from your phone through the website or a chat server and the remote beeps, so you do not have to dig through the couch. It takes no arguments. It needs `adb` installed where the client runs (or in a container the client can reach), and that host must reach the Shield on port 5555 with ADB debugging enabled.
+Add this command if you lose the Shield remote. Run it from your phone through the website or a chat server and the remote beeps, so you do not have to dig through the couch. It takes no arguments. It needs `adb` installed where the client runs (or in a container the client can reach), and that host must reach the Shield on port 5555 with ADB debugging enabled. The first time that host connects, the Shield shows an "Allow USB debugging?" prompt, and the command fails with "device unauthorized" until you approve it on the TV screen.
 
 Command:
 
@@ -138,7 +138,7 @@ Use this to find out whether a host needs a reboot after updates, and which serv
 Command:
 
 ```text
-test -f /var/run/reboot-required && echo "reboot required" || echo "no reboot required"; sudo needrestart -b -r l; systemctl --failed --no-legend
+test -f /var/run/reboot-required && echo "reboot required" || echo "no reboot required"; sudo needrestart -b -r l -l; systemctl --failed --no-legend
 ```
 
 The Command field cuts off long text, so the full command is above. Tick the shell checkbox.
@@ -146,12 +146,12 @@ The Command field cuts off long text, so the full command is above. Tick the she
 ![commands-reboot-check.png](../../assets/screenshots/client/commands-reboot-check.png)
 
 ```text
-notifiarr ALL=(root) NOPASSWD: /usr/sbin/needrestart -b -r l
+notifiarr ALL=(root) NOPASSWD: /usr/sbin/needrestart -b -r l -l
 ```
 
 1. The shell checkbox lets the client run `;`, `&&`, and `||` between the checks. On Linux the client wraps the command in `/bin/sh -c`.
 2. `/var/run/reboot-required` exists on Debian and Ubuntu after a package update needs a reboot.
-3. `needrestart -b -r l` lists services that use outdated libraries in machine-readable form (`-b`) and does not restart anything (`-r l`).
+3. `needrestart -b -r l -l` lists services that use outdated libraries. `-b` is machine-readable batch output, `-r l` is list-only (nothing restarts), and `-l` limits the checks to outdated libraries.
 4. `systemctl --failed --no-legend` lists failed units and needs no `sudo`. It exits 0 even when units have failed, so read the output rather than relying on the failure count.
 
 ---
