@@ -38,14 +38,121 @@ Click the **+** button to add a new command instance. Multiple commands can be c
 
 Each command shows execution statistics:
 
-- **Last execution** - When the command was last run
-- **Execution count** - Total number of times the command has been executed
-- **Failure count** - Number of failed executions (non-zero process exit)
-- **Last command** - The exact command string that was executed
-- **Output** - The stdout/stderr output from the last execution (click the orange button to expand; this opens automatically when the last run failed)
+- **Last execution**: When the command was last run
+- **Execution count**: Total number of times the command has been executed
+- **Failure count**: Number of failed executions (non-zero process exit)
+- **Last command**: The exact command string that was executed
+- **Output**: The stdout/stderr output from the last execution (click the orange button to expand; this opens automatically when the last run failed)
 
 !!! note "Windows PowerShell"
     Failures increment only when the process exits non-zero. Windows PowerShell cmdlet errors such as `Start-Process` failing are non-terminating, so `powershell.exe -File script.ps1` exits 0 unless the script sets `$ErrorActionPreference = 'Stop'`. The client rewrites direct `powershell.exe`/`pwsh` `-File` invocations (Shell disabled) to run with `$ErrorActionPreference='Stop'` so those errors count as failures. Leave **Shell** off when the command already starts with `powershell.exe`. The console window is hidden; use **Log Output** and the output panel instead of a flashing PowerShell window.
+
+---
+
+## Fill In a Command
+
+Open **Commands**, click **Create Command**, and fill in each field. Each example below shows the command string and a screenshot of the filled-in form.
+
+| TOML key | Web UI field | Value |
+| --- | --- | --- |
+| `name` | Name | Text shown in logs and notifications |
+| `command` | Command | The command line to run |
+| `shell` | Run as shell command checkbox (hover text) | `true` or `false` |
+| `notify` | Notify | `true` is Yes, `false` is No |
+| `log` | Log Output | `true` is Yes, `false` is No |
+| `timeout` | Maximum Run Duration | A duration such as `20s` or `2m`. The Web UI fills in `10s` for a new command. An empty or zero value falls back to `15s` |
+
+![commands-form.png](../../assets/screenshots/client/commands-form.png)
+
+The client also writes a `hash` key, a 64-character ID, when it saves the config. Leave it out of a new block and the client generates one. The number of arguments and their regular expressions are not config keys; the client reads them from the `({regex})` patterns in `command`.
+
+---
+
+## Example: Locate an NVIDIA Shield Remote
+
+Add this command if you lose the Shield remote. Run it from your phone through the website or a chat server and the remote beeps, so you do not have to dig through the couch. It takes no arguments. It needs `adb` installed where the client runs (or in a container the client can reach), and that host must reach the Shield on port 5555 with ADB debugging enabled. The first time that host connects, the Shield shows an "Allow USB debugging?" prompt, and the command fails with "device unauthorized" until you approve it on the TV screen.
+
+Command:
+
+```text
+adb -s 192.168.1.50:5555 shell input keyevent KEYCODE_WAKEUP && adb -s 192.168.1.50:5555 shell am start -n com.nvidia.remotelocator/.ShieldRemoteLocatorActivity
+```
+
+The Command field cuts off long text, so the full command is above. Tick the shell checkbox at the end of the field (hover text: Run as shell command).
+
+![commands-shield-remote.png](../../assets/screenshots/client/commands-shield-remote.png)
+
+1. Replace `192.168.1.50` with the IP address of your Shield.
+2. The shell checkbox lets `&&` run the second `adb` call only if the wake key event succeeds. Without a shell, the client runs a single program and passes `&&` to it as an argument.
+3. The first call wakes the Shield. The second opens the remote locator screen, which makes the remote buzz.
+4. Save the configuration. A changed command must be saved before you can run it.
+
+---
+
+## Example: Ops Commands on Linux
+
+Add these commands to run routine host maintenance without opening an SSH session: restart a container, test a proxy config, or check whether a reboot is due. Run them from the Web UI, the Notifiarr website, or a chat server. None take arguments. They assume the client runs on Linux as the user `notifiarr`; change the user to match your install.
+
+Privileged steps use `sudo`. The client runs a command without a shell by splitting it into a program and arguments, so `sudo docker restart radarr` works with the shell checkbox off. The client has no password prompt, so each `sudo` call needs a `NOPASSWD` rule in a file under `/etc/sudoers.d/` (edit it with `visudo -f /etc/sudoers.d/notifiarr`). List the full command with its exact arguments. Sudo then allows only that argument list, not other uses of the same program.
+
+### Restart a Container
+
+Use this when an app hangs and a restart fixes it. The notification confirms the restart ran.
+
+Command:
+
+```text
+sudo docker restart radarr
+```
+
+![commands-restart-container.png](../../assets/screenshots/client/commands-restart-container.png)
+
+```text
+notifiarr ALL=(root) NOPASSWD: /usr/bin/docker restart radarr
+```
+
+Replace `radarr` with the container name in both places. Use `which docker` to confirm the path in the sudoers line. Add one command and one sudoers line per container.
+
+### Validate an Nginx Config
+
+Use this after you edit a proxy config, to confirm it parses before the proxy reloads it.
+
+Command:
+
+```text
+sudo docker exec swag nginx -t
+```
+
+![commands-nginx-test.png](../../assets/screenshots/client/commands-nginx-test.png)
+
+```text
+notifiarr ALL=(root) NOPASSWD: /usr/bin/docker exec swag nginx -t
+```
+
+Replace `swag` with the name of your nginx or reverse proxy container. `nginx -t` prints its result on stderr. The client captures stdout and stderr together, so the output panel and the notification show the full result. A failed test exits non-zero and counts as a failure.
+
+### Check Reboot Readiness
+
+Use this to find out whether a host needs a reboot after updates, and which services still run outdated libraries, without logging in.
+
+Command:
+
+```text
+test -f /var/run/reboot-required && echo "reboot required" || echo "no reboot required"; sudo needrestart -b -r l -l; systemctl --failed --no-legend
+```
+
+The Command field cuts off long text, so the full command is above. Tick the shell checkbox.
+
+![commands-reboot-check.png](../../assets/screenshots/client/commands-reboot-check.png)
+
+```text
+notifiarr ALL=(root) NOPASSWD: /usr/sbin/needrestart -b -r l -l
+```
+
+1. The shell checkbox lets the client run `;`, `&&`, and `||` between the checks. On Linux the client wraps the command in `/bin/sh -c`.
+2. `/var/run/reboot-required` exists on Debian and Ubuntu after a package update needs a reboot.
+3. `needrestart -b -r l -l` lists services that use outdated libraries. `-b` is machine-readable batch output, `-r l` is list-only (nothing restarts), and `-l` limits the checks to outdated libraries.
+4. `systemctl --failed --no-legend` lists failed units and needs no `sudo`. It exits 0 even when units have failed, so read the output rather than relying on the failure count.
 
 ---
 
