@@ -1,2 +1,2 @@
 -r requirements.txt
-zensical==0.0.72
+zensical==0.0.73
