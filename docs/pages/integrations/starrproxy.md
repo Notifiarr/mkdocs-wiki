@@ -19,6 +19,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/starrproxy/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Starr Proxy.
 
 1. Notification color for blocked requests

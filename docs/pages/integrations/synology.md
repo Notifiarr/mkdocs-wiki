@@ -21,6 +21,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/synology/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Synology.
 
 Each trigger has the following options:
