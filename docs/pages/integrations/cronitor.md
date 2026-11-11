@@ -28,7 +28,7 @@ Click the **cog icon** to open the configuration options for Cronitor.
 
 ## Instructions
 
-1. In Cronitor, navigate to your alert settings
-2. Add a webhook notification pointing to your Notifiarr webhook URL
+1. In Cronitor click Settings in the menu, then Alerts, then Create Notification List, then Webhook
+2. Add a webhook that points to your Notifiarr webhook URL
 3. Enable the Issues trigger on the Notifiarr website
 4. Test the notification to ensure it is working
