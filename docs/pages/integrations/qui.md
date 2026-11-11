@@ -80,11 +80,13 @@ Each trigger has the following options:
 3. Notification layout
 4. Toggle which optional fields to include in notifications
 
+`Torrent added` and `Torrent completed` also have `Ignore category` and `Ignore tags` settings. Each takes a regular expression, and a notification is skipped when the torrent category or tags match it.
+
 ---
 
 ## Instructions
 
-1. Configure qui to send webhook notifications to your Notifiarr webhook URL
+1. In qui, go to Settings → General Settings → Notifications and add a notification URL that starts with `notifiarrapi://`. The URL is `notifiarrapi://` followed by your API key. The Notifiarr qui integration page shows it, and an integration-specific key is recommended
 2. Enable the triggers you want on the Notifiarr website
 3. Customize the optional notification fields for each trigger
 4. Test the notification to ensure it is working

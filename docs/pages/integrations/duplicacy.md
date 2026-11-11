@@ -35,6 +35,6 @@ Click the **cog icon** to open the configuration options for Duplicacy.
 
 ## Instructions
 
-1. Configure Duplicacy to send webhook notifications to your Notifiarr webhook URL
+1. In Duplicacy go to Backup, tick **Send report after completion** and **Send report on failure**, and put the Notifiarr webhook URL in the URL box. The report template must be the default one: the file is `report.tmpl`, so rename an existing custom one to `report.tmpl.backup` to make the app use the defaults
 2. Enable the triggers you want on the Notifiarr website
 3. Test the notification to ensure it is working
