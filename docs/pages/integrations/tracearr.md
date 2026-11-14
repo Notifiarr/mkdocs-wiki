@@ -30,6 +30,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/tracearr/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Tracearr.
 
 Each trigger has the following options:

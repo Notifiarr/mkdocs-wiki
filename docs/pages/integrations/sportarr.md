@@ -37,6 +37,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/sportarr/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Sportarr.
 
 Most triggers have the following options:

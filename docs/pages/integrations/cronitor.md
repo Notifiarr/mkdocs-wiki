@@ -19,6 +19,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/cronitor/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Cronitor.
 
 1. Notification pings for issue alerts

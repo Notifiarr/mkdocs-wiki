@@ -45,6 +45,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/qbitmanage/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Qbit Manage.
 
 Each trigger has its own configuration options:
