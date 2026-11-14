@@ -6,7 +6,7 @@
 ## Currently Supported Applications
 
 - Lidarr >= v1
-- Radarr >= v4
+- Radarr >= v3
 - Readarr >= v1
 - Sonarr >= v4
 

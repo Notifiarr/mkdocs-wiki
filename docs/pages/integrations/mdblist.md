@@ -66,7 +66,7 @@ Settings for adding individual movies from the MDBList website to Radarr.
 - `Quality Profile` - Quality profile to use from Radarr
 - `Minimum Availability` - Released, In Cinemas, or Announced
 - `Root Folder` - Root folder path from Radarr
-- `Movie Tag` - Tag to apply to movies
+- `Movie Tags` - Comma-separated tags to apply to movies
 
 ### Sonarr lists
 
@@ -81,7 +81,7 @@ Settings for adding MDBList lists to Sonarr.
 - `Season Type` - Daily, Standard, or Anime
 - `Quality Profile` - Quality profile to use from Sonarr
 - `Root Folder` - Root folder path from Sonarr
-- `Show Tag` - Tag to apply to list items
+- `Show Tags` - Comma-separated tags to apply to list items
 
 ### Sonarr shows
 
@@ -95,7 +95,7 @@ Settings for adding individual shows from the MDBList website to Sonarr.
 - `Season Type` - Daily, Standard, or Anime
 - `Quality Profile` - Quality profile to use from Sonarr
 - `Root Folder` - Root folder path from Sonarr
-- `Show Tag` - Tag to apply to shows
+- `Show Tags` - Comma-separated tags to apply to shows
 
 ### Library sync (Patron)
 

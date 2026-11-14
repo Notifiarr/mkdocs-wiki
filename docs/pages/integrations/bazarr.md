@@ -20,10 +20,8 @@
 
 ### Triggers
 
-- `Info` - Currently all notifications use this type
-- `Warning` - To date, Bazarr doesn't use this type
-- `Success` - To date, Bazarr doesn't use this type
-- `Failure` - To date, Bazarr doesn't use this type
+- `Info` - Currently all notifications use this type. It is the only trigger on the Bazarr integration page
+- `Warning`, `Success`, and `Failure` - The integration page has no trigger for these types. To date, Bazarr doesn't use them
 
 ---
 

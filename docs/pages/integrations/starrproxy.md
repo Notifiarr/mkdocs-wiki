@@ -28,7 +28,8 @@ Click the **cog icon** to open the configuration options for Starr Proxy.
 
 ## Instructions
 
+1. In Starr Proxy go to Notifications → Platforms → Notifiarr and add your Notifiarr API key. An integration-specific key is recommended
 1. Enable the Starr Proxy integration on the Notifiarr website
-2. Configure the Blocked trigger and select a notification channel
-3. Set up your notification color and pings as desired
-4. Test the notification to ensure it is working
+1. Configure the Blocked trigger and select a notification channel
+1. Set up your notification color and pings as desired
+1. Test the notification to ensure it is working
