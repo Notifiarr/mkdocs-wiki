@@ -17,6 +17,7 @@ nav:
       - Site Tunnel: pages/client/siteTunnel.md
       - File Watcher: pages/client/fileWatcher.md
       - Endpoints: pages/client/endpoints.md
+      - HTTP API: pages/client/api.md
       - Commands: pages/client/commands.md
       - Actions: pages/client/actions.md
       - Metrics: pages/client/metrics.md
