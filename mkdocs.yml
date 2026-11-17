@@ -37,6 +37,7 @@ nav:
       - Metrics: pages/website/metrics.md
   - Integrations:
       - How To Setup Integrations: pages/integrations/basicUsage.md
+      - Alexa: pages/integrations/alexa.md
       - Apprise: pages/integrations/apprise.md
       - Authentik: pages/integrations/authentik.md
       - Autobrr: pages/integrations/autobrr.md
