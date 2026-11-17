@@ -21,9 +21,11 @@ ping origin-proxy.notifiarr.com
 
 - Channel Stats
 - Dashboard
+- Log Watcher
 - MDBList (Adding lists & movies to Radarr, Adding shows to Sonarr)
 - Media Requests
 - Network
+- Package Manager
 - Plex
 - Lidarr (Backup, Corruption & Stuck Queue notifications)
 - Prowlarr (Backup, Corruption & Stuck Queue notifications)
@@ -35,6 +37,17 @@ ping origin-proxy.notifiarr.com
 - TRaSH Custom Format & Profile Sync (Patron)
 - Client Commands
     - Discord triggering, automation, and advanced features (Sub)
+
+### Integrations that use the client but do not require it
+
+The site marks these as `Client Used: Yes, Required: No` on the Manage Integrations page.
+
+- Alexa (beta, Sub)
+- Discord App
+- Emby
+- Jellyfin
+- Sportarr
+- Unpackerr
 
 ### Features
 
