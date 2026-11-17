@@ -26,7 +26,7 @@ nav:
       - Troubleshooting: pages/client/troubleshooting.md
       - Reverse Proxy: pages/client/reverseProxy.md
       - Cloudflare Proxy: pages/client/cloudflare.md
-      #- Configuration: pages/client/configuration.md
+      - Configuration: pages/client/configuration.md
   - Website:
       - Client setup: pages/website/clientConfig.md
       - Integrations setup: pages/website/integrationsSetup.md
