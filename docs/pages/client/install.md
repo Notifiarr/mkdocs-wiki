@@ -140,6 +140,41 @@ Current as of Version 25.10.1.
 - **Option A:** In the Web UI, click your username → Trust Profile
 - **Option B:** Right-click the notifiarr tray icon → Config → Password - and set a new password.
 
+### Auto update
+
+The Windows client can download and install its own updates. Auto update is off by default and only works on Windows.
+
+Set **Auto Update** in the Web UI under **Settings** > **Configuration**, or use the `auto_update` config key or the `DN_AUTO_UPDATE` environment variable.
+
+| Value | Check interval |
+| ----- | -------------- |
+| `off` (default) | Never |
+| `hourly` | Every hour |
+| `daily` | Every 24 hours |
+| A duration such as `3h`, `6h`, or `12h` | That duration. Values under one hour are raised to one hour |
+
+The Web UI offers Disabled, Daily, 12 hours, 6 hours, and 3 hours.
+
+- The client checks for an update about 6 minutes after it starts, then on the chosen interval.
+- By default the client checks [GitHub releases](https://github.com/Notifiarr/notifiarr/releases).
+- Users with developer access also see an **Unstable Channel** option (`unstable_ch` or `DN_UNSTABLE_CH`). It checks the unstable website instead of GitHub.
+
+When an update is found, the client:
+
+1. Downloads the new `.exe` to a temporary name in the same folder as the running file.
+1. Renames the running file to `notifiarr.amd64.backup.<timestamp>.exe` in the same folder. The client keeps the three newest backups and deletes older ones.
+1. Moves the new file to the original name.
+1. Starts the new file with `--restart` and exits. The new file waits for the old process to exit, then starts the client again. A notification shows the new version.
+
+The new file starts with two flags that exist on Windows only. Do not run them by hand.
+
+- `--restart`: Waits for the old process to exit, then starts the client again with `--updated`. Used by auto update.
+- `--updated`: Shows the "updated" notification on startup.
+
+#### Update from the tray
+
+The tray menu has an **Update** item. It checks GitHub and asks "Upgrade Now?" when a newer version exists. If you answer yes, the update installs the same way as auto update. The **Unstable** item does the same check against the unstable website. It only shows when you run an unstable build or have developer access.
+
 ## Synology
 
 1. Run the below command while ssh'd in to the NAS.
