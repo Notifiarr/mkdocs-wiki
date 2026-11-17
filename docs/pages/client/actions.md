@@ -54,7 +54,7 @@ Actions include operations such as:
 - Polling Notifiarr for new settings
 - Telling the Notifiarr website the client is still up
 - Running custom cron timers provided by the website
-- Checking for a new client version (Windows only, when Auto Update is enabled)
+- Checking for a new client version, when Auto Update is enabled. The check returns early on operating systems other than Windows
 - Stopping all triggers and timers when the client reloads
 
 Some of these only appear when the matching setting is configured. For example, the queue actions need a Starr instance.
@@ -62,7 +62,7 @@ Some of these only appear when the matching setting is configured. For example, 
 !!! info "Timing of the background actions"
     - **Polling Notifiarr for new settings** repeats about every 4 minutes. It only exists while the client has no settings from the website.
     - **Telling the Notifiarr website the client is still up** repeats about every 15 minutes.
-    - **Checking Plex for completed sessions** repeats about every minute. It exists only when Plex session tracking is configured.
+    - **Checking Plex for completed sessions** repeats about every minute. It exists only when Plex is configured and at least one of the movies percent, series percent, or track sessions settings is set.
     - **Custom cron timers** run at the interval the website provides. The client raises any interval under one minute to one minute.
 
 Each action that supports manual execution has a **Run** button.
