@@ -200,6 +200,20 @@ Set a password, or configure your auth proxy header on the *Trust Profile* page.
 Find this page by clicking your username in the Web UI menu. There's a screenshot
 of it to the left; click that to see a larger version.
 
+You can also set the password with the `ui_password` config key or the `DN_UI_PASSWORD` environment variable.
+Use at least 9 characters.
+
+| Value | Result |
+| ----- | ------ |
+| `password` | Sets the password for the default username, `admin` |
+| `username:password` | Sets the username and the password. The client splits the value at the first `:` |
+| `webauth` | Turns off the login form and trusts your auth proxy. The proxy must send the `x-webauth-user` header |
+| `webauth:header-name` | The same, with a custom header such as `webauth:remote-user` |
+| `noauth` | Turns off authentication. Not recommended, and it needs `upstreams` set |
+| Not set | The password is the API key |
+
+The client encrypts a plain `password` or `username:password` value when it starts. Changing the password in the Web UI also encrypts it, which is the recommended way.
+
 ### Setup Log Files
 
 Head to the *Settings => Configuration* page and scroll down to *Logging*.

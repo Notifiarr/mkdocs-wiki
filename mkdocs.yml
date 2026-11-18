@@ -17,6 +17,7 @@ nav:
       - Site Tunnel: pages/client/siteTunnel.md
       - File Watcher: pages/client/fileWatcher.md
       - Endpoints: pages/client/endpoints.md
+      - HTTP API: pages/client/api.md
       - Commands: pages/client/commands.md
       - Actions: pages/client/actions.md
       - Metrics: pages/client/metrics.md
@@ -25,7 +26,7 @@ nav:
       - Troubleshooting: pages/client/troubleshooting.md
       - Reverse Proxy: pages/client/reverseProxy.md
       - Cloudflare Proxy: pages/client/cloudflare.md
-      #- Configuration: pages/client/configuration.md
+      - Configuration: pages/client/configuration.md
   - Website:
       - Client setup: pages/website/clientConfig.md
       - Integrations setup: pages/website/integrationsSetup.md
@@ -37,6 +38,7 @@ nav:
       - Metrics: pages/website/metrics.md
   - Integrations:
       - How To Setup Integrations: pages/integrations/basicUsage.md
+      - Alexa: pages/integrations/alexa.md
       - Apprise: pages/integrations/apprise.md
       - Authentik: pages/integrations/authentik.md
       - Autobrr: pages/integrations/autobrr.md

@@ -40,7 +40,7 @@ Click on the `Notifiarr` role and then pick `Permissions`.
 
 If you manage your channels with individual permissions **plus** bot permissions, you will need to adjust them accordingly so the bot can do its job
 
-- If permissions are misconfigured, then the Notifiarr site will auto-disable the integration after 25 Discord API errors
+- If permissions are misconfigured, then the Notifiarr site will auto-disable the integration after more than 5 Discord API errors
 
 - If you are using reactions and get API errors, the site will auto-remove the reaction
 
