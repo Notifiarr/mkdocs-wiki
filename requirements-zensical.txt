@@ -1,2 +1,2 @@
 -r requirements.txt
-zensical==0.1.0
+zensical==0.1.1
