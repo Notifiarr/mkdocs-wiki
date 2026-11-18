@@ -23,6 +23,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/crossseed/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Cross Seed.
 
 1. Notification color selector for search results

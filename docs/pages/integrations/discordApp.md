@@ -3,6 +3,8 @@
 !!! info
     The Discord App integration provides advanced Discord server management features including message tracking, member traffic monitoring, channel cleanup, threading, off-topic management, reminders, forum management, role triggers, warnings, and more.
 
+![integration-settings.png](../../assets/screenshots/integrations/discordapp/integration-settings.png)
+
 ---
 
 ## Features

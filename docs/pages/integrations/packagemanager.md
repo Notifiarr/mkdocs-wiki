@@ -23,6 +23,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/packagemanager/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Package Manager.
 
 1. Notification color selector for APT notifications

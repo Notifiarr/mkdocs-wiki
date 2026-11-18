@@ -4,6 +4,8 @@ The Log Watcher (aka File Watcher) allows the Notifiarr Client to monitor log fi
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/logwatch/integration-settings.png)
+
 Add a new Log Watcher entry in the Notifiarr Client UI under **Configuration** > **Log Watch**.
 
 ### Fields

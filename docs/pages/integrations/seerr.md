@@ -24,6 +24,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/seerr/integration-settings.png)
+
 1. Enable triggers and pick colors for each trigger
 1. Expand the notification content settings via the customize button
 

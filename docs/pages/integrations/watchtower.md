@@ -20,6 +20,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/watchtower/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Watchtower.
 
 1. Notification pings for each trigger
