@@ -41,6 +41,6 @@ Click the **cog icon** to open the configuration options for Cross Seed.
 
 ## Instructions
 
-1. Configure the webhook in Cross Seed to point to your Notifiarr webhook URL
+1. Open the cross-seed `config.js`, find `notificationWebhookUrl` near the bottom, and set it to the webhook URL from the Notifiarr cross-seed integration page, for example `notificationWebhookUrl: "webhook-url-here"`. If you run multiple instances, add `?instance=name` to the end of the URL
 2. Enable the triggers you want on the Notifiarr website
 3. Test the notification to ensure it is working

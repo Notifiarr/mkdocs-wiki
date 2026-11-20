@@ -33,12 +33,13 @@ Click the **cog icon** to open the configuration options for Watchtower.
 
 ## Instructions
 
-1. Configure Watchtower to send notifications to your Notifiarr webhook URL
-2. In your Watchtower configuration, set the notification URL:
+1. In your Watchtower compose file, enable the report and set the notification URL. The site shows the URL with a `generic://` scheme and `?template=json` at the end:
 
     ```text
-    https://notifiarr.com/api/v1/notification/watchtower/YOUR_API_KEY
+    WATCHTOWER_NOTIFICATION_REPORT=true
+    WATCHTOWER_NOTIFICATION_URL=generic://notifiarr.com/api/v1/notification/watchtower/YOUR_API_KEY?template=json
     ```
 
+2. Optional: add `&server=NAME` to the end of the URL to show which server sent the notification
 3. Enable the triggers you want on the Notifiarr website
-4. Test the notification to ensure it is working
+4. Restart or recreate the Watchtower container. It sends a `Checking` notification

@@ -1,7 +1,7 @@
 # Seerr
 
 !!! info
-    In February 2026 the upstream [Jellyseerr](https://github.com/Fallenbagel/jellyseerr) and [Overseerr](https://github.com/sct/overseerr) projects merged into a single application called [**Seerr**](https://seerr.dev). Notifiarr's **Seerr** integration replaces the previous separate Jellyseerr and Overseerr integrations and works with any Seerr instance — including existing Jellyseerr / Overseerr installations during the upstream sunset period.
+    In February 2026 the upstream [Jellyseerr](https://github.com/Fallenbagel/jellyseerr) and [Overseerr](https://github.com/sct/overseerr) projects merged into a single application called [**Seerr**](https://seerr.dev). Notifiarr's **Seerr** integration is meant to replace the separate Jellyseerr and Overseerr integrations, which are still active on the site, and works with any Seerr instance — including existing Jellyseerr / Overseerr installations during the upstream sunset period.
 
     Upstream announcement: [docs.seerr.dev — Seerr Release: Unifying Overseerr and Jellyseerr](https://docs.seerr.dev/blog/seerr-release/).
 

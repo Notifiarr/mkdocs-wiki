@@ -36,7 +36,7 @@ notifiarr://{api_key}/{channel1_id}/{channel2_id}/{channelN_id}
 | Parameter | Description |
 |-----------|-------------|
 | `source` / `from` | Label describing the notification origin |
-| `event` | Existing event ID to update instead of creating a new notification |
+| `event` | Event label. The site appends it to the notification author line after the app name |
 
 !!! warning
     As of this writing, the upstream Apprise webhook to Notifiarr only supports one user/role mention per payload.

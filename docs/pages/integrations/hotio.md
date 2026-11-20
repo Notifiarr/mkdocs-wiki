@@ -51,7 +51,14 @@ There are three trigger states for Pullio, each with its own settings:
 
 ![instructions.png](../../assets/screenshots/integrations/hotio/instructions.png)
 
-The compose entry to enable Notifiarr with Pullio
+The compose entry to enable Notifiarr with Pullio. Add this label to the container and use the webhook URL from the Notifiarr Hotio integration page:
+
+```yaml
+labels:
+  - org.hotio.pullio.generic.webhook=[URL BELOW HERE]
+```
+
+To add a link without a label, which defaults to **External Link**, add `- org.hotio.pullio.author.url=http://link-to-site.com`. To add a link with a label, add `- "org.hotio.pullio.author.url={\"link\": \"http://link-to-site.com\", \"label\": \"changelog\"}"`.
 
 !!! note
      for images: If you do not specify an avatar image in the app compose one will be used from the site so you do not have to worry about image hosting sites.

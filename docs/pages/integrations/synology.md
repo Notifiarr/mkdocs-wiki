@@ -40,8 +40,10 @@ Each trigger has the following options:
 
 ## Instructions
 
-1. Configure your Synology NAS to send webhook notifications to your Notifiarr webhook URL
-2. Enable the Synology integration on the Notifiarr website
-3. Enable the triggers for the severity levels you want to monitor
-4. Optionally enable fuzzy matching for better notification routing
-5. Test the notification to ensure it is working
+1. This requires DSM 7.2 or later. In DSM go to Control Panel → Notifications → Webhooks and click **Add**
+2. Pick `Custom` for the provider and `All` for the rule, then click Next
+3. Set the name to `Notifiarr` and the subject to `host=%HOSTNAME%`. Copy the webhook URL from the Notifiarr Synology integration page into the `Webhook URL` field. Tick the option to send notifications in English, then click Next
+4. Set the method to `POST` and the content type to `application/json`, then click Apply
+5. On DSM 7.2.2, add `"hostname": "{your-syno-hostname}"` to the HTTP Body section. DSM 7.2.2 merges the hostname into the message, and the site reads the host from this field
+6. Enable the triggers for the severity levels you want to monitor
+7. Optionally enable fuzzy matching for better notification routing

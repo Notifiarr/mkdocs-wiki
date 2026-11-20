@@ -30,7 +30,7 @@ Each trigger has the following notification fields that can be toggled on or off
 ![instructions.png](../../assets/screenshots/integrations/uptimekuma/instructions.png)
 
 !!! info
-    Add the webhook to your Uptime Kuma via Uptime-Kuma &rarr; Settings &rarr; Notifications &rarr; Setup Notifications
+    Add the webhook to your Uptime Kuma via Uptime-Kuma &rarr; Settings &rarr; Notifications &rarr; Setup Notifications. Add a **JSON** webhook and use the URL shown on the Notifiarr Uptime Kuma integration page
 
 ![uptime-webhook](../../assets/screenshots/integrations/uptimekuma/uptime-webhook.png)
 
