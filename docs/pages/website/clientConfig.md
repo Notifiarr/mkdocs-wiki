@@ -97,6 +97,16 @@ At the bottom of the client configuration is a `Commands` section
 3. Which channel
 4. Role
 
+Each automation has an **Enabled** checkbox, so you can turn it off without deleting it. The **Channels** and **Roles** options only apply to the keyword type.
+
+#### Command types
+
+- **Auto Triggered** - Runs the command when an event happens. Pick the event from the list:
+    - Notifications: `Kometa run finished`, `Kometa update`, and `TRaSH update`
+    - Services: `<service name> down`, one entry for each service on your network integration
+- **Keyword** - Runs the command when someone posts a keyword, such as `!plexRestart`, in a Discord channel the bot reads. Set the keyword and the number of arguments it takes. The Channels option sets the Discord channels where the keyword works.
+- **Timer** - Runs the command every set number of minutes. The minimum is 10.
+
 ### Command Example
 
 The network integration is enabled and Plex is being monitored so when Plex goes down a notification is sent to Discord. With that in mind we want Plex to automatically restart its self at that point so a command is used.

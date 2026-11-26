@@ -11,6 +11,8 @@ Find tips for common problems on this page.
 
 ## Tmp not found
 
+<a id="tmp-folder-not-found"></a>
+
 Corruption checks require a temp folder to write the db file. This may be a couple hundred megabytes or more.
 Set the `TMPDIR` environment variable to a writable path, or mount `/tmp` to resolve the error.
 

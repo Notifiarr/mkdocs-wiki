@@ -4,7 +4,7 @@ The Log Watcher (aka File Watcher) allows the Notifiarr Client to monitor log fi
 
 ## Configuration
 
-Add a new Log Watcher entry in the Notifiarr Client UI under **Configuration** > **Log Watch**.
+Add a new Log Watcher entry in the Notifiarr Client UI under **Settings** > **File Watcher**.
 
 ### Fields
 
@@ -16,7 +16,7 @@ Add a new Log Watcher entry in the Notifiarr Client UI under **Configuration** >
 | **Poll** | No | `false` | Use polling instead of inotify (useful for network mounts) |
 | **Pipe** | No | `false` | Treat path as a named pipe (FIFO) instead of a file |
 | **Must Exist** | No | `false` | Fail if the file doesn't exist at startup |
-| **Log Match** | No | `true` | Log matched lines to notifiarr debug log |
+| **Log Match** | No | `false` | Log matched lines to notifiarr debug log |
 
 !!! tip "Regex Tips"
     - Use `(?i)` at the start for case-insensitive matching
