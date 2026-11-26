@@ -10,7 +10,7 @@
 ### Triggers
 
 - `Grab` - Receive a notification for a `Grab` event, when something is sent to the download client
-    - Optional notification fields: Instance, Indexer, Quality, Size, Poster, Banner, Status, Venue, City, Country, Description, League, Sport, Timestamp, Home team, Away team, Home score, Away score
+    - Optional notification fields: Instance, Indexer, Quality, Size, Poster, Banner, Status, Venue, City, Country, Description, League, Sport, Time, Home team, Away team, Home score, Away score
 - `Imported` - Receive a notification for a `Download` event that is not an upgrade, when media is imported to its root folder
     - Optional notification fields: Instance, Indexer, Quality, Size, Filename, plus the same event fields as `Grab`
 - `Upgrade` - Receive a notification for a `Download` event that Sportarr flags as an upgrade, when existing media is replaced with a better quality. If no Upgrade channel is set, the Imported channel is used
@@ -27,7 +27,7 @@
 - `Manual Interaction` - Receive a notification for a `ManualInteractionRequired` event, when a download needs a manual import
     - Optional notification fields: Instance, Filename, Size, Confidence, Poster, Banner
 - `Recording Started`, `Recording Completed`, and `Recording Failed` - Receive a notification for the `RecordingStarted`, `RecordingCompleted`, and `RecordingFailed` events
-    - Optional notification fields: Instance, Poster, Banner, Status, Venue, City, Country, Description, League, Sport, Timestamp, Home team, Away team, Home score, Away score. The same field selection applies to all three triggers.
+    - Optional notification fields: Instance, Poster, Banner, Status, Venue, City, Country, Description, League, Sport, Time, Home team, Away team, Home score, Away score. The same field selection applies to all three triggers.
 
 ### Channels
 

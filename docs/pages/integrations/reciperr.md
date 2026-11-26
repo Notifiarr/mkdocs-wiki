@@ -56,5 +56,5 @@ Click the **cog icon** to open the configuration options for Reciperr.
 1. Enable the Reciperr integration on the Notifiarr website
 2. Configure the triggers you want to use
 3. Set up your movie and list settings with the appropriate Radarr configuration
-4. Configure Reciperr to send webhook notifications to your Notifiarr webhook URL
+4. In Reciperr, use the Notifiarr endpoint URL shown on the Notifiarr Reciperr integration page. It starts with `https://notifiarr.com/api/v1/user/reciperr/`, not the `/api/v1/notification/` webhook path that most integrations use
 5. Test the notification to ensure it is working

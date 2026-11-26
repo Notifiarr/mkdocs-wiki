@@ -22,7 +22,7 @@
 - `Plugin Updated` - Receive a notification when a plugin is updated
 - `Plugin Uninstalled` - Receive a notification when a plugin is uninstalled
 - `Update Available` - Receive a notification when an Emby server update is available
-- `Server Restart` - Receive a notification when the Emby server restarts
+- `Server Restart` - Receive a notification when Emby reports that a server restart is required (`system.serverrestartrequired`)
 - `Mark Favorite` - Receive a notification when a user marks an item as a favorite
 - `Mark Watched` - Receive a notification when a user marks an item as watched
 - `Mark Unwatched` - Receive a notification when a user marks an item as unwatched

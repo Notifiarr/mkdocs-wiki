@@ -1,7 +1,7 @@
 # Overseerr
 
 !!! warning "Moved upstream — see Seerr"
-    In February 2026 Overseerr and Jellyseerr merged upstream into a single application called [**Seerr**](https://seerr.dev). Notifiarr followed by replacing the separate Overseerr and Jellyseerr integrations with a unified [**Seerr** integration](seerr.md).
+    In February 2026 Overseerr and Jellyseerr merged upstream into a single application called [**Seerr**](https://seerr.dev). Notifiarr added a unified [**Seerr** integration](seerr.md) that is meant to replace the separate Overseerr and Jellyseerr integrations. Both of those integrations are still active on the site.
 
     Upstream announcement: [docs.seerr.dev — Seerr Release: Unifying Overseerr and Jellyseerr](https://docs.seerr.dev/blog/seerr-release/).
 

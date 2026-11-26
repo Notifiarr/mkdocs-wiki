@@ -112,7 +112,7 @@ Additional settings such as automatically unmonitor an episode or movie once a u
 - `Delete movie & file on finish` - Delete movie and file after selected users finish watching in selected Radarr instances (Patron feature, requires finished/scrobble notifications enabled)
 - `Delete movie file on finish` - Delete only the movie file after selected users finish watching in selected Radarr instances (Patron feature, requires finished/scrobble notifications enabled)
 - `Delete episode on finish` - Delete episode after selected users finish watching in selected Sonarr instances (Patron feature, requires finished/scrobble notifications enabled)
-- `Delete delay` - How long to wait after the finished notification before deleting, in minutes (Patron feature)
+- `Delete delay` - How long to wait after the finished notification before deleting, in minutes, minimum 2 (Patron feature)
 - `Delete exclusions (TMDb)` - TMDb IDs to exclude from automatic movie deletion, separated by commas (Patron feature)
 - `Delete exclusions (TVDb)` - TVDb IDs to exclude from automatic episode deletion, separated by commas (Patron feature)
 - `Library exclusion` - Ignore notifications from specific libraries
@@ -164,6 +164,6 @@ This integration requires the Notifiarr client to be running locally. You can ge
 In Plex, [add a webhook](https://app.plex.tv/desktop/#!/settings/webhooks) that points to `http://localhost:port/plex?token=plex-token-here`
 
 - Replace `localhost:port` with the `ip:port` to the Notifiarr client
-- Replace `plex-token-here` with the token for Plex so the Notifiarr client allows the incoming connection
+- Replace `plex-token-here` with the token for Plex so the Notifiarr client allows the incoming connection. The client also accepts its own API key as the `token` value
 
 ![webhook.png](../../assets/screenshots/integrations/plex/webhook.png)

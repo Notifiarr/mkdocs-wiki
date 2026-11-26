@@ -24,7 +24,7 @@ Each stat creates a Discord voice channel displaying the corresponding value. Yo
 
 ### Discord
 
-- `Discord: Users` - Number of members in the server
+- `Discord: Users` - Members online and total members in the server, shown as `online/total`
 
 ### Notifications
 
@@ -69,7 +69,7 @@ Requires the GitHub integration to be set up.
 
 Requires the Plex client to be set up.
 
-- `Plex: Streaming` - Current number of Plex streams
+- `Plex: Streaming` - Current number of Plex streams, including paused streams
 - `Plex: Transcoding` - Current number of transcodes on the server
 - `Plex: Traffic` - Current Plex traffic
 - `Plex: Lan Traffic` - Current Plex traffic on your LAN
