@@ -22,6 +22,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/reciperr/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Reciperr.
 
 1. Notification color for Movies trigger

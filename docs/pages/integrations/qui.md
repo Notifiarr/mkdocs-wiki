@@ -3,6 +3,8 @@
 !!! info
     This integration allows for notifications from [qui](https://qui.gg/) for torrent management, backups, directory scans, orphan scans, cross-seed operations, and automation actions.
 
+![integration-settings.png](../../assets/screenshots/integrations/qui/integration-settings.png)
+
 ---
 
 ## Trigger Options

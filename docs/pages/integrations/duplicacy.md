@@ -21,6 +21,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/duplicacy/integration-settings.png)
+
 Click the **cog icon** to open the configuration options for Duplicacy.
 
 1. Notification pings for each trigger

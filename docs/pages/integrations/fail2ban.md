@@ -22,6 +22,8 @@
 
 ## Configuration
 
+![integration-settings.png](../../assets/screenshots/integrations/fail2ban/integration-settings.png)
+
 ### Integration Settings
 
 - `Show IP Map` - Display a map for the banned IP address in the notification

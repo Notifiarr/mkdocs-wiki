@@ -45,6 +45,8 @@ notifiarr://{api_key}/{channel1_id}/{channel2_id}/{channelN_id}
 
 ## App History
 
+![integration-settings.png](../../assets/screenshots/integrations/apprise/integration-settings.png)
+
 The Notifiarr Apprise integration page tracks notification history from all connected Apprise apps. Each row in the **App History** table represents an application that has sent at least one notification through Apprise to Notifiarr.
 
 | Column | Description |

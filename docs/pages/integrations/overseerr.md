@@ -7,4 +7,6 @@
 
 If you are still running Overseerr during the upstream sunset period, configure it as a webhook source on the [Seerr integration page](seerr.md). The Notifiarr webhook URL works for both pre-migration Overseerr / Jellyseerr and current Seerr installations.
 
+![integration-settings.png](../../assets/screenshots/integrations/overseerr/integration-settings.png)
+
 For upstream Overseerr documentation, see the [Overseerr notification docs](https://docs.overseerr.dev/using-overseerr/notifications).
